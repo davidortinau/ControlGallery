@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.CheckboxPage"
+             Title="CheckBox">
+    <ContentPage.Resources>
+        <Style TargetType="StackLayout" Class="CheckBoxContainer">
+            <Setter Property="Spacing" Value="0"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Default" StyleClass="Headline"/>
+                <StackLayout StyleClass="CheckBoxContainer">
+                    <CheckBox/>
+                    <Label Text="Unchecked" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout StyleClass="CheckBoxContainer">
+                    <CheckBox IsChecked="True"/>
+                    <Label Text="Checked" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout StyleClass="CheckBoxContainer">
+                    <CheckBox IsEnabled="False"/>
+                    <Label Text="Disabled" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout StyleClass="CheckBoxContainer">
+                    <CheckBox IsEnabled="False" IsChecked="True"/>
+                    <Label Text="Disabled checked" VerticalOptions="Center"/>
+                </StackLayout>
+
+                <Label Text="Styling" StyleClass="Headline"/>
+                <StackLayout StyleClass="CheckBoxContainer">
+                    <CheckBox Color="{StaticResource Accent}"/>
+                    <Label Text="Accent" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

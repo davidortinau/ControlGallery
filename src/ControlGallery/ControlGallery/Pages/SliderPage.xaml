@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.SliderPage"
+             Title="Slider"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Default" StyleClass="Headline"/>
+            <Slider/>
+
+            <Label Text="MinimumTrackColor" StyleClass="Headline"/>
+            <Slider MinimumTrackColor="{StaticResource Neutral}" Value="0.5"/>
+
+            <Label Text="MaximumTrackColor" StyleClass="Headline"/>
+            <Slider MaximumTrackColor="{StaticResource Neutral}" Value="0.5"/>
+
+            <Label Text="ThumbColor" StyleClass="Headline"/>
+            <Slider ThumbColor="{StaticResource Primary}" Value="0.5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.ProgressBarPage"
+             Title="ProgressBar"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Default" StyleClass="Headline"/>
+                
+                <ProgressBar Progress="0.5"/>
+                <ProgressBar x:Name="progressBar" Progress="{Binding Progress}"/>
+            
+                <Label Text="Styled" StyleClass="Headline"/>
+            
+                <Label Text="HeightRequest" StyleClass="Subhead"/>
+                <ProgressBar HeightRequest="20" Progress="0.2"/>
+            
+                <Label Text="ProgressColor" StyleClass="Subhead"/>
+                <ProgressBar HeightRequest="20" Progress="0.3" ProgressColor="{StaticResource Primary}"/>
+
+                <Label Text="BackgroundColor" StyleClass="Subhead"/>
+                <ProgressBar HeightRequest="20" 
+                             Progress="0.4" 
+                             BackgroundColor="{StaticResource Secondary}"
+                             ProgressColor="{StaticResource Primary}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:ControlGallery"
+             x:Class="ControlGallery.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#512BD4</Color>
+            <Color x:Key="Secondary">#DFD8F7</Color>
+            <Color x:Key="Tertiary">#2B0B98</Color>
+            <Color x:Key="Neutral">#969696</Color>
+            <Color x:Key="NeutralLighter">#E5E5E1</Color>
+            <Color x:Key="NeutralDarker">#505050</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="Black">#000000</Color>
+            <Color x:Key="Accent">#F7B548</Color>
+            <Color x:Key="Error">#C00</Color>
+            <Color x:Key="Warning">#FFCC00</Color>
+            <Color x:Key="Text_Light">#000000</Color>
+            <Color x:Key="Text_Dark">#FFFFFF</Color>
+            <Color x:Key="TextOnSolid_Light">#FFFFFF</Color>
+            <Color x:Key="TextOnSolid_Dark">#000000</Color>
+            <Color x:Key="TextSecondary_Light">#1d1d1d</Color>
+            <Color x:Key="TextSecondary_Dark">#f1f1f1</Color>
+
+            <Style TargetType="Page" ApplyToDerivedTypes="True">
+                <Setter Property="Padding" Value="15"/>
+            </Style>
+
+            <!-- SHELL -->
+            <Style x:Key="BaseStyle"
+           TargetType="Element">
+                <Setter Property="Shell.BackgroundColor"
+                    Value="{StaticResource Tertiary}" />
+                <Setter Property="Shell.ForegroundColor"
+                    Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+                <Setter Property="Shell.TitleColor"
+                    Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
+                <Setter Property="Shell.DisabledColor"
+                    Value="#B4000000" />
+                <Setter Property="Shell.UnselectedColor"
+                    Value="#CC0000" />
+                <Setter Property="Shell.NavBarHasShadow"
+                    Value="False"/>
+            </Style>
+
+            <!--<Style TargetType="Shell" ApplyToDerivedTypes="True">
+                <Setter Property="FlyoutHeaderTemplate"
+                Value="{DataTemplate common:FlyoutHeaderTemplate}"/>
+                <Setter Property="FlyoutFooterTemplate"
+                Value="{DataTemplate common:FlyoutFooterTemplate}"/>
+                <Setter Property="ItemTemplate"
+                Value="{DataTemplate common:FlyoutItemTemplate}"/>
+                <Setter Property="Shell.FlyoutBehavior" Value="{OnIdiom Tablet=Locked, Desktop=Locked, Default=Flyout}"/>
+            </Style>-->
+
+            <Style BasedOn="{StaticResource BaseStyle}"
+           ApplyToDerivedTypes="True"
+           TargetType="FlyoutItem" />
+
+            <FontImageSource
+                x:Key="CircleIcon"
+                FontFamily="FontAwesome"
+                Glyph="{x:Static app:IconFont.DotCircle}"
+                Color="{AppThemeBinding Dark={StaticResource TextOnSolid_Dark}, Light={StaticResource TextOnSolid_Light}}"
+                Size="16"/>
+
+            <FontImageSource
+                x:Key="CircleIconDisabled"
+                FontFamily="FontAwesome"
+                Glyph="{x:Static app:IconFont.DotCircle}"
+                Color="{AppThemeBinding Dark={StaticResource TextOnSolid_Dark}, Light={StaticResource TextOnSolid_Light}}"
+                Size="16"/>
+
+            <FontImageSource
+                x:Key="CircleIconAlt"
+                FontFamily="FontAwesome"
+                Glyph="{x:Static app:IconFont.DotCircle}"
+                Color="{StaticResource Primary}"
+                Size="16"/>
+            <FontImageSource
+                x:Key="CircleIconAltDisabled"
+                FontFamily="FontAwesome"
+                Glyph="{x:Static app:IconFont.DotCircle}"
+                Color="{StaticResource Neutral}"
+                Size="16"/>
+
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="OpenSansRegular"/>
+                <Setter Property="FontSize"
+                        Value="17"/>
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding
+                    Dark={StaticResource Text_Dark},
+                    Light={StaticResource Text_Light}}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="LargeTitle">
+                <Setter Property="FontSize"
+                        Value="30"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Title1">
+                <Setter Property="FontSize"
+                        Value="26"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Headline">
+                <Setter Property="FontSize"
+                        Value="17"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Subhead">
+                <Setter Property="FontSize"
+                        Value="15"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Footnote">
+                <Setter Property="FontSize"
+                        Value="13"/>
+            </Style>
+            
+            <!-- Text Color Styles -->
+            <Style TargetType="Label"
+                   Class="Secondary">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding
+                    Dark={StaticResource TextSecondary_Dark},
+                    Light={StaticResource TextSecondary_Light}}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Primary">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Primary}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Error">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Error}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Warning">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Warning}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Disabled">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Neutral}"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="WidthRequest" Value="120"/>
+            </Style>
+
+            <Style TargetType="StackLayout">
+                <Setter Property="Spacing" Value="10"/>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>
