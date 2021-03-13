@@ -14,6 +14,7 @@ namespace ControlGallery
 				.ConfigureServices((ctx, services) =>
 				{
 					services.AddTransient<LabelPage>();
+					services.AddTransient<ButtonPage>();
 					services.AddTransient<IWindow, MainWindow>();
 				})
 				.ConfigureFonts((hostingContext, fonts) =>

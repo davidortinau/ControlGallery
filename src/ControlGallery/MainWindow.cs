@@ -11,7 +11,7 @@ namespace ControlGallery
 
 		public MainWindow()
 		{
-			Page = App.Current.Services.GetService<LabelPage>();
+			Page = App.Current.Services.GetService<ButtonPage>();
 		}
 	}
 }
