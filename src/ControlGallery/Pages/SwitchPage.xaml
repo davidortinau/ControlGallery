@@ -2,8 +2,94 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ControlGallery.Pages.SwitchPage"
+             BackgroundColor="White"
              Title="Switch">
     <ContentPage.Resources>
+              <Color x:Key="Primary">#512BD4</Color>
+              <Color x:Key="Secondary">#DFD8F7</Color>
+              <Color x:Key="Tertiary">#2B0B98</Color>
+              <Color x:Key="Neutral">#969696</Color>
+              <Color x:Key="NeutralLighter">#E5E5E1</Color>
+              <Color x:Key="NeutralDarker">#505050</Color>
+              <Color x:Key="White">#FFFFFF</Color>
+              <Color x:Key="Black">#000000</Color>
+              <Color x:Key="Accent">#F7B548</Color>
+              <Color x:Key="Error">#C00</Color>
+              <Color x:Key="Warning">#FFCC00</Color>
+              <Color x:Key="Text_Light">#000000</Color>
+              <Color x:Key="Text_Dark">#FFFFFF</Color>
+              <Color x:Key="TextOnSolid_Light">#FFFFFF</Color>
+              <Color x:Key="TextOnSolid_Dark">#000000</Color>
+              <Color x:Key="TextSecondary_Light">#1d1d1d</Color>
+              <Color x:Key="TextSecondary_Dark">#f1f1f1</Color>
+
+              <Style TargetType="Page" ApplyToDerivedTypes="True">
+                     <Setter Property="Padding" Value="15"/>
+              </Style>
+
+              <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="OpenSansRegular"/>
+                <Setter Property="FontSize"
+                        Value="17"/>
+                <Setter Property="TextColor"
+                        Value="{StaticResource Text_Light}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="LargeTitle">
+                <Setter Property="FontSize"
+                        Value="30"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Title1">
+                <Setter Property="FontSize"
+                        Value="26"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Headline">
+                <Setter Property="FontSize"
+                        Value="17"/>
+                <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Subhead">
+                <Setter Property="FontSize"
+                        Value="15"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Footnote">
+                <Setter Property="FontSize"
+                        Value="13"/>
+            </Style>
+            
+            <!-- Text Color Styles -->
+            <Style TargetType="Label"
+                   Class="Secondary">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Text_Light}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Primary">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Primary}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Error">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Error}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Warning">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Warning}"/>
+            </Style>
+            <Style TargetType="Label"
+                   Class="Disabled">
+                <Setter Property="TextColor"
+                        Value="{StaticResource Neutral}"/>
+            </Style>
+
         <Style TargetType="StackLayout" Class="SwitchContainer">
             <Setter Property="Spacing" Value="0"/>
             <Setter Property="Orientation" Value="Horizontal"/>
@@ -11,7 +97,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
                 <Label Text="Default" StyleClass="Headline"/>
                 <Label Text="Enabled and untoggled" StyleClass="Subhead"/>
                 <Switch/>

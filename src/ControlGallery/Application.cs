@@ -13,8 +13,19 @@ namespace ControlGallery
 				.RegisterCompatibilityRenderers()
 				.ConfigureServices((ctx, services) =>
 				{
-					services.AddTransient<LabelPage>();
+					services.AddTransient<ActivityIndicatorPage>();
 					services.AddTransient<ButtonPage>();
+					services.AddTransient<CheckboxPage>();
+					services.AddTransient<EditorPage>();
+					services.AddTransient<EntryPage>();
+					services.AddTransient<LabelPage>();
+					services.AddTransient<ProgressBarPage>();
+					services.AddTransient<RadioButtonPage>();
+					services.AddTransient<SliderPage>();
+					services.AddTransient<StepperPage>();
+					services.AddTransient<SwitchPage>();
+					
+					services.AddTransient<MainPage>();
 					services.AddTransient<IWindow, MainWindow>();
 				})
 				.ConfigureFonts((hostingContext, fonts) =>
