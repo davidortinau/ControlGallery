@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
              x:Class="ControlGallery.Pages.MainPage"
+             BackgroundColor="White"
              Title="Main Page"
              >
 <ContentPage.Resources>
@@ -202,6 +203,11 @@
         <Setter Property="Spacing" Value="0"/>
         <Setter Property="Orientation" Value="Horizontal"/>
     </Style>
+
+    <Style TargetType="StackLayout" Class="SwitchContainer">
+            <Setter Property="Spacing" Value="0"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+        </Style>
 </ContentPage.Resources>
 
     <ContentPage.Content>
@@ -335,7 +341,7 @@
 
             <Label Text="Fixed Height" StyleClass="Subhead"/>
             <Editor Placeholder="Placeholder" HeightRequest="200"/>
-
+<!--
             <Label Text="Basic" StyleClass="Headline" />
             <StackLayout Orientation="Horizontal">
                 <Entry/>
@@ -345,7 +351,8 @@
             <Label Text="With Placeholder" StyleClass="Headline" />
             <StackLayout Orientation="Horizontal">
                 <Entry Placeholder="Placeholder"/>
-                <Entry Placeholder="Placeholder color" PlaceholderColor="{StaticResource Accent}"/>
+                <Entry Placeholder="Placeholder color" 
+                    PlaceholderColor="{StaticResource Accent}"/>
                 <Entry Placeholder="Placeholder" IsEnabled="False"/>
             </StackLayout>
             
@@ -385,10 +392,81 @@
             <StackLayout Orientation="Horizontal">
                 <Entry Text="" />
             </StackLayout>
+-->
+                <Label Text="Default" StyleClass="Headline"/>
+                
+                <ProgressBar Progress="0.5"/>
+                <ProgressBar x:Name="progressBar" />
+            
+                <Label Text="Styled" StyleClass="Headline"/>
+            
+                <Label Text="HeightRequest" StyleClass="Subhead"/>
+                <ProgressBar HeightRequest="20" Progress="0.2"/>
+            
+                <Label Text="ProgressColor" StyleClass="Subhead"/>
+                <ProgressBar HeightRequest="20" Progress="0.3" 
+                    ProgressColor="{StaticResource Primary}"/>
 
-            <Label Text="Default" StyleClass="Headline"/>
-                
-                
+                <Label Text="BackgroundColor" StyleClass="Subhead"/>
+                <ProgressBar HeightRequest="20" 
+                             Progress="0.4" 
+                             BackgroundColor="{StaticResource Secondary}"
+                             ProgressColor="{StaticResource Primary}"/>
+
+                <Label Text="Default" StyleClass="Headline"/>
+                <Slider/>
+
+                <Label Text="MinimumTrackColor" StyleClass="Headline"/>
+                <Slider MinimumTrackColor="{StaticResource Neutral}" Value="0.5"/>
+
+                <Label Text="MaximumTrackColor" StyleClass="Headline"/>
+                <Slider MaximumTrackColor="{StaticResource Neutral}" Value="0.5"/>
+
+                <Label Text="ThumbColor" StyleClass="Headline"/>
+                <Slider ThumbColor="{StaticResource Primary}" Value="0.5"/>
+
+
+                <Label Text="Default" StyleClass="Headline"/>
+                <StackLayout Orientation="Horizontal">
+                    <Stepper/>
+                    <Stepper IsEnabled="False"/>
+                </StackLayout>
+
+                <Label Text="Styled" StyleClass="Headline"/>
+
+                <Label Text="BackgroundColor" StyleClass="Subhead"/>
+                <StackLayout Orientation="Horizontal">
+                    <Stepper BackgroundColor="{StaticResource Secondary}"/>
+                    <Stepper BackgroundColor="{StaticResource Secondary}" 
+                             IsEnabled="False"/>
+                </StackLayout>
+
+                <Label Text="BackgroundColor" StyleClass="Subhead"/>
+                <StackLayout Orientation="Horizontal">
+                    <Stepper Increment="2"/>
+                    <Stepper BackgroundColor="{StaticResource Secondary}" 
+                             IsEnabled="False"/>
+                </StackLayout>
+
+                <Label Text="Default" StyleClass="Headline"/>
+                <Label Text="Enabled and untoggled" StyleClass="Subhead"/>
+                <Switch/>
+
+                <Label Text="Enabled and toggled" StyleClass="Subhead"/>
+                <Switch IsToggled="True"/>
+
+                <Label Text="Disabled and untoggled" StyleClass="Subhead"/>
+                <Switch IsEnabled="False"/>
+
+                <Label Text="Disabled and toggled" StyleClass="Subhead"/>
+                <Switch IsToggled="True" IsEnabled="False"/>
+
+                <Label Text="Styled" StyleClass="Headline"/>
+                <Label Text="OnColor" StyleClass="Subhead"/>
+                <Switch IsToggled="True" OnColor="{StaticResource Accent}"/>
+
+                <Label Text="ThumbColor" StyleClass="Subhead"/>
+                <Switch IsToggled="True" ThumbColor="{StaticResource Accent}" />
 
 
             </StackLayout>
