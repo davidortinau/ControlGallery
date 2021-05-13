@@ -1,21 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">$(TargetFrameworks);net6.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks>net6.0-maccatalyst;net6.0-android;net6.0-ios</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <SingleProject>true</SingleProject>
     <ApplicationTitle>Control Gallery</ApplicationTitle>
     <ApplicationId>com.microsoft.MauiControlGallery</ApplicationId>
     <ApplicationVersion>1.0</ApplicationVersion>
     <AndroidVersionCode>1</AndroidVersionCode>
-    <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net6.0-ios'">ios-x64</RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net6.0-ios'">iossimulator-x64</RuntimeIdentifier>
     <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">maccatalyst-x64</RuntimeIdentifier>
+    <InvariantGlobalization Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">true</InvariantGlobalization>
+    <!-- Set to True to C# hot reload on Android -->
+    <UseInterpreter Condition="'$(TargetFramework)' == 'net6.0-android'">True</UseInterpreter>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.2.2.159" />
+    <PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.4.482" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="6.0.100-preview.4.482" />
   </ItemGroup>
   <ItemGroup>
-    <SharedImage Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" IsAppIcon="true" />
-    <SharedFont Include="Common\Fonts\*.ttf"/>
+    <MauiImage Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" IsAppIcon="true" />
+    <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
+    <MauiImage Include="Resources\Images\*" />
+    <MauiFont Include="Resources\Fonts\*.ttf"/>
   </ItemGroup>
 </Project>

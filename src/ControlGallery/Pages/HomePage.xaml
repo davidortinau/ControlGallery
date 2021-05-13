@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:ControlGallery"
+             x:Class="ControlGallery.Pages.HomePage"
+             BackgroundColor="White"
+             Title="Gallery"
+             >
+    <ScrollView>
+        <VerticalStackLayout Spacing="4">
+        
+            <Button Text="ActivityIndicator" Clicked="OnClicked" />
+            <Button Text="Button" Clicked="OnClicked" />
+            <Button Text="Checkbox" Clicked="OnClicked" />
+            <Button Text="Editor" Clicked="OnClicked" />
+            <Button Text="Entry" Clicked="OnClicked" />
+            <Button Text="Label" Clicked="OnClicked" />
+            <Button Text="ProgressBar" Clicked="OnClicked" />
+            <Button Text="RadioButton" Clicked="OnClicked" />
+            <Button Text="Slider" Clicked="OnClicked" />
+            <Button Text="Stepper" Clicked="OnClicked" />
+            <Button Text="Switch" Clicked="OnClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

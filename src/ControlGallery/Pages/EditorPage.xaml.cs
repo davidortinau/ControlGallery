@@ -11,9 +11,8 @@ using Microsoft.Maui.Controls.Xaml;
 namespace ControlGallery.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EditorPage : ContentPage, IPage
+    public partial class EditorPage : ContentPage
     {
-        public IView View { get => (IView)Content; set => Content = (View)value; }
         public EditorPage()
         {
             InitializeComponent();

@@ -11,9 +11,8 @@ using Microsoft.Maui.Controls.Xaml;
 namespace ControlGallery.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProgressBarPage : ContentPage, IPage
+    public partial class ProgressBarPage : ContentPage
     {
-        public IView View { get => (IView)Content; set => Content = (View)value; }
         private bool isActiveWindow;
 
         public ProgressBarPage()

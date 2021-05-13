@@ -6,7 +6,7 @@ using Microsoft.Maui;
 namespace ControlGallery
 {
 	[Application]
-	public class MainApplication : MauiApplication<Application>
+	public class MainApplication : MauiApplication<Startup>
 	{
 		public MainApplication(IntPtr handle, JniHandleOwnership ownerShip) : base(handle, ownerShip)
 		{

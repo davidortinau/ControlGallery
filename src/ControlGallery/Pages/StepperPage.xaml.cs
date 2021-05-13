@@ -11,9 +11,8 @@ using Microsoft.Maui.Controls.Xaml;
 namespace ControlGallery.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StepperPage : ContentPage, IPage
+    public partial class StepperPage : ContentPage
     {
-        public IView View { get => (IView)Content; set => Content = (View)value; }
         public StepperPage()
         {
             InitializeComponent();

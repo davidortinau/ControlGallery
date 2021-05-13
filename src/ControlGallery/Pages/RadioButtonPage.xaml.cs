@@ -11,9 +11,8 @@ using Microsoft.Maui.Controls.Xaml;
 namespace ControlGallery.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RadioButtonPage : ContentPage, IPage
+    public partial class RadioButtonPage : ContentPage
     {
-        public IView View { get => (IView)Content; set => Content = (View)value; }
         public List<Quality> QualityOptions {get;set; } = new List<Quality>
         {
             new Quality{Description="Low"},
