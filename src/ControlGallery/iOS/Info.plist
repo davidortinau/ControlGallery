@@ -6,6 +6,8 @@
 	<true/>
 	<key>MinimumOSVersion</key>
 	<string>10.3.4</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>

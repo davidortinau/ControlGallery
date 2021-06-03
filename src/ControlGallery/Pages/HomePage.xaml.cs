@@ -32,6 +32,9 @@ namespace ControlGallery.Pages
                 case "checkbox":
                     Navigation.PushAsync(new CheckboxPage());
                     break;
+                case "datepicker":
+                    Navigation.PushAsync(new DatePickerPage());
+                    break;
                 case "editor":
                     Navigation.PushAsync(new EditorPage());
                     break;
