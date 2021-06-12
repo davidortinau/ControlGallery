@@ -20,9 +20,7 @@ namespace ControlGallery
 				.SetImageDirectory("Assets");
 
 			return new Microsoft.Maui.Controls.Window(
-				new NavigationPage(
-					new HomePage()
-				)
+				new AppShell()
 			);
 		}
 	}

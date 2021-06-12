@@ -22,8 +22,11 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
-                    <Button ImageSource="{StaticResource CircleIcon}"/>
-                    <Button ImageSource="{StaticResource CircleIcon}" IsEnabled="False"/>
+                    <Button FontFamily="FontAwesome"
+                            Text="{x:Static app:IconFont.Archway}"/>
+                    <Button FontFamily="FontAwesome"
+                            Text="{x:Static app:IconFont.Archway}"
+                            IsEnabled="False"/>
                 </StackLayout>
 
                 <Label Text="Primary outline"/>

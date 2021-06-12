@@ -5,11 +5,6 @@
        Title="ControlGallery"
        x:Class="ControlGallery.AppShell">
 
-    <FlyoutItem Title="Stepper">
-        <ShellContent Route="stepper" 
-                      ContentTemplate="{DataTemplate pages:StepperPage}" />
-    </FlyoutItem>
-    
     <FlyoutItem Title="ActivityIndicator">
         <ShellContent Route="activityindicator" 
                       ContentTemplate="{DataTemplate pages:ActivityIndicatorPage}" />
@@ -23,6 +18,11 @@
     <FlyoutItem Title="CheckBox">
         <ShellContent Route="checkbox" 
                       ContentTemplate="{DataTemplate pages:CheckboxPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="DatePicker">
+        <ShellContent Route="datepicker" 
+                      ContentTemplate="{DataTemplate pages:DatePickerPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Editor">
@@ -53,6 +53,11 @@
     <FlyoutItem Title="Slider">
         <ShellContent Route="slider" 
                       ContentTemplate="{DataTemplate pages:SliderPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Stepper">
+        <ShellContent Route="stepper" 
+                      ContentTemplate="{DataTemplate pages:StepperPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Switch">
