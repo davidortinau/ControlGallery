@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:ControlGallery"
+             x:Class="ControlGallery.Pages.HomePage"
+             BackgroundColor="White"
+             Title="Gallery"
+             >
+    <ScrollView>
+        <VerticalStackLayout Spacing="4" Margin="15">
+
+            <Label Text="Views" StyleClass="LargeTitle" />
+            <Button Text="ActivityIndicator" Clicked="OnClicked" />
+            <Button Text="Button" Clicked="OnClicked" />
+            <Button Text="CarouselView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Checkbox" Clicked="OnClicked" />
+            <Button Text="CollectionView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="DatePicker" Clicked="OnClicked" />
+            <Button Text="Editor" Clicked="OnClicked" />
+            <Button Text="Entry" Clicked="OnClicked" />
+            <Button Text="IndicatorView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Image" Clicked="OnClicked" />
+            <Button Text="ImageButton" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Label" Clicked="OnClicked" />
+            <Button Text="Map" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Picker" Clicked="OnClicked" />
+            <Button Text="ProgressBar" Clicked="OnClicked" />
+            <Button Text="RadioButton" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="RefreshView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="SearchBar" Clicked="OnClicked" />
+            <Button Text="Shapes" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Slider" Clicked="OnClicked" />
+            <Button Text="Stepper" Clicked="OnClicked" />
+            <Button Text="SwipeView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Switch" Clicked="OnClicked" />
+            <Button Text="TimePicker" Clicked="OnClicked" />
+            <Button Text="WebView" Clicked="OnClicked" IsEnabled="False" />
+
+            <Label Text="Layouts" StyleClass="LargeTitle" />
+            <Button Text="AbsoluteLayout" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="ContentPresenter" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="ContentView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Grid" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="GridLayout (New)" Clicked="OnClicked" />
+            <Button Text="HorizontalStackLayout" Clicked="OnClicked" />
+            <Button Text="RelativeLayout" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="StackLayout" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="TemplatedView" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="VerticalStackLayout" Clicked="OnClicked" />
+
+            <Label Text="Features" StyleClass="LargeTitle" />
+            <Button Text="Accessibility" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Animation" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Borders" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Brushes" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Corners" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Device" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="FlowDirection (RTL)" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Fonts" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Lifecycle Events" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Themes" Clicked="OnClicked" IsEnabled="False" />
+            <Button Text="Transforms" Clicked="OnClicked" IsEnabled="False" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

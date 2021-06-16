@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.SwitchPage"
+             BackgroundColor="White"
+             Title="Switch">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+                <Label Text="Default" StyleClass="Headline"/>
+                <Label Text="Enabled and untoggled" StyleClass="Subhead"/>
+                <Switch/>
+
+                <Label Text="Enabled and toggled" StyleClass="Subhead"/>
+                <Switch IsToggled="True"/>
+
+                <Label Text="Disabled and untoggled" StyleClass="Subhead"/>
+                <Switch IsEnabled="False"/>
+
+                <Label Text="Disabled and toggled" StyleClass="Subhead"/>
+                <Switch IsToggled="True" IsEnabled="False"/>
+
+                <Label Text="Styled" StyleClass="Headline"/>
+                <Label Text="OnColor" StyleClass="Subhead"/>
+                <Switch IsToggled="True" OnColor="{StaticResource Accent}"/>
+
+                <Label Text="ThumbColor" StyleClass="Subhead"/>
+                <Switch IsToggled="True" ThumbColor="{StaticResource Accent}" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

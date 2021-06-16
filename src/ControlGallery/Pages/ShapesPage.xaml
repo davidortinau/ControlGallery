@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:ControlGallery"
+             xmlns:droid="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="ControlGallery.Pages.ShapesPage"
+             Title="Shapes"
+             BackgroundColor="White">
+             <ContentPage.Resources>
+                <StyleSheet>
+                    <![CDATA[
+                    
+                    
+                    FlexLayout > Polygon {
+                        -xf-horizontal-options: Center;
+                        -xf-vertical-options: Center;
+                        width: 50;
+                        height: 50;
+                    }
+                    
+                    FlexLayout > Rectangle {
+                        -xf-horizontal-options: Center;
+                        -xf-vertical-options: Center;
+                        width: 50;
+                        height: 50;
+                    }
+                    
+                    FlexLayout > Ellipse {
+                        -xf-horizontal-options: Center;
+                        -xf-vertical-options: Center;
+                        width: 50;
+                        height: 50;
+                    }
+                    
+                    FlexLayout > Grid {
+                        -xf-horizontal-options: Center;
+                        -xf-vertical-options: Center;
+                        width: 50;
+                        height: 50;
+                    }
+                    
+                    FlexLayout > Path {
+                        -xf-horizontal-options: Center;
+                        -xf-vertical-options: Center;
+                        width: 50;
+                        height: 50;
+                    }
+                    ]]>
+                </StyleSheet>
+        </ContentPage>
+    <ContentPage.Content>
+        <ScrollView Margin="0,60,0,0">
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
+                <Label Text="Shapes" StyleClass="Headline"/>
+                <FlexLayout Wrap="Wrap" AlignContent="SpaceEvenly" JustifyContent="SpaceEvenly">
+                    <Ellipse WidthRequest="50" HeightRequest="50"
+                        Fill="{StaticResource PrimaryBrush}"/>
+                    <Rectangle WidthRequest="50" HeightRequest="50"
+                            Fill="{StaticResource PrimaryBrush}"/>
+                    
+                    <Polygon Fill="{StaticResource PrimaryBrush}"
+                            Points="0 36 0 13.5 13.5 0 36 0 50 13.5 50 36 36 50 13.5 50"/>
+                    
+                    <Polygon Fill="{StaticResource PrimaryBrush}"
+                            Points="0 14 12 0 38 0 50 14 25 50"/>
+                    
+                    <Polygon Fill="{StaticResource PrimaryBrush}"
+                        Margin="0,10"
+                            Points="24 0 47.7764129 17.2745751 38.6946313 45.2254249 9.30536869 45.2254249 0.223587093 17.2745751"/>
+                    
+                    <Grid Margin="0,10">
+                        <Polygon Fill="#512BD4" 
+                                Points="0 0 0 50 25 25"/>
+                        <Polygon Fill="#DFD8F7" 
+                                Points="0 0 50 0 25 25"/>
+                        <Polygon Fill="#2B0B98" 
+                                Points="50 0 50 50 25 25"/>
+                        <Polygon Fill="#E5E5E1" 
+                                Points="0 50 25 25 50 50"/>
+                    </Grid>
+                    
+                    <Polygon Fill="{StaticResource PrimaryBrush}"
+                        Margin="0,10"
+                            Points="8 25 25 0 42 25 25 50"/>
+                </FlexLayout>                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.EntryPage"
+             BackgroundColor="White"
+             Title="Entry"
+             >
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+                <Label Text="Basic" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry/>
+                    <Entry IsEnabled="False"/>
+                </StackLayout>
+
+                <Label Text="With Placeholder" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Placeholder="Placeholder"/>
+                    <Entry Placeholder="Placeholder color" PlaceholderColor="{StaticResource Accent}"/>
+                    <Entry Placeholder="Placeholder" IsEnabled="False"/>
+                </StackLayout>
+                
+                <Label Text="Password" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry IsPassword="True" />
+                    <Entry IsPassword="True" IsEnabled="False"/>
+                </StackLayout>
+
+                <Label Text="With Text" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="Text"/>
+                    <Entry Text="Text Color" TextColor="{StaticResource Accent}"/>
+                    <Entry Text="Text" IsEnabled="False"/>
+                </StackLayout>
+
+                <Label Text="Read-only" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="I am read only" IsReadOnly="True"/>
+                </StackLayout>
+
+                <Label Text="With Purple Background" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Placeholder="Placeholder" 
+                        Background="{StaticResource Tertiary}"/>
+                    <Entry Placeholder="Placeholder" IsEnabled="False"
+                        Background="{StaticResource Tertiary}"/>
+                </StackLayout>
+
+                <Label Text="Community Toolkit Helpers" StyleClass="Headline"/>
+                <Label Text="With error message" StyleClass="Subhead" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="" />
+                </StackLayout>
+
+                <Label Text="Input mask" StyleClass="Subhead" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
