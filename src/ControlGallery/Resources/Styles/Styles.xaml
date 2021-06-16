@@ -22,8 +22,10 @@
         <Color x:Key="TextSecondary_Light">#1d1d1d</Color>
         <Color x:Key="TextSecondary_Dark">#f1f1f1</Color>
 
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
+
         <Style TargetType="Page" ApplyToDerivedTypes="True">
-                <Setter Property="Padding" Value="15"/>
+                <Setter Property="Padding" Value="15,88,15,0"/>
         </Style>
 
     <Style TargetType="Label">

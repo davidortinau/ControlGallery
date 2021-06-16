@@ -2,6 +2,8 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:pages="clr-namespace:ControlGallery.Pages"
+       xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+       ios:Page.UseSafeArea="true"
        Title="ControlGallery"
        x:Class="ControlGallery.AppShell">
 
@@ -35,6 +37,11 @@
                       ContentTemplate="{DataTemplate pages:EntryPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Image">
+        <ShellContent Route="image" 
+                      ContentTemplate="{DataTemplate pages:ImagePage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Label">
         <ShellContent Route="label" 
                       ContentTemplate="{DataTemplate pages:LabelPage}" />
@@ -48,6 +55,11 @@
     <FlyoutItem Title="RadioButton">
         <ShellContent Route="radiobutton" 
                       ContentTemplate="{DataTemplate pages:RadioButtonPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Shapes">
+        <ShellContent Route="shapes" 
+                      ContentTemplate="{DataTemplate pages:ShapesPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Slider">
@@ -65,5 +77,10 @@
                       ContentTemplate="{DataTemplate pages:SwitchPage}" />
     </FlyoutItem>
 
+    <!-- layout -->
+    <FlyoutItem Title="Margin and Padding">
+        <ShellContent Route="marginpadding" 
+                      ContentTemplate="{DataTemplate pages:MarginPaddingPage}" />
+    </FlyoutItem>
 
 </Shell>
