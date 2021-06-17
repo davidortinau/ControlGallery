@@ -50,7 +50,7 @@
                     }
                     ]]>
                 </StyleSheet>
-        </ContentPage>
+        </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView Margin="0,60,0,0">
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">

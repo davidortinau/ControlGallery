@@ -26,6 +26,7 @@
 
         <Style TargetType="Page" ApplyToDerivedTypes="True">
                 <Setter Property="Padding" Value="15,88,15,0"/>
+                <Setter Property="Background" Value="#F1F1F1"/>
         </Style>
 
     <Style TargetType="Label">
