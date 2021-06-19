@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ControlGallery.Models"
+             x:Class="ControlGallery.Pages.ColorsPage"
+             Title="Colors">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+                <Label Text="Colors" StyleClass="Headline"/>
+                <BoxView StyleClass="HRule"/>
+                
+                <FlexLayout Wrap="Wrap" AlignContent="SpaceAround">
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type models:ColorBrush}">
+                            <models:ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
+                            <models:ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
+                            <models:ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Ellipse WidthRequest="100" HeightRequest="100"
+                                    Fill="{Binding Brush}"/>
+                                <Label Text="{Binding BrushName}"/>
+                                <Label Text="{Binding BrushValue}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout>
+                </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
