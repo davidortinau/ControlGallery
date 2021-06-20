@@ -4,20 +4,49 @@
              xmlns:models="clr-namespace:ControlGallery.Models"
              x:Class="ControlGallery.Pages.ColorsPage"
              Title="Colors">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="ColorBox">
+            <StackLayout WidthRequest="130" HeightRequest="160" Margin="8,0,8,8">
+                <Ellipse WidthRequest="100" HeightRequest="100"
+                         HorizontalOptions="Center"
+                         Fill="{Binding Brush}"/>
+                <BoxView HeightRequest="12" Color="Transparent"/>
+                <Label Text="{Binding BrushName}" StyleClass="Headline"/>
+                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta"/>
+            </StackLayout>
+        </DataTemplate>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-                <Label Text="Colors" StyleClass="Headline"/>
+                <Label Text="App Palette" StyleClass="Headline"/>
                 <BoxView StyleClass="HRule"/>
                 
                 <FlexLayout Wrap="Wrap" 
                             AlignContent="SpaceEvenly" 
-                            Margin="15">
+                            Margin="15"
+                            BindableLayout.ItemTemplate="{StaticResource ColorBox}"
+                            >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type models:ColorBrush}">
                             <models:ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
                             <models:ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
                             <models:ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>
+                            <models:ColorBrush Brush="{StaticResource AccentBrush}" BrushName="Accent"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                </FlexLayout>
+                
+                <Label Text="Neutral Palette" StyleClass="Headline"/>
+                <BoxView StyleClass="HRule"/>
+                
+                <FlexLayout Wrap="Wrap" 
+                            AlignContent="SpaceEvenly" 
+                            Margin="15"
+                            BindableLayout.ItemTemplate="{StaticResource ColorBox}">
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type models:ColorBrush}">
                             <models:ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>
                             <models:ColorBrush Brush="{StaticResource NeutralLighterBrush}" BrushName="NeutralLighter"/>
                             <models:ColorBrush Brush="{StaticResource NeutralDarkerBrush}" BrushName="NeutralDarker"/>
@@ -25,17 +54,6 @@
                             <models:ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout WidthRequest="160" HeightRequest="160" Margin="8,0,8,8">
-                                <Ellipse WidthRequest="100" HeightRequest="100"
-                                         HorizontalOptions="Center"
-                                         Fill="{Binding Brush}"/>
-                                <Label Text="{Binding BrushName}"/>
-                                <Label Text="{Binding BrushValue}"/>
-                            </StackLayout>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
                 </FlexLayout>
             </StackLayout>
         </ScrollView>

@@ -90,7 +90,7 @@
     <Style TargetType="Label"
             Class="Headline">
         <Setter Property="FontSize"
-                Value="17"/>
+                Value="18"/>
         <Setter Property="FontFamily" Value="OpenSansSemiBold"/>
     </Style>
     <Style TargetType="Label"
