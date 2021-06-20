@@ -24,6 +24,18 @@
 
     <SolidColorBrush x:Key="PrimaryBrush" 
         Color="{StaticResource Primary}"/>
+    <SolidColorBrush x:Key="SecondaryBrush" 
+        Color="{StaticResource Secondary}"/>
+    <SolidColorBrush x:Key="TertiaryBrush" 
+        Color="{StaticResource Tertiary}"/>
+    <SolidColorBrush x:Key="NeutralBrush" 
+        Color="{StaticResource Neutral}"/>
+    <SolidColorBrush x:Key="NeutralLighterBrush" 
+        Color="{StaticResource NeutralLighter}"/>
+    <SolidColorBrush x:Key="NeutralDarkerBrush" 
+        Color="{StaticResource NeutralDarker}"/>
+    <SolidColorBrush x:Key="AccentBrush" 
+        Color="{StaticResource Accent}"/>
 
     <SolidColorBrush x:Key="BlackBrush" 
         Color="{StaticResource Black}"/>
@@ -36,6 +48,10 @@
             Value="{AppThemeBinding
                 Dark={StaticResource BlackBrush},
                 Light={StaticResource WhiteBrush}}"/>    
+    </Style>
+
+    <Style TargetType="Layout" Class="InnerContent">
+        <Setter Property="Margin" Value="15"/>
     </Style>
 
     <Style TargetType="Label">
