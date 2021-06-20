@@ -7,6 +7,14 @@
        Title="ControlGallery"
        x:Class="ControlGallery.AppShell">
 
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout HeightRequest="88">
+                <BoxView Color="{StaticResource Primary}" HeightRequest="88"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
     <FlyoutItem Title="Colors">
         <ShellContent Route="colors" 
                       ContentTemplate="{DataTemplate pages:ColorsPage}" />
