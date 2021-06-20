@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
              x:Class="ControlGallery.Pages.HomePage"
-             BackgroundColor="White"
              Title="Gallery"
              >
     <ScrollView>

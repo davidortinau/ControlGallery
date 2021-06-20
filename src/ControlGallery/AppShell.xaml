@@ -7,7 +7,12 @@
        Title="ControlGallery"
        x:Class="ControlGallery.AppShell">
 
-<FlyoutItem Title="AppTheme">
+    <FlyoutItem Title="Colors">
+        <ShellContent Route="colors" 
+                      ContentTemplate="{DataTemplate pages:ColorsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="AppTheme">
         <ShellContent Route="apptheme" 
                       ContentTemplate="{DataTemplate pages:AppThemePage}" />
     </FlyoutItem>

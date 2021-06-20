@@ -7,8 +7,7 @@
              Shell.NavBarIsVisible="false"
              x:Class="ControlGallery.Pages.MarginPaddingPage"
              Title="Margin &amp; Padding"
-             Padding="50"
-             Background="Black">
+             Padding="50">
     <ContentPage.Content>
         
             <Grid Background="#d1d1d1" Padding="50">
