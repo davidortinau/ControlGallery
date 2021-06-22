@@ -11,8 +11,23 @@
                          HorizontalOptions="Center"
                          Fill="{Binding Brush}"/>
                 <BoxView HeightRequest="12" Color="Transparent"/>
-                <Label Text="{Binding BrushName}" StyleClass="Headline"/>
-                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta"/>
+                <Label Text="{Binding BrushName}" StyleClass="Headline"
+                       HorizontalOptions="Center"/>
+                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="ColorBoxSm">
+            <StackLayout WidthRequest="100" HeightRequest="130" Margin="8,0,8,8">
+                <Ellipse WidthRequest="70" HeightRequest="70"
+                         HorizontalOptions="Center"
+                         Fill="{Binding Brush}"/>
+                <BoxView HeightRequest="12" Color="Transparent"/>
+                <Label Text="{Binding BrushName}" StyleClass="Headline"
+                       HorizontalOptions="Center"/>
+                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta"
+                       HorizontalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
     </ContentPage.Resources>
@@ -44,7 +59,7 @@
                 <FlexLayout Wrap="Wrap" 
                             AlignContent="SpaceEvenly" 
                             Margin="15"
-                            BindableLayout.ItemTemplate="{StaticResource ColorBox}">
+                            BindableLayout.ItemTemplate="{StaticResource ColorBoxSm}">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type models:ColorBrush}">
                             <models:ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>

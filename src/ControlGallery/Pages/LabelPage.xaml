@@ -9,7 +9,7 @@
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
                 <Label Text="App Text Styles"
-                       StyleClass="Headline" />
+                       StyleClass="LargeTitle" />
                 <BoxView StyleClass="HRule"/>
 
                 <Label Text="Large Title"
@@ -40,8 +40,44 @@
                        StyleClass="Footnote"/>
                 <Label Text="13px, OpenSansRegular, #000000" 
                        StyleClass="TypographyMeta"/>
+                
+                <Label Text="Pre-defined Sizes"
+                       StyleClass="LargeTitle" />
+                <BoxView StyleClass="HRule"/>
+                <Grid RowDefinitions="42,36">
+                     <Label Text="Aa" FontSize="30" VerticalOptions="End"/>
+                     <Label Text="30" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="26" VerticalOptions="End" Grid.Column="1"/>
+                     <Label Text="26" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="1" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="18" Grid.Column="2" VerticalOptions="End"/>
+                     <Label Text="18" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="2" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="15" Grid.Column="3" VerticalOptions="End"/>
+                     <Label Text="15" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="3" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="13" Grid.Column="4" VerticalOptions="End"/>
+                     <Label Text="13" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="4" Grid.Row="1"/>
+                      
+                </Grid>
 
+                <Label Text="Examples"
+                       StyleClass="LargeTitle" />
+                <BoxView StyleClass="HRule"/>
+                <Grid ColumnDefinitions="*,*">
+                     <StackLayout Grid.Column="0">
+                            <Label Text="Overview" StyleClass="Title1"/>
+                            <Label Text=".NET Multi-platform App UI (. NET MAUI) is a cross-platform framework for creating native mobile and desktop apps with C# and XAML. Using . NET MAUI, you can develop apps that can run on Android, iOS, macOS, and Windows from a single shared code-base." 
+                                   LineBreakMode="WordWrap"
+                            />
+                     </StackLayout>
+                     <StackLayout Grid.Column="1">
+                            <Label Text="Getting Started" StyleClass="Title1"/>
+                            <Label Text="To create .NET Multi-platform App UI (MAUI) apps, you currently require .NET 6 Preview 5 with .NET MAUI and the platform SDKs for Android, iOS, macOS, tvOS, and Mac Catalyst." 
+                                   LineBreakMode="WordWrap"
+                            />
+                     </StackLayout>
+                </Grid>
+                
                 <Label Text="Text Color Styles"
+                       Margin="0,15,0,0"
                        StyleClass="Headline" />
                 <BoxView StyleClass="HRule"/>
                 <Label Text="Regular"/>
@@ -51,6 +87,7 @@
                 <Label Text="Disabled" StyleClass="Disabled"/>
 
                 <Label Text="Default Styles"
+                       Margin="0,15,0,0"
                        StyleClass="Headline" />
                 <BoxView StyleClass="HRule"/>
                 <Label Text="TitleStyle" Style="{DynamicResource TitleStyle}"/>
