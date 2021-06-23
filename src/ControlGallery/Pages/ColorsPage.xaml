@@ -6,30 +6,35 @@
              Title="Colors">
     <ContentPage.Resources>
         <DataTemplate x:Key="ColorBox">
-            <StackLayout WidthRequest="130" HeightRequest="160" Margin="8,0,8,8">
-                <Ellipse WidthRequest="100" HeightRequest="100"
-                         HorizontalOptions="Center"
+            <StackLayout WidthRequest="130" HeightRequest="190" Margin="8,0,8,8"
+                BackgroundColor="{StaticResource NeutralLighter}"
+            >
+                <Rectangle WidthRequest="130" 
+                         HeightRequest="130"
+                         StrokeThickness="0"
+                         HorizontalOptions="Start"
                          Fill="{Binding Brush}"/>
-                <BoxView HeightRequest="12" Color="Transparent"/>
-                <Label Text="{Binding BrushName}" StyleClass="Headline"
-                       HorizontalOptions="Center"/>
-                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta"
-                       HorizontalOptions="Center"/>
+                
+                <Label Text="{Binding BrushName}" StyleClass="Headline" Margin="8"/>
+                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta" Margin="8,0"/>
+            </StackLayout>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ColorBoxSm">
+            <StackLayout WidthRequest="100" HeightRequest="160" Margin="8,0,8,8"
+                BackgroundColor="{StaticResource NeutralLighter}"
+            >
+                <Rectangle WidthRequest="100" 
+                         HeightRequest="100"
+                         StrokeThickness="0"
+                         HorizontalOptions="Start"
+                         Fill="{Binding Brush}"/>
+                
+                <Label Text="{Binding BrushName}" StyleClass="Headline" Margin="8"/>
+                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta" Margin="8,0"/>
             </StackLayout>
         </DataTemplate>
         
-        <DataTemplate x:Key="ColorBoxSm">
-            <StackLayout WidthRequest="100" HeightRequest="130" Margin="8,0,8,8">
-                <Ellipse WidthRequest="70" HeightRequest="70"
-                         HorizontalOptions="Center"
-                         Fill="{Binding Brush}"/>
-                <BoxView HeightRequest="12" Color="Transparent"/>
-                <Label Text="{Binding BrushName}" StyleClass="Headline"
-                       HorizontalOptions="Center"/>
-                <Label Text="{Binding BrushValue}" StyleClass="TypographyMeta"
-                       HorizontalOptions="Center"/>
-            </StackLayout>
-        </DataTemplate>
     </ContentPage.Resources>
     
     <ContentPage.Content>
