@@ -1,49 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:ControlGallery"
              x:Class="ControlGallery.Pages.LabelPage"
-             Title="Label"
-             >
+             Title="Label">
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-                <Label Text="App Text Styles"
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}"
+              Spacing="8"
+            >
+                <Label Text="Font"
                        StyleClass="LargeTitle" />
                 <BoxView StyleClass="HRule"/>
 
-                <Label Text="Large Title"
-                       StyleClass="LargeTitle"/>
-                <Label Text="30px, OpenSansSemiBold, #000000" 
-                       StyleClass="TypographyMeta"/>
-                
-                <Label Text="Title 1"
-                       StyleClass="Title1"/>
-                <Label Text="26px, OpenSansSemiBold, #000000" 
-                       StyleClass="TypographyMeta"/>
+                <Label Text="OpenSansRegular" FontSize="24" FontFamily="OpenSansRegular"/>
 
-                <Label Text="Headline"
-                       StyleClass="Headline"/>
-                <Label Text="17px, OpenSansSemiBold, #000000" 
-                       StyleClass="TypographyMeta"/>
-
-                <Label Text="Body"/>
-                <Label Text="17px, OpenSansRegular, #000000" 
-                       StyleClass="TypographyMeta"/>
-
-                <Label Text="Subhead"
-                       StyleClass="Subhead"/>
-                <Label Text="15px, OpenSansRegular, #000000" 
-                       StyleClass="TypographyMeta"/>
-
-                <Label Text="Footnote"
-                       StyleClass="Footnote"/>
-                <Label Text="13px, OpenSansRegular, #000000" 
-                       StyleClass="TypographyMeta"/>
-                
                 <Label Text="Pre-defined Sizes"
                        StyleClass="LargeTitle" />
-                <BoxView StyleClass="HRule"/>
                 <Grid RowDefinitions="42,36">
                      <Label Text="Aa" FontSize="30" VerticalOptions="End"/>
                      <Label Text="30" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Row="1"/>
@@ -55,9 +29,83 @@
                      <Label Text="15" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="3" Grid.Row="1"/>
                      <Label Text="Aa" FontSize="13" Grid.Column="4" VerticalOptions="End"/>
                      <Label Text="13" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="4" Grid.Row="1"/>
-                      
+                </Grid>
+                
+                <Label Text="Font"
+                       StyleClass="LargeTitle" />
+                <BoxView StyleClass="HRule"/>
+
+                <Label Text="OpenSansSemiBold" FontSize="24" FontFamily="OpenSansSemiBold"/>
+
+                <Label Text="Pre-defined Sizes"
+                       StyleClass="LargeTitle" />
+                <Grid RowDefinitions="42,36">
+                     <Label Text="Aa" FontSize="30" VerticalOptions="End" FontFamily="OpenSansSemiBold"/>
+                     <Label Text="30" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="26" VerticalOptions="End" Grid.Column="1" FontFamily="OpenSansSemiBold"/>
+                     <Label Text="26" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="1" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="18" Grid.Column="2" VerticalOptions="End" FontFamily="OpenSansSemiBold"/>
+                     <Label Text="18" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="2" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="15" Grid.Column="3" VerticalOptions="End" FontFamily="OpenSansSemiBold"/>
+                     <Label Text="15" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="3" Grid.Row="1"/>
+                     <Label Text="Aa" FontSize="13" Grid.Column="4" VerticalOptions="End" FontFamily="OpenSansSemiBold"/>
+                     <Label Text="13" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="4" Grid.Row="1"/>
                 </Grid>
 
+                <Label Text="Font"
+                       StyleClass="LargeTitle" />
+                <BoxView StyleClass="HRule"/>
+
+                <Label Text="FontAwesome" FontSize="24"/>
+
+                <Label Text="Pre-defined Sizes"
+                       StyleClass="LargeTitle" />
+                <Grid RowDefinitions="42,36">
+                     <Label Text="{x:Static app:IconFont.AirFreshener}" FontSize="30" VerticalOptions="End" FontFamily="FontAwesome"/>
+                     <Label Text="30" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Row="1"/>
+                     <Label Text="{x:Static app:IconFont.AirFreshener}" FontSize="26" VerticalOptions="End" Grid.Column="1" FontFamily="FontAwesome"/>
+                     <Label Text="26" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="1" Grid.Row="1"/>
+                     <Label Text="{x:Static app:IconFont.AirFreshener}" FontSize="18" Grid.Column="2" VerticalOptions="End" FontFamily="FontAwesome"/>
+                     <Label Text="18" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="2" Grid.Row="1"/>
+                     <Label Text="{x:Static app:IconFont.AirFreshener}" FontSize="15" Grid.Column="3" VerticalOptions="End" FontFamily="FontAwesome"/>
+                     <Label Text="15" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="3" Grid.Row="1"/>
+                     <Label Text="{x:Static app:IconFont.AirFreshener}" FontSize="13" Grid.Column="4" VerticalOptions="End" FontFamily="FontAwesome"/>
+                     <Label Text="13" StyleClass="TypographyMeta" VerticalOptions="Center" Grid.Column="4" Grid.Row="1"/>
+                </Grid>
+                
+                <Label Text="App Text Styles"
+                       StyleClass="LargeTitle" />
+                <BoxView StyleClass="HRule"/>
+
+                <Label Text="Large Title"
+                     StyleClass="LargeTitle"/>
+              <Label Text="30px, OpenSansSemiBold, #000000" 
+                     StyleClass="TypographyMeta"/>
+
+              <Label Text="Title 1"
+                     StyleClass="Title1"/>
+              <Label Text="26px, OpenSansSemiBold, #000000" 
+                     StyleClass="TypographyMeta"/>
+
+              <Label Text="Headline"
+                     StyleClass="Headline"/>
+              <Label Text="17px, OpenSansSemiBold, #000000" 
+                     StyleClass="TypographyMeta"/>
+
+              <Label Text="Body"/>
+              <Label Text="17px, OpenSansRegular, #000000" 
+                     StyleClass="TypographyMeta"/>
+
+              <Label Text="Subhead"
+                     StyleClass="Subhead"/>
+              <Label Text="15px, OpenSansRegular, #000000" 
+                     StyleClass="TypographyMeta"/>
+
+              <Label Text="Footnote"
+                     StyleClass="Footnote"/>
+              <Label Text="13px, OpenSansRegular, #000000" 
+                     StyleClass="TypographyMeta"/>
+                
                 <Label Text="Examples"
                        StyleClass="LargeTitle" />
                 <BoxView StyleClass="HRule"/>

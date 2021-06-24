@@ -15,6 +15,11 @@
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
+    <FlyoutItem Title="Typography">
+        <ShellContent Route="typography" 
+                      ContentTemplate="{DataTemplate pages:LabelPage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Colors">
         <ShellContent Route="colors" 
                       ContentTemplate="{DataTemplate pages:ColorsPage}" />
