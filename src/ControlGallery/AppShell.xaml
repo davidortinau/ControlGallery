@@ -2,11 +2,18 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:pages="clr-namespace:ControlGallery.Pages"
+       
        xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
        ios:Page.UseSafeArea="true"
+       xmlns:app="clr-namespace:LayoutLab"
        Title="ControlGallery"
        x:Class="ControlGallery.AppShell">
 
+    <FlyoutItem Title="Alert">
+        <ShellContent Route="alert" 
+                      ContentTemplate="{DataTemplate pages:AlertPage}" />
+    </FlyoutItem>
+    
     <FlyoutItem Title="ActivityIndicator">
         <ShellContent Route="activityindicator" 
                       ContentTemplate="{DataTemplate pages:ActivityIndicatorPage}" />
@@ -81,6 +88,76 @@
     <FlyoutItem Title="Margin and Padding">
         <ShellContent Route="marginpadding" 
                       ContentTemplate="{DataTemplate pages:MarginPaddingPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Grid Alignment"
+                >
+        <ShellContent ContentTemplate="{DataTemplate app:AlignmentGridPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Grid Basic"
+                >
+        <ShellContent ContentTemplate="{DataTemplate app:BasicGridPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Grid Calculator"
+                >
+        <ShellContent ContentTemplate="{DataTemplate app:CalculatorPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Grid Slider"
+                >
+        <ShellContent ContentTemplate="{DataTemplate app:SliderGridPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Grid Spacing"
+                >
+        <ShellContent ContentTemplate="{DataTemplate app:SpacingGridPage}"/>
+    </FlyoutItem>
+
+    <!-- Stack -->
+    <FlyoutItem Title="Stack Alignment">
+        <ShellContent ContentTemplate="{DataTemplate app:AlignmentStackPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Stack Combined">
+        <ShellContent ContentTemplate="{DataTemplate app:CombinedStackPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Stack Expansion">
+        <ShellContent ContentTemplate="{DataTemplate app:ExpansionStackPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Stack Horizontal">
+        <ShellContent ContentTemplate="{DataTemplate app:HorizontalStackPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Stack Spacing">
+        <ShellContent ContentTemplate="{DataTemplate app:SpacingStackPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Stack Vertical">
+        <ShellContent ContentTemplate="{DataTemplate app:VerticalStackPage}"/>
+    </FlyoutItem>
+
+    <!-- Flex -->
+    <FlyoutItem Title="Flex Basis">
+        <ShellContent ContentTemplate="{DataTemplate app:BasisExperimentPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flex Catalog Items">
+        <ShellContent ContentTemplate="{DataTemplate app:CatalogItemsPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flex Catalog Items CSS">
+        <ShellContent ContentTemplate="{DataTemplate app:CssCatalogItemsPage}"/>
+    </FlyoutItem>
+    <!--<FlyoutItem Title="Flex Experiment">
+        <ShellContent ContentTemplate="{DataTemplate app:ExperimentPage}"/>
+    </FlyoutItem>-->
+    <FlyoutItem Title="Flex Grow">
+        <ShellContent ContentTemplate="{DataTemplate app:GrowExperimentPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flex Holy Grail">
+        <ShellContent ContentTemplate="{DataTemplate app:HolyGrailLayoutPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flex Photo Wrap">
+        <ShellContent ContentTemplate="{DataTemplate app:PhotoWrappingPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flex Shrink">
+        <ShellContent ContentTemplate="{DataTemplate app:ShrinkExperimentPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Flex Stack">
+        <ShellContent ContentTemplate="{DataTemplate app:SimpleStackPage}"/>
     </FlyoutItem>
 
 </Shell>
