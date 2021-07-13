@@ -34,6 +34,7 @@
 
         <Style TargetType="Button" x:Key="PrimaryButtonOutline">
             <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="14,10"/>
             <Setter Property="BackgroundColor" Value="Transparent"/>
             <Setter Property="TextColor" Value="{StaticResource Primary}"/>
             <Setter Property="BorderWidth" Value="1"/>

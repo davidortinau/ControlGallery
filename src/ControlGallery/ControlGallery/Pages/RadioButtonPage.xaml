@@ -95,58 +95,60 @@
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="On" StyleClass="Headline"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="RadioButton" IsChecked="True" />
-                <RadioButton Content="RadioButton" IsChecked="True" IsEnabled="False"/>
-            </StackLayout>
+        <ScrollView> 
+            <StackLayout>
+                <Label Text="On" StyleClass="Headline"/>
+                <StackLayout Orientation="Horizontal">
+                    <RadioButton Content="RadioButton" IsChecked="True" />
+                    <RadioButton Content="RadioButton" IsChecked="True" IsEnabled="False"/>
+                </StackLayout>
 
-            <Label Text="Off" StyleClass="Headline"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="RadioButton" IsChecked="False" />
-                <RadioButton Content="RadioButton" IsChecked="False" IsEnabled="False"/>
-            </StackLayout>
+                <Label Text="Off" StyleClass="Headline"/>
+                <StackLayout Orientation="Horizontal">
+                    <RadioButton Content="RadioButton" IsChecked="False" />
+                    <RadioButton Content="RadioButton" IsChecked="False" IsEnabled="False"/>
+                </StackLayout>
 
 
-            <Label Text="RadioButtonGroup" StyleClass="Headline" />
-            <StackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="Colors">
-                <RadioButton Content="Red" IsChecked="True"/>
-                <RadioButton Content="Green" />
-                <RadioButton Content="Blue" />
-            </StackLayout>
+                <Label Text="RadioButtonGroup" StyleClass="Headline" />
+                <StackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="Colors">
+                    <RadioButton Content="Red" IsChecked="True"/>
+                    <RadioButton Content="Green" />
+                    <RadioButton Content="Blue" />
+                </StackLayout>
 
-            <Label Text="RadioButton ContentTemplate" StyleClass="Headline"/>
-            <StackLayout 
-                Orientation="Horizontal"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                BindableLayout.ItemsSource="{Binding QualityOptions}"
-                RadioButtonGroup.GroupName="Quality"
-                RadioButtonGroup.SelectedValue="High"
-                >
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <RadioButton StyleClass="ImageQuality">
-                            <RadioButton.Content>
-                                <StackLayout
-                                  HorizontalOptions="Center"
-                                  VerticalOptions="Center">
-                                    <Image
-                                        Source="{FontImage FontFamily=FontAwesome, 
-                                            Glyph={x:Static app:IconFont.Image}, 
-                                            Color=#323130}"
-                                        Scale="0.75" />
-                                    <Label HorizontalOptions="FillAndExpand"
-                                            HeightRequest="40"
-                                           Text="{Binding Description}"
-                                            TextColor="#323130" />
-                                </StackLayout>
-                            </RadioButton.Content>
-                        </RadioButton>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
+                <Label Text="RadioButton ContentTemplate" StyleClass="Headline"/>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BindableLayout.ItemsSource="{Binding QualityOptions}"
+                    RadioButtonGroup.GroupName="Quality"
+                    RadioButtonGroup.SelectedValue="High"
+                    >
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <RadioButton StyleClass="ImageQuality">
+                                <RadioButton.Content>
+                                    <StackLayout
+                                      HorizontalOptions="Center"
+                                      VerticalOptions="Center">
+                                        <Image
+                                            Source="{FontImage FontFamily=FontAwesome, 
+                                                Glyph={x:Static app:IconFont.Image}, 
+                                                Color=#323130}"
+                                            Scale="0.75" />
+                                        <Label HorizontalOptions="FillAndExpand"
+                                                HeightRequest="40"
+                                               Text="{Binding Description}"
+                                                TextColor="#323130" />
+                                    </StackLayout>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

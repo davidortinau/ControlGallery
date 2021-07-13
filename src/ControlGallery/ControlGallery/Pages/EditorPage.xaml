@@ -4,32 +4,34 @@
              x:Class="ControlGallery.Pages.EditorPage"
              Title="Editor">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Default" StyleClass="Headline"/>
-            <Editor/>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Default" StyleClass="Headline"/>
+                <Editor/>
 
-            <Label Text="Placeholder" StyleClass="Headline"/>
-            <Editor Placeholder="Placeholder"/>
+                <Label Text="Placeholder" StyleClass="Headline"/>
+                <Editor Placeholder="Placeholder"/>
             
-            <Label Text="Disabled" StyleClass="Headline"/>
-            <Editor Text="I am disabled" IsEnabled="False"/>
+                <Label Text="Disabled" StyleClass="Headline"/>
+                <Editor Text="I am disabled" IsEnabled="False"/>
 
-            <Label Text="Read-only" StyleClass="Headline"/>
-            <Editor Text="I am read only" IsReadOnly="True"/>
+                <Label Text="Read-only" StyleClass="Headline"/>
+                <Editor Text="I am read only" IsReadOnly="True"/>
 
 
             
 
-            <Label Text="With error message" StyleClass="Headline"/>
-            <Editor />
+                <Label Text="With error message" StyleClass="Headline"/>
+                <Editor />
 
-            <Label Text="Multiline" StyleClass="Headline"/>
-            <Label Text="AutoSize" StyleClass="Subhead"/>
-            <Editor Placeholder="Placeholder" AutoSize="TextChanges"/>
+                <Label Text="Multiline" StyleClass="Headline"/>
+                <Label Text="AutoSize" StyleClass="Subhead"/>
+                <Editor Placeholder="Placeholder" AutoSize="TextChanges"/>
 
-            <Label Text="Fixed Height" StyleClass="Subhead"/>
-            <Editor Placeholder="Placeholder" HeightRequest="200"/>
+                <Label Text="Fixed Height" StyleClass="Subhead"/>
+                <Editor Placeholder="Placeholder" HeightRequest="200"/>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

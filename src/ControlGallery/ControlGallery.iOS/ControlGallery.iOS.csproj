@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -135,13 +136,13 @@
     <PackageReference Include="Xamarin.CommunityToolkit">
       <Version>1.1.0-pre1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ControlGallery\ControlGallery.csproj">
-      <Project>{4EBDC327-608B-4026-9BCD-1C7BEE1FFDEF}</Project>
+      <Project>{7287E734-F683-446A-BF6A-F369E568EC89}</Project>
       <Name>ControlGallery</Name>
     </ProjectReference>
   </ItemGroup>
