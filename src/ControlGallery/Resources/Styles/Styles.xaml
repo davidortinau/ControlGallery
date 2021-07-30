@@ -68,11 +68,7 @@
         <Setter Property="FontSize"
                 Value="12"/>
         <Setter Property="TextColor"
-                Value="{AppThemeBinding 
-                    Dark={StaticResource Neutral},
-                    Light={StaticResource NeutralDarker}}"/>
-        <Setter Property="Margin"
-                Value="0,0,0,16"/>
+                Value="{AppThemeBinding Dark={StaticResource Text_Dark}, Light={StaticResource Text_Light}}"/>
     </Style>
     
     <Style TargetType="Label"

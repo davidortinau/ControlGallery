@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:layouts="clr-namespace:Microsoft.Maui.Controls.Layout2;assembly=Microsoft.Maui.Controls"
+             xmlns:local="clr-namespace:FlexLayoutDemos"
+             x:Class="LayoutLab.SimpleStackPage"
+             Title="Simple Stack">
+    
+    <layouts:FlexLayout Direction="Column"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly">
+        
+        <Label Text="FlexLayout in Action"
+               FontSize="Large" />
+
+        <Image Source="seatedmonkey.jpg" />
+
+        <Button Text="Do-Nothing Button" />
+
+        <Label Text="Another Label" />
+    </layouts:FlexLayout>
+</ContentPage>
