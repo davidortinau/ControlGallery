@@ -25,7 +25,7 @@
 	</PropertyGroup>
 
     <!-- Temporarily disable runtimeconfig.json under .NET framework MSBuild -->
-  <PropertyGroup Condition=" '$(MSBuildRuntimeType)' == 'Full' and ('$(TargetFramework)' == 'net6.0-android' or '$(TargetFramework)' == 'net6.0-ios' or '$(TargetFramework)' == 'net6.0-maccatalyst') ">
+  <!-- <PropertyGroup Condition=" '$(MSBuildRuntimeType)' == 'Full' and ('$(TargetFramework)' == 'net6.0-android' or '$(TargetFramework)' == 'net6.0-ios' or '$(TargetFramework)' == 'net6.0-maccatalyst') ">
     <GenerateRuntimeConfigurationFiles>false</GenerateRuntimeConfigurationFiles>
-  </PropertyGroup>
+  </PropertyGroup> -->
 </Project>

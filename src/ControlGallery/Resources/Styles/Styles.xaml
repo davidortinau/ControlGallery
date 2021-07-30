@@ -34,7 +34,7 @@
         <Setter Property="FontSize"
                 Value="17"/>
         <Setter Property="TextColor"
-                Value="{StaticResource Text_Light}"/>
+                Value="{AppThemeBinding Dark={StaticResource Text_Dark}, Light={StaticResource Text_Light}}"/>
     </Style>
     
     <Style TargetType="Label"
