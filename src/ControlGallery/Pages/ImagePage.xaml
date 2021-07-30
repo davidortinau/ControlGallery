@@ -7,8 +7,7 @@
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
              x:Class="ControlGallery.Pages.ImagePage"
-             Title="Image"
-             BackgroundColor="White">
+             Title="Image">
     <ContentPage.Content>
         <ScrollView Margin="0,60,0,0">
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">

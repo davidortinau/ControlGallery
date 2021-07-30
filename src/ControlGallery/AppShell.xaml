@@ -9,11 +9,18 @@
        Title="ControlGallery"
        x:Class="ControlGallery.AppShell">
 
+
     <FlyoutItem Title="Alert">
         <ShellContent Route="alert" 
                       ContentTemplate="{DataTemplate pages:AlertPage}" />
     </FlyoutItem>
     
+
+    <FlyoutItem Title="AppTheme">
+        <ShellContent Route="apptheme" 
+                      ContentTemplate="{DataTemplate pages:AppThemePage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="ActivityIndicator">
         <ShellContent Route="activityindicator" 
                       ContentTemplate="{DataTemplate pages:ActivityIndicatorPage}" />
@@ -28,6 +35,12 @@
         <ShellContent Route="checkbox" 
                       ContentTemplate="{DataTemplate pages:CheckboxPage}" />
     </FlyoutItem>
+  
+      <FlyoutItem Title="Colors">
+        <ShellContent Route="colors" 
+                      ContentTemplate="{DataTemplate pages:ColorsPage}" />
+    </FlyoutItem>
+
 
     <FlyoutItem Title="DatePicker">
         <ShellContent Route="datepicker" 

@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ControlGallery.Pages.RadioButtonPage"
              xmlns:app="clr-namespace:ControlGallery"
-             BackgroundColor="White"
              Title="RadioButton">
     <ContentPage.Resources>
         <ResourceDictionary>

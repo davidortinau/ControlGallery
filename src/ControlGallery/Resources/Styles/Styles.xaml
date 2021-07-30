@@ -5,34 +5,68 @@
                     x:Class="ControlGallery.Resources.Styles.Styles">
     
     <Color x:Key="Primary">#512BD4</Color>
-        <Color x:Key="Secondary">#DFD8F7</Color>
-        <Color x:Key="Tertiary">#2B0B98</Color>
-        <Color x:Key="Neutral">#969696</Color>
-        <Color x:Key="NeutralLighter">#E5E5E1</Color>
-        <Color x:Key="NeutralDarker">#505050</Color>
-        <Color x:Key="White">#FFFFFF</Color>
-        <Color x:Key="Black">#000000</Color>
-        <Color x:Key="Accent">#F7B548</Color>
-        <Color x:Key="Error">#C00</Color>
-        <Color x:Key="Warning">#FFCC00</Color>
-        <Color x:Key="Text_Light">#000000</Color>
-        <Color x:Key="Text_Dark">#FFFFFF</Color>
-        <Color x:Key="TextOnSolid_Light">#FFFFFF</Color>
-        <Color x:Key="TextOnSolid_Dark">#000000</Color>
-        <Color x:Key="TextSecondary_Light">#1d1d1d</Color>
-        <Color x:Key="TextSecondary_Dark">#f1f1f1</Color>
+    <Color x:Key="Secondary">#DFD8F7</Color>
+    <Color x:Key="Tertiary">#2B0B98</Color>
+    <Color x:Key="Neutral">#969696</Color>
+    <Color x:Key="NeutralLighter">#E5E5E1</Color>
+    <Color x:Key="NeutralDarker">#505050</Color>
+    <Color x:Key="White">#FFFAFA</Color>
+    <Color x:Key="Black">#1d1d1d</Color>
+    <Color x:Key="Accent">#F7B548</Color>
+    <Color x:Key="Error">#C00</Color>
+    <Color x:Key="Warning">#FFCC00</Color>
+    <Color x:Key="Text_Light">#FFFAFA</Color>
+    <Color x:Key="Text_Dark">#FFFFFF</Color>
+    <Color x:Key="TextOnSolid_Light">#FFFFFF</Color>
+    <Color x:Key="TextOnSolid_Dark">#000000</Color>
+    <Color x:Key="TextSecondary_Light">#1d1d1d</Color>
+    <Color x:Key="TextSecondary_Dark">#f1f1f1</Color>
 
-        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
+    <SolidColorBrush x:Key="PrimaryBrush" 
+        Color="{StaticResource Primary}"/>
+    <SolidColorBrush x:Key="SecondaryBrush" 
+        Color="{StaticResource Secondary}"/>
+    <SolidColorBrush x:Key="TertiaryBrush" 
+        Color="{StaticResource Tertiary}"/>
+    <SolidColorBrush x:Key="NeutralBrush" 
+        Color="{StaticResource Neutral}"/>
+    <SolidColorBrush x:Key="NeutralLighterBrush" 
+        Color="{StaticResource NeutralLighter}"/>
+    <SolidColorBrush x:Key="NeutralDarkerBrush" 
+        Color="{StaticResource NeutralDarker}"/>
+    <SolidColorBrush x:Key="AccentBrush" 
+        Color="{StaticResource Accent}"/>
 
-        <Style TargetType="Page" ApplyToDerivedTypes="True">
-                <Setter Property="Padding" Value="15,88,15,0"/>
-                <Setter Property="Background" Value="#F1F1F1"/>
-        </Style>
+    <SolidColorBrush x:Key="BlackBrush" 
+        Color="{StaticResource Black}"/>
+    <SolidColorBrush x:Key="WhiteBrush" 
+        Color="{StaticResource White}"/>
+
+    <Style TargetType="Page" ApplyToDerivedTypes="True">
+        <Setter Property="Padding" Value="15,88,15,0"/>
+        <Setter Property="Background"
+            Value="{AppThemeBinding
+                Dark={StaticResource BlackBrush},
+                Light={StaticResource WhiteBrush}}"/>    
+    </Style>
+
+    <Style TargetType="Layout" Class="InnerContent">
+        <Setter Property="Margin" Value="15"/>
+    </Style>
 
     <Style TargetType="Label">
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize"
                 Value="17"/>
+        <Setter Property="TextColor" 
+            Value="{AppThemeBinding 
+                Dark={StaticResource White}, 
+                Light={StaticResource Black}}"/>
+    </Style>
+
+    <Style TargetType="Label" Class="TypographyMeta">
+        <Setter Property="FontSize"
+                Value="12"/>
         <Setter Property="TextColor"
                 Value="{AppThemeBinding Dark={StaticResource Text_Dark}, Light={StaticResource Text_Light}}"/>
     </Style>
@@ -205,13 +239,23 @@
         </Setter>
     </Style>
 
-    <Style TargetType="StackLayout" Class="CheckBoxContainer">
+    <Style TargetType="BoxView" Class="HRule">
+        <Setter Property="Color" 
+            Value="{AppThemeBinding 
+                Dark={StaticResource Neutral},
+                Light={StaticResource NeutralDarker}}"/>
+        <Setter Property="HeightRequest" Value="1"/>
+    </Style>
+
+    <Style TargetType="StackLayout">
         <Setter Property="Spacing" Value="0"/>
+    </Style>
+
+    <Style TargetType="StackLayout" Class="CheckBoxContainer">
         <Setter Property="Orientation" Value="Horizontal"/>
     </Style>
 
     <Style TargetType="StackLayout" Class="SwitchContainer">
-            <Setter Property="Spacing" Value="0"/>
             <Setter Property="Orientation" Value="Horizontal"/>
         </Style>
 

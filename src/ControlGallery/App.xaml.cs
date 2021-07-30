@@ -10,7 +10,6 @@ namespace ControlGallery
 		public App()
 		{
 			InitializeComponent();
-
 			MainPage = new AppShell();
 		}
 	}
