@@ -39,11 +39,11 @@ namespace LayoutLab
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center
             });
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.Blue
             }, 1, 0);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Row 0, Column 1",
                 HorizontalOptions = LayoutOptions.Center,
@@ -51,21 +51,21 @@ namespace LayoutLab
             }, 1, 0);
 
             // Row 1
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.Teal
             }, 0, 1, 1, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Row 1, Column 0",
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center
             }, 0, 1, 1, 2);
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.Purple
             }, 1, 2, 1, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Row1, Column 1",
                 HorizontalOptions = LayoutOptions.Center,

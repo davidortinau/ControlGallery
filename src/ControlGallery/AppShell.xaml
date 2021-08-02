@@ -2,7 +2,6 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:pages="clr-namespace:ControlGallery.Pages"
-       
        xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
        ios:Page.UseSafeArea="true"
        xmlns:app="clr-namespace:LayoutLab"
@@ -103,6 +102,7 @@
                       ContentTemplate="{DataTemplate pages:MarginPaddingPage}" />
     </FlyoutItem>
 
+    <!-- Grid -->
     <FlyoutItem Title="Grid Alignment"
                 >
         <ShellContent ContentTemplate="{DataTemplate app:AlignmentGridPage}"/>
@@ -154,16 +154,14 @@
     <FlyoutItem Title="Flex Catalog Items CSS">
         <ShellContent ContentTemplate="{DataTemplate app:CssCatalogItemsPage}"/>
     </FlyoutItem>
-    <!--<FlyoutItem Title="Flex Experiment">
-        <ShellContent ContentTemplate="{DataTemplate app:ExperimentPage}"/>
-    </FlyoutItem>-->
     <FlyoutItem Title="Flex Grow">
         <ShellContent ContentTemplate="{DataTemplate app:GrowExperimentPage}"/>
     </FlyoutItem>
-    <FlyoutItem Title="Flex Holy Grail">
+    <!-- fails to compile -->
+    <!-- <FlyoutItem Title="Flex Holy Grail">
         <ShellContent ContentTemplate="{DataTemplate app:HolyGrailLayoutPage}"/>
-    </FlyoutItem>
-    <FlyoutItem Title="Flex Photo Wrap">
+    </FlyoutItem> -->
+    <FlyoutItem Title="Flex Photo Wrap (Crashes)">
         <ShellContent ContentTemplate="{DataTemplate app:PhotoWrappingPage}"/>
     </FlyoutItem>
     <FlyoutItem Title="Flex Shrink">

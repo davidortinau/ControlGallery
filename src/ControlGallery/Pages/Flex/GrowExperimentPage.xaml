@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:layouts="clr-namespace:Microsoft.Maui.Controls.Layout2;assembly=Microsoft.Maui.Controls"
              x:Class="LayoutLab.GrowExperimentPage"
              Title="Grow Experiment">
 
@@ -61,15 +60,15 @@
         </Grid>
 
         <!-- FlexLayout -->
-        <layouts:FlexLayout Grid.Row="1"
+        <FlexLayout Grid.Row="1"
                     Direction="Column"
                     BackgroundColor="AliceBlue">
 
-            <layouts:FlexLayout.Resources>
+            <FlexLayout.Resources>
                 <Style TargetType="Label">
                     <Setter Property="FontSize" Value="Large" />
                 </Style>
-            </layouts:FlexLayout.Resources>
+            </FlexLayout.Resources>
 
             <Label Text="Label 1"
                    TextColor="Blue"
@@ -94,6 +93,6 @@
             <Label Text="Label 5"
                    TextColor="Blue"
                    BackgroundColor="Pink" />
-        </layouts:FlexLayout>
+        </FlexLayout>
     </Grid>
 </ContentPage>

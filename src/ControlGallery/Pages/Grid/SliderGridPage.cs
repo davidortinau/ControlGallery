@@ -91,7 +91,7 @@ namespace LayoutLab
             childGrid.Children.Add(blueLabel);
 
             // Place the child Grid in the root Grid
-            rootGrid.Children.Add(childGrid, 0, 1);
+            rootGrid.Add(childGrid, 0, 1);
 
 
 			this.Content = rootGrid;

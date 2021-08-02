@@ -42,11 +42,11 @@ namespace LayoutLab
 
             // This BoxView and Label are in row 0 and column 1, which are specified as arguments
             // to the Add method. 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.Blue
             }, 1, 0);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Row 0, Column 1",
                 HorizontalOptions = LayoutOptions.Center,
@@ -56,11 +56,11 @@ namespace LayoutLab
             // Row 1
             // This BoxView and Label are in row 1 and column 0, which are specified as arguments
             // to the Add method overload.
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.Teal
             }, 0, 1, 1, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Row 1, Column 0",
                 HorizontalOptions = LayoutOptions.Center,
@@ -68,11 +68,11 @@ namespace LayoutLab
             }, 0, 1, 1, 2); // These arguments indicate that that the child element goes in the column starting at 0 but ending before 1.
                             // They also indicate that the child element goes in the row starting at 1 but ending before 2.
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.Purple
             }, 1, 2, 1, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Row1, Column 1",
                 HorizontalOptions = LayoutOptions.Center,

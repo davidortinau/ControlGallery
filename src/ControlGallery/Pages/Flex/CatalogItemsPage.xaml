@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FlexLayoutDemos"
-             xmlns:layouts="clr-namespace:Microsoft.Maui.Controls.Layout2;assembly=Microsoft.Maui.Controls"
              x:Class="LayoutLab.CatalogItemsPage"
              Title="Catalog Items">
     <ContentPage.Resources>
@@ -38,11 +37,11 @@
     </ContentPage.Resources>
 
     <ScrollView Orientation="Both">
-        <layouts:FlexLayout>
+        <FlexLayout>
             <Frame WidthRequest="300"
                    HeightRequest="480">
 
-                <layouts:FlexLayout Direction="Column">
+                <FlexLayout Direction="Column">
                     <Label Text="Seated Monkey" 
                            Style="{StaticResource headerLabel}" />
                     <Label Text="This monkey is laid back and relaxed, and likes to watch the world go by." />
@@ -54,13 +53,13 @@
                            HeightRequest="180" />
                     <Label FlexLayout.Grow="1" />
                     <Button />
-                </layouts:FlexLayout>
+                </FlexLayout>
             </Frame>
 
             <Frame WidthRequest="300"
                    HeightRequest="480">
 
-                <layouts:FlexLayout Direction="Column">
+                <FlexLayout Direction="Column">
                     <Label Text="Banana Monkey"
                            Style="{StaticResource headerLabel}" />
                     <Label Text="Watch this monkey eat a giant banana." />
@@ -71,13 +70,13 @@
                            HeightRequest="180" />
                     <Label FlexLayout.Grow="1" />
                     <Button />
-                </layouts:FlexLayout>
+                </FlexLayout>
             </Frame>
             
             <Frame WidthRequest="300"
                    HeightRequest="480">
 
-                <layouts:FlexLayout Direction="Column">
+                <FlexLayout Direction="Column">
                     <Label Text="Face-Palm Monkey"
                            Style="{StaticResource headerLabel}" />
                     <Label Text="This monkey reacts appropriately to ridiculous assertions and actions." />
@@ -89,8 +88,8 @@
                            HeightRequest="180" />
                     <Label FlexLayout.Grow="1" />
                     <Button />
-                </layouts:FlexLayout>
+                </FlexLayout>
             </Frame>
-        </layouts:FlexLayout>
+        </FlexLayout>
     </ScrollView>
 </ContentPage>

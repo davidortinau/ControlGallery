@@ -2,6 +2,7 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
+using LayoutLab;
 
 namespace LayoutLab
 {	public class AlignmentGridPage : ContentPage
@@ -56,22 +57,22 @@ namespace LayoutLab
                 VerticalOptions = LayoutOptions.Start
             });
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.LightSkyBlue
             }, 1, 0);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Upper center",
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Start
             }, 1, 0);
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.CadetBlue
             }, 2, 0);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Upper right",
                 HorizontalOptions = LayoutOptions.End,
@@ -79,33 +80,33 @@ namespace LayoutLab
             }, 2, 0);
 
             // Row 1
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.CornflowerBlue
             }, 0, 1);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Center left",
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Center
             }, 0, 1);
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.DodgerBlue
             }, 1, 1);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Center center",
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center
             }, 1, 1);
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.DarkSlateBlue
             }, 2, 1);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Center right",
                 HorizontalOptions = LayoutOptions.End,
@@ -113,33 +114,33 @@ namespace LayoutLab
             }, 2, 1);
 
             // Row 2
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.SteelBlue
             }, 0, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Lower left",
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.End
             }, 0, 2);
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.LightBlue
             }, 1, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Lower center",
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.End
             }, 1, 2);
 
-            grid.Children.Add(new BoxView
+            grid.Add(new BoxView
             {
                 Color = Colors.BlueViolet
             }, 2, 2);
-            grid.Children.Add(new Label
+            grid.Add(new Label
             {
                 Text = "Lower right",
                 HorizontalOptions = LayoutOptions.End,
