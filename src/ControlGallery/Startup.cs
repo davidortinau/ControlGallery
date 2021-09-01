@@ -8,11 +8,12 @@ using Microsoft.Maui.Controls.Hosting;
 
 namespace ControlGallery
 {
-	public class Startup : IStartup
+	public static class MauiProgram
 	{
-		public void Configure(IAppHostBuilder appBuilder)
+		public static MauiApp CreateMauiApp()
 		{
-			appBuilder
+			var builder = MauiApp.CreateBuilder();
+			builder
 // 				.ConfigureMauiHandlers(handlers =>
 // 				{
 // #if WINDOWS10_0_17763_0_OR_GREATER
@@ -26,13 +27,15 @@ namespace ControlGallery
 // 						Microsoft.Maui.Controls.Compatibility.Platform.iOS.ImageButtonRenderer>();
 // #endif
 // 				})
-				.ConfigureFonts((hostingContext, fonts) =>
+				.ConfigureFonts(fonts =>
 				{
 					fonts.AddFont("fa_solid.ttf", "FontAwesome");
 					fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 					fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
 				})
 				.UseMauiApp<App>();
+
+			return builder.Build();
 		}
 	}
 }
