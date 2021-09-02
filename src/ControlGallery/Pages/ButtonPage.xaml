@@ -10,60 +10,60 @@
              Title="Button">
     <ContentPage.Content>
         <ScrollView Margin="0,60,0,0">
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
+            <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
                 <Label Text="Primary filled"/>
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout HorizontalOptions="Start">
                     <Button Text="Button"/>
                     <Button Text="Button" IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button ImageSource="{StaticResource CircleIcon}" Text="Button"/>
                     <Button ImageSource="{StaticResource CircleIcon}" Text="Button" IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button FontFamily="FontAwesome"
                             Text="{x:Static app:IconFont.Archway}"/>
                     <Button FontFamily="FontAwesome"
                             Text="{x:Static app:IconFont.Archway}"
                             IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Primary outline"/>
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button Text="Button" Style="{StaticResource PrimaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutline}"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button ImageSource="{StaticResource CircleIconAlt}" Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
                     <Button ImageSource="{StaticResource CircleIconAlt}" Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button ImageSource="{StaticResource CircleIconAlt}" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
                     <Button ImageSource="{StaticResource CircleIconAlt}" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Secondary outline"/>
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button Text="Button" Style="{StaticResource SecondaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource SecondaryButtonOutline}"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Teriary outline"/>
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Button Text="Button" Style="{StaticResource TertiaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource TertiaryButtonOutline}"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Borderless"/>
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout HorizontalOptions="Start">
                     <Button Text="Button" Style="{StaticResource BorderlessButton}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource BorderlessButton}"/>
-                </StackLayout>
-            </StackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
