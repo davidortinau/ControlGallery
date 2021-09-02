@@ -6,6 +6,7 @@
        ios:Page.UseSafeArea="true"
        xmlns:app="clr-namespace:LayoutLab"
        Title="ControlGallery"
+       FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}"
        x:Class="ControlGallery.AppShell">
 
 

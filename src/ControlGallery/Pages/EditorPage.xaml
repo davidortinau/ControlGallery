@@ -6,7 +6,7 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
                 <Label Text="Default" StyleClass="Headline"/>
                 <Editor/>
 
@@ -32,7 +32,7 @@
                 <Label Text="Fixed Height" StyleClass="Subhead"/>
                 <Editor Placeholder="Placeholder" HeightRequest="200"/>
 
-            </StackLayout>
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

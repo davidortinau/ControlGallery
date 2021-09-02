@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ControlGallery.Pages.AlertPage">
 
-    <StackLayout>
+    <StackLayout Margin="15,100">
         <Button Text="Display Alert" Clicked="Button_Clicked"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"

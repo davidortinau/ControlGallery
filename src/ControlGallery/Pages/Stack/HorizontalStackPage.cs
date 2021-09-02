@@ -8,20 +8,21 @@ namespace LayoutLab
 	{
 		public HorizontalStackPage()
 		{
-            BackgroundColor = Colors.White;
-			this.Content = new StackLayout
+			this.Content = new ScrollView()
             {
-                Margin = new Thickness(20),
-                Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.Center,
-                Children =
+                Content = new StackLayout
                 {
-                    new BoxView { Color = Colors.Red },
-                    new BoxView { Color = Colors.Yellow },
-                    new BoxView { Color = Colors.Blue },
-                    new BoxView { Color = Colors.Green },
-                    new BoxView { Color = Colors.Orange },
-                    new BoxView { Color = Colors.Purple }
+                    Margin = new Thickness(20),
+                    Orientation = StackOrientation.Horizontal,
+                    Children =
+                    {
+                        new BoxView { Color = Colors.Red },
+                        new BoxView { Color = Colors.Yellow },
+                        new BoxView { Color = Colors.Blue },
+                        new BoxView { Color = Colors.Green },
+                        new BoxView { Color = Colors.Orange },
+                        new BoxView { Color = Colors.Purple }
+                    }
                 }
             };
 		}

@@ -14,7 +14,7 @@ namespace LayoutLab
 			{
 				Setters =
                 {
-					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#eee") },
+					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromArgb ("#eee") },
 					new Setter { Property = Button.TextColorProperty, Value = Colors.Black },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
@@ -25,7 +25,7 @@ namespace LayoutLab
 			{
 				Setters =
                 {
-					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#ddd") },
+					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromArgb ("#ddd") },
 					new Setter { Property = Button.TextColorProperty, Value = Colors.Black },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
@@ -36,7 +36,7 @@ namespace LayoutLab
 			{
 				Setters =
                 {
-					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#E8AD00") },
+					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromArgb ("#E8AD00") },
 					new Setter { Property = Button.TextColorProperty, Value = Colors.White },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
 					new Setter { Property = Button.FontSizeProperty, Value = 40 }
@@ -92,9 +92,9 @@ namespace LayoutLab
 			grid.Add(zeroButton, 0, 5);
 			Grid.SetColumnSpan(zeroButton, 2);
 
-			//BackgroundColor = Color.FromHex("#404040");
-			
-            this.Content = grid;
+			BackgroundColor = Color.FromArgb("#404040");
+
+			this.Content = grid;
 		}
 	}
 }

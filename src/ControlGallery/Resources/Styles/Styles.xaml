@@ -15,7 +15,7 @@
     <Color x:Key="Accent">#F7B548</Color>
     <Color x:Key="Error">#C00</Color>
     <Color x:Key="Warning">#FFCC00</Color>
-    <Color x:Key="Text_Light">#FFFAFA</Color>
+    <Color x:Key="Text_Light">#000000</Color>
     <Color x:Key="Text_Dark">#FFFFFF</Color>
     <Color x:Key="TextOnSolid_Light">#FFFFFF</Color>
     <Color x:Key="TextOnSolid_Dark">#000000</Color>
@@ -42,12 +42,89 @@
     <SolidColorBrush x:Key="WhiteBrush" 
         Color="{StaticResource White}"/>
 
+    <!-- Shell -->
+    <Style x:Key="BaseStyle"
+           TargetType="Element">
+        <Setter Property="Shell.BackgroundColor"
+                Value="{StaticResource Primary}" />
+        <Setter Property="Shell.ForegroundColor"
+                Value="{StaticResource White}" />
+        <Setter Property="Shell.TitleColor"
+                Value="Red" />
+        <Setter Property="Shell.DisabledColor"
+                Value="Green" />
+        <Setter Property="Shell.UnselectedColor"
+                Value="#CC0000" />
+        <Setter Property="Shell.NavBarHasShadow"
+                Value="False"/>
+    </Style>
+    <Style BasedOn="{StaticResource BaseStyle}"
+           ApplyToDerivedTypes="True"
+           TargetType="FlyoutItem" />
+
+    <Style
+        TargetType="Label"
+        Class="FlyoutItemLabelStyle">
+        <Setter
+            Property="FontSize"
+            Value="18" />
+        <Setter
+            Property="TextColor"
+            Value="{AppThemeBinding Dark={StaticResource Text_Dark}, Light={StaticResource Text_Light}}" />
+        <Setter
+            Property="FontFamily"
+            Value="OpenSansRegular"/>
+        <Setter
+            Property="HeightRequest"
+            Value="44" />
+    </Style>
+
+    <Style
+            TargetType="Layout"
+            ApplyToDerivedTypes="True"
+            Class="FlyoutItemGridStyle">
+
+            <Setter
+                Property="HeightRequest"
+                Value="84" />
+            <Setter
+                Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup
+                        x:Name="CommonStates">
+                        <VisualState
+                            x:Name="Normal">
+                            <VisualState.Setters>
+
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState
+                            x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter
+                                    Property="BackgroundColor"
+                                    Value="#FF3300" />
+
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState
+                            x:Name="Disabled">
+                            <VisualState.Setters>
+
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
     <Style TargetType="Page" ApplyToDerivedTypes="True">
-        <Setter Property="Padding" Value="15,88,15,0"/>
+        <Setter Property="Padding" Value="15"/>
         <Setter Property="Background"
             Value="{AppThemeBinding
                 Dark={StaticResource BlackBrush},
-                Light={StaticResource WhiteBrush}}"/>    
+                Light={StaticResource WhiteBrush}}"/>
+        <Setter Property="Shell.NavBarIsVisible" Value="false"/>
     </Style>
 
     <Style TargetType="Layout" Class="InnerContent">
@@ -248,7 +325,7 @@
     </Style>
 
     <Style TargetType="StackLayout">
-        <Setter Property="Spacing" Value="0"/>
+        <Setter Property="Spacing" Value="10"/>
     </Style>
 
     <Style TargetType="StackLayout" Class="CheckBoxContainer">
@@ -258,6 +335,10 @@
     <Style TargetType="StackLayout" Class="SwitchContainer">
             <Setter Property="Orientation" Value="Horizontal"/>
         </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="WidthRequest" Value="180"/>
+    </Style>
 
     
 </ResourceDictionary>    

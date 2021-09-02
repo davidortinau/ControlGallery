@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 
 using Microsoft.Maui.Controls;
+using System.Diagnostics;
 
 namespace LayoutLab
 {
@@ -46,11 +47,16 @@ namespace LayoutLab
                         // Create an Image object for each bitmap
                         foreach (string filepath in imageList.Photos)
                         {
-                            Image image = new Image
+                            Debug.WriteLine($"Image: {filepath}");
+                            if (!string.IsNullOrEmpty(filepath))
                             {
-                                Source = ImageSource.FromUri(new Uri(filepath))
-                            };
-                            flexLayout.Add(image);
+                                Image image = new Image
+                                {
+                                    Source = ImageSource.FromUri(new Uri(filepath))
+                                };
+                                flexLayout.Add(image);
+                            }
+                            
                         }
                     }
                 }

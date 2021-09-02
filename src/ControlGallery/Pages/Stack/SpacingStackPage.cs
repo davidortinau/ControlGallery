@@ -11,12 +11,12 @@ namespace LayoutLab
             BackgroundColor = Colors.White;
             this.Content = new StackLayout
             {
-                Margin = new Thickness(20),
+                Margin = new Thickness(100),
                 Spacing = 0,
                 Children =
                 {
                     new Label { Text = "Primary colors" },
-                    new BoxView { Color = Colors.Red },
+                    new BoxView { Color = Colors.Red, WidthRequest = 100, HeightRequest = 100 },
                     new BoxView { Color = Colors.Yellow },
                     new BoxView { Color = Colors.Blue },
                     new Label { Text = "Secondary colors" },

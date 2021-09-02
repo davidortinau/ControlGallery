@@ -6,57 +6,61 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
                 <Label Text="Basic" StyleClass="Headline" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry/>
                     <Entry IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="With Placeholder" StyleClass="Headline" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry Placeholder="Placeholder"/>
                     <Entry Placeholder="Placeholder color" PlaceholderColor="{StaticResource Accent}"/>
                     <Entry Placeholder="Placeholder" IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
                 
                 <Label Text="Password" StyleClass="Headline" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry IsPassword="True" />
                     <Entry IsPassword="True" IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="With Text" StyleClass="Headline" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry Text="Text"/>
                     <Entry Text="Text Color" TextColor="{StaticResource Accent}"/>
                     <Entry Text="Text" IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Read-only" StyleClass="Headline" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry Text="I am read only" IsReadOnly="True"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="With Purple Background" StyleClass="Headline" />
-                <StackLayout Orientation="Horizontal">
-                    <Entry Placeholder="Placeholder" 
-                        Background="{StaticResource Tertiary}"/>
+                <HorizontalStackLayout>
+                    <Entry Placeholder="Placeholder"
+                           TextColor="{StaticResource TextOnSolid_Light}"
+                           PlaceholderColor="{StaticResource TextOnSolid_Light}"
+                           Background="{StaticResource TertiaryBrush}"/>
                     <Entry Placeholder="Placeholder" IsEnabled="False"
-                        Background="{StaticResource Tertiary}"/>
-                </StackLayout>
+                           TextColor="{StaticResource TextOnSolid_Light}"
+                           PlaceholderColor="{StaticResource TextOnSolid_Light}"
+                           Background="{StaticResource TertiaryBrush}"/>
+                </HorizontalStackLayout>
 
                 <Label Text="Community Toolkit Helpers" StyleClass="Headline"/>
                 <Label Text="With error message" StyleClass="Subhead" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry Text="" />
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Input mask" StyleClass="Subhead" />
-                <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout>
                     <Entry Text="" />
-                </StackLayout>
-            </StackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
