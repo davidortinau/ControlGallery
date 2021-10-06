@@ -6,20 +6,70 @@
              xmlns:droid="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
+             Shell.NavBarIsVisible="False"
+             Shell.TitleColor="White"
+             Shell.FlyoutWidth="100"
              x:Class="ControlGallery.Pages.ButtonPage"
              Title="Button">
+    <ContentPage.Resources>
+        <Style TargetType="HorizontalStackLayout">
+            <Setter Property="Spacing" Value="8"/>
+        </Style>
+        <Style TargetType="VerticalStackLayout">
+            <Setter Property="Spacing" Value="8"/>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView Margin="0,60,0,0">
-            <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
+            <VerticalStackLayout 
+               Padding="{OnPlatform iOS='30,60,30,30', Default='30,00'}">
+
+                <Button Text="Click to pop!"
+                        x:Name="PopBtn"
+                        MinimumWidthRequest="300"
+                        MaximumWidthRequest="500"
+                        Padding="40"
+                        TextColor="Orange" 
+                        FontSize="32"
+                        ImageSource="appicon.png"
+                        Margin="0,0,0,40"
+                        AnchorX="0.5"
+                        AnchorY="0.5"
+                        HorizontalOptions="Center"
+                        Clicked="OnButtonClicked">
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="#1d1d1d" 
+                            Radius="10" 
+                            Opacity="0.6"
+                            />
+                    </Button.Shadow>
+                </Button>
+                
+                
+
+
+
                 <Label Text="Primary filled"/>
                 <HorizontalStackLayout HorizontalOptions="Start">
-                    <Button Text="Button"/>
+                    <Button Text="Button"
+                            AnchorX="0.5"
+                        AnchorY="0.5"
+                            >
+                        <Button.Shadow>
+                            <Shadow
+                            Brush="#1d1d1d" 
+                            Radius="20"
+                            Opacity="0.8"
+                            />
+                        </Button.Shadow>
+                    </Button>
                     <Button Text="Button" IsEnabled="False"/>
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout>
-                    <Button ImageSource="{StaticResource CircleIcon}" Text="Button"/>
-                    <Button ImageSource="{StaticResource CircleIcon}" Text="Button" IsEnabled="False"/>
+                <HorizontalStackLayout HorizontalOptions="Start">
+                    <Button MinimumWidthRequest="200" ImageSource="{StaticResource CircleIcon}" Text="Button"/>
+                    <Button MinimumWidthRequest="200" ImageSource="{StaticResource CircleIcon}" Text="Button" IsEnabled="False"/>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
@@ -32,7 +82,8 @@
 
                 <Label Text="Primary outline"/>
                 <HorizontalStackLayout>
-                    <Button Text="Button" Style="{StaticResource PrimaryButtonOutline}"/>
+                    <Button Text="Button" 
+                            Style="{StaticResource PrimaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutline}"/>
                 </HorizontalStackLayout>
 

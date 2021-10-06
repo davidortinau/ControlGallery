@@ -5,7 +5,7 @@
              Title="DatePicker">
 
     <ScrollView>
-        <StackLayout>
+        <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
             <DatePicker />
         </StackLayout>
     </ScrollView>

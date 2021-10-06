@@ -28,7 +28,7 @@
 
                 <Label Text="With Text" StyleClass="Headline" />
                 <HorizontalStackLayout>
-                    <Entry Text="Text"/>
+                    <Entry Text="Text" TextChanged="OnTextChanged" />
                     <Entry Text="Text Color" TextColor="{StaticResource Accent}"/>
                     <Entry Text="Text" IsEnabled="False"/>
                 </HorizontalStackLayout>

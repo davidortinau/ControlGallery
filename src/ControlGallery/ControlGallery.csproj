@@ -8,9 +8,9 @@
     <SingleProject>true</SingleProject>
     <ApplicationTitle>Control Gallery</ApplicationTitle>
     <ApplicationId>com.microsoft.MauiControlGallery</ApplicationId>
-    <ApplicationVersion>1.0</ApplicationVersion>
-    <AndroidVersionCode>1</AndroidVersionCode>
+    <ApplicationVersion>1</ApplicationVersion>
   </PropertyGroup>
+	
   <ItemGroup>
     <MauiImage Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" IsAppIcon="true" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
@@ -34,9 +34,26 @@
 		<PackageReference Include="Microsoft.WindowsAppSDK.InteractiveExperiences" Version="1.0.0-experimental1" NoWarn="NU1701" />
 	</ItemGroup>
 
+  	<ItemGroup>
+  	  <Compile Update="Pages\ShadowPage.xaml.cs">
+  	    <DependentUpon>ShadowPage.xaml</DependentUpon>
+  	  </Compile>
+  	</ItemGroup>
+
+  	<ItemGroup>
+  	  <MauiXaml Update="Pages\ShadowPage.xaml">
+  	    <Generator>MSBuild:Compile</Generator>
+  	  </MauiXaml>
+  	</ItemGroup>
+
+
+	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
+		<OutputType>WinExe</OutputType>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	</PropertyGroup>
+
 	<PropertyGroup>
 		<!-- Required - WinUI can't deploy in a multi-targeting environment -->
-		<AppxPackageRecipe>bin\$(Configuration)\net6.0-windows10.0.19041\win-x64\ControlGallery.build.appxrecipe</AppxPackageRecipe>
 		<RuntimeIdentifier Condition="$(TargetFramework.Contains('-windows'))">win-x64</RuntimeIdentifier>
 	</PropertyGroup>
 

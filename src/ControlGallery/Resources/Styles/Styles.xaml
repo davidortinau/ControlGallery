@@ -50,7 +50,7 @@
         <Setter Property="Shell.ForegroundColor"
                 Value="{StaticResource White}" />
         <Setter Property="Shell.TitleColor"
-                Value="Red" />
+                Value="{AppThemeBinding Dark={StaticResource Text_Light}, Light={StaticResource Text_Dark}}" />
         <Setter Property="Shell.DisabledColor"
                 Value="Green" />
         <Setter Property="Shell.UnselectedColor"
@@ -67,16 +67,18 @@
         Class="FlyoutItemLabelStyle">
         <Setter
             Property="FontSize"
-            Value="18" />
+            Value="16" />
         <Setter
             Property="TextColor"
-            Value="{AppThemeBinding Dark={StaticResource Text_Dark}, Light={StaticResource Text_Light}}" />
+            Value="{AppThemeBinding Dark={StaticResource Primary}, Light={StaticResource Primary}}" />
         <Setter
             Property="FontFamily"
             Value="OpenSansRegular"/>
         <Setter
             Property="HeightRequest"
             Value="44" />
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
     </Style>
 
     <Style
@@ -86,7 +88,7 @@
 
             <Setter
                 Property="HeightRequest"
-                Value="84" />
+                Value="44" />
             <Setter
                 Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
@@ -95,8 +97,10 @@
                         <VisualState
                             x:Name="Normal">
                             <VisualState.Setters>
-
-                            </VisualState.Setters>
+                            <Setter
+                                Property="BackgroundColor"
+                                Value="#FF9900" />
+                        </VisualState.Setters>
                         </VisualState>
                         <VisualState
                             x:Name="Selected">
@@ -119,12 +123,12 @@
         </Style>
 
     <Style TargetType="Page" ApplyToDerivedTypes="True">
-        <Setter Property="Padding" Value="15"/>
+        <Setter Property="Padding" Value="0"/>
         <Setter Property="Background"
             Value="{AppThemeBinding
                 Dark={StaticResource BlackBrush},
                 Light={StaticResource WhiteBrush}}"/>
-        <Setter Property="Shell.NavBarIsVisible" Value="false"/>
+        <Setter Property="Shell.NavBarIsVisible" Value="True"/>
     </Style>
 
     <Style TargetType="Layout" Class="InnerContent">
@@ -205,6 +209,13 @@
     </Style>
 
     <FontImageSource
+        x:Key="AtomIcon"
+        FontFamily="FontAwesome"
+        Glyph="{x:Static app:IconFont.Atom}"
+        Color="{StaticResource TextOnSolid_Light}"
+        Size="42"/>
+
+    <FontImageSource
         x:Key="CircleIcon"
         FontFamily="FontAwesome"
         Glyph="{x:Static app:IconFont.DotCircle}"
@@ -242,6 +253,14 @@
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                            <Setter Property="Scale"
+                            Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                            Value="1" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Disabled">
@@ -259,13 +278,13 @@
         <Setter Property="CornerRadius" Value="8"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="TextColor" Value="{StaticResource Primary}"/>
-        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="BorderWidth" Value="0"/>
         <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
-                        <VisualState.Setters>
+                        <VisualState.Setters>   
                             <Setter Property="Background" Value="Transparent" />
                         </VisualState.Setters>
                     </VisualState>

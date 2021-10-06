@@ -8,6 +8,63 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+                <!-- Unicode line feed character -->
+                <Label Text="First line &#10; Second line" />
+
+                <!-- Property element syntax -->
+                <Label>
+                    <Label.Text>
+                        First line
+                        Second line
+                        Third Line
+                    </Label.Text>
+                </Label>
+
+                <Label Text="Character spaced text"
+       CharacterSpacing="10" />
+
+                <Label Text="This text will be displayed in uppercase."
+       TextTransform="Lowercase" />
+
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       LineHeight="1.8" />
+                
+                <Label BackgroundColor="Yellow" 
+                       Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
+       TextType="Html"  />
+
+                <Label LineBreakMode="WordWrap">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
+                            <Span Text="default, " Style="{DynamicResource BodyStyle}">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            <Span Text="italic small." FontAttributes="Italic" FontSize="Small" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <!--<Label Text="XAML Hot Reload connected and working, unless I make a layout change"
+                       FontSize="12"
+                       TextColor="Red"
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       Padding="10"
+                       Margin="50"
+                       MaxLines="3"
+                       LineBreakMode="TailTruncation"
+                       FontAttributes="Italic"
+                       TextDecorations="Underline"
+                       VerticalTextAlignment="End"
+                       HorizontalTextAlignment="Start"
+                       />-->
+
+
                 <Label Text="App Text Styles"
                        StyleClass="Headline" />
                 <BoxView StyleClass="HRule"/>

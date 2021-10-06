@@ -5,10 +5,16 @@
        xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
        ios:Page.UseSafeArea="true"
        xmlns:app="clr-namespace:LayoutLab"
-       Title="ControlGallery"
+       Title="ControlGallery" FlyoutBackgroundColor="Red"
        FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}"
        x:Class="ControlGallery.AppShell">
 
+    <FlyoutItem Title="Working">
+        <ShellContent Route="working" 
+                      ContentTemplate="{DataTemplate pages:ShadowPage}" />
+    </FlyoutItem>
+    
+    <!-- working file above -->
 
     <FlyoutItem Title="Alert">
         <ShellContent Route="alert" 
@@ -25,7 +31,12 @@
         <ShellContent Route="activityindicator" 
                       ContentTemplate="{DataTemplate pages:ActivityIndicatorPage}" />
     </FlyoutItem>
-    
+
+    <FlyoutItem Title="Border">
+        <ShellContent Route="border" 
+                      ContentTemplate="{DataTemplate pages:BorderPage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Button">
         <ShellContent Route="button" 
                       ContentTemplate="{DataTemplate pages:ButtonPage}" />

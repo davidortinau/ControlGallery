@@ -8,12 +8,84 @@
              ios:Page.UseSafeArea="true"
              x:Class="ControlGallery.Pages.ImagePage"
              Title="Image">
+    <ContentPage.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Background" Value="#f1f1f1"/>
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView Margin="0,60,0,0">
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
-                <Label Text="Image" StyleClass="Headline"/>
-                <Image Source="dotnet_bot.png" HeightRequest="200" WidthRequest="200"/>
-            </StackLayout>
+            <VerticalStackLayout 
+                Spacing="20"
+                Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
+                <Label Text="Images" 
+                           StyleClass="Headline"/>
+                <Border Stroke="Black"
+                        StrokeThickness="3"
+                        HorizontalOptions="Start"
+                        >
+                    <Border.StrokeShape>
+                        <RoundRectangle />
+                    </Border.StrokeShape>
+                    <Image Source="{StaticResource CircleIcon}"
+                           HeightRequest="50"
+                           WidthRequest="50"
+                           BackgroundColor="Black"
+                           />
+                </Border>
+
+                <Label Text="Image with 40x40 and #f1f1f1 bg"/>
+                <Image Source="dotnet_bot.png" 
+                       BackgroundColor="#f1f1f1"
+                       HeightRequest="40" WidthRequest="40"/>
+
+                <Label Text="Image with AspectFill 40x100"/>
+                <Image Source="dotnet_bot.png" 
+                       BackgroundColor="#f1f1f1"
+                       HeightRequest="40" 
+                       WidthRequest="100"
+                       Aspect="AspectFill"
+                       />
+
+                <Label Text="Image with AspectFit 40x100"/>
+                <Image Source="dotnet_bot.png" 
+                       HeightRequest="40" WidthRequest="100"
+                       BackgroundColor="#f1f1f1"
+                       Aspect="AspectFit"
+                       />
+
+                <!--<Label Text="Image with Center 40x100"/>
+                <Image Source="dotnet_bot.png" 
+                       HeightRequest="40" WidthRequest="100"
+                       Aspect="Center"
+                       />-->
+
+                <Label Text="Image with Fill 40x100"/>
+                <Image Source="dotnet_bot.png" 
+                       HeightRequest="40" WidthRequest="100"
+                       Aspect="Fill"
+                       />
+
+                <Label Text="Online image"/>
+                <Image Source="https://aka.ms/campus.jpg" 
+                       WidthRequest="200"
+                       HeightRequest="200"/>
+
+                <Label Text="Online image clipped"/>
+                <Image Source="https://aka.ms/campus.jpg" 
+                       Aspect="AspectFill"
+                       WidthRequest="100"
+                       HeightRequest="100">
+                    <Image.Clip>
+                        <EllipseGeometry 
+                            Center="100,100"
+                            RadiusX="100" RadiusY="100" />
+                    </Image.Clip>
+                </Image>
+
+                <Label Text="Image without sizing info"/>
+                <Image Source="dotnet_bot.png" HorizontalOptions="Start" />
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

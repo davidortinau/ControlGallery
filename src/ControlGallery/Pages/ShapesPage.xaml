@@ -84,6 +84,11 @@
                     <Polygon Fill="{StaticResource PrimaryBrush}"
                         Margin="0,10"
                             Points="8 25 25 0 42 25 25 50"/>
+
+                    <Path 
+    Fill="{StaticResource PrimaryBrush}"
+    Data="M50,0 L50,50 L25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.3309524 10.9701429,0.224119049 24.5865793,0.00334928573 L25,0 L50,0 Z" />
+
                 </FlexLayout>                
             </StackLayout>
         </ScrollView>

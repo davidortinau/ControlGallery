@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.ShadowPage"
+             Title="Border"
+             >
+    <ContentPage.Resources>
+        <Shadow x:Key="BasicShadow"
+                            Brush="{StaticResource BlackBrush}"
+                            Opacity="0.8"
+                            Radius="10"
+                            Offset="10,10"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Margin="15" Spacing="8">
+                <Label Text="On a layout"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+
+                <VerticalStackLayout Padding="12" Margin="20" 
+                                     Background="#f1f1f1"
+                                     HorizontalOptions="Start"
+                                     Shadow="{StaticResource BasicShadow}">
+                    <Label Text="Padding=12, Margin=20"/>
+                </VerticalStackLayout>
+
+                <Label Text="On a label"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+
+                
+                <Label Text="I Have A Shadow" 
+                       Shadow="{StaticResource BasicShadow}"/>
+                
+                <Label Text="Image with clip"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+
+                <Image Source="https://aka.ms/campus.jpg"
+                       Aspect="AspectFill"
+                       HeightRequest="120"
+                       WidthRequest="120"
+                       Shadow="{StaticResource BasicShadow}"
+                       >
+                    <Image.Clip>
+                        <EllipseGeometry RadiusX="120"
+                                         RadiusY="120"
+                                         Center="120,120"/>
+                    </Image.Clip>
+                </Image>
+
+                <Label Text="Shape"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+
+                <Polygon Fill="{StaticResource PrimaryBrush}"
+                         Shadow="{StaticResource BasicShadow}"
+                        Points="0 36 0 13.5 13.5 0 36 0 50 13.5 50 36 36 50 13.5 50"/>
+
+                <Label Text="Compound shapes"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+
+                <Grid 
+                    HorizontalOptions="Start"
+                    RowDefinitions="Auto"
+                    ColumnDefinitions="Auto"
+                    Shadow="{StaticResource BasicShadow}">
+                    <Polygon Fill="#663300" 
+                         Points="0 0 0 50 25 25"/>
+                    <Polygon Fill="#FF6600" 
+                         Points="0 0 50 0 25 25"/>
+                    <Polygon Fill="#FF9900" 
+                         Points="50 0 50 50 25 25"/>
+                    <Polygon Fill="#8C5D00" 
+                         Points="0 50 25 25 50 50"/>
+                </Grid>
+
+                <Label Text="Path"
+                       Margin="0,80,0,0"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+
+                <Path 
+                    Fill="{StaticResource PrimaryBrush}"
+                    Data="M50,0 L50,50 L25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.3309524 10.9701429,0.224119049 24.5865793,0.00334928573 L25,0 L50,0 Z" />
+                <BoxView HeightRequest="100"
+                         />
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+        
+</ContentPage>

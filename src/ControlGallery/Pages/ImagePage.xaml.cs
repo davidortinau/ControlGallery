@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Shapes;
 using Microsoft.Maui.Controls.Xaml;
 
 namespace ControlGallery.Pages
@@ -15,6 +16,8 @@ namespace ControlGallery.Pages
         public ImagePage()
         {
             InitializeComponent();
+
+            
         }
     }
 }

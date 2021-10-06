@@ -8,5 +8,21 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     />
+
+        <Border HorizontalOptions="Start"
+               Background="Red"
+                StrokeThickness="2"
+                Stroke="White"
+                WidthRequest="200"
+                HeightRequest="40"
+               >
+            <Border.StrokeShape>
+                <RoundRectangle WidthRequest="200" HeightRequest="40" CornerRadius="20"/>
+            </Border.StrokeShape>
+            <StackLayout>
+                <Label TextColor="White" Text="I'm in a stack"/>
+            </StackLayout>
+            
+        </Border>
     </StackLayout>
 </ContentPage>
