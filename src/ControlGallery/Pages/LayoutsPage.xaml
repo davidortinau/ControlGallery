@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             x:Class="ControlGallery.Pages.LayoutsPage"
+             Title="Layouts">
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <BindableLayout.ItemsSource>
+                <x:Array Type="{x:Type m:NavItem}">
+                    <m:NavItem Title="Flex - Basis"
+                                   Destination="{x:Type p:FlexBas}"/>
+                    
+                </x:Array>
+            </BindableLayout.ItemsSource>
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button Style="{StaticResource BorderlessButton}"
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

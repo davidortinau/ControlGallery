@@ -35,33 +35,15 @@
 	</ItemGroup>
 
   	<ItemGroup>
-  	  <Compile Update="Pages\LayoutsPage.xaml.cs">
-  	    <DependentUpon>LayoutsPage.xaml</DependentUpon>
-  	  </Compile>
-  	  <Compile Update="Pages\ControlsPage.xaml.cs">
-  	    <DependentUpon>ControlsPage.xaml</DependentUpon>
-  	  </Compile>
   	  <Compile Update="Pages\ShadowPage.xaml.cs">
   	    <DependentUpon>ShadowPage.xaml</DependentUpon>
   	  </Compile>
   	</ItemGroup>
 
   	<ItemGroup>
-  	  <MauiXaml Update="Pages\LayoutsPage.xaml">
-  	    <SubType>Designer</SubType>
-  	    <Generator>MSBuild:Compile</Generator>
-  	  </MauiXaml>
-  	  <MauiXaml Update="Pages\ControlsPage.xaml">
-  	    <Generator>MSBuild:Compile</Generator>
-  	  </MauiXaml>
   	  <MauiXaml Update="Pages\ShadowPage.xaml">
   	    <Generator>MSBuild:Compile</Generator>
   	  </MauiXaml>
-  	</ItemGroup>
-
-  	<ItemGroup>
-  	  <Folder Include="Pages\Controls\" />
-  	  <Folder Include="Pages\Layouts\" />
   	</ItemGroup>
 
 

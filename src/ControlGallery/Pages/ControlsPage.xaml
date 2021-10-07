@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:p="clr-namespace:ControlGallery.Pages"
+             x:Class="ControlGallery.Pages.ControlsPage"
+             Title="Controls">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout>
+                <BindableLayout.ItemsSource>
+                    <x:Array Type="{x:Type m:NavItem}">
+                        <m:NavItem Title="ActivityIndicator"
+                                   Destination="{x:Type p:ActivityIndicatorPage}"/>
+                        <m:NavItem Title="Alerts"
+                                   Destination="{x:Type p:AlertPage}"/>
+                        <m:NavItem Title="App Themes"
+                                   Destination="{x:Type p:AppThemePage}"/>
+                        <m:NavItem Title="Borders"
+                                   Destination="{x:Type p:BorderPage}"/>
+                        <m:NavItem Title="Buttons"
+                                   Destination="{x:Type p:ButtonPage}"/>
+                        <m:NavItem Title="CheckBoxes"
+                                   Destination="{x:Type p:CheckboxPage}"/>
+                        <m:NavItem Title="Date Picker"
+                                   Destination="{x:Type p:DatePickerPage}"/>
+                        <m:NavItem Title="Editors"
+                                   Destination="{x:Type p:EditorPage}"/>
+                        <m:NavItem Title="Entry"
+                                   Destination="{x:Type p:EntryPage}"/>
+                        <m:NavItem Title="Images"
+                                   Destination="{x:Type p:ImagePage}"/>
+                        <m:NavItem Title="Labels"
+                                   Destination="{x:Type p:LabelPage}"/>
+                        <m:NavItem Title="Progress Bars"
+                                   Destination="{x:Type p:ProgressBarPage}"/>
+                        <m:NavItem Title="Radio Buttons"
+                                   Destination="{x:Type p:RadioButtonPage}"/>
+                        <m:NavItem Title="Shadows"
+                                   Destination="{x:Type p:ShadowPage}"/>
+                        <m:NavItem Title="Shapes"
+                                   Destination="{x:Type p:ShapesPage}"/>
+                        <m:NavItem Title="Sliders"
+                                   Destination="{x:Type p:SliderPage}"/>
+                        <m:NavItem Title="Steppers"
+                                   Destination="{x:Type p:StepperPage}"/>
+                        <m:NavItem Title="Switches"
+                                   Destination="{x:Type p:SwitchPage}"/>
+                    </x:Array>
+                </BindableLayout.ItemsSource>
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource BorderlessButton}"
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

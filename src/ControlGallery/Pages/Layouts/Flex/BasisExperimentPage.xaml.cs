@@ -2,7 +2,7 @@
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Layouts;
 
-namespace LayoutLab
+namespace ControlGallery.Pages.Layouts
 {
 	public partial class BasisExperimentPage : ContentPage
 	{

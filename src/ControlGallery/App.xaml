@@ -1,8 +1,23 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:WeatherTwentyOne"
+             xmlns:pages="clr-namespace:ControlGallery.Pages"
              x:Class="ControlGallery.App">
     <Application.Resources>
         <ResourceDictionary Source="Resources/Styles/Styles.xaml"/>
     </Application.Resources>
+
+    <Application.MainPage>
+        <Shell
+            FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}">
+            <FlyoutItem Title="Controls">
+                <ShellContent Route="controls" 
+                      ContentTemplate="{DataTemplate pages:ControlsPage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Layouts">
+                <ShellContent Route="alert" 
+                      ContentTemplate="{DataTemplate pages:LayoutsPage}" />
+            </FlyoutItem>
+        </Shell>
+    </Application.MainPage>
 </Application>
