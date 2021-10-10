@@ -2,25 +2,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
              x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
     <ContentPage.Content>
-        <VerticalStackLayout>
-            <BindableLayout.ItemsSource>
-                <x:Array Type="{x:Type m:NavItem}">
-                    <m:NavItem Title="Flex - Basis"
-                                   Destination="{x:Type p:FlexBas}"/>
-                    
-                </x:Array>
-            </BindableLayout.ItemsSource>
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <Button Style="{StaticResource BorderlessButton}"
+        <ScrollView>
+
+            <VerticalStackLayout>
+                <Label Text="FlexLayout" StyleClass="Headline"/>
+                <VerticalStackLayout>
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Basis"
+                                   Destination="{x:Type p:BasisExperimentPage}"/>
+                            <m:NavItem Title="Catalog"
+                                   Destination="{x:Type p:CatalogItemsPage}"/>
+                            <m:NavItem Title="Grow"
+                                   Destination="{x:Type p:GrowExperimentPage}"/>
+                            <m:NavItem Title="Shrink"
+                                   Destination="{x:Type p:ShrinkExperimentPage}"/>
+                            <m:NavItem Title="Simple"
+                                   Destination="{x:Type p:SimpleStackPage}"/>
+                            <m:NavItem Title="Wrapping"
+                                   Destination="{x:Type p:PhotoWrappingPage}"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource BorderlessButton}"
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
                                 />
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </VerticalStackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
+                <Label Text="Grid" StyleClass="Headline"/>
+            </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
