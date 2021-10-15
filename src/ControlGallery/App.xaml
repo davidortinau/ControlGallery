@@ -9,6 +9,20 @@
     <Application.MainPage>
         <Shell
             FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}">
+            <Shell.FlyoutHeaderTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="120" 
+                          ColumnDefinitions="*"
+                          Background="#333333"
+                          >
+                        <Label Text="Control Gallery"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </Shell.FlyoutHeaderTemplate>
+            
             <FlyoutItem Title="Controls">
                 <ShellContent Route="controls" 
                       ContentTemplate="{DataTemplate pages:ControlsPage}" />
@@ -16,6 +30,11 @@
 
             <FlyoutItem Title="Layouts">
                 <ShellContent Route="alert" 
+                      ContentTemplate="{DataTemplate pages:LayoutsPage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Features">
+                <ShellContent Route="features" 
                       ContentTemplate="{DataTemplate pages:LayoutsPage}" />
             </FlyoutItem>
         </Shell>

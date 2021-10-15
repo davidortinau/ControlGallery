@@ -7,13 +7,14 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
                 <Label Text="Default" StyleClass="Headline"/>
-                <StackLayout StyleClass="CheckBoxContainer">
+                <StackLayout>
                     <CheckBox/>
                     <Label Text="Unchecked" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout StyleClass="CheckBoxContainer">
-                    <CheckBox IsChecked="True"/>
+                    <CheckBox IsChecked="True" Color="Red" BackgroundColor="Black"/>
                     <Label Text="Checked" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout StyleClass="CheckBoxContainer">

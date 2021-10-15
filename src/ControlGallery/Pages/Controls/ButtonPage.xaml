@@ -45,40 +45,29 @@
                             />
                     </Button.Shadow>
                 </Button>
-                
-                
+
+
 
 
 
                 <Label Text="Primary filled"/>
-                <HorizontalStackLayout HorizontalOptions="Start">
-                    <Button Text="Button"
-                            AnchorX="0.5"
-                        AnchorY="0.5"
-                            >
-                        <Button.Shadow>
-                            <Shadow
-                            Brush="#1d1d1d" 
-                            Radius="20"
-                            Opacity="0.8"
-                            />
-                        </Button.Shadow>
-                    </Button>
+                <StackLayout Orientation="Vertical">
+                    <Button Text="Button"/>
                     <Button Text="Button" IsEnabled="False"/>
-                </HorizontalStackLayout>
+                </StackLayout>
 
-                <HorizontalStackLayout HorizontalOptions="Start">
-                    <Button MinimumWidthRequest="200" ImageSource="{StaticResource CircleIcon}" Text="Button"/>
-                    <Button MinimumWidthRequest="200" ImageSource="{StaticResource CircleIcon}" Text="Button" IsEnabled="False"/>
-                </HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Button ImageSource="{StaticResource CircleIcon}" Text="Button"/>
+                    <Button ImageSource="{StaticResource CircleIcon}" Text="Button" IsEnabled="False"/>
+                </VerticalStackLayout>
 
-                <HorizontalStackLayout>
+                <VerticalStackLayout>
                     <Button FontFamily="FontAwesome"
                             Text="{x:Static app:IconFont.Archway}"/>
                     <Button FontFamily="FontAwesome"
                             Text="{x:Static app:IconFont.Archway}"
                             IsEnabled="False"/>
-                </HorizontalStackLayout>
+                </VerticalStackLayout>
 
                 <Label Text="Primary outline"/>
                 <HorizontalStackLayout>

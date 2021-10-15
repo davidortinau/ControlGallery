@@ -4,10 +4,11 @@
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
              x:Class="ControlGallery.Pages.ControlsPage"
+             BackgroundImageSource="dotnet_bot.png"
              Title="Controls">
     <ContentPage.Content>
         <ScrollView>
-            <VerticalStackLayout>
+            <VerticalStackLayout Spacing="8">
                 <BindableLayout.ItemsSource>
                     <x:Array Type="{x:Type m:NavItem}">
                         <m:NavItem Title="ActivityIndicator"
@@ -50,10 +51,14 @@
                 </BindableLayout.ItemsSource>
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Button Style="{StaticResource BorderlessButton}"
-                                Text="{Binding Title}"
-                                Command="{Binding NavigateTo}"
-                                />
+                        <Label HeightRequest="44"
+                               VerticalTextAlignment="Center"
+                               Text="{Binding Title}"
+                               >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateTo}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </VerticalStackLayout>

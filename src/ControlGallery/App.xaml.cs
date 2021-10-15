@@ -13,6 +13,8 @@ namespace ControlGallery
 			InitializeComponent();
 
 			RegisterRoutes();
+
+			App.Current.UserAppTheme = OSAppTheme.Light;
 		}
 
         private void RegisterRoutes()

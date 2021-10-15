@@ -5,6 +5,8 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Graphics.Controls.Hosting;
+using Microsoft.Maui.Graphics.Controls;
 
 namespace ControlGallery
 {
@@ -15,6 +17,7 @@ namespace ControlGallery
 			var builder = MauiApp.CreateBuilder();
 			builder
 				.UseMauiApp<App>()
+				//.ConfigureGraphicsControls(DrawableType.Material)
 				.ConfigureFonts(fonts =>
 				{
 					fonts.AddFont("fa_solid.ttf", "FontAwesome");

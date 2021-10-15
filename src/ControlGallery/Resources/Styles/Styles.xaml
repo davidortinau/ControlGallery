@@ -42,6 +42,8 @@
     <SolidColorBrush x:Key="WhiteBrush" 
         Color="{StaticResource White}"/>
 
+    
+
     <!-- Shell -->
     <Style x:Key="BaseStyle"
            TargetType="Element">
@@ -74,10 +76,6 @@
         <Setter
             Property="FontFamily"
             Value="OpenSansRegular"/>
-        <Setter
-            Property="HeightRequest"
-            Value="44" />
-        <Setter Property="VerticalTextAlignment" Value="Center"/>
         <Setter Property="VerticalOptions" Value="Center"/>
     </Style>
 
@@ -98,7 +96,7 @@
                             x:Name="Normal">
                             <VisualState.Setters>
                             <Setter
-                                Property="BackgroundColor"
+                                Property="Background"
                                 Value="#FF9900" />
                         </VisualState.Setters>
                         </VisualState>
@@ -106,7 +104,7 @@
                             x:Name="Selected">
                             <VisualState.Setters>
                                 <Setter
-                                    Property="BackgroundColor"
+                                    Property="Background"
                                     Value="#FF3300" />
 
                             </VisualState.Setters>
