@@ -8,7 +8,7 @@ using System.Runtime.Serialization.Json;
 using Microsoft.Maui.Controls;
 using System.Diagnostics;
 
-namespace LayoutLab
+namespace ControlGallery.Pages.Layouts
 {
     public partial class PhotoWrappingPage : ContentPage
     {

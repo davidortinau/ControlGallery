@@ -1,4 +1,5 @@
 ﻿using ControlGallery.Pages;
+using ControlGallery.Pages.Layouts;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;
@@ -37,6 +38,15 @@ namespace ControlGallery
 			Routing.RegisterRoute(nameof(SliderPage), typeof(SliderPage));
 			Routing.RegisterRoute(nameof(StepperPage), typeof(StepperPage));
 			Routing.RegisterRoute(nameof(SwitchPage), typeof(SwitchPage));
+
+			// Layouts
+			Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));
+			Routing.RegisterRoute(nameof(CatalogItemsPage), typeof(CatalogItemsPage));
+			Routing.RegisterRoute(nameof(CssCatalogItemsPage), typeof(CssCatalogItemsPage));
+			Routing.RegisterRoute(nameof(GrowExperimentPage), typeof(GrowExperimentPage));
+			Routing.RegisterRoute(nameof(PhotoWrappingPage), typeof(PhotoWrappingPage));
+			Routing.RegisterRoute(nameof(ShrinkExperimentPage), typeof(ShrinkExperimentPage));
+			Routing.RegisterRoute(nameof(SimpleStackPage), typeof(SimpleStackPage));
 		}
     }
 }
