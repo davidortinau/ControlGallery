@@ -47,6 +47,22 @@ namespace ControlGallery
 			Routing.RegisterRoute(nameof(PhotoWrappingPage), typeof(PhotoWrappingPage));
 			Routing.RegisterRoute(nameof(ShrinkExperimentPage), typeof(ShrinkExperimentPage));
 			Routing.RegisterRoute(nameof(SimpleStackPage), typeof(SimpleStackPage));
+
+			Routing.RegisterRoute(nameof(AlignmentGridPage), typeof(AlignmentGridPage));
+			Routing.RegisterRoute(nameof(BasicGridPage), typeof(BasicGridPage));
+			Routing.RegisterRoute(nameof(CalculatorPage), typeof(CalculatorPage));
+			Routing.RegisterRoute(nameof(SliderGridPage), typeof(SliderGridPage));
+			Routing.RegisterRoute(nameof(SpacingGridPage), typeof(SpacingGridPage));
+
+			Routing.RegisterRoute(nameof(AlignmentStackPage), typeof(AlignmentStackPage));
+			Routing.RegisterRoute(nameof(CombinedStackPage), typeof(CombinedStackPage));
+			Routing.RegisterRoute(nameof(ExpansionStackPage), typeof(ExpansionStackPage));
+			Routing.RegisterRoute(nameof(HorizontalStackPage), typeof(HorizontalStackPage));
+			Routing.RegisterRoute(nameof(SpacingStackPage), typeof(SpacingStackPage));
+			Routing.RegisterRoute(nameof(VerticalStackPage), typeof(VerticalStackPage));
+
+			Routing.RegisterRoute(nameof(ColorsPage), typeof(ColorsPage));
+			Routing.RegisterRoute(nameof(MarginPaddingPage), typeof(MarginPaddingPage));
 		}
     }
 }

@@ -3,16 +3,25 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
 
-namespace LayoutLab
+namespace ControlGallery.Pages.Layouts
 {	public class SpacingStackPage : ContentPage
 	{
 		public SpacingStackPage()
 		{
-            BackgroundColor = Colors.White;
+            Style boxStyle = new Style(typeof(BoxView))
+            {
+                Setters =
+                {
+                    new Setter { Property = BoxView.HeightRequestProperty, Value = 50 },
+                    new Setter { Property = BoxView.WidthRequestProperty, Value = 50 }
+                }
+            };
+            Resources.Add(boxStyle);
+
             this.Content = new StackLayout
             {
                 Margin = new Thickness(100),
-                Spacing = 0,
+                Spacing = 40,
                 Children =
                 {
                     new Label { Text = "Primary colors" },

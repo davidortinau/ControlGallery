@@ -1,16 +1,19 @@
 ﻿using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
-using LayoutLab.Converters;
+using ControlGallery.Converters;
 using Microsoft.Maui.Graphics;
+using ControlGallery.Common;
 
-namespace LayoutLab
+namespace ControlGallery.Pages.Layouts
 {	public class SliderGridPage : ContentPage
 	{
         BoxView boxView;
         Slider redSlider;
         Slider greenSlider;
         Slider blueSlider;
+        Label hexLabel;
+
 		public SliderGridPage()
 		{
             BackgroundColor = Colors.White;
@@ -38,6 +41,15 @@ namespace LayoutLab
             boxView = new BoxView { Color = Colors.Black };
             rootGrid.Children.Add(boxView);
 
+            hexLabel = new Label()
+            {
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalOptions = LayoutOptions.Center,
+                TextColor = Colors.Black,
+                FontSize = 64
+            };
+            rootGrid.Children.Add(hexLabel);
+
             // Child page layout
             Grid childGrid = new Grid
             {
@@ -55,7 +67,7 @@ namespace LayoutLab
 
             DoubleToIntConverter doubleToInt = new DoubleToIntConverter();
 
-            redSlider = new Slider();
+redSlider = new Slider();
             redSlider.ValueChanged += OnSliderValueChanged;
             childGrid.Children.Add(redSlider);
 
@@ -91,7 +103,7 @@ namespace LayoutLab
             childGrid.Children.Add(blueLabel);
 
             // Place the child Grid in the root Grid
-            rootGrid.Add(childGrid, 0, 1);
+            rootGrid.Add(childGrid, 1, 0);
 
 
 			this.Content = rootGrid;
@@ -100,6 +112,9 @@ namespace LayoutLab
         void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
         {
             boxView.Color = new Color((float)redSlider.Value, (float)greenSlider.Value, (float)blueSlider.Value);
+            hexLabel.Text = boxView.Color.ToHex();
+
+            // if color is dark, then flip color of text?
         }
 	}
 }

@@ -51,8 +51,8 @@
                 </StyleSheet>
         </ContentPage.Resources>
     <ContentPage.Content>
-        <ScrollView Margin="0,60,0,0">
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,90'}">
+        <ScrollView>
+            <StackLayout Margin="15">
                 <Label Text="Shapes" StyleClass="Headline"/>
                 <FlexLayout Wrap="Wrap" AlignContent="SpaceEvenly" JustifyContent="SpaceEvenly">
                     <Ellipse WidthRequest="50" HeightRequest="50"

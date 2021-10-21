@@ -38,6 +38,75 @@
                 </VerticalStackLayout>
 
                 <Label Text="Grid" StyleClass="Headline"/>
+                <VerticalStackLayout>
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Alignment"
+                                   Destination="{x:Type p:AlignmentGridPage}"/>
+                            <m:NavItem Title="Basic"
+                                   Destination="{x:Type p:BasicGridPage}"/>
+                            <m:NavItem Title="Calculator"
+                                   Destination="{x:Type p:CalculatorPage}"/>
+                            <m:NavItem Title="Slider"
+                                   Destination="{x:Type p:SliderGridPage}"/>
+                            <m:NavItem Title="Spacing"
+                                   Destination="{x:Type p:SpacingGridPage}"/>
+                            
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Style="{StaticResource BorderlessButton}"
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
+                <Label Text="StackLayout" StyleClass="Headline"/>
+                <VerticalStackLayout>
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Alignment"
+                                   Destination="{x:Type p:AlignmentStackPage}"/>
+                            <m:NavItem Title="Combined"
+                                   Destination="{x:Type p:CombinedStackPage}"/>
+                            <m:NavItem Title="Expansion"
+                                   Destination="{x:Type p:ExpansionStackPage}"/>
+                            <m:NavItem Title="Horizontal"
+                                   Destination="{x:Type p:HorizontalStackPage}"/>
+                            <m:NavItem Title="Spacing"
+                                   Destination="{x:Type p:SpacingStackPage}"/>
+                            <m:NavItem Title="Vertical"
+                                   Destination="{x:Type p:VerticalStackPage}"/>
+                            
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Style="{StaticResource BorderlessButton}"
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
+                <Label Text="Other" StyleClass="Headline"/>
+                <Button 
+                                Style="{StaticResource BorderlessButton}"
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                >
+                    <Button.BindingContext>
+                        <m:NavItem Title="Margin + Padding"
+                            Destination="{x:Type p:MarginPaddingPage}"/>
+                    </Button.BindingContext>
+                </Button>
+
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>

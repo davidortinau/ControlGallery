@@ -17,7 +17,7 @@ namespace ControlGallery
 			var builder = MauiApp.CreateBuilder();
 			builder
 				.UseMauiApp<App>()
-				//.ConfigureGraphicsControls(DrawableType.Material)
+				// .ConfigureGraphicsControls(DrawableType.Fluent)
 				.ConfigureFonts(fonts =>
 				{
 					fonts.AddFont("fa_solid.ttf", "FontAwesome");

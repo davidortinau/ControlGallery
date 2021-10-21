@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text;
 using Microsoft.Maui.Controls;
 
-namespace LayoutLab
+namespace ControlGallery.Converters
 {
     public class BooleanInverseConverter : IValueConverter
     {

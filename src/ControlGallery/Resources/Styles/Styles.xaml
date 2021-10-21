@@ -349,5 +349,9 @@
         <Setter Property="WidthRequest" Value="180"/>
     </Style>
 
+    <Style TargetType="Frame">
+        <Setter Property="HasShadow" Value="False"/>
+    </Style>
+
     
 </ResourceDictionary>    

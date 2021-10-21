@@ -8,7 +8,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
 
-namespace ControlGallery.Pages
+namespace ControlGallery.Pages.Layouts
 {
     public partial class MarginPaddingPage : ContentPage
     {

@@ -3,7 +3,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
 
-namespace LayoutLab
+namespace ControlGallery.Pages.Layouts
 {	public class ExpansionStackPage : ContentPage
 	{
 		public ExpansionStackPage()

@@ -13,7 +13,7 @@
                 <DataTemplate>
                     <Grid RowDefinitions="120" 
                           ColumnDefinitions="*"
-                          Background="#333333"
+                          Background="#512BD4"
                           >
                         <Label Text="Control Gallery"
                                TextColor="White"

@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 
-namespace LayoutLab
+namespace ControlGallery.Common
 {
 
     public static class GridExtensions

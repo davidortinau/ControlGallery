@@ -4,11 +4,10 @@
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
              x:Class="ControlGallery.Pages.ControlsPage"
-             BackgroundImageSource="dotnet_bot.png"
              Title="Controls">
     <ContentPage.Content>
         <ScrollView>
-            <VerticalStackLayout Spacing="8">
+            <VerticalStackLayout Spacing="8" Margin="15">
                 <BindableLayout.ItemsSource>
                     <x:Array Type="{x:Type m:NavItem}">
                         <m:NavItem Title="ActivityIndicator"
@@ -23,6 +22,8 @@
                                    Destination="{x:Type p:ButtonPage}"/>
                         <m:NavItem Title="CheckBoxes"
                                    Destination="{x:Type p:CheckboxPage}"/>
+                        <m:NavItem Title="Colors"
+                                   Destination="{x:Type p:ColorsPage}"/>
                         <m:NavItem Title="Date Picker"
                                    Destination="{x:Type p:DatePickerPage}"/>
                         <m:NavItem Title="Editors"
@@ -51,14 +52,11 @@
                 </BindableLayout.ItemsSource>
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Label HeightRequest="44"
-                               VerticalTextAlignment="Center"
-                               Text="{Binding Title}"
-                               >
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding NavigateTo}"/>
-                            </Label.GestureRecognizers>
-                        </Label>
+                        <Button 
+                            Style="{StaticResource BorderlessButton}"
+                            Text="{Binding Title}"
+                            Command="{Binding NavigateTo}"
+                        />
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </VerticalStackLayout>

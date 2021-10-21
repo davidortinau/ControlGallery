@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using Microsoft.Maui.Controls;
 
-namespace LayoutLab.Converters
+namespace ControlGallery.Converters
 {
     public class DoubleToIntConverter : IValueConverter
     {
