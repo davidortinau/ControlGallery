@@ -48,6 +48,9 @@
                                    Destination="{x:Type p:StepperPage}"/>
                         <m:NavItem Title="Switches"
                                    Destination="{x:Type p:SwitchPage}"/>
+
+                        <m:NavItem Title="TableView"
+                                   Destination="{x:Type p:TableViewPage}"/>
                     </x:Array>
                 </BindableLayout.ItemsSource>
                 <BindableLayout.ItemTemplate>

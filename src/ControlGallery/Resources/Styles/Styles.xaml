@@ -50,7 +50,7 @@
         <Setter Property="Shell.BackgroundColor"
                 Value="{StaticResource Primary}" />
         <Setter Property="Shell.ForegroundColor"
-                Value="{StaticResource White}" />
+                Value="{StaticResource Primary}" />
         <Setter Property="Shell.TitleColor"
                 Value="{AppThemeBinding Dark={StaticResource Text_Light}, Light={StaticResource Text_Dark}}" />
         <Setter Property="Shell.DisabledColor"
