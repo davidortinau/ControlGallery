@@ -18,11 +18,5 @@ namespace ControlGallery.Pages
         {
             InitializeComponent();
         }
-
-        async void OnButtonClicked(object sender, EventArgs args)
-        {
-            PopBtn.BackgroundColor = Colors.Yellow;
-            await this.DisplayAlert("Yellow", "good job", "bye");
-        }
     }
 }
