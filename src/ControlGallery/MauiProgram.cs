@@ -5,8 +5,6 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Graphics.Controls.Hosting;
-using Microsoft.Maui.Graphics.Controls;
 
 namespace ControlGallery
 {

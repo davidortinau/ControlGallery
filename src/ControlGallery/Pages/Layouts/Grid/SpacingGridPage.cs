@@ -14,8 +14,8 @@ namespace ControlGallery.Pages.Layouts
 
 			Grid grid = new Grid
             {
-                RowSpacing = 0,
-                ColumnSpacing = 0,
+                RowSpacing = 8,
+                ColumnSpacing = 8,
                 RowDefinitions =
                 {
                     new RowDefinition { Height = new GridLength(2, GridUnitType.Star) },
