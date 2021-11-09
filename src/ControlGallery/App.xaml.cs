@@ -1,5 +1,7 @@
 ﻿using ControlGallery.Pages;
+using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
+using ControlGallery.Pages.Layouts.AbsoluteLayouts;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;
@@ -63,6 +65,22 @@ namespace ControlGallery
 
 			Routing.RegisterRoute(nameof(ColorsPage), typeof(ColorsPage));
 			Routing.RegisterRoute(nameof(MarginPaddingPage), typeof(MarginPaddingPage));
+
+			Routing.RegisterRoute(nameof(TableViewPage), typeof(TableViewPage));
+
+			Routing.RegisterRoute(nameof(DataIntentXaml), typeof(DataIntentXaml));
+			Routing.RegisterRoute(nameof(EntryCellDemoXaml), typeof(EntryCellDemoXaml));
+			Routing.RegisterRoute(nameof(FormIntentXaml), typeof(FormIntentXaml));
+			Routing.RegisterRoute(nameof(MenuIntentXaml), typeof(MenuIntentXaml));
+			Routing.RegisterRoute(nameof(SettingsIntentXaml), typeof(SettingsIntentXaml));
+			Routing.RegisterRoute(nameof(SwitchCellDemoXaml), typeof(SwitchCellDemoXaml));
+
+			Routing.RegisterRoute(nameof(BouncingTextDemoPage), typeof(BouncingTextDemoPage));
+			Routing.RegisterRoute(nameof(ChessboardDemoPage), typeof(ChessboardDemoPage));
+			Routing.RegisterRoute(nameof(ProportionalCoordinateCalcDemoPage), typeof(ProportionalCoordinateCalcDemoPage));
+			Routing.RegisterRoute(nameof(ProportionalDemoPage), typeof(ProportionalDemoPage));
+			Routing.RegisterRoute(nameof(SimpleOverlayDemoPage), typeof(SimpleOverlayDemoPage));
+			Routing.RegisterRoute(nameof(StylishHeaderDemoPage), typeof(StylishHeaderDemoPage));
 		}
     }
 }

@@ -3,12 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
+             xmlns:a="clr-namespace:ControlGallery.Pages.Layouts.AbsoluteLayouts"
              x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
     <ContentPage.Content>
         <ScrollView>
 
             <VerticalStackLayout>
+                <Label Text="AbsoluteLayout" StyleClass="Headline"/>
+                <VerticalStackLayout>
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Bouncing Text"
+                                   Destination="{x:Type a:BouncingTextDemoPage}"/>
+                        <m:NavItem Title="Chessboard"
+                                   Destination="{x:Type a:ChessboardDemoPage}"/>
+                        <m:NavItem Title="Proportional Coordinate Calc"
+                                   Destination="{x:Type a:ProportionalCoordinateCalcDemoPage}"/>
+                        <m:NavItem Title="Proportional"
+                                   Destination="{x:Type a:ProportionalDemoPage}"/>
+                        <m:NavItem Title="Simple Overlay"
+                                   Destination="{x:Type a:SimpleOverlayDemoPage}"/>
+                        <m:NavItem Title="Stylish Header"
+                                   Destination="{x:Type a:StylishHeaderDemoPage}"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button Style="{StaticResource BorderlessButton}"
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
                 <Label Text="FlexLayout" StyleClass="Headline"/>
                 <VerticalStackLayout>
                     <BindableLayout.ItemsSource>
