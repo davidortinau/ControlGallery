@@ -9,28 +9,28 @@
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
 
                 <Label Text="Default" StyleClass="Headline"/>
-                <StackLayout>
+                <HorizontalStackLayout>
                     <CheckBox/>
                     <Label Text="Unchecked" VerticalOptions="Center"/>
-                </StackLayout>
-                <StackLayout StyleClass="CheckBoxContainer">
-                    <CheckBox IsChecked="True" Color="Red" BackgroundColor="Black"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <CheckBox IsChecked="True" />
                     <Label Text="Checked" VerticalOptions="Center"/>
-                </StackLayout>
-                <StackLayout StyleClass="CheckBoxContainer">
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
                     <CheckBox IsEnabled="False"/>
                     <Label Text="Disabled" VerticalOptions="Center"/>
-                </StackLayout>
-                <StackLayout StyleClass="CheckBoxContainer">
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
                     <CheckBox IsEnabled="False" IsChecked="True"/>
                     <Label Text="Disabled checked" VerticalOptions="Center"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Styling" StyleClass="Headline"/>
-                <StackLayout StyleClass="CheckBoxContainer">
+                <HorizontalStackLayout>
                     <CheckBox Color="{StaticResource Accent}"/>
                     <Label Text="Accent" VerticalOptions="Center"/>
-                </StackLayout>
+                </HorizontalStackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

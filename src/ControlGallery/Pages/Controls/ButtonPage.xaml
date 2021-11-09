@@ -24,7 +24,7 @@
             <VerticalStackLayout 
                Padding="{OnPlatform iOS='30,60,30,30', Default='30,00'}">
 
-                <Button Text="Click to pop!"
+                <!--<Button Text="Click to pop!"
                         x:Name="PopBtn"
                         MinimumWidthRequest="300"
                         MaximumWidthRequest="500"
@@ -44,11 +44,7 @@
                             Opacity="0.6"
                             />
                     </Button.Shadow>
-                </Button>
-
-
-
-
+                </Button>-->
 
                 <Label Text="Primary filled"/>
                 <StackLayout Orientation="Vertical">
