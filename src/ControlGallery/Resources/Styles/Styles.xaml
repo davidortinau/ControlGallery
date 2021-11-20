@@ -41,8 +41,7 @@
         Color="{StaticResource Black}"/>
     <SolidColorBrush x:Key="WhiteBrush" 
         Color="{StaticResource White}"/>
-
-    
+   
 
     <!-- Shell -->
     <Style x:Key="BaseStyle"
@@ -347,6 +346,7 @@
 
     <Style TargetType="Entry">
         <Setter Property="WidthRequest" Value="180"/>
+        <Setter Property="TextColor" Value="Black"/>
     </Style>
 
     <Style TargetType="Frame">
@@ -358,5 +358,8 @@
         <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
     </Style>
 
-    
+    <Style TargetType="Editor">
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+
 </ResourceDictionary>    

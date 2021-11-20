@@ -6,10 +6,11 @@
     <UseMaui>true</UseMaui>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
     <SingleProject>true</SingleProject>
-    <ApplicationTitle>Control Gallery</ApplicationTitle>
-    <ApplicationId>com.microsoft.MauiControlGallery</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
 
+	  <ApplicationTitle>Control Gallery</ApplicationTitle>
+	  <ApplicationId>com.microsoft.MauiControlGallery</ApplicationId>
+	  <ApplicationVersion>1</ApplicationVersion>
 	  <!-- (Optional) Pin to a specific version -->
 	  <!--<MauiVersion>6.0.101-preview.10.2068</MauiVersion>-->
 
@@ -32,7 +33,7 @@
 
 	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<!-- Required - WinUI does not yet have buildTransitive for everything -->
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview3" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.29-preview3" />
 	</ItemGroup>
 
