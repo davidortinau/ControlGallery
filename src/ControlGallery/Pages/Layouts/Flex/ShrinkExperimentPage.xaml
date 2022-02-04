@@ -4,14 +4,14 @@
              x:Class="ControlGallery.Pages.Layouts.ShrinkExperimentPage"
              Title="Shrink Experiment">
 
-    <Grid Margin="10, 0">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- Control Panel -->
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Margin="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -63,44 +63,40 @@
 
         <!-- FlexLayout -->
         <FlexLayout Grid.Row="1"
-                    BackgroundColor="AliceBlue">
+                    BackgroundColor="{StaticResource Neutral}">
 
             <FlexLayout.Resources>
                 <Style TargetType="Label">
-                    <Setter Property="FontSize">
-                        <Setter.Value>
-                            <OnPlatform x:TypeArguments="x:Double">
-                                <On Platform="iOS, Android" Value="32" />
-                                <On Platform="UWP" Value="48" />
-                            </OnPlatform>
-                        </Setter.Value>
-                    </Setter>
+                    <Setter Property="Padding" Value="4"/>
                 </Style>
-            </FlexLayout.Resources>
 
+            </FlexLayout.Resources>
+            
             <Label Text="Label 1"
-                   TextColor="Blue"
-                   BackgroundColor="Pink" />
+                   TextColor="{StaticResource Text_Light}"
+                   BackgroundColor="{StaticResource Secondary}" />
 
             <Label Text="Label 2"
-                   TextColor="Red"
-                   BackgroundColor="Cyan"
+                   TextColor="{StaticResource Text_Dark}"
+                   BackgroundColor="{StaticResource Tertiary}"
                    FlexLayout.Shrink="{Binding Source={x:Reference shrink2Slider},
                                                Path=Value,
                                                Mode=TwoWay}" />
+            
             <Label Text="Label 3"
-                   TextColor="Blue"
-                   BackgroundColor="Pink" />
+                   TextColor="{StaticResource Text_Light}"
+                   BackgroundColor="{StaticResource Secondary}" />
 
             <Label Text="Label 4"
-                   TextColor="Red"
-                   BackgroundColor="Cyan"
+                   TextColor="{StaticResource Text_Dark}"
+                   BackgroundColor="{StaticResource Tertiary}"
                    FlexLayout.Shrink="{Binding Source={x:Reference shrink4Slider},
                                                Path=Value,
                                                Mode=TwoWay}" />
+
             <Label Text="Label 5"
-                   TextColor="Blue"
-                   BackgroundColor="Pink" />
+                   TextColor="{StaticResource Text_Light}"
+                   BackgroundColor="{StaticResource Secondary}" />
         </FlexLayout>
     </Grid>
 </ContentPage>

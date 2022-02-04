@@ -9,9 +9,15 @@
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
 
+                <Label Text="Unicode linebreaks"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <!-- Unicode line feed character -->
                 <Label Text="First line &#10; Second line" />
 
+                <Label Text="Property Element linebreaks"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <!-- Property element syntax -->
                 <Label>
                     <Label.Text>
@@ -21,19 +27,35 @@
                     </Label.Text>
                 </Label>
 
+                <Label Text="CharacterSpacing=10"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label Text="Character spaced text"
        CharacterSpacing="10" />
 
+                <Label Text="TextTransform=Uppercase"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label Text="This text will be displayed in uppercase."
-       TextTransform="Lowercase" />
+       TextTransform="Uppercase" />
 
+                <Label Text="LineBreakMode &amp; LineHeight"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
        LineBreakMode="WordWrap"
        LineHeight="1.8" />
                 
+                <Label Text="HTML"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label BackgroundColor="Yellow" 
                        Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
        TextType="Html"  />
+
+                <Label Text="FormattedText &amp; Spans"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
 
                 <Label LineBreakMode="WordWrap">
                     <Label.FormattedText>

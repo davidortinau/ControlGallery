@@ -5,14 +5,14 @@
              x:Class="ControlGallery.Pages.Layouts.BasisExperimentPage"
              Title="Basis Experiment">
     
-    <Grid Margin="10, 0">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <!-- Control Panel -->
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Margin="15">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -134,29 +134,35 @@
         <FlexLayout Grid.Row="1"
                     Direction="Column"
                     Wrap="Wrap"
-                    BackgroundColor="AliceBlue">
+                    BackgroundColor="{StaticResource NeutralLighter}">
+            <FlexLayout.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Padding" Value="4"/>
+                </Style>
+
+            </FlexLayout.Resources>
             
             <Label Text="Label 1"
-                   TextColor="Blue"
-                   BackgroundColor="Pink" />
+                   TextColor="{StaticResource Text_Light}"
+                   BackgroundColor="{StaticResource Secondary}" />
 
             <Label x:Name="label2"
                    Text="Label 2"
-                   TextColor="Red"
-                   BackgroundColor="Cyan" />
+                   TextColor="{StaticResource Text_Dark}"
+                   BackgroundColor="{StaticResource Tertiary}" />
             
             <Label Text="Label 3"
-                   TextColor="Blue"
-                   BackgroundColor="Pink" />
+                   TextColor="{StaticResource Text_Light}"
+                   BackgroundColor="{StaticResource Secondary}" />
 
             <Label x:Name="label4"
                    Text="Label 4"
-                   TextColor="Red"
-                   BackgroundColor="Cyan" />
+                   TextColor="{StaticResource Text_Dark}"
+                   BackgroundColor="{StaticResource Tertiary}" />
 
             <Label Text="Label 5"
-                   TextColor="Blue"
-                   BackgroundColor="Pink" />
+                   TextColor="{StaticResource Text_Light}"
+                   BackgroundColor="{StaticResource Secondary}" />
         </FlexLayout>
     </Grid>
 </ContentPage>

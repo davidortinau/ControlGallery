@@ -100,13 +100,13 @@
             <Label Text="On" StyleClass="Headline"/>
             <StackLayout Orientation="Horizontal">
                 <RadioButton Content="RadioButton" IsChecked="True" />
-                <RadioButton Content="RadioButton" IsChecked="True" IsEnabled="False"/>
+                <RadioButton Content="RadioButton (Disabled)" IsChecked="True" IsEnabled="False"/>
             </StackLayout>
 
             <Label Text="Off" StyleClass="Headline"/>
             <StackLayout Orientation="Horizontal">
                 <RadioButton Content="RadioButton" IsChecked="False" />
-                <RadioButton Content="RadioButton" IsChecked="False" IsEnabled="False"/>
+                <RadioButton Content="RadioButton (Disabled)" IsChecked="False" IsEnabled="False"/>
             </StackLayout>
 
 
