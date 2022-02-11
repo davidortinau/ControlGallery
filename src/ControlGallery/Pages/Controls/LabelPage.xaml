@@ -24,6 +24,9 @@
                 <!-- Unicode line feed character -->
                 <Label Text="First line &#10; Second line" />
 
+                <Label Text="Property Element linebreaks"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <!-- Property element syntax -->
                 <Label>
                     <Label.Text>
@@ -33,9 +36,15 @@
                     </Label.Text>
                 </Label>
 
+                <Label Text="CharacterSpacing=10"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label Text="Character spaced text"
        CharacterSpacing="10" />
 
+                <Label Text="TextTransform=Uppercase"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label Text="This text will be displayed in uppercase."
        TextTransform="Uppercase" />
 
@@ -57,6 +66,10 @@
                 <Label BackgroundColor="Yellow" 
                        Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
        TextType="Html"  />
+
+                <Label Text="FormattedText &amp; Spans"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
 
                 <Label LineBreakMode="WordWrap">
                     <Label.FormattedText>

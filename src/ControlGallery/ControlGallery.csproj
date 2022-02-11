@@ -24,6 +24,7 @@
 	  <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
 	  <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</SupportedOSPlatformVersion>
 	  <TargetPlatformMinVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</TargetPlatformMinVersion>
+	  <ProjectGuid>{DA6AB9E8-93F9-4324-9C25-A4E70160B936}</ProjectGuid>
   </PropertyGroup>
 	
   <ItemGroup>
@@ -43,6 +44,9 @@
   	  <PackageReference Include="Microsoft.Maui.Graphics.Controls" Version="6.0.101-nightly.225" />
   	</ItemGroup>-->
 
+	<ItemGroup>
+	  <None Include="Info.plist" />
+	</ItemGroup>
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>
 		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
