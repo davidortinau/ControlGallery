@@ -52,8 +52,11 @@ namespace ControlGallery.Pages.Layouts
                             {
                                 Image image = new Image
                                 {
-                                    Source = ImageSource.FromUri(new Uri(filepath))
+                                    Source = ImageSource.FromUri(new Uri(filepath)),
+                                    Aspect = Aspect.AspectFill,
+                                    MaximumHeightRequest = 100
                                 };
+                                FlexLayout.SetBasis(image, new Microsoft.Maui.Layouts.FlexBasis(0.2f));
                                 flexLayout.Add(image);
                             }
                             

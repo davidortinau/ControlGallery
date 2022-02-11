@@ -9,6 +9,18 @@
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
 
+                <Label Text="Vertical Alignment" StyleClass="Headline"/>
+                <BoxView StyleClass="HRule"/>
+                <Label Text="Start"
+                       Background="#ccc" HeightRequest="80"
+                       VerticalTextAlignment="Start"/>
+                <Label Text="Center"
+                       Background="#f1f1f1" HeightRequest="80"
+                       VerticalTextAlignment="Center"/>
+                <Label Text="End"
+                       Background="#ccc" HeightRequest="80"
+                       VerticalTextAlignment="End"/>
+
                 <!-- Unicode line feed character -->
                 <Label Text="First line &#10; Second line" />
 
@@ -25,12 +37,23 @@
        CharacterSpacing="10" />
 
                 <Label Text="This text will be displayed in uppercase."
-       TextTransform="Lowercase" />
+       TextTransform="Uppercase" />
 
-                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
-       LineBreakMode="WordWrap"
+                <Label Text="LineBreakMode=WordWrap Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap" 
        LineHeight="1.8" />
-                
+
+                <Label Text="MaxLines=3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       MaxLines="3" 
+                       WidthRequest="300"
+                       LineBreakMode="WordWrap"
+       LineHeight="1.8" />
+
+                <Label Text="LineBreakMode=TailTruncation Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+                       WidthRequest="300"
+                       LineBreakMode="TailTruncation"
+                       LineHeight="1.8" />
+
                 <Label BackgroundColor="Yellow" 
                        Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
        TextType="Html"  />

@@ -11,8 +11,10 @@
 	  <ApplicationTitle>Control Gallery</ApplicationTitle>
 	  <ApplicationId>com.microsoft.MauiControlGallery</ApplicationId>
 	  <ApplicationVersion>1</ApplicationVersion>
+	  
 	  <!-- (Optional) Pin to a specific version -->
 	  <!--<MauiVersion>6.0.101-preview.10.2068</MauiVersion>-->
+	  <!--<MauiVersion>6.0.101-preview.11.2349</MauiVersion>-->
 
 	  <!-- Required for C# Hot Reload -->
 	  <UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
@@ -34,12 +36,12 @@
 	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<!-- Required - WinUI does not yet have buildTransitive for everything -->
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.29-preview3" />
+		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
   	  <PackageReference Include="Microsoft.Maui.Graphics.Controls" Version="6.0.101-nightly.225" />
-  	</ItemGroup>
+  	</ItemGroup>-->
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>

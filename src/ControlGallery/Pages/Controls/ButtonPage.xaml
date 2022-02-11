@@ -47,23 +47,23 @@
                 </Button>-->
 
                 <Label Text="Primary filled"/>
-                <StackLayout Orientation="Vertical">
+                <HorizontalStackLayout>
                     <Button Text="Button"/>
                     <Button Text="Button" IsEnabled="False"/>
-                </StackLayout>
+                </HorizontalStackLayout>
 
-                <VerticalStackLayout>
+                <HorizontalStackLayout>
                     <Button ImageSource="{StaticResource CircleIcon}" Text="Button"/>
                     <Button ImageSource="{StaticResource CircleIcon}" Text="Button" IsEnabled="False"/>
-                </VerticalStackLayout>
+                </HorizontalStackLayout>
 
-                <VerticalStackLayout>
+                <HorizontalStackLayout>
                     <Button FontFamily="FontAwesome"
                             Text="{x:Static app:IconFont.Archway}"/>
                     <Button FontFamily="FontAwesome"
                             Text="{x:Static app:IconFont.Archway}"
                             IsEnabled="False"/>
-                </VerticalStackLayout>
+                </HorizontalStackLayout>
 
                 <Label Text="Primary outline"/>
                 <HorizontalStackLayout>
@@ -99,6 +99,15 @@
                     <Button Text="Button" Style="{StaticResource BorderlessButton}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource BorderlessButton}"/>
                 </HorizontalStackLayout>
+
+                <Label Text="Misc Test Cases"/>
+                <Button Text="uppercase" TextTransform="Uppercase"/>
+
+                <Button Text="Corner 20" CornerRadius="20" HeightRequest="40" Padding="0"/>
+
+                <Button Text="Sm" HorizontalOptions="Start"/>
+
+                <Button Text="This is a lot of text for a button" HorizontalOptions="Start"/>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
