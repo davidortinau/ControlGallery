@@ -7,7 +7,8 @@
              Title="Controls">
     <ContentPage.Content>
         <ScrollView>
-            <VerticalStackLayout Spacing="8" Margin="15">
+            <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                        AlignItems="Start" AlignContent="Start">
                 <BindableLayout.ItemsSource>
                     <x:Array Type="{x:Type m:NavItem}">
                         <m:NavItem Title="ActivityIndicator"
@@ -63,7 +64,7 @@
                         />
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
-            </VerticalStackLayout>
+            </FlexLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

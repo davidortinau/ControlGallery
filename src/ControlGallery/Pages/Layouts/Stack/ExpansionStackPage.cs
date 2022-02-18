@@ -14,13 +14,13 @@ namespace ControlGallery.Pages.Layouts
 				Margin = new Thickness(20),
 				Children = {
 					new BoxView { BackgroundColor = Colors.Red, HeightRequest = 1 },
-					new Label { Text = "StartAndExpand", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.StartAndExpand },
+					new Label { Text = "Start", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.Start },
 					new BoxView { BackgroundColor = Colors.Red, HeightRequest = 1 },
-					new Label { Text = "CenterAndExpand", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.CenterAndExpand },
+					new Label { Text = "Center", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.Center },
 					new BoxView { BackgroundColor = Colors.Red, HeightRequest = 1 },
-					new Label { Text = "EndAndExpand", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.EndAndExpand },
+					new Label { Text = "End", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.End },
 					new BoxView { BackgroundColor = Colors.Red, HeightRequest = 1 },
-					new Label { Text = "FillAndExpand", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.FillAndExpand },
+					new Label { Text = "Fill", BackgroundColor = Colors.Gray, VerticalOptions = LayoutOptions.Fill },
 					new BoxView { BackgroundColor = Colors.Red, HeightRequest = 1 }
 				}
 			};

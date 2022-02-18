@@ -11,7 +11,8 @@
 
             <VerticalStackLayout>
                 <Label Text="AbsoluteLayout" StyleClass="Headline"/>
-                <VerticalStackLayout>
+                <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                        AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Bouncing Text"
@@ -30,16 +31,17 @@
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <Button Style="{StaticResource BorderlessButton}"
+                            <Button 
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </VerticalStackLayout>
+                </FlexLayout>
 
                 <Label Text="FlexLayout" StyleClass="Headline"/>
-                <VerticalStackLayout>
+                <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                        AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Basis"
@@ -58,16 +60,17 @@
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <Button Style="{StaticResource BorderlessButton}"
+                            <Button 
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </VerticalStackLayout>
+                </FlexLayout>
 
                 <Label Text="Grid" StyleClass="Headline"/>
-                <VerticalStackLayout>
+                <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                        AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Alignment"
@@ -86,16 +89,16 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Button 
-                                Style="{StaticResource BorderlessButton}"
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </VerticalStackLayout>
+                </FlexLayout>
 
                 <Label Text="StackLayout" StyleClass="Headline"/>
-                <VerticalStackLayout>
+                    <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                        AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Alignment"
@@ -116,17 +119,15 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Button 
-                                Style="{StaticResource BorderlessButton}"
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </VerticalStackLayout>
+                </FlexLayout>
 
                 <Label Text="Other" StyleClass="Headline"/>
                 <Button 
-                                Style="{StaticResource BorderlessButton}"
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
                 >

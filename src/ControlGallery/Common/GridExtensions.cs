@@ -20,7 +20,16 @@ namespace ControlGallery.Common
             grid.Add(child);
 
             grid.SetRow(child, rowStart);
+            if(rowEnd > rowStart)
+            {
+                grid.SetRowSpan(child, (rowEnd - rowStart) + 1);
+            }
+
             grid.SetColumn(child, colStart);
+            if(colEnd > colStart)
+            {
+                grid.SetColumnSpan(child, (colEnd - colStart)+1);
+            }
         }
     }
 }

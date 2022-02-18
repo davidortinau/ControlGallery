@@ -6,7 +6,7 @@
              Title="Gallery"
              >
     <ScrollView>
-        <VerticalStackLayout Spacing="4" Margin="15">
+        <FlexLayout Margin="15" Wrap="Wrap">
 
             <Label Text="Views" StyleClass="LargeTitle" />
             <Button Text="ActivityIndicator" Clicked="OnClicked" />
@@ -59,6 +59,6 @@
             <Button Text="Lifecycle Events" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="Themes" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="Transforms" Clicked="OnClicked" IsEnabled="False" />
-        </VerticalStackLayout>
+        </FlexLayout>
     </ScrollView>
 </ContentPage>

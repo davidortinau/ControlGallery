@@ -32,10 +32,10 @@
                                     <Setter
                                       Property="BorderColor"
                                       Value="#FF3300" />
-                                        <Setter
+                                        <!--<Setter
                                           TargetName="Check"
                                           Property="Opacity"
-                                          Value="1" />              
+                                          Value="1" />-->              
                                     </VisualState.Setters>
                             </VisualState>
                             <VisualState
@@ -44,10 +44,10 @@
                                     <Setter
                       Property="BorderColor"
                       Value="#F3F2F1" />
-                                    <Setter
+                                    <!--<Setter
                       TargetName="Check"
                       Property="Opacity"
-                      Value="0" />
+                      Value="0" />-->
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -96,7 +96,7 @@
     
     <ContentPage.Content>
     <ScrollView>
-        <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+        <StackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}">
             <Label Text="On" StyleClass="Headline"/>
             <StackLayout Orientation="Horizontal">
                 <RadioButton Content="RadioButton" IsChecked="True" />
@@ -130,15 +130,15 @@
                     <DataTemplate>
                         <RadioButton StyleClass="ImageQuality">
                             <RadioButton.Content>
-                                <StackLayout
-                                  HorizontalOptions="Center"
-                                  VerticalOptions="Center">
+                                <StackLayout 
+                                  HorizontalOptions="CenterAndExpand"
+                                  VerticalOptions="CenterAndExpand">
                                     <Image
                                         Source="{FontImage FontFamily=FontAwesome, 
                                             Glyph={x:Static app:IconFont.Image}, 
                                             Color=#323130}"
                                         Scale="0.75" />
-                                    <Label HorizontalOptions="FillAndExpand"
+                                    <Label HorizontalOptions="Fill"
                                             HeightRequest="40"
                                            Text="{Binding Description}"
                                             TextColor="#323130" />

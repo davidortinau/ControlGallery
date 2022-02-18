@@ -9,18 +9,33 @@
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
 
-                <Label Text="Vertical Alignment" StyleClass="Headline"/>
-                <BoxView StyleClass="HRule"/>
-                <Label Text="Start"
-                       Background="#ccc" HeightRequest="80"
-                       VerticalTextAlignment="Start"/>
-                <Label Text="Center"
-                       Background="#f1f1f1" HeightRequest="80"
-                       VerticalTextAlignment="Center"/>
-                <Label Text="End"
-                       Background="#ccc" HeightRequest="80"
-                       VerticalTextAlignment="End"/>
+                <Label LineBreakMode="NoWrap" LineHeight="1.4">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Font name: Default &#10;"/>
+                            <Span Text="Version: 1.00  &#10;"/>
+                            <Span Text="Digitally Signed, TrueType Outlines &#10;"/>
+                            <Span Text="abcdefghijklmnopqrstuvwxyz "/>
+                            <Span Text="abcdefghijklmnopqrstuvwxyz &#10;" TextTransform="Uppercase"/>
+                            <Span Text="1234567890.:,;'+-*/=  &#10;"/>
+                            <Span Text="12 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="12"/>
+                            <Span Text="18 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="18"/>
+                            <Span Text="24 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="24"/>
+                            <Span Text="36 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="36"/>
+                            <Span Text="48 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="48"/>
+                            <Span Text="60 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="60"/>
+                            <Span Text="72 The quick brown fox jumps over the lazy dog. 1234567890 " FontSize="72" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="https://google.com" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>                    
+                </Label>
 
+                <Label Text="Unicode linebreaks"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <!-- Unicode line feed character -->
                 <Label Text="First line &#10; Second line" />
 
@@ -48,21 +63,16 @@
                 <Label Text="This text will be displayed in uppercase."
        TextTransform="Uppercase" />
 
-                <Label Text="LineBreakMode=WordWrap Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
-       LineBreakMode="WordWrap" 
+                <Label Text="LineBreakMode &amp; LineHeight"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
        LineHeight="1.8" />
 
-                <Label Text="MaxLines=3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
-       MaxLines="3" 
-                       WidthRequest="300"
-                       LineBreakMode="WordWrap"
-       LineHeight="1.8" />
-
-                <Label Text="LineBreakMode=TailTruncation Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
-                       WidthRequest="300"
-                       LineBreakMode="TailTruncation"
-                       LineHeight="1.8" />
-
+                <Label Text="HTML"
+                       StyleClass="Headline" />
+                <BoxView StyleClass="HRule"/>
                 <Label BackgroundColor="Yellow" 
                        Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
        TextType="Html"  />
@@ -109,7 +119,7 @@
                        StyleClass="LargeTitle"/>
                 <Label Text="30px, OpenSansSemiBold, #000000" 
                        StyleClass="TypographyMeta"/>
-                
+
                 <Label Text="Title 1"
                        StyleClass="Title1"/>
                 <Label Text="26px, OpenSansSemiBold, #000000" 
@@ -152,6 +162,7 @@
                 <Label Text="CaptionStyle" Style="{DynamicResource CaptionStyle}"/>
                 <Label Text="ListItemTextStyle" Style="{DynamicResource ListItemTextStyle}"/>
                 <Label Text="ListItemDetailTextStyle" Style="{DynamicResource ListItemDetailTextStyle}"/>
+
 
             </StackLayout>
         </ScrollView>

@@ -5,6 +5,7 @@ using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.LifecycleEvents;
 
 namespace ControlGallery
 {
@@ -15,13 +16,21 @@ namespace ControlGallery
 			var builder = MauiApp.CreateBuilder();
 			builder
 				.UseMauiApp<App>()
-				// .ConfigureGraphicsControls(DrawableType.Fluent)
 				.ConfigureFonts(fonts =>
 				{
 					fonts.AddFont("fa_solid.ttf", "FontAwesome");
 					fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 					fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
 				});
+			builder.ConfigureLifecycleEvents(lifecycle => {
+#if WINDOWS
+        lifecycle
+            .AddWindows(windows =>
+                windows.OnNativeMessage((app, args) => {
+                    app.ExtendsContentIntoTitleBar = false;
+                }));
+#endif
+			});
 
 			return builder.Build();
 		}

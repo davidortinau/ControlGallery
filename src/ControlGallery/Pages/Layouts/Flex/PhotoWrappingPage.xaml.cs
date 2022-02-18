@@ -29,13 +29,13 @@ namespace ControlGallery.Pages.Layouts
 
         async void LoadBitmapCollection()
         {
-            using (WebClient webClient = new WebClient())
+            using (HttpClient webClient = new HttpClient())
             {
                 try
                 {
                     // Download the list of stock photos
                     Uri uri = new Uri("https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json");
-                    byte[] data = await webClient.DownloadDataTaskAsync(uri);
+                    byte[] data = await webClient.GetByteArrayAsync(uri);
 
                     // Convert to a Stream object
                     using (Stream stream = new MemoryStream(data))
