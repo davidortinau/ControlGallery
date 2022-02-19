@@ -2,17 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ControlGallery.Pages.LabelPage"
-             Title="Label"
-             >
+             Title="Label">
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+        <ScrollView Orientation="Both">
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30,30,0,30'}">
 
                 <Label LineBreakMode="NoWrap" LineHeight="1.4">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Font name: Default &#10;"/>
+                            <Span Text="Font name: OpenSans Regular &#10;"/>
                             <Span Text="Version: 1.00  &#10;"/>
                             <Span Text="Digitally Signed, TrueType Outlines &#10;"/>
                             <Span Text="abcdefghijklmnopqrstuvwxyz "/>

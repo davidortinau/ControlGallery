@@ -1,4 +1,5 @@
-﻿using ControlGallery.Pages;
+﻿using CollectionViewDemos.Views;
+using ControlGallery.Pages;
 using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
@@ -81,6 +82,40 @@ namespace ControlGallery
 			Routing.RegisterRoute(nameof(ProportionalDemoPage), typeof(ProportionalDemoPage));
 			Routing.RegisterRoute(nameof(SimpleOverlayDemoPage), typeof(SimpleOverlayDemoPage));
 			Routing.RegisterRoute(nameof(StylishHeaderDemoPage), typeof(StylishHeaderDemoPage));
+
+			Routing.RegisterRoute(nameof(CollectionViewPage), typeof(CollectionViewPage));
+			Routing.RegisterRoute(nameof(EmptyViewDataTemplateSelectorPage), typeof(EmptyViewDataTemplateSelectorPage));
+			Routing.RegisterRoute(nameof(EmptyViewFilteredPage), typeof(EmptyViewFilteredPage));
+			Routing.RegisterRoute(nameof(EmptyViewLoadSimulationPage), typeof(EmptyViewLoadSimulationPage));
+			Routing.RegisterRoute(nameof(EmptyViewNullPage), typeof(EmptyViewNullPage));
+			Routing.RegisterRoute(nameof(EmptyViewSwapPage), typeof(EmptyViewSwapPage));
+			Routing.RegisterRoute(nameof(EmptyViewTemplatePage), typeof(EmptyViewTemplatePage));
+			Routing.RegisterRoute(nameof(EmptyViewWithViewsFilteredPage), typeof(EmptyViewWithViewsFilteredPage));
+
+			Routing.RegisterRoute(nameof(VerticalListEmptyGroupsPage), typeof(VerticalListEmptyGroupsPage));
+			Routing.RegisterRoute(nameof(VerticalListGroupingPage), typeof(VerticalListGroupingPage));
+			Routing.RegisterRoute(nameof(VerticalListGroupingVariableSizeItemsPage), typeof(VerticalListGroupingVariableSizeItemsPage));
+			Routing.RegisterRoute(nameof(VerticalListTextGroupingPage), typeof(VerticalListTextGroupingPage));
+
+			Routing.RegisterRoute(nameof(HorizontalGridHeaderFooterViewPage), typeof(HorizontalGridHeaderFooterViewPage));
+			Routing.RegisterRoute(nameof(VerticalListHeaderFooterDataTemplatePage), typeof(VerticalListHeaderFooterDataTemplatePage));
+			Routing.RegisterRoute(nameof(VerticalListHeaderFooterStringPage), typeof(VerticalListHeaderFooterStringPage));
+			Routing.RegisterRoute(nameof(VerticalListHeaderFooterViewPage), typeof(VerticalListHeaderFooterViewPage));
+
+			Routing.RegisterRoute(nameof(HorizontalGridPage), typeof(HorizontalGridPage));
+			Routing.RegisterRoute(nameof(HorizontalGridTextPage), typeof(HorizontalGridTextPage));
+			Routing.RegisterRoute(nameof(HorizontalListPage), typeof(HorizontalListPage));
+			Routing.RegisterRoute(nameof(HorizontalListTextPage), typeof(HorizontalListTextPage));
+			Routing.RegisterRoute(nameof(VerticalGridPage), typeof(VerticalGridPage));
+			Routing.RegisterRoute(nameof(VerticalListDataTemplateSelectorPage), typeof(VerticalListDataTemplateSelectorPage));
+			Routing.RegisterRoute(nameof(VerticalListPage), typeof(VerticalListPage));
+			Routing.RegisterRoute(nameof(VerticalListRTLPage), typeof(VerticalListRTLPage));
+			Routing.RegisterRoute(nameof(VerticalListTextPage), typeof(VerticalListTextPage));
+
+			Routing.RegisterRoute(nameof(HorizontalGridPullToRefreshPage), typeof(HorizontalGridPullToRefreshPage));
+			Routing.RegisterRoute(nameof(VerticalListPullToRefreshPage), typeof(VerticalListPullToRefreshPage));
+
+
 		}
     }
 }

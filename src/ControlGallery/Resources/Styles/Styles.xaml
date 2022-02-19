@@ -63,7 +63,7 @@
            ApplyToDerivedTypes="True"
            TargetType="FlyoutItem" />
 
-    <!--<Style
+    <Style
         TargetType="Label"
         Class="FlyoutItemLabelStyle">
         <Setter
@@ -71,7 +71,7 @@
             Value="18" />
         <Setter
             Property="TextColor"
-            Value="{AppThemeBinding Dark={StaticResource Primary}, Light={StaticResource Primary}}" />
+            Value="White" />
         <Setter
             Property="FontFamily"
             Value="OpenSansRegular"/>
@@ -117,7 +117,7 @@
                     </VisualStateGroup>
                 </VisualStateGroupList>
             </Setter>
-        </Style>-->
+        </Style>
 
     <Style TargetType="Page" ApplyToDerivedTypes="True">
         <Setter Property="Padding" Value="0"/>
@@ -373,4 +373,7 @@
         <Setter Property="OnColor" Value="{StaticResource Primary}"/>
     </Style>
 
+    <Style TargetType="TextCell">
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
 </ResourceDictionary>    

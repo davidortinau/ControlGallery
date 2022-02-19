@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
+             xmlns:c="clr-namespace:CollectionViewDemos.Views"
              x:Class="ControlGallery.Pages.ControlsPage"
              Title="Controls">
     <ContentPage.Content>
@@ -23,6 +24,8 @@
                                    Destination="{x:Type p:ButtonPage}"/>
                         <m:NavItem Title="CheckBoxes"
                                    Destination="{x:Type p:CheckboxPage}"/>
+                        <m:NavItem Title="CollectionView"
+                                   Destination="{x:Type c:CollectionViewPage}"/>
                         <m:NavItem Title="Colors"
                                    Destination="{x:Type p:ColorsPage}"/>
                         <m:NavItem Title="Date Picker"

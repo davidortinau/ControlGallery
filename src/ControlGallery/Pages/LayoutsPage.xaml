@@ -9,10 +9,11 @@
     <ContentPage.Content>
         <ScrollView>
 
-            <VerticalStackLayout>
+            <VerticalStackLayout Margin="15">
                 <Label Text="AbsoluteLayout" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
-                        AlignItems="Start" AlignContent="Start">
+                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
+                        AlignItems="Start" AlignContent="Start" 
+                            >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Bouncing Text"
@@ -40,7 +41,7 @@
                 </FlexLayout>
 
                 <Label Text="FlexLayout" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
                         AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -69,7 +70,7 @@
                 </FlexLayout>
 
                 <Label Text="Grid" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
                         AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -97,7 +98,7 @@
                 </FlexLayout>
 
                 <Label Text="StackLayout" StyleClass="Headline"/>
-                    <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
+                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
                         AlignItems="Start" AlignContent="Start">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">

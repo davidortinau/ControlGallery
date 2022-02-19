@@ -10,6 +10,7 @@
 
     <Application.MainPage>
         <Shell 
+            FlyoutBackground="#512BD4"
             FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}">
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
