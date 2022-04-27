@@ -7,25 +7,25 @@
     <ContentPage.Content>
         <ScrollView>
             <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-                <Label Text="Default" StyleClass="Headline"/>
+                <Label Text="Default" Style="{StaticResource Headline}"/>
                 <Editor/>
 
-                <Label Text="Placeholder" StyleClass="Headline"/>
+                <Label Text="Placeholder" Style="{StaticResource Headline}"/>
                 <Editor Placeholder="Placeholder"/>
                 
-                <Label Text="Disabled" StyleClass="Headline"/>
+                <Label Text="Disabled" Style="{StaticResource Headline}"/>
                 <Editor Text="I am disabled" IsEnabled="False"/>
 
-                <Label Text="Read-only" StyleClass="Headline"/>
+                <Label Text="Read-only" Style="{StaticResource Headline}"/>
                 <Editor Text="I am read only" IsReadOnly="True"/>
 
 
                 
 
-                <Label Text="With error message" StyleClass="Headline"/>
+                <Label Text="With error message" Style="{StaticResource Headline}"/>
                 <Editor />
 
-                <Label Text="Multiline" StyleClass="Headline"/>
+                <Label Text="Multiline" Style="{StaticResource Headline}"/>
                 <Label Text="AutoSize" StyleClass="Subhead"/>
                 <Editor Placeholder="Placeholder" AutoSize="TextChanges"/>
 

@@ -1,13 +1,10 @@
-﻿using Microsoft.Maui.Controls;
+﻿namespace ControlGallery.Pages;
 
-namespace ControlGallery.Pages
+public partial class LayoutsPage : ContentPage
 {
-    public partial class LayoutsPage : ContentPage
+    public LayoutsPage()
     {
-        public LayoutsPage()
-        {
-            InitializeComponent();
-        }
-
+        InitializeComponent();
     }
+
 }

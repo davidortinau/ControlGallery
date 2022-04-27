@@ -1,9 +1,12 @@
 ﻿namespace ControlGallery.Pages;
-public partial class MainPage : ContentPage
+
+public partial class ColorsPage : ContentPage
 {
-    public MainPage()
+    public ColorsPage()
     {
         InitializeComponent();
+
+        
     }
 
 }

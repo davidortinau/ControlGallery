@@ -9,8 +9,8 @@
         <ScrollView>
             <VerticalStackLayout Margin="15" Spacing="8">
                 <Label Text="BoxView"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <BoxView Color="Red" WidthRequest="100" HeightRequest="100"/>
 

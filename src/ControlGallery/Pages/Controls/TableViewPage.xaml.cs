@@ -1,9 +1,9 @@
 ﻿namespace ControlGallery.Pages;
-public partial class MainPage : ContentPage
+
+public partial class TableViewPage : ContentPage
 {
-    public MainPage()
+    public TableViewPage()
     {
         InitializeComponent();
     }
-
 }

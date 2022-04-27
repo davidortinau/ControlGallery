@@ -141,7 +141,10 @@
                 </Style>
 
             </FlexLayout.Resources>
-            
+
+            <Button Text="Click me"
+                    Clicked="Button_Clicked"/>
+
             <Label Text="Label 1"
                    TextColor="{StaticResource Text_Light}"
                    BackgroundColor="{StaticResource Secondary}" />

@@ -1,4 +1,5 @@
 using System;
+
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
@@ -9,7 +10,7 @@ namespace ControlGallery.Common
 
     public static class AbsoluteLayoutExtensions
     {
-        public static void Add(this AbsoluteLayout layout, IView child, Rectangle bounds, AbsoluteLayoutFlags flags)
+        public static void Add(this AbsoluteLayout layout, IView child, Rect bounds, AbsoluteLayoutFlags flags)
         {
             layout.Add(child);
 

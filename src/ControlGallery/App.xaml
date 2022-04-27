@@ -9,17 +9,15 @@
     </Application.Resources>
 
     <Application.MainPage>
-        <Shell 
-            FlyoutBackground="#512BD4"
-            FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}">
+        <Shell FlyoutBackground="{AppThemeBinding Dark={StaticResource PrimaryBrush}, Light=White}"
+               FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
+            >
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="120" 
                           ColumnDefinitions="*"
-                          Background="#512BD4"
                           >
                         <Label Text="Control Gallery"
-                               TextColor="White"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"/>
                     </Grid>
@@ -38,7 +36,7 @@
 
             <FlyoutItem Title="Features">
                 <ShellContent Route="features" 
-                      ContentTemplate="{DataTemplate pages:LayoutsPage}" />
+                      ContentTemplate="{DataTemplate pages:FeaturesPage}" />
             </FlyoutItem>
         </Shell>
     </Application.MainPage>

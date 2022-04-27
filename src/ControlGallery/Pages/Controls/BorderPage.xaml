@@ -16,8 +16,8 @@
         <ScrollView>
             <VerticalStackLayout Margin="15" Spacing="8">
                 <Label Text="Rectangle"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Border>
                     <Border.StrokeShape>
@@ -27,8 +27,8 @@
                 </Border>
 
                 <Label Text="Round Rectangle"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Border>
                     <Border.StrokeShape>
@@ -38,8 +38,8 @@
                 </Border>
 
                 <Label Text="Thickness"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Border StrokeThickness="8">
                     <Border.StrokeShape>
@@ -49,8 +49,8 @@
                 </Border>
 
                 <Label Text="Stroke Dash Offset"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Border StrokeDashOffset="8"
                          StrokeDashArray="1,1">
@@ -61,8 +61,8 @@
                 </Border>
 
                 <Label Text="Stroke Line Join"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Border StrokeLineJoin="Bevel"
                         StrokeDashOffset="8"
@@ -74,8 +74,8 @@
                 </Border>
 
                 <Label Text="Stroke Line Cap"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Border StrokeLineCap="Flat" 
                         StrokeDashOffset="8" 

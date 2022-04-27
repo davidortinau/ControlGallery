@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-                <Label Text="Default" StyleClass="Headline"/>
+                <Label Text="Default" Style="{StaticResource Headline}"/>
                 <Label Text="Enabled and untoggled" StyleClass="Subhead"/>
                 <Switch/>
 
@@ -20,7 +20,7 @@
                 <Label Text="Disabled and toggled" StyleClass="Subhead"/>
                 <Switch IsToggled="True" IsEnabled="False"/>
 
-                <Label Text="Styled" StyleClass="Headline"/>
+                <Label Text="Styled" Style="{StaticResource Headline}"/>
                 <Label Text="OnColor" StyleClass="Subhead"/>
                 <Switch IsToggled="True" OnColor="{StaticResource Accent}"/>
 

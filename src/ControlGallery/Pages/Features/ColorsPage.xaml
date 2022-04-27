@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ControlGallery.Models"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             x:Class="ControlGallery.Pages.ColorsPage"
+             Title="Colors &amp; Brushes">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
+                <Label Text="Colors" Style="{StaticResource Headline}"/>
+                <BoxView Style="{StaticResource HRule}"/>
+                
+                <cl:HorizontalWrapLayout 
+                            Margin="2,15">
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type models:ColorBrush}">
+                            <models:ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
+                            <models:ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
+                            <models:ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>
+                            <models:ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>
+                            <models:ColorBrush Brush="{StaticResource NeutralLighterBrush}" BrushName="NeutralLighter"/>
+                            <models:ColorBrush Brush="{StaticResource NeutralDarkerBrush}" BrushName="NeutralDarker"/>
+                            <models:ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
+                            <models:ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout WidthRequest="160" HeightRequest="160" Margin="8,0,8,8">
+                                <Ellipse WidthRequest="100" HeightRequest="100"
+                                         HorizontalOptions="Center"
+                                         Fill="{Binding Brush}"/>
+                                <Label Text="{Binding BrushName}"/>
+                                <Label Text="{Binding BrushValue}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </cl:HorizontalWrapLayout>
+
+                <Label Text="Linear Gradient Brush" Style="{StaticResource Headline}"/>
+                <BoxView Style="{StaticResource HRule}"/>
+                <cl:HorizontalWrapLayout Spacing="15">
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#48c6ef" Offset="1"/>
+                                <GradientStop Color="#6f86d6" Offset="0.1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Background>                        
+                    </Rectangle>
+
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="#434343  "
+                          Offset="0.1" />
+                                <GradientStop Color="#000000"
+                          Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="#a3bded "
+                          Offset="0.1" />
+                                <GradientStop Color="#6991c7"
+                          Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <LinearGradientBrush EndPoint="0.5,0.5">
+                                <GradientStop Color="#ff758c"
+                          Offset="0.1" />
+                                <GradientStop Color="#ff7eb3"
+                          Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+                </cl:HorizontalWrapLayout>
+
+                <Label Text="Radial Gradient Brush" Style="{StaticResource Headline}"/>
+                <BoxView Style="{StaticResource HRule}"/>
+                <cl:HorizontalWrapLayout Spacing="15">
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#48c6ef" Offset="1"/>
+                                <GradientStop Color="#6f86d6" Offset="0.1"/>
+                            </RadialGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#434343  "
+                          Offset="0.1" />
+                                <GradientStop Color="#000000"
+                          Offset="1.0" />
+                            </RadialGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#a3bded "
+                          Offset="0.1" />
+                                <GradientStop Color="#6991c7"
+                          Offset="1.0" />
+                            </RadialGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+
+                    <Rectangle WidthRequest="200" HeightRequest="200">
+                        <Rectangle.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#ff758c"
+                          Offset="0.1" />
+                                <GradientStop Color="#ff7eb3"
+                          Offset="1.0" />
+                            </RadialGradientBrush>
+                        </Rectangle.Background>
+                    </Rectangle>
+                </cl:HorizontalWrapLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

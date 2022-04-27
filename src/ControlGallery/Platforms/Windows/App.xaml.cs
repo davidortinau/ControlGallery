@@ -28,7 +28,7 @@ namespace ControlGallery.WinUI
         {
             base.OnLaunched(args);
 
-            Microsoft.Maui.Essentials.Platform.OnLaunched(args);
+            //Microsoft.Maui.Essentials.Platform.OnLaunched(args);
         }
     }
 }

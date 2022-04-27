@@ -4,15 +4,15 @@
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
              xmlns:a="clr-namespace:ControlGallery.Pages.Layouts.AbsoluteLayouts"
+             xmlns:cl="clr-namespace:CustomLayouts"
              x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
     <ContentPage.Content>
         <ScrollView>
 
             <VerticalStackLayout Margin="15">
-                <Label Text="AbsoluteLayout" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
-                        AlignItems="Start" AlignContent="Start" 
+                <Label Text="AbsoluteLayout" Style="{StaticResource Headline}"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
                             >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -38,11 +38,10 @@
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </FlexLayout>
+                </cl:HorizontalWrapLayout>
 
-                <Label Text="FlexLayout" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
-                        AlignItems="Start" AlignContent="Start">
+                <Label Text="FlexLayout" Style="{StaticResource Headline}"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Basis"
@@ -67,11 +66,10 @@
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </FlexLayout>
+                </cl:HorizontalWrapLayout>
 
-                <Label Text="Grid" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
-                        AlignItems="Start" AlignContent="Start">
+                <Label Text="Grid" Style="{StaticResource Headline}"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Alignment"
@@ -95,11 +93,10 @@
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </FlexLayout>
+                </cl:HorizontalWrapLayout>
 
-                <Label Text="StackLayout" StyleClass="Headline"/>
-                <FlexLayout Wrap="Wrap" Margin="0,0,0,60" JustifyContent="Start"
-                        AlignItems="Start" AlignContent="Start">
+                <Label Text="StackLayout" Style="{StaticResource Headline}"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Alignment"
@@ -125,9 +122,9 @@
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </FlexLayout>
+                </cl:HorizontalWrapLayout>
 
-                <Label Text="Other" StyleClass="Headline"/>
+                <Label Text="Other" Style="{StaticResource Headline}"/>
                 <Button 
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"

@@ -4,20 +4,19 @@
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
              xmlns:c="clr-namespace:CollectionViewDemos.Views"
-             x:Class="ControlGallery.Pages.ControlsPage"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.Content>
         <ScrollView>
-            <FlexLayout Wrap="Wrap" Margin="15" JustifyContent="Start"
-                        AlignItems="Start" AlignContent="Start">
+            
+                <cl:HorizontalWrapLayout Margin="15" Spacing="12">
                 <BindableLayout.ItemsSource>
                     <x:Array Type="{x:Type m:NavItem}">
                         <m:NavItem Title="ActivityIndicator"
                                    Destination="{x:Type p:ActivityIndicatorPage}"/>
                         <m:NavItem Title="Alerts"
                                    Destination="{x:Type p:AlertPage}"/>
-                        <m:NavItem Title="App Themes"
-                                   Destination="{x:Type p:AppThemePage}"/>
                         <m:NavItem Title="Borders"
                                    Destination="{x:Type p:BorderPage}"/>
                         <m:NavItem Title="Buttons"
@@ -26,8 +25,6 @@
                                    Destination="{x:Type p:CheckboxPage}"/>
                         <m:NavItem Title="CollectionView"
                                    Destination="{x:Type c:CollectionViewPage}"/>
-                        <m:NavItem Title="Colors"
-                                   Destination="{x:Type p:ColorsPage}"/>
                         <m:NavItem Title="Date Picker"
                                    Destination="{x:Type p:DatePickerPage}"/>
                         <m:NavItem Title="Editors"
@@ -67,7 +64,8 @@
                         />
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
-            </FlexLayout>
+            </cl:HorizontalWrapLayout>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

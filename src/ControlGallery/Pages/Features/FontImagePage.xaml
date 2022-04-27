@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ControlGallery"
+             x:Class="ControlGallery.Pages.FontImagePage"
+             Title="FontImagePage">
+    <ContentPage.Resources>
+        <FontImageSource
+        x:Key="CircleIconAlt"
+        FontFamily="FontAwesome"
+        Glyph="{x:Static local:IconFont.DotCircle}"
+        Color="{StaticResource Primary}"
+        Size="80"/>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="{x:Static local:IconFont.AirFreshener}"
+               FontSize="24"
+               FontFamily="FontAwesome"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        
+        <Image HeightRequest="80" WidthRequest="80"
+               Source="{StaticResource CircleIconAlt}"/>
+    </StackLayout>
+</ContentPage>

@@ -53,7 +53,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="15">
-                <Label Text="Shapes" StyleClass="Headline"/>
+                <Label Text="Shapes" Style="{StaticResource Headline}"/>
                 <FlexLayout Wrap="Wrap" AlignContent="SpaceEvenly" JustifyContent="SpaceEvenly">
                     <Ellipse WidthRequest="50" HeightRequest="50"
                         Fill="{StaticResource PrimaryBrush}"/>

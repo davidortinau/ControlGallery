@@ -8,7 +8,7 @@
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
 
-                <Label Text="Default" StyleClass="Headline"/>
+                <Label Text="Default" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
                     <CheckBox/>
                     <Label Text="Unchecked" VerticalOptions="Center"/>
@@ -26,7 +26,7 @@
                     <Label Text="Disabled checked" VerticalOptions="Center"/>
                 </HorizontalStackLayout>
 
-                <Label Text="Styling" StyleClass="Headline"/>
+                <Label Text="Styling" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
                     <CheckBox Color="{StaticResource Accent}"/>
                     <Label Text="Accent" VerticalOptions="Center"/>

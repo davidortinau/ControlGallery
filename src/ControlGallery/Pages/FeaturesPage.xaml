@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:p="clr-namespace:ControlGallery.Pages"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             x:Class="ControlGallery.Pages.FeaturesPage"
+             Title="Features">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <VerticalStackLayout Margin="15">
+                <Label Text="UI Features" Style="{StaticResource Headline}"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
+                            >
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="AppThemeBinding"
+                                   Destination="{x:Type p:AppThemePage}"/>
+                            <m:NavItem Title="Colors"
+                                   Destination="{x:Type p:ColorsPage}"/>
+                            <m:NavItem Title="FontImageSource"
+                                   Destination="{x:Type p:FontImagePage}"/>
+                            <m:NavItem Title="MenuBar"
+                                   Destination="{x:Type p:MenuBarPage}"/>
+                            <m:NavItem Title="Triggers"
+                                   Destination="{x:Type p:TriggersPage}"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </cl:HorizontalWrapLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

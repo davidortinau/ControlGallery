@@ -15,8 +15,8 @@
         <ScrollView>
             <VerticalStackLayout Margin="15" Spacing="8">
                 <Label Text="On a layout"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <VerticalStackLayout Padding="12" Margin="20" 
                                      Background="#f1f1f1"
@@ -27,16 +27,16 @@
                 </VerticalStackLayout>
 
                 <Label Text="On a label"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 
                 <Label Text="I Have A Shadow" 
                        Shadow="{StaticResource BasicShadow}"/>
                 
                 <Label Text="Image with clip"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Image Source="https://aka.ms/campus.jpg"
                        Aspect="AspectFill"
@@ -52,8 +52,8 @@
                 </Image>
 
                 <Label Text="Shape"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 
                 <Polygon Fill="{StaticResource PrimaryBrush}"
@@ -62,8 +62,8 @@
                          Points="0 36 0 13.5 13.5 0 36 0 50 13.5 50 36 36 50 13.5 50"/>
                 
                 <Label Text="Compound shapes"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Grid 
                     HeightRequest="50" WidthRequest="50"
@@ -79,8 +79,8 @@
                 </Grid>
 
                 <Label Text="Path"
-                       StyleClass="Headline" />
-                <BoxView StyleClass="HRule"/>
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
 
                 <Path 
                     HeightRequest="100" WidthRequest="100" 

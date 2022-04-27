@@ -97,27 +97,27 @@
     <ContentPage.Content>
     <ScrollView>
         <StackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}">
-            <Label Text="On" StyleClass="Headline"/>
+            <Label Text="On" Style="{StaticResource Headline}"/>
             <StackLayout Orientation="Horizontal">
                 <RadioButton Content="RadioButton" IsChecked="True" />
                 <RadioButton Content="RadioButton (Disabled)" IsChecked="True" IsEnabled="False"/>
             </StackLayout>
 
-            <Label Text="Off" StyleClass="Headline"/>
+            <Label Text="Off" Style="{StaticResource Headline}"/>
             <StackLayout Orientation="Horizontal">
                 <RadioButton Content="RadioButton" IsChecked="False" />
                 <RadioButton Content="RadioButton (Disabled)" IsChecked="False" IsEnabled="False"/>
             </StackLayout>
 
 
-            <Label Text="RadioButtonGroup" StyleClass="Headline" />
+            <Label Text="RadioButtonGroup" Style="{StaticResource Headline}" />
             <StackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="Colors">
                 <RadioButton Content="Red" IsChecked="True"/>
                 <RadioButton Content="Green" />
                 <RadioButton Content="Blue" />
             </StackLayout>
 
-            <Label Text="RadioButton ContentTemplate" StyleClass="Headline"/>
+            <Label Text="RadioButton ContentTemplate" Style="{StaticResource Headline}"/>
             <StackLayout 
                 Orientation="Horizontal"
                 HorizontalOptions="FillAndExpand"

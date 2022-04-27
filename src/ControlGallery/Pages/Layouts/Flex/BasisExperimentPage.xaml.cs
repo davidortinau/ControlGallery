@@ -86,5 +86,10 @@ namespace ControlGallery.Pages.Layouts
         {
             FlexLayout.SetBasis(label4, new FlexBasis((float)args.NewValue, relativeSwitch4.IsToggled));
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Clicked", "Nice shot man", "Okay");
+        }
     }
 }

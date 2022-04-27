@@ -8,7 +8,7 @@
     <ScrollView>
         <FlexLayout Margin="15" Wrap="Wrap">
 
-            <Label Text="Views" StyleClass="LargeTitle" />
+            <Label Text="Views" Style="{StaticResource LargeTitle}" />
             <Button Text="ActivityIndicator" Clicked="OnClicked" />
             <Button Text="Button" Clicked="OnClicked" />
             <Button Text="CarouselView" Clicked="OnClicked" IsEnabled="False" />
@@ -35,7 +35,7 @@
             <Button Text="TimePicker" Clicked="OnClicked" />
             <Button Text="WebView" Clicked="OnClicked" IsEnabled="False" />
 
-            <Label Text="Layouts" StyleClass="LargeTitle" />
+            <Label Text="Layouts" Style="{StaticResource LargeTitle}" />
             <Button Text="AbsoluteLayout" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="ContentPresenter" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="ContentView" Clicked="OnClicked" IsEnabled="False" />
@@ -47,7 +47,7 @@
             <Button Text="TemplatedView" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="VerticalStackLayout" Clicked="OnClicked" />
 
-            <Label Text="Features" StyleClass="LargeTitle" />
+            <Label Text="Features" Style="{StaticResource LargeTitle}" />
             <Button Text="Accessibility" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="Animation" Clicked="OnClicked" IsEnabled="False" />
             <Button Text="Borders" Clicked="OnClicked" IsEnabled="False" />

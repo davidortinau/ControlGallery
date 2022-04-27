@@ -7,16 +7,16 @@
     
     <ScrollView>
         <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-            <Label Text="Default" StyleClass="Headline"/>
+            <Label Text="Default" Style="{StaticResource Headline}"/>
             <Slider />
 
-            <Label Text="MinimumTrackColor" StyleClass="Headline"/>
+            <Label Text="MinimumTrackColor" Style="{StaticResource Headline}"/>
             <Slider MinimumTrackColor="{StaticResource Neutral}" Value="0.5"/>
 
-            <Label Text="MaximumTrackColor" StyleClass="Headline"/>
+            <Label Text="MaximumTrackColor" Style="{StaticResource Headline}"/>
             <Slider MaximumTrackColor="{StaticResource Neutral}" Value="0.5"/>
 
-            <Label Text="ThumbColor" StyleClass="Headline"/>
+            <Label Text="ThumbColor" Style="{StaticResource Headline}"/>
             <Slider ThumbColor="{StaticResource Primary}" Value="0.5"/>
         </StackLayout>
     </ScrollView>
