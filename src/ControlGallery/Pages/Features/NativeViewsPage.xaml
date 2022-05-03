@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ControlGallery.Models"
+             xmlns:ios="clr-namespace:UIKit;assembly=Microsoft.iOS;targetPlatform=iOS"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             x:Class="ControlGallery.Pages.NativeViewsPage"
+             Title="Native Views">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
+                <Label Text="iOS UIColorWell" Style="{StaticResource Headline}"/>
+                <BoxView Style="{StaticResource HRule}"/>
+
+                <ios:UIColorWell />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

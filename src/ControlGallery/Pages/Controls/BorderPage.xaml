@@ -5,12 +5,12 @@
              Title="Borders"
              >
     <ContentPage.Resources>
-        <Style TargetType="Border">
+        <!--<Style TargetType="Border">
             <Setter Property="Stroke" Value="{StaticResource PrimaryBrush}"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="HorizontalOptions" Value="Start"/>
             <Setter Property="StrokeThickness" Value="4"/>
-        </Style>
+        </Style>-->
     </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
@@ -18,7 +18,7 @@
                 <Label Text="Rectangle"
                        Style="{StaticResource Headline}" />
                 <BoxView Style="{StaticResource HRule}"/>
-
+                
                 <Border>
                     <Border.StrokeShape>
                         <Rectangle />
@@ -85,6 +85,36 @@
                     </Border.StrokeShape>
                     <Label Text="Round Rectangle" Margin="12,8"/>
                 </Border>
+
+                <Label Text="Ellipse"
+                       Style="{StaticResource Headline}" />
+                <BoxView Style="{StaticResource HRule}"/>
+
+                <Grid ColumnDefinitions="78,*,*"
+                      RowDefinitions="48,30"
+                      ColumnSpacing="20"
+                      RowSpacing="0">
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.RowSpan="2"
+                            Background="Azure"
+                            Stroke="Red"
+                            StrokeThickness="6"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="72"
+                            HeightRequest="72"
+                            >
+                        <Border.StrokeShape>
+                            <Ellipse/>
+                        </Border.StrokeShape>
+                        <Label Text="Hello"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               FontSize="24"
+                               LineHeight="0.9"/>
+                    </Border>
+                </Grid>
 
             </VerticalStackLayout>
         </ScrollView>

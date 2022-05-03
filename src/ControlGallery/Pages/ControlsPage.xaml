@@ -9,7 +9,14 @@
              Title="Controls">
     <ContentPage.Content>
         <ScrollView>
-            
+            <VerticalStackLayout>
+                <!--<Label Margin="0,20,0,0"
+                Text="Current count: 0"
+                FontSize="18"
+                FontAttributes="Bold"
+                x:Name="CounterLabel"
+                HorizontalOptions="Center" />-->
+
                 <cl:HorizontalWrapLayout Margin="15" Spacing="12">
                 <BindableLayout.ItemsSource>
                     <x:Array Type="{x:Type m:NavItem}">
@@ -31,6 +38,8 @@
                                    Destination="{x:Type p:EditorPage}"/>
                         <m:NavItem Title="Entry"
                                    Destination="{x:Type p:EntryPage}"/>
+                        <m:NavItem Title="Frame"
+                                   Destination="{x:Type p:FramePage}"/>
                         <m:NavItem Title="Images"
                                    Destination="{x:Type p:ImagePage}"/>
                         <m:NavItem Title="Labels"
@@ -39,6 +48,8 @@
                                    Destination="{x:Type p:ProgressBarPage}"/>
                         <m:NavItem Title="Radio Buttons"
                                    Destination="{x:Type p:RadioButtonPage}"/>
+                        <m:NavItem Title="RefreshView"
+                                   Destination="{x:Type p:RefreshViewPage}"/>
                         <m:NavItem Title="Shadows"
                                    Destination="{x:Type p:ShadowPage}"/>
                         <m:NavItem Title="Shapes"
@@ -65,7 +76,7 @@
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </cl:HorizontalWrapLayout>
-            
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

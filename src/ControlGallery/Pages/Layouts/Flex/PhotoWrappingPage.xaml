@@ -7,6 +7,9 @@
         <ScrollView>
             <FlexLayout x:Name="flexLayout"
                         Wrap="Wrap"
+                        MinimumHeightRequest="1200"
+                        MinimumWidthRequest="800"
+                        Background="silver"
                         JustifyContent="SpaceAround" />
         </ScrollView>
 

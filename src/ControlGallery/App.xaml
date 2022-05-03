@@ -9,8 +9,31 @@
     </Application.Resources>
 
     <Application.MainPage>
+        <!--<ContentPage>
+            <Border 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Stroke="#C49B33"
+                StrokeThickness="4"
+                Background="#2B0B98"
+                Padding="16,8"> 
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,0,0,40" />
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow />
+                </Border.Shadow>
+
+
+                <Label Text=".NET MAUI"
+           TextColor="White"
+           FontSize="18"
+           FontAttributes="Bold" />
+            </Border>
+        </ContentPage>-->
         <Shell FlyoutBackground="{AppThemeBinding Dark={StaticResource PrimaryBrush}, Light=White}"
                FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
+               FlyoutIcon="{StaticResource AtomIcon}"
             >
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
@@ -23,7 +46,9 @@
                     </Grid>
                 </DataTemplate>
             </Shell.FlyoutHeaderTemplate>
-            
+
+
+
             <FlyoutItem Title="Controls">
                 <ShellContent Route="controls" 
                       ContentTemplate="{DataTemplate pages:ControlsPage}" />
@@ -33,6 +58,8 @@
                 <ShellContent Route="alert" 
                       ContentTemplate="{DataTemplate pages:LayoutsPage}" />
             </FlyoutItem>
+
+
 
             <FlyoutItem Title="Features">
                 <ShellContent Route="features" 

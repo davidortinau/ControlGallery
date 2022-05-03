@@ -36,6 +36,8 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(SliderPage), typeof(SliderPage));
         Routing.RegisterRoute(nameof(StepperPage), typeof(StepperPage));
         Routing.RegisterRoute(nameof(SwitchPage), typeof(SwitchPage));
+        Routing.RegisterRoute(nameof(FramePage), typeof(FramePage));
+        Routing.RegisterRoute(nameof(RefreshViewPage), typeof(RefreshViewPage));
 
         // Layouts
         Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));
@@ -49,6 +51,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(AlignmentGridPage), typeof(AlignmentGridPage));
         Routing.RegisterRoute(nameof(BasicGridPage), typeof(BasicGridPage));
         Routing.RegisterRoute(nameof(CalculatorPage), typeof(CalculatorPage));
+        Routing.RegisterRoute(nameof(KeypadPage), typeof(KeypadPage));
         Routing.RegisterRoute(nameof(SliderGridPage), typeof(SliderGridPage));
         Routing.RegisterRoute(nameof(SpacingGridPage), typeof(SpacingGridPage));
 
@@ -58,8 +61,9 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(HorizontalStackPage), typeof(HorizontalStackPage));
         Routing.RegisterRoute(nameof(SpacingStackPage), typeof(SpacingStackPage));
         Routing.RegisterRoute(nameof(VerticalStackPage), typeof(VerticalStackPage));
+        Routing.RegisterRoute(nameof(AndExpandPage), typeof(AndExpandPage));
 
-        
+
         Routing.RegisterRoute(nameof(MarginPaddingPage), typeof(MarginPaddingPage));
 
         Routing.RegisterRoute(nameof(TableViewPage), typeof(TableViewPage));
@@ -116,6 +120,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(FontImagePage), typeof(FontImagePage));
         Routing.RegisterRoute(nameof(MenuBarPage), typeof(MenuBarPage));
         Routing.RegisterRoute(nameof(TriggersPage), typeof(TriggersPage));
+        Routing.RegisterRoute(nameof(NativeViewsPage), typeof(NativeViewsPage));
 
 
     }

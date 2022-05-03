@@ -33,6 +33,14 @@
     <MauiImage Include="Resources\Images\*" />
     <MauiFont Include="Resources\Fonts\*.ttf" />
   </ItemGroup>
+	
+  <ItemGroup>
+    <None Remove="Resources\food_01.png" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\food_01.png" />
+  </ItemGroup>
 
 	<!--<ItemGroup>
   	  <PackageReference Include="Microsoft.Maui.Graphics.Controls" Version="6.0.101-nightly.225" />
@@ -46,14 +54,26 @@
 	  <Compile Update="Pages\Controls\CollectionView\Views\CollectionViewPage.xaml.cs">
 	    <DependentUpon>CollectionViewPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Pages\Controls\RefreshViewPage.xaml.cs">
+	    <DependentUpon>RefreshViewPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\FeaturesPage.xaml.cs">
 	    <DependentUpon>FeaturesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Features\NativeViewsPage.xaml.cs">
+	    <DependentUpon>NativeViewsPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\Features\TriggersPage.xaml.cs">
 	    <DependentUpon>TriggersPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\Features\MenuBarPage.xaml.cs">
 	    <DependentUpon>MenuBarPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Layouts\Grid\KeypadPage.xaml.cs">
+	    <DependentUpon>KeypadPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Layouts\Stack\AndExpandPage.xaml.cs">
+	    <DependentUpon>AndExpandPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -205,6 +225,12 @@
 	  <MauiXaml Update="Pages\Controls\CollectionView\Views\Swipe\VerticalListSwipeContextItemsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Controls\RefreshViewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Features\NativeViewsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Features\TriggersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -215,6 +241,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\FeaturesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Layouts\Grid\KeypadPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Layouts\Stack\AndExpandPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

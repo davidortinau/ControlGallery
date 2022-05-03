@@ -66,6 +66,11 @@
         Default="OpenSansSemiBold"
         />
 
+    <!--<OnPlatform x:TypeArguments="Thickness"
+        x:Key="VeryThick"
+        Default="40,20"
+        />-->
+
 
     <!-- Shell -->
     <Style x:Key="BaseStyle"
@@ -221,7 +226,7 @@
         FontFamily="FontAwesome"
         Glyph="{x:Static app:IconFont.Atom}"
         Color="{StaticResource TextOnSolid_Light}"
-        Size="42"/>
+        Size="24"/>
 
     <FontImageSource
         x:Key="CircleIcon"

@@ -23,6 +23,8 @@
                                    Destination="{x:Type p:FontImagePage}"/>
                             <m:NavItem Title="MenuBar"
                                    Destination="{x:Type p:MenuBarPage}"/>
+                            <m:NavItem Title="Native Views"
+                                   Destination="{x:Type p:NativeViewsPage}"/>
                             <m:NavItem Title="Triggers"
                                    Destination="{x:Type p:TriggersPage}"/>
                         </x:Array>

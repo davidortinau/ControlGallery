@@ -78,6 +78,8 @@
                                    Destination="{x:Type p:BasicGridPage}"/>
                             <m:NavItem Title="Calculator"
                                    Destination="{x:Type p:CalculatorPage}"/>
+                            <m:NavItem Title="Keypad"
+                                   Destination="{x:Type p:KeypadPage}"/>
                             <m:NavItem Title="Slider"
                                    Destination="{x:Type p:SliderGridPage}"/>
                             <m:NavItem Title="Spacing"
@@ -101,6 +103,8 @@
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Alignment"
                                    Destination="{x:Type p:AlignmentStackPage}"/>
+                            <m:NavItem Title="AndExpand"
+                                   Destination="{x:Type p:AndExpandPage}"/>
                             <m:NavItem Title="Combined"
                                    Destination="{x:Type p:CombinedStackPage}"/>
                             <m:NavItem Title="Expansion"

@@ -33,7 +33,11 @@
                            BackgroundColor="Black"
                            />
                 </Border>-->
-
+                <Label Text="Embedded Resource"/>
+                <Image x:Name="ImgTarget"
+                       
+                       HeightRequest="100" WidthRequest="100"/>
+                
                 <Label Text="Image with 40x40 and #f1f1f1 bg"/>
                 <Image Source="dotnet_bot.png" 
                        BackgroundColor="#f1f1f1"

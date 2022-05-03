@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ControlGallery.Pages;
 
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Shapes;
-using Microsoft.Maui.Controls.Xaml;
-
-namespace ControlGallery.Pages
+public partial class ImagePage : ContentPage
 {
-    public partial class ImagePage : ContentPage
+    public ImagePage()
     {
-        public ImagePage()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
-            
-        }
+        
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        ImgTarget.Source = ImageSource.FromResource("ControlGallery.Resources.food_01.png");
     }
 }
