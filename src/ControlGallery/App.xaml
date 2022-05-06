@@ -5,35 +5,16 @@
              windows:Application.ImageDirectory="Assets"
              x:Class="ControlGallery.App">
     <Application.Resources>
-        <ResourceDictionary Source="Resources/Styles/Styles.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/DefaultStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
     <Application.MainPage>
-        <!--<ContentPage>
-            <Border 
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Stroke="#C49B33"
-                StrokeThickness="4"
-                Background="#2B0B98"
-                Padding="16,8"> 
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="40,0,0,40" />
-                </Border.StrokeShape>
-                <Border.Shadow>
-                    <Shadow />
-                </Border.Shadow>
-
-
-                <Label Text=".NET MAUI"
-           TextColor="White"
-           FontSize="18"
-           FontAttributes="Bold" />
-            </Border>
-        </ContentPage>-->
-        <Shell FlyoutBackground="{AppThemeBinding Dark={StaticResource PrimaryBrush}, Light=White}"
-               FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
-               FlyoutIcon="{StaticResource AtomIcon}"
+        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
             >
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
