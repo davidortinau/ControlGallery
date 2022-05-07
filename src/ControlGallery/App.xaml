@@ -14,16 +14,16 @@
     </Application.Resources>
 
     <Application.MainPage>
-        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
-            >
+        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}">
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="120" 
-                          ColumnDefinitions="*"
-                          >
-                        <Label Text="Control Gallery"
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center"/>
+                          ColumnDefinitions="*">
+                        <Image Source="dotnet_bot.png"
+                               HeightRequest="80"
+                               WidthRequest="80"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
                     </Grid>
                 </DataTemplate>
             </Shell.FlyoutHeaderTemplate>

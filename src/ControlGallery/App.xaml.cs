@@ -14,7 +14,7 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         RegisterRoutes();
 
-        App.Current.UserAppTheme = AppTheme.Light;
+        //App.Current.UserAppTheme = AppTheme.Light;
     }
 
     private void RegisterRoutes()

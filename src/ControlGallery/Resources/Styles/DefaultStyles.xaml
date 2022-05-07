@@ -12,6 +12,7 @@
     <Color x:Key="NeutralDarker">#505050</Color>
     <Color x:Key="White">#FFFAFA</Color>
     <Color x:Key="Black">#1d1d1d</Color>
+    <Color x:Key="Gray950">#141414</Color>
     <Color x:Key="Accent">#F7B548</Color>
     <Color x:Key="Error">#C00</Color>
     <Color x:Key="Warning">#FFCC00</Color>
@@ -405,8 +406,18 @@
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" />
     </Style>
 
+    <Style TargetType="Shell">
+        <Setter Property="FlyoutBackground" Value="{AppThemeBinding Dark={StaticResource Gray950}, Light={StaticResource Tertiary}}"/>
+    </Style>
+
+    <Style
+        TargetType="Label"
+        Class="FlyoutItemLabelStyle">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource LightGray}}" />
+    </Style>
+
     <Style x:Key="BaseStyle" TargetType="Element">
-        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Black}}" />
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Tertiary}, Dark={StaticResource Gray950}}" />
         <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
         <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource White}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource LightGray}, Dark={StaticResource DarkGray}}" />
