@@ -12,14 +12,16 @@
         Color="{StaticResource Primary}"
         Size="80"/>
     </ContentPage.Resources>
-    <StackLayout>
+    <StackLayout Margin="15" Spacing="8">
+        <Label Text="Label" Style="{StaticResource Headline}"/>
         <Label Text="{x:Static local:IconFont.AirFreshener}"
                FontSize="24"
                FontFamily="FontAwesome"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-        
+                HorizontalOptions="Start" />
+
+        <Label Text="Image" Style="{StaticResource Headline}"/>
         <Image HeightRequest="80" WidthRequest="80"
-               Source="{StaticResource CircleIconAlt}"/>
+               Source="{StaticResource CircleIconAlt}"
+               HorizontalOptions="Start"/>
     </StackLayout>
 </ContentPage>

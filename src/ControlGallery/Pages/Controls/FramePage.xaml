@@ -5,72 +5,72 @@
              x:Class="ControlGallery.Pages.FramePage"
              Title="Frame">
     <ContentPage.Content>
-        
-            <StackLayout Margin="15,100">
-            <Label Text="Basic Frame" Style="{StaticResource Headline}"/>
-            <Frame>
-                <Grid>
-                    <Label Text="Frame"/>
-                </Grid>
-            </Frame>
+        <ScrollView>
+            <StackLayout Margin="15" Spacing="8">
+                <Label Text="Basic Frame" Style="{StaticResource Headline}"/>
+                <Frame>
+                    <Grid>
+                        <Label Text="Frame"/>
+                    </Grid>
+                </Frame>
 
-            <Label Text="IsClippedToBounds Frame" Style="{StaticResource Headline}"/>
-            <Frame 
-               BackgroundColor="Silver"
-               BorderColor="Black"
-               CornerRadius="5"
-               HasShadow="True"
-               Padding="8"
-               VerticalOptions="Center"
-               HorizontalOptions="Center">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="75" />
-                        <RowDefinition Height="4" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="75" />
-                        <ColumnDefinition Width="200" />
-                    </Grid.ColumnDefinitions>
-                    <Frame IsClippedToBounds="True"
+                <Label Text="IsClippedToBounds Frame" Style="{StaticResource Headline}"/>
+                <Frame 
+                   BackgroundColor="Silver"
                    BorderColor="Black"
-                   BackgroundColor="Gray"
-                   CornerRadius="38"
-                   HeightRequest="60"
-                   WidthRequest="60"
-                   HorizontalOptions="Center"
-                   HasShadow="False"
-                   VerticalOptions="Center">
-                        <Image Source="dotnet_bot.png"
-                       Margin="-20"
-                       WidthRequest="100"
-                       HeightRequest="100"
-                       Aspect="AspectFill" />
-                    </Frame>
-                    <Label Grid.Column="1"
-                   Text="Card Title"
-                   FontAttributes="Bold"
-                   FontSize="Large"
-                   VerticalTextAlignment="Center"
-                   HorizontalTextAlignment="Start" />
-                    <BoxView Grid.Row="1"
-                     Grid.ColumnSpan="2"
-                     BackgroundColor="Black"
-                     HeightRequest="2"
-                     HorizontalOptions="Fill" />
-                    <Label Grid.Row="2"
-                   Grid.ColumnSpan="2"
-                   Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
-                   VerticalTextAlignment="Start"
-                   VerticalOptions="Fill"
-                   HorizontalOptions="Fill" />
+                   CornerRadius="5"
+                   HasShadow="True"
+                   Padding="8"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="75" />
+                            <RowDefinition Height="4" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75" />
+                            <ColumnDefinition Width="200" />
+                        </Grid.ColumnDefinitions>
+                        <Frame IsClippedToBounds="True"
+                       BorderColor="Black"
+                       BackgroundColor="Gray"
+                       CornerRadius="38"
+                       HeightRequest="60"
+                       WidthRequest="60"
+                       HorizontalOptions="Center"
+                       HasShadow="False"
+                       VerticalOptions="Center">
+                            <Image Source="dotnet_bot.png"
+                           Margin="-20"
+                           WidthRequest="100"
+                           HeightRequest="100"
+                           Aspect="AspectFill" />
+                        </Frame>
+                        <Label Grid.Column="1"
+                       Text="Card Title"
+                       FontAttributes="Bold"
+                       FontSize="Large"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start" />
+                        <BoxView Grid.Row="1"
+                         Grid.ColumnSpan="2"
+                         BackgroundColor="Black"
+                         HeightRequest="2"
+                         HorizontalOptions="Fill" />
+                        <Label Grid.Row="2"
+                       Grid.ColumnSpan="2"
+                       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
+                       VerticalTextAlignment="Start"
+                       VerticalOptions="Fill"
+                       HorizontalOptions="Fill" />
 
-                </Grid>
-            </Frame>
+                    </Grid>
+                </Frame>
 
 
-        </StackLayout>
-
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

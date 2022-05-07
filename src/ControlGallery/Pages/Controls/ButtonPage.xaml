@@ -24,28 +24,6 @@
             <VerticalStackLayout 
                Padding="{OnPlatform iOS='30,60,30,30', Default='30,00'}">
 
-                <!--<Button Text="Click to pop!"
-                        x:Name="PopBtn"
-                        MinimumWidthRequest="300"
-                        MaximumWidthRequest="500"
-                        Padding="40"
-                        TextColor="Orange" 
-                        FontSize="32"
-                        ImageSource="appicon.png"
-                        Margin="0,0,0,40"
-                        AnchorX="0.5"
-                        AnchorY="0.5"
-                        HorizontalOptions="Center"
-                        Clicked="OnButtonClicked">
-                    <Button.Shadow>
-                        <Shadow
-                            Brush="#1d1d1d" 
-                            Radius="10" 
-                            Opacity="0.6"
-                            />
-                    </Button.Shadow>
-                </Button>-->
-
                 <Label Text="Primary filled"/>
                 <HorizontalStackLayout>
                     <Button Text="Button"/>

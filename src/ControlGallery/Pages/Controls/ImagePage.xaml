@@ -18,22 +18,7 @@
             <VerticalStackLayout 
                 Spacing="20"
                 Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
-                <Label Text="Images" 
-                           Style="{StaticResource Headline}"/>
-                <!--<Border Stroke="Black"
-                        StrokeThickness="3"
-                        HorizontalOptions="Start"
-                        >
-                    <Border.StrokeShape>
-                        <RoundRectangle />
-                    </Border.StrokeShape>
-                    <Image Source="{StaticResource CircleIcon}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           BackgroundColor="Black"
-                           />
-                </Border>-->
-                <Label Text="Embedded Resource"/>
+                <Label Text="Embedded Resource" Style="{StaticResource Headline}"/>
                 <Image x:Name="ImgTarget"
                        
                        HeightRequest="100" WidthRequest="100"/>

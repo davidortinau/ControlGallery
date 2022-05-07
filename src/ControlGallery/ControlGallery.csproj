@@ -38,5 +38,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\food_01.png" />
   </ItemGroup>
+	
+	
+  <ItemGroup>
+    <MauiXaml Update="Resources\Styles\Text.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Resources\Styles\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Resources\Styles\Sizes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
 
 </Project>

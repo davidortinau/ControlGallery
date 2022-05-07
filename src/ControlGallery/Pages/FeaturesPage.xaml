@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <ScrollView>
 
-            <VerticalStackLayout Margin="15">
+            <VerticalStackLayout Margin="15" Spacing="8">
                 <Label Text="UI Features" Style="{StaticResource Headline}"/>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
                             >
