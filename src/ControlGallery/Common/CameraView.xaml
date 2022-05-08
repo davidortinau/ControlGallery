@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:r="clr-namespace:ConferenceVision.Views.Renderers"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="false"
+             BackgroundColor="Black"
+             BackgroundImage=""
+             x:Class="ConferenceVision.Views.CameraView">
+    <ContentPage.Content>
+        
+        <FlexLayout
+            x:Name="Container"
+            JustifyContent="SpaceBetween" 
+            Direction="Column">
+            <FlexLayout.Margin>
+                <OnPlatform x:TypeArguments="Thickness" Default="0">
+                    <On Platform="iOS" Value="0,30"/>
+                </OnPlatform>
+            </FlexLayout.Margin>
+
+            <Button
+                FlexLayout.AlignSelf="Start"
+                Text="&#xE894;" 
+                FontSize="18"
+                WidthRequest="40"
+                HeightRequest="40"
+                Style="{StaticResource IconFontButton}" 
+                FlexLayout.Shrink="0"
+                Clicked="OnCloseAsync">                
+                <Button.Margin>
+                    <OnPlatform x:TypeArguments="Thickness" Default="-1">
+                        <On Platform="Android" Value="0"/>
+                    </OnPlatform>
+                </Button.Margin>
+            </Button>
+            
+            <r:CameraPreview 
+                    x:Name="Camera"
+                    FlexLayout.Grow="1"
+                    Camera="Rear"
+                    BackgroundColor="Black"
+                    EncodingId="{Binding EncodingId}"
+                    Filename="{Binding Filename, Mode=TwoWay}"
+                    SaveCommand="{Binding SaveCommand}"
+                />
+
+            <AbsoluteLayout
+                FlexLayout.Shrink="0">
+                <Button.Margin>
+                        <OnPlatform x:TypeArguments="Thickness" Default="15">
+                            <On Platform="Android" Value="15"/>
+                        </OnPlatform>
+                    </Button.Margin>
+                <Image
+                    x:Name="LastImage"
+                    IsVisible="{Binding HasLastMemory}"
+                    AbsoluteLayout.LayoutBounds="30, 0.5, 40, 40"
+                    AbsoluteLayout.LayoutFlags="YProportional"
+                    Source="{Binding ThumbnailImagePath, Converter={StaticResource ImageSourceConverter}}"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Aspect="AspectFill"
+                    BackgroundColor="Transparent">
+                    <Image.GestureRecognizers>
+                         <TapGestureRecognizer
+                            Tapped="NavToDetailAsync"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <BoxView 
+                    x:Name="AchievementIndicator"
+                    IsVisible="{Binding HasAchievement}"
+                    InputTransparent="true"
+                    Opacity="0"
+                    AbsoluteLayout.LayoutBounds="30, 0.5, 40, 40"
+                    AbsoluteLayout.LayoutFlags="YProportional"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    BackgroundColor="White"/>
+                    
+                <Button
+                    AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Image="btn_take_photo.png"
+                    Style="{StaticResource NakedButton}"
+                    Clicked="OnCaptureTapped">
+                </Button>
+                
+            </AbsoluteLayout>
+
+                
+                
+            </FlexLayout>
+    </ContentPage.Content>
+    
+    <ContentPage.Resources>
+        <Style TargetType="FlexLayout">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList x:Name="CommonStates">
+                    <VisualStateGroup>
+                        <VisualState x:Name="Portrait">
+                            <VisualState.Setters>
+                                <Setter Property="Direction" Value="Column"/>
+                                <Setter Property="Margin">
+                                    <OnPlatform x:TypeArguments="Thickness" Default="0">
+                                        <On Platform="iOS" Value="0,30"/>
+                                    </OnPlatform>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Horizontal">
+                            <VisualState.Setters>
+                                <Setter Property="Direction" Value="Row"/>
+                                <Setter Property="Margin">
+                                    <OnPlatform x:TypeArguments="Thickness" Default="0">
+                                        <On Platform="iOS" Value="30,0"/>
+                                    </OnPlatform>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList x:Name="CommonStates">
+                    <VisualStateGroup>
+                        <VisualState x:Name="Portrait">
+                            <VisualState.Setters>
+                                <Setter Property="AbsoluteLayout.LayoutBounds" 
+                                        Value="30, 0.5, 40, 40"/>
+                                <Setter Property="AbsoluteLayout.LayoutFlags" 
+                                        Value="YProportional"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Horizontal">
+                            <VisualState.Setters>
+                                <Setter Property="AbsoluteLayout.LayoutBounds" 
+                                        Value="0.5, 0.9, 40, 40"/>
+                                <Setter Property="AbsoluteLayout.LayoutFlags" 
+                                        Value="PositionProportional"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
