@@ -16,7 +16,7 @@
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Camera View"
-                                   Destination="{x:Type p:CameraViewPage}"/>
+                                   Destination="{x:Type p:AppThemePage}"/>
                             
                         </x:Array>
                     </BindableLayout.ItemsSource>

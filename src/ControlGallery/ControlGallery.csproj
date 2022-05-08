@@ -36,6 +36,7 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <None Remove="Resources\Fonts\FabMDL2.ttf" />
     <None Remove="Resources\Images\h01.png" />
     <None Remove="Resources\Images\h02.png" />
     <None Remove="Resources\Images\h03.png" />
@@ -66,6 +67,18 @@
     <Compile Update="Pages\Controls\PickerPage.xaml.cs">
       <DependentUpon>PickerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Layouts\Custom\CacadeLayoutPage.xaml.cs">
+      <DependentUpon>CacadeLayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Layouts\Custom\ColumnLayoutPage.xaml.cs">
+      <DependentUpon>ColumnLayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Layouts\Custom\HorizontalWrapLayoutPage.xaml.cs">
+      <DependentUpon>HorizontalWrapLayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\TipsPage.xaml.cs">
+      <DependentUpon>TipsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\Features\ClippingPage.xaml.cs">
       <DependentUpon>ClippingPage.xaml</DependentUpon>
     </Compile>
@@ -73,6 +86,9 @@
 	
 	
   <ItemGroup>
+    <MauiXaml Update="Common\CameraView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Pages\Controls\WebViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
@@ -85,7 +101,22 @@
     <MauiXaml Update="Pages\Controls\PickerPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
+    <MauiXaml Update="Pages\Layouts\Custom\CacadeLayoutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Layouts\Custom\ColumnLayoutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Layouts\Custom\HorizontalWrapLayoutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\TipsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Pages\Features\ClippingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Tips\CameraViewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
     <MauiXaml Update="Resources\Styles\Text.xaml">

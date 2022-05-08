@@ -68,6 +68,8 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(AndExpandPage), typeof(AndExpandPage));
         
         Routing.RegisterRoute(nameof(HorizontalWrapLayoutPage), typeof(HorizontalWrapLayoutPage));
+        Routing.RegisterRoute(nameof(CascadeLayoutPage), typeof(CascadeLayoutPage));
+        Routing.RegisterRoute(nameof(ColumnLayoutPage), typeof(ColumnLayoutPage));
 
 
         Routing.RegisterRoute(nameof(MarginPaddingPage), typeof(MarginPaddingPage));

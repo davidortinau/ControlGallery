@@ -3,8 +3,8 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cl="clr-namespace:CustomLayouts"
-             x:Class="ControlGallery.Pages.Layouts.HorizontalWrapLayoutPage"
-             Title="Horizontal Wrap Layout">
+             x:Class="ControlGallery.Pages.Layouts.CascadeLayoutPage"
+             Title="CascadeLayout">
     <ContentPage.Resources>
         <Style TargetType="Border">
             <Setter Property="WidthRequest" Value="75"/>
@@ -16,7 +16,7 @@
         </Style>
     </ContentPage.Resources>
     <ScrollView>
-        <cl:HorizontalWrapLayout Spacing="5" Margin="15">
+        <cl:CascadeLayout Spacing="20" Margin="15">
             <Border />
             <Border />
             <Border />
@@ -33,7 +33,6 @@
             <Border />
             <Border />
             <Border />
-            <Border />
-        </cl:HorizontalWrapLayout>
+        </cl:CascadeLayout>
     </ScrollView>
 </ContentPage>

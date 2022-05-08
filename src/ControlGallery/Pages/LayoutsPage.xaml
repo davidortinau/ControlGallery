@@ -162,11 +162,9 @@
                             <m:NavItem Title="HorizontalWrapLayout"
                                    Destination="{x:Type p:HorizontalWrapLayoutPage}"/>
                             <m:NavItem Title="CascadeLayout"
-                                   Destination="{x:Type p:AndExpandPage}"/>
+                                   Destination="{x:Type p:CascadeLayoutPage}"/>
                             <m:NavItem Title="ColumnLayout"
-                                   Destination="{x:Type p:CombinedStackPage}"/>
-                            <m:NavItem Title="ContentColumnLayout"
-                                   Destination="{x:Type p:ExpansionStackPage}"/>
+                                   Destination="{x:Type p:ColumnLayoutPage}"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
