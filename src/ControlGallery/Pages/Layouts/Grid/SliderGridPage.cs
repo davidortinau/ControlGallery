@@ -16,7 +16,7 @@ namespace ControlGallery.Pages.Layouts
 
 		public SliderGridPage()
 		{
-            BackgroundColor = Colors.White;
+            //BackgroundColor = Colors.White;
             Title = "Slider";
 
 			Style labelStyle = new Style(typeof(Label))

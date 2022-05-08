@@ -9,7 +9,7 @@ namespace ControlGallery.Pages.Layouts
 	{
 		public SpacingGridPage()
 		{
-            BackgroundColor = Colors.White;
+            //BackgroundColor = Colors.White;
             Title = "Spacing";
 
 			Grid grid = new Grid

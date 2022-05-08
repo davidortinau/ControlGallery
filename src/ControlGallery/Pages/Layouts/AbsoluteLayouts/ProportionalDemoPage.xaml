@@ -5,16 +5,16 @@
              x:Class="ControlGallery.Pages.Layouts.AbsoluteLayouts.ProportionalDemoPage"
              Title="Proportional demo">
     <AbsoluteLayout>
-        <BoxView Color="Blue"
+        <Border Background="{StaticResource Gray100Brush}"
                  AbsoluteLayout.LayoutBounds="0.5,0,100,25"
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
-        <BoxView Color="Green"
+        <Border Background="{StaticResource Gray200Brush}"
                  AbsoluteLayout.LayoutBounds="0,0.5,25,100"
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
-        <BoxView Color="Red"
+        <Border Background="{StaticResource Gray300Brush}"
                  AbsoluteLayout.LayoutBounds="1,0.5,25,100"
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
-        <BoxView Color="Black"
+        <Border Background="{StaticResource Gray500Brush}"
                  AbsoluteLayout.LayoutBounds="0.5,1,100,25"
                  AbsoluteLayout.LayoutFlags="PositionProportional" />
         <Label Text="Centered text"

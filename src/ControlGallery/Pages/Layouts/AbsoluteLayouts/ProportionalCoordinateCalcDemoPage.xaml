@@ -6,7 +6,7 @@
     <ContentView Margin="20"
                  SizeChanged="OnContentViewSizeChanged">
         <AbsoluteLayout x:Name="absoluteLayout"
-                        BackgroundColor="LightCoral"
+                        BackgroundColor="{StaticResource Gray500}"
                         HorizontalOptions="Center"
                         VerticalOptions="Center" />
     </ContentView>

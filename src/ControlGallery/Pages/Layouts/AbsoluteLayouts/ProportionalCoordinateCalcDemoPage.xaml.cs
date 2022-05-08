@@ -13,6 +13,8 @@ namespace ControlGallery.Pages.Layouts.AbsoluteLayouts
         {
             InitializeComponent();
 
+            App.Current.Resources.TryGetValue("Gray300", out var color);
+
             Rect[] fractionalRects =
             {
                 new Rect(0.05, 0.1, 0.90, 0.1),    // outer top
@@ -39,7 +41,7 @@ namespace ControlGallery.Pages.Layouts.AbsoluteLayouts
 
                 absoluteLayout.Add(new BoxView
                 {
-                    Color = Colors.DarkBlue
+                    Color = (Color)color
                 }, layoutBounds, AbsoluteLayoutFlags.All);
             }
         }
