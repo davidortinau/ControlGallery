@@ -66,6 +66,8 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(SpacingStackPage), typeof(SpacingStackPage));
         Routing.RegisterRoute(nameof(VerticalStackPage), typeof(VerticalStackPage));
         Routing.RegisterRoute(nameof(AndExpandPage), typeof(AndExpandPage));
+        
+        Routing.RegisterRoute(nameof(HorizontalWrapLayoutPage), typeof(HorizontalWrapLayoutPage));
 
 
         Routing.RegisterRoute(nameof(MarginPaddingPage), typeof(MarginPaddingPage));

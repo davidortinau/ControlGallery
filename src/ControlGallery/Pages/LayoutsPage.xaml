@@ -155,6 +155,30 @@
                     <Label Text="ScrollView" Style="{StaticResource Headline}" VerticalOptions="Center"/>
                 </HorizontalStackLayout>
 
+                <Label Text="Custom Layouts" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="HorizontalWrapLayout"
+                                   Destination="{x:Type p:HorizontalWrapLayoutPage}"/>
+                            <m:NavItem Title="CascadeLayout"
+                                   Destination="{x:Type p:AndExpandPage}"/>
+                            <m:NavItem Title="ColumnLayout"
+                                   Destination="{x:Type p:CombinedStackPage}"/>
+                            <m:NavItem Title="ContentColumnLayout"
+                                   Destination="{x:Type p:ExpansionStackPage}"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </cl:HorizontalWrapLayout>
+
                 <Label Text="Other" Style="{StaticResource Headline}"/>
                 <Button 
                     HorizontalOptions="Start"

@@ -48,6 +48,11 @@
                 <ShellContent Route="features" 
                       ContentTemplate="{DataTemplate pages:FeaturesPage}" />
             </FlyoutItem>
+
+            <FlyoutItem Title="Tips &amp; Tricks" FlyoutIcon="view_image.png">
+                <ShellContent Route="tips" 
+                      ContentTemplate="{DataTemplate pages:TipsPage}" />
+            </FlyoutItem>
         </Shell>
     </Application.MainPage>
 </Application>

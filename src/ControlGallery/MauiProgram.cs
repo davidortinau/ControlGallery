@@ -19,7 +19,8 @@ public static class MauiProgram
 				fonts.AddFont("fa_solid.ttf", "FontAwesome");
 				fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
-			});
+                fonts.AddFont("fabmdl2.ttf", "FabMDL2");
+            });
 
 #if WINDOWS
             builder.ConfigureLifecycleEvents(events =>

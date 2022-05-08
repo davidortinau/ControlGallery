@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             x:Class="ControlGallery.Pages.Layouts.HorizontalWrapLayoutPage"
+             Title="Horizontal Wrap Layout">
+    <ContentPage.Resources>
+        <Style TargetType="BoxView">
+            <Setter Property="WidthRequest" Value="75"/>
+            <Setter Property="HeightRequest" Value="75"/>
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <cl:HorizontalWrapLayout Spacing="5" Margin="15">
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+            <BoxView Color="{StaticResource Gray950}"/>
+        </cl:HorizontalWrapLayout>
+    </ScrollView>
+</ContentPage>
