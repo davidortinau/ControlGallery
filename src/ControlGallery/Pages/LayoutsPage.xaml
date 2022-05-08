@@ -11,7 +11,10 @@
         <ScrollView>
 
             <VerticalStackLayout Margin="15" Spacing="8">
-                <Label Text="AbsoluteLayout" Style="{StaticResource Headline}"/>
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_absolutelayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="AbsoluteLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
                             >
                     <BindableLayout.ItemsSource>
@@ -40,7 +43,15 @@
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
 
-                <Label Text="FlexLayout" Style="{StaticResource Headline}"/>
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_contentview.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="ContentView" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_flexlayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="FlexLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -68,7 +79,10 @@
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
 
-                <Label Text="Grid" Style="{StaticResource Headline}"/>
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_grid.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="Grid" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -97,7 +111,10 @@
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
 
-                <Label Text="StackLayout" Style="{StaticResource Headline}"/>
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_stacklayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="StackLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -127,6 +144,16 @@
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
+
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_relativelayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="RelativeLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="8">
+                    <Image Source="layout_scrollview.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
+                    <Label Text="ScrollView" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
 
                 <Label Text="Other" Style="{StaticResource Headline}"/>
                 <Button 

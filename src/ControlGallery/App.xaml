@@ -1,5 +1,6 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app="clr-namespace:ControlGallery"
              xmlns:pages="clr-namespace:ControlGallery.Pages"
              xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
              windows:Application.ImageDirectory="Assets"
@@ -33,19 +34,17 @@
 
 
 
-            <FlyoutItem Title="Controls">
+            <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
                 <ShellContent Route="controls" 
                       ContentTemplate="{DataTemplate pages:ControlsPage}" />
             </FlyoutItem>
 
-            <FlyoutItem Title="Layouts">
+            <FlyoutItem Title="Layouts" FlyoutIcon="layout_grid.png">
                 <ShellContent Route="alert" 
                       ContentTemplate="{DataTemplate pages:LayoutsPage}" />
             </FlyoutItem>
 
-
-
-            <FlyoutItem Title="Features">
+            <FlyoutItem Title="Features" FlyoutIcon="view_slider.png">
                 <ShellContent Route="features" 
                       ContentTemplate="{DataTemplate pages:FeaturesPage}" />
             </FlyoutItem>

@@ -31,7 +31,20 @@
     <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiImage Include="Resources\Images\*" />
+	<MauiImage Include="Resources\Images\toolbox\*" />
     <MauiFont Include="Resources\Fonts\*.ttf" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <None Remove="Resources\Images\h01.png" />
+    <None Remove="Resources\Images\h02.png" />
+    <None Remove="Resources\Images\h03.png" />
+    <None Remove="Resources\Images\h04.png" />
+    <None Remove="Resources\Images\h05.png" />
+    <None Remove="Resources\Images\insta_01.jpg" />
+    <None Remove="Resources\Images\insta_02.jpg" />
+    <None Remove="Resources\Images\insta_03.jpg" />
+    <None Remove="Resources\Images\insta_04.jpg" />
   </ItemGroup>
 	
 	
@@ -41,6 +54,40 @@
 	
 	
   <ItemGroup>
+    <Compile Update="Pages\Controls\WebViewPage.xaml.cs">
+      <DependentUpon>WebViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Controls\TimePickerPage.xaml.cs">
+      <DependentUpon>TimePickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Controls\SearchBarPage.xaml.cs">
+      <DependentUpon>SearchBarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Controls\PickerPage.xaml.cs">
+      <DependentUpon>PickerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\Features\ClippingPage.xaml.cs">
+      <DependentUpon>ClippingPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+	
+	
+  <ItemGroup>
+    <MauiXaml Update="Pages\Controls\WebViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Controls\TimePickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Controls\SearchBarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Controls\PickerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Features\ClippingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
     <MauiXaml Update="Resources\Styles\Text.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>

@@ -23,14 +23,17 @@ namespace ControlGallery.Pages
 			CurrentThemeLabel.Text = Application.Current.UserAppTheme.ToString();
 		}
 
-        void OnChangeTheme(object s, EventArgs e)
+        void RadioButton_CheckedChanged(System.Object sender, CheckedChangedEventArgs e)
         {
-            AppTheme currentTheme = Application.Current.RequestedTheme;
-            Application.Current.UserAppTheme = (currentTheme == AppTheme.Light) ? AppTheme.Dark : AppTheme.Light;
+            AppTheme val = (AppTheme)((RadioButton)sender).Value;
+            if (App.Current.UserAppTheme == val)
+                return;
+
+            App.Current.UserAppTheme = val;
             CurrentThemeLabel.Text = Application.Current.UserAppTheme.ToString();
         }
 
-        
+
 
     }
 }

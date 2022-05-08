@@ -354,19 +354,19 @@
     </Style>
 
     <Style TargetType="Shell">
-        <Setter Property="FlyoutBackground" Value="{AppThemeBinding Dark={StaticResource Gray950}, Light={StaticResource Tertiary}}"/>
+        <Setter Property="FlyoutBackground" Value="{AppThemeBinding Dark={StaticResource Gray950}, Light={StaticResource Gray100}}"/>
     </Style>
 
     <Style
         TargetType="Label"
         Class="FlyoutItemLabelStyle">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray200}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray200}}" />
     </Style>
 
     <Style x:Key="BaseStyle" TargetType="Element">
         <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Tertiary}, Dark={StaticResource Gray950}}" />
         <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
-        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource White}}" />
+        <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
         <Setter Property="Shell.DisabledColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
         <Setter Property="Shell.UnselectedColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray900}}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />

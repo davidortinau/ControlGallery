@@ -17,6 +17,8 @@
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="AppThemeBinding"
                                    Destination="{x:Type p:AppThemePage}"/>
+                            <m:NavItem Title="Clipping"
+                                   Destination="{x:Type p:ClippingPage}"/>
                             <m:NavItem Title="Colors"
                                    Destination="{x:Type p:ColorsPage}"/>
                             <m:NavItem Title="FontImageSource"

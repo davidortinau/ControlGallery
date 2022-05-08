@@ -38,6 +38,10 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(SwitchPage), typeof(SwitchPage));
         Routing.RegisterRoute(nameof(FramePage), typeof(FramePage));
         Routing.RegisterRoute(nameof(RefreshViewPage), typeof(RefreshViewPage));
+        Routing.RegisterRoute(nameof(WebViewPage), typeof(WebViewPage));
+        Routing.RegisterRoute(nameof(TimePickerPage), typeof(TimePickerPage));
+        Routing.RegisterRoute(nameof(PickerPage), typeof(PickerPage));
+        Routing.RegisterRoute(nameof(SearchBarPage), typeof(SearchBarPage));
 
         // Layouts
         Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));
@@ -121,6 +125,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(MenuBarPage), typeof(MenuBarPage));
         Routing.RegisterRoute(nameof(TriggersPage), typeof(TriggersPage));
         Routing.RegisterRoute(nameof(NativeViewsPage), typeof(NativeViewsPage));
+        Routing.RegisterRoute(nameof(ClippingPage), typeof(ClippingPage));
 
 
     }
