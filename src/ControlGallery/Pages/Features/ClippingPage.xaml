@@ -7,10 +7,10 @@
     <ScrollView>
         <StackLayout Margin="15" Spacing="8">
             <Label Text="Clip with Shape" Style="{StaticResource Headline}"/>
-            <Image Source="insta_04.jpg" WidthRequest="200"
+            <Image Source="insta_04.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"
                    HorizontalOptions="Start">
                 <Image.Clip>
-                    <RoundRectangleGeometry Rect="0,0,100,40" CornerRadius="20"/>
+                    <EllipseGeometry RadiusX="80" RadiusY="80" Center="40,40"/>
                 </Image.Clip>
             </Image>
 

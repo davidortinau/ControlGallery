@@ -18,7 +18,13 @@
     </Application.Resources>
 
     <Application.MainPage>
-        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}">
+        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
+               x:Name="AppShell"
+               
+               >
+            <Shell.BindingContext>
+                <app:AppShellViewModel/>
+            </Shell.BindingContext>
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
                     <Grid RowDefinitions="120" 
@@ -53,6 +59,23 @@
                 <ShellContent Route="tips" 
                       ContentTemplate="{DataTemplate pages:TipsPage}" />
             </FlyoutItem>
+
+            <Shell.FlyoutFooterTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Margin="30">
+                        <Label Text="Appearance"/>
+                        <Picker x:Name="AppearancePicker" SelectedItem="{Binding Appearance}">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>System</x:String>
+                                    <x:String>Dark</x:String>
+                                    <x:String>Light</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </Shell.FlyoutFooterTemplate>
         </Shell>
     </Application.MainPage>
 </Application>

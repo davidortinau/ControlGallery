@@ -14,6 +14,8 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         RegisterRoutes();
 
+        AppShell.BindingContext = new AppShellViewModel();
+
         //App.Current.UserAppTheme = AppTheme.Light;
     }
 
@@ -133,4 +135,36 @@ public partial class App : Microsoft.Maui.Controls.Application
 
 
     }
+}
+
+public class AppShellViewModel
+{
+    private string appearance = "System";
+
+    public string Appearance
+    {
+        get => appearance; 
+        set
+        {
+            appearance = value;
+
+            switch (appearance)
+            {
+                case "System":
+                    App.Current.UserAppTheme = AppTheme.Unspecified;
+                    break;
+                case "Dark":
+                    App.Current.UserAppTheme = AppTheme.Dark;
+                    break;
+                default:
+                    App.Current.UserAppTheme = AppTheme.Light;
+                    break;
+            }
+        }
+    }
+    public AppShellViewModel()
+    {
+        
+    }
+
 }
