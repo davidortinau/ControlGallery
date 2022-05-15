@@ -1,35 +1,33 @@
-﻿using System;
-using Microsoft.Maui; using Microsoft.Maui.Controls;
+﻿using Microsoft.Maui.Dispatching;
 
-namespace ControlGallery.Pages.Layouts.AbsoluteLayouts
+namespace ControlGallery.Pages.Layouts.AbsoluteLayouts;
+
+public partial class SimpleOverlayDemoPage : ContentPage
 {
-    public partial class SimpleOverlayDemoPage : ContentPage
+    public SimpleOverlayDemoPage()
     {
-        public SimpleOverlayDemoPage()
+        InitializeComponent();
+    }
+
+    void OnButtonClicked(object sender, EventArgs e)
+    {
+        // Show overlay with ProgressBar
+        overlay.IsVisible = true;
+
+        TimeSpan duration = TimeSpan.FromSeconds(5);
+        DateTime now = DateTime.Now;
+
+        this.Dispatcher.StartTimer(TimeSpan.FromSeconds(0.1), () =>
         {
-            InitializeComponent();
-        }
+            double progress = (DateTime.Now - now).TotalMilliseconds / duration.TotalMilliseconds;
+            progressBar.Progress = progress;
+            bool continueTimer = progress < 1;
 
-        void OnButtonClicked(object sender, EventArgs e)
-        {
-            // Show overlay with ProgressBar
-            overlay.IsVisible = true;
-
-            TimeSpan duration = TimeSpan.FromSeconds(5);
-            DateTime now = DateTime.Now;
-
-            Device.StartTimer(TimeSpan.FromSeconds(0.1), () =>
+            if (!continueTimer)
             {
-                double progress = (DateTime.Now - now).TotalMilliseconds / duration.TotalMilliseconds;
-                progressBar.Progress = progress;
-                bool continueTimer = progress < 1;
-
-                if (!continueTimer)
-                {
-                    overlay.IsVisible = false;
-                }
-                return continueTimer;
-            });
-        }
+                overlay.IsVisible = false;
+            }
+            return continueTimer;
+        });
     }
 }

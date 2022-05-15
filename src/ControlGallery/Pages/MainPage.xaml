@@ -215,7 +215,7 @@
                 
                 <Label Text="Text Styles"
                        Style="{StaticResource Headline}"
-                    HorizontalOptions="CenterAndExpand" />
+                    HorizontalOptions="Center" />
                 <Label Text="Large Title is Bold 30"
                        Style="{StaticResource LargeTitle}"/>
                 <Label Text="Title 1 is Bold 26"
@@ -230,7 +230,7 @@
 
                 <Label Text="Text Color Styles"
                        Style="{StaticResource Headline}"
-                    HorizontalOptions="CenterAndExpand" />
+                    HorizontalOptions="Center" />
                 <Label Text="Regular"/>
                 <Label Text="Secondary" Style="{StaticResource Secondary}"/>
                 <Label Text="Error" StyleClass="Error"/>

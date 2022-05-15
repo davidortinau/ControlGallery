@@ -26,7 +26,7 @@ namespace ControlGallery.Pages.Layouts
                             Children =
                             {
                                 new BoxView { Color = Colors.Red },
-                                new Label { Text = "Red", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
+                                new Label { Text = "Red", FontSize = 16, VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
@@ -41,7 +41,7 @@ namespace ControlGallery.Pages.Layouts
                             Children =
                             {
                                 new BoxView { Color = Colors.Yellow },
-                                new Label { Text = "Yellow", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
+                                new Label { Text = "Yellow", FontSize = 16, VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
@@ -56,7 +56,7 @@ namespace ControlGallery.Pages.Layouts
                             Children =
                             {
                                 new BoxView { Color = Colors.Blue },
-                                new Label { Text = "Blue", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
+                                new Label { Text = "Blue", FontSize = 16, VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
@@ -72,7 +72,7 @@ namespace ControlGallery.Pages.Layouts
                             Children =
                             {
                                 new BoxView { Color = Colors.Green },
-                                new Label { Text = "Green", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
+                                new Label { Text = "Green", FontSize = 16, VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
@@ -87,7 +87,7 @@ namespace ControlGallery.Pages.Layouts
                             Children =
                             {
                                 new BoxView { Color = Colors.Orange },
-                                new Label { Text = "Orange", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
+                                new Label { Text = "Orange", FontSize = 16, VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },
@@ -102,7 +102,7 @@ namespace ControlGallery.Pages.Layouts
                             Children =
                             {
                                 new BoxView { Color = Colors.Purple },
-                                new Label { Text = "Purple", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)), VerticalOptions = LayoutOptions.Center }
+                                new Label { Text = "Purple", FontSize = 16, VerticalOptions = LayoutOptions.Center }
                             }
                         }
                     },

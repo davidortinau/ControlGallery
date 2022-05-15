@@ -44,4 +44,26 @@ public partial class ControlsPage : ContentPage
 			this.MenuBarItems.Add(fileMenu);
 			this.MenuBarItems.Add(locationMenu);
 		}
+
+    void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
+    {
+		ControlsList.ItemsLayout = new GridItemsLayout(3, ItemsLayoutOrientation.Vertical) {  HorizontalItemSpacing = 8, VerticalItemSpacing = 8 };
+    }
+
+    void ToolbarItem_Clicked_1(System.Object sender, System.EventArgs e)
+    {
+		ControlsList.ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical);
+    }
+}
+
+public class DisplayTemplateSelector : DataTemplateSelector
+{
+	public DataTemplate GridTemplate { get; set; }
+	public DataTemplate ListTemplate { get; set; }
+
+	protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+	{
+		CollectionView colV = (CollectionView)container;
+		return colV.ItemsLayout.GetType() == typeof(GridItemsLayout) ? GridTemplate : ListTemplate;
 	}
+}

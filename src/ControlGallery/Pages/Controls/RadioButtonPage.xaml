@@ -131,8 +131,8 @@
                         <RadioButton StyleClass="ImageQuality">
                             <RadioButton.Content>
                                 <StackLayout 
-                                  HorizontalOptions="CenterAndExpand"
-                                  VerticalOptions="CenterAndExpand">
+                                  HorizontalOptions="Center"
+                                  VerticalOptions="Center">
                                     <Image
                                         Source="{FontImage FontFamily=FontAwesome, 
                                             Glyph={x:Static app:IconFont.Image}, 

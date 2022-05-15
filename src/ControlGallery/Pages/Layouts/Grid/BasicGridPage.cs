@@ -117,8 +117,8 @@ namespace ControlGallery.Pages.Layouts
             var frame = new Frame
             {
                 BackgroundColor = Colors.Red,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
                 HeightRequest = 60,
                 WidthRequest = 60,
                 CornerRadius = 30,
@@ -130,8 +130,8 @@ namespace ControlGallery.Pages.Layouts
 
             var grid = new Grid()
             {
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
                 BackgroundColor = Colors.LightGray,
                 ColumnDefinitions =
             {
