@@ -1,9 +1,34 @@
-﻿
-Border > VerticalStackLayout {
-    margin: 32;
-    -maui-spacing: 16;
+﻿FlexLayout > Polygon {
+    -maui-horizontal-options: Center;
+    -maui-vertical-options: Center;
+    width: 50;
+    height: 50;
 }
 
-Border > VerticalStackLayout > HorizontalStackLayout {
-    -maui-spacing: 16;
+FlexLayout > Rectangle {
+    -maui-horizontal-options: Center;
+    -maui-vertical-options: Center;
+    width: 50;
+    height: 50;
+}
+
+FlexLayout > Ellipse {
+    -maui-horizontal-options: Center;
+    -maui-vertical-options: Center;
+    width: 50;
+    height: 50;
+}
+
+FlexLayout > Grid {
+    -maui-horizontal-options: Center;
+    -maui-vertical-options: Center;
+    width: 50;
+    height: 50;
+}
+
+FlexLayout > Path {
+    -maui-horizontal-options: Center;
+    -maui-vertical-options: Center;
+    width: 50;
+    height: 50;
 }

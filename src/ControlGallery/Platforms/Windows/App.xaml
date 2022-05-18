@@ -5,4 +5,22 @@
     xmlns:maui="using:Microsoft.Maui"
     xmlns:local="using:ControlGallery.WinUI">
 
+    <maui:MauiWinUIApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="WindowCaptionBackground">#2B0B98</SolidColorBrush>
+            <SolidColorBrush x:Key="WindowCaptionBackgroundDisabled">#512BD4</SolidColorBrush>
+            <SolidColorBrush x:Key="WindowCaptionForeground">White</SolidColorBrush>
+            <SolidColorBrush x:Key="WindowCaptionForegroundDisabled">LightGray</SolidColorBrush>
+            
+            <!--<StaticResource x:Key="WindowCaptionBackground" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+            <StaticResource x:Key="WindowCaptionBackgroundDisabled" ResourceKey="SystemControlBackgroundBaseLowBrush" />
+            <StaticResource x:Key="WindowCaptionForeground" ResourceKey="SystemControlForegroundBaseHighBrush" />
+            <StaticResource x:Key="WindowCaptionForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />-->
+        </ResourceDictionary>
+    </maui:MauiWinUIApplication.Resources>
+
 </maui:MauiWinUIApplication>

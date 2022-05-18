@@ -39,6 +39,8 @@ public static class MauiProgram
                         int y = 1080 / 2 - height / 2; //Convert.ToInt32(DeviceDisplay.MainDisplayInfo.Height)
 
                         winuiAppWindow.MoveAndResize(new RectInt32(x, y, width, height));
+
+                        window.ExtendsContentIntoTitleBar = true;
                     });
                 });
             });

@@ -2,16 +2,24 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
+             xmlns:models="clr-namespace:ControlGallery.Models"
+             xmlns:cl="clr-namespace:CustomLayouts"
              x:Class="ControlGallery.Pages.MainPage"
-             Title="Main Pages"
+             Title=".NET Multi-platform App UI"
              Background="{StaticResource Gray200Brush}"
              >
 
     <ContentPage.Resources>
-        <!--<StyleSheet Source="/Resources/Styles/main.css" />-->
-        
+        <StyleSheet Source="/Resources/Styles/main.css" />
+
+        <Shadow x:Key="BasicShadow"
+                            Brush="{StaticResource Gray950Brush}"
+                            Opacity="0.8"
+                            Radius="10"
+                            Offset="10,10"/>
+
+
         <Style TargetType="Border">
-            <!--<Setter Property="WidthRequest" Value="320"/>-->
             <Setter Property="HorizontalOptions" Value="Fill"/>
             <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
             <Setter Property="StrokeThickness" Value="1"/>
@@ -22,7 +30,7 @@
         </Style>
 
         <Style TargetType="VerticalStackLayout">
-            <Setter Property="Margin" Value="32"/>
+            <Setter Property="Margin" Value="16"/>
             <Setter Property="Spacing" Value="16"/>
             <Setter Property="Padding" Value="1"/>
         </Style>
@@ -39,8 +47,384 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="32" Margin="32" >
+            <Grid ColumnDefinitions="*,*,*,*,*,*" ColumnSpacing="32" Margin="32" >
+                <VerticalStackLayout Grid.Column="5" Spacing="32" Margin="0">
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="SearchBar" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <SearchBar Placeholder="Enter keyword"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="CarouselView" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <CarouselView IndicatorView="CarouselIndicators"> 
+                                <CarouselView.ItemsSource>
+                                    <x:Array Type="{x:Type models:ColorBrush}">
+                                        <models:ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
+                                        <models:ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
+                                        <models:ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>
+                                        <models:ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>
+                                        <models:ColorBrush Brush="{StaticResource NeutralLighterBrush}" BrushName="NeutralLighter"/>
+                                        <models:ColorBrush Brush="{StaticResource NeutralDarkerBrush}" BrushName="NeutralDarker"/>
+                                        <models:ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
+                                        <models:ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
+                                    </x:Array>
+                                </CarouselView.ItemsSource>
+                                <CarouselView.ItemsLayout>
+                                    <LinearItemsLayout Orientation="Horizontal"
+                                                       ItemSpacing="4"
+                                                       />
+                                </CarouselView.ItemsLayout>
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border WidthRequest="80" HeightRequest="120">
+                                            <Grid 
+                                                RowDefinitions="80,40"
+                                                WidthRequest="80" HeightRequest="120">
+                                                <Rectangle HeightRequest="80" WidthRequest="80"
+                                                     Fill="{Binding Brush}"/>
+                                                
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                            <IndicatorView x:Name="CarouselIndicators"
+                                           />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="ListView" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <ListView SeparatorVisibility="Default" SeparatorColor="{StaticResource Gray950}">
+                                <ListView.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Red</x:String>
+                                        <x:String>Green</x:String>
+                                        <x:String>Blue</x:String>
+                                    </x:Array>
+                                </ListView.ItemsSource>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <SwitchCell Text="{Binding .}" />
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="CollectionView" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <CollectionView>
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Span="3" Orientation="Vertical" HorizontalItemSpacing="8" VerticalItemSpacing="8"/>
+                                </CollectionView.ItemsLayout>
+                                <CollectionView.ItemsSource>
+                                    <x:Array Type="{x:Type models:ColorBrush}">
+                                        <models:ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
+                                        <models:ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
+                                        <models:ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>
+                                        <models:ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>
+                                        <models:ColorBrush Brush="{StaticResource NeutralLighterBrush}" BrushName="NeutralLighter"/>
+                                        <models:ColorBrush Brush="{StaticResource NeutralDarkerBrush}" BrushName="NeutralDarker"/>
+                                        <models:ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
+                                        <models:ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
+                                    </x:Array>
+                                </CollectionView.ItemsSource>
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout WidthRequest="40" HeightRequest="40">
+                                            <Ellipse WidthRequest="40" HeightRequest="40"
+                                         HorizontalOptions="Center"
+                                         Fill="{Binding Brush}"/>
+                                            <!--<Label Text="{Binding BrushName}"/>
+                                            <Label Text="{Binding BrushValue}"/>-->
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Bindable Layout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <FlexLayout Wrap="Wrap" Direction="Column">
+                                <BindableLayout.ItemsSource>
+                                    <x:Array Type="{x:Type models:ColorBrush}">
+                                        <models:ColorBrush Brush="{StaticResource Gray100Brush}" BrushName="Primary"/>
+                                        <models:ColorBrush Brush="{StaticResource Gray200Brush}" BrushName="Secondary"/>
+                                        <models:ColorBrush Brush="{StaticResource Gray300Brush}" BrushName="Tertiary"/>
+                                        <models:ColorBrush Brush="{StaticResource Gray500Brush}" BrushName="Neutral"/>
+                                        <models:ColorBrush Brush="{StaticResource Gray900Brush}" BrushName="NeutralLighter"/>
+                                        <models:ColorBrush Brush="{StaticResource Gray950Brush}" BrushName="NeutralDarker"/>
+                                        <models:ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
+                                    </x:Array>
+                                </BindableLayout.ItemsSource>
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout WidthRequest="40" HeightRequest="40">
+                                            <Ellipse WidthRequest="40" HeightRequest="40"
+                                         HorizontalOptions="Center"
+                                         Fill="{Binding Brush}"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="WebView" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <WebView Source="https://dot.net/maui" HeightRequest="200"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="AbsoluteLayout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <AbsoluteLayout HeightRequest="125" Margin="0,0,0,16">
+                                <AbsoluteLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="50"/>
+                                        <Setter Property="HeightRequest" Value="50"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+
+                                    </Style>
+                                </AbsoluteLayout.Resources>
+                                <Border />
+                                <Border AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="1,1"/>
+                                <Border AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0,1" />
+                                <Border AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="1,0"/>
+                                <Border Background="{StaticResource AccentBrush}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5"/>
+                            </AbsoluteLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="VerticalStackLayout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <VerticalStackLayout Spacing="8">
+                                <VerticalStackLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="125"/>
+                                        <Setter Property="HeightRequest" Value="50"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+
+                                    </Style>
+                                </VerticalStackLayout.Resources>
+                                <Border />
+                                <Border Background="{StaticResource AccentBrush}" />
+                                <Border />
+                                <Border />
+                                <Border Background="{StaticResource AccentBrush}" />
+                                <Border />
+
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                </VerticalStackLayout>
+                
+                <VerticalStackLayout Grid.Column="4" Spacing="32" Margin="0">
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Image" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <Image Source="dotnet_bot.png" 
+                               HeightRequest="80" WidthRequest="80"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Image Button" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <ImageButton Source="dotnet_bot.png" 
+                               HeightRequest="80" WidthRequest="80"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Label" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <Label LineBreakMode="NoWrap" LineHeight="1.4">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Font name: OpenSans Regular &#10;"/>
+                                        <Span Text="Version: 1.00  &#10;"/>
+                                        <Span Text="Digitally Signed, TrueType Outlines &#10;"/>
+                                        <Span Text="abcdefghijklmnopqrstuvwxyz "/>
+                                        <Span Text="abcdefghijklmnopqrstuvwxyz &#10;" TextTransform="Uppercase"/>
+                                        <Span Text="1234567890.:,;'+-*/=  &#10;"/>
+                                        <Span Text="12 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="12"/>
+                                        <Span Text="18 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="18"/>
+                                        <Span Text="24 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="24"/>
+                                        <Span Text="36 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="36"/>
+                                        <Span Text="48 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="48"/>
+                                        <Span Text="60 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="60"/>
+                                        <Span Text="72 The quick brown fox jumps over the lazy dog. 1234567890 " FontSize="72" >
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="https://google.com" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Radio Button" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <HorizontalStackLayout RadioButtonGroup.GroupName="EnabledButtons">
+                                <RadioButton Content="First" IsChecked="True" />
+                                <RadioButton Content="Second" />
+                                <RadioButton Content="Third" />
+                            </HorizontalStackLayout>
+                            <Label Text="Disabled"/>
+                            <HorizontalStackLayout RadioButtonGroup.GroupName="DisabledButtons">
+                                <RadioButton Content="First" IsChecked="True" IsEnabled="False" />
+                                <RadioButton Content="Second" IsEnabled="False" />
+                                <RadioButton Content="Third" IsEnabled="False" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Frame" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <Frame 
+                               BackgroundColor="{StaticResource Gray100}"
+                               BorderColor="Transparent"
+                               CornerRadius="16" 
+                               Padding="16"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Start">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="75" />
+                                        <RowDefinition Height="4" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label 
+                                       Text="Card Title"
+                                       FontAttributes="Bold"
+                                       FontSize="Large"
+                                       VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Start" />
+                                    <BoxView Grid.Row="1"
+                                         Grid.ColumnSpan="2"
+                                         BackgroundColor="{StaticResource Gray950}"
+                                         HeightRequest="1"
+                                         HorizontalOptions="Fill" />
+                                    <Label Grid.Row="2"
+                                       Grid.ColumnSpan="2"
+                                       Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
+                                       VerticalTextAlignment="Start"
+                                       VerticalOptions="Fill"
+                                       HorizontalOptions="Fill" />
+
+                                </Grid>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="StackLayout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <StackLayout Spacing="8">
+                                <StackLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="150"/>
+                                        <Setter Property="HeightRequest" Value="50"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+
+                                    </Style>
+                                </StackLayout.Resources>
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+
+                            </StackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+
                 <VerticalStackLayout Grid.Column="3" Spacing="32" Margin="0">
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Shapes" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <FlexLayout Wrap="Wrap" AlignContent="SpaceEvenly" JustifyContent="SpaceEvenly">
+                                <Ellipse WidthRequest="50" HeightRequest="50"
+                                    Fill="{StaticResource PrimaryBrush}"/>
+                                <Rectangle WidthRequest="50" HeightRequest="50"
+                                    Fill="{StaticResource PrimaryBrush}"/>
+
+                                <Polygon Fill="{StaticResource PrimaryBrush}"
+                                    Points="0 36 0 13.5 13.5 0 36 0 50 13.5 50 36 36 50 13.5 50"/>
+
+                                <Polygon Fill="{StaticResource PrimaryBrush}"
+                                    Points="0 14 12 0 38 0 50 14 25 50"/>
+
+                                <Polygon Fill="{StaticResource PrimaryBrush}"
+                                    Margin="0,10"
+                                    Points="24 0 47.7764129 17.2745751 38.6946313 45.2254249 9.30536869 45.2254249 0.223587093 17.2745751"/>
+
+                                <Grid HeightRequest="50" WidthRequest="50" FlexLayout.AlignSelf="Start">
+                                    <Polygon Fill="#512BD4" 
+                                        Points="0 0 0 50 25 25"/>
+                                    <Polygon Fill="#DFD8F7" 
+                                        Points="0 0 50 0 25 25"/>
+                                    <Polygon Fill="#2B0B98" 
+                                        Points="50 0 50 50 25 25" HorizontalOptions="End"/>
+                                    <Polygon Fill="#E5E5E1" 
+                                        Points="0 50 25 25 50 50" VerticalOptions="End"/>
+                                </Grid>
+
+                                <Polygon Fill="{StaticResource PrimaryBrush}"
+                                    Margin="0,10"
+                                    Points="8 25 25 0 42 25 25 50"/>
+
+                                <Path 
+                                    Fill="{StaticResource PrimaryBrush}"
+                                    Data="M50,0 L50,50 L25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.3309524 10.9701429,0.224119049 24.5865793,0.00334928573 L25,0 L50,0 Z" />
+
+                            </FlexLayout>
+                        </VerticalStackLayout>
+                    </Border>
                     <Border>
                         <VerticalStackLayout>
                             <Label Text="Switch" Style="{StaticResource Headline}"/>
@@ -78,21 +462,86 @@
                             <TimePicker/>
                         </VerticalStackLayout>
                     </Border>
+
                     <Border>
                         <VerticalStackLayout>
-                            <Label Text="Picker" Style="{StaticResource Headline}"/>
+                            <Label Text="Stepper" Style="{StaticResource Headline}"/>
                             <BoxView HeightRequest="1"/>
-                            <Picker Title="Select a color">
-                                <Picker.ItemsSource>
-                                    <x:Array Type="{x:Type x:String}">
-                                        <x:String>Red</x:String>
-                                        <x:String>Green</x:String>
-                                        <x:String>Blue</x:String>
-                                    </x:Array>
-                                </Picker.ItemsSource>
-                            </Picker>
+
+                            <Label Text="Default" />
+                            <StackLayout Orientation="Horizontal">
+                                <Stepper/>
+                                <Stepper IsEnabled="False"/>
+                            </StackLayout>
+
+
+                            <Label Text="BackgroundColor" />
+                            <StackLayout Orientation="Horizontal">
+                                <Stepper BackgroundColor="{StaticResource Secondary}"/>
+                                <Stepper BackgroundColor="{StaticResource Secondary}" 
+                                         IsEnabled="False"/>
+                            </StackLayout>
+
+                            <Label Text="BackgroundColor" />
+                            <StackLayout Orientation="Horizontal">
+                                <Stepper Increment="2"/>
+                                <Stepper BackgroundColor="{StaticResource Secondary}" 
+                                         IsEnabled="False"/>
+                            </StackLayout>
                         </VerticalStackLayout>
                     </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="FlexLayout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <FlexLayout Direction="Row" JustifyContent="SpaceAround">
+                                <FlexLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="75"/>
+                                        <Setter Property="HeightRequest" Value="75"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+                                        
+                                    </Style>
+                                </FlexLayout.Resources>
+                                <Border />
+                                <Border Background="{StaticResource AccentBrush}" />
+                                <Border />
+
+                            </FlexLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="HorizontaStackLayout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <HorizontalStackLayout Spacing="8">
+                                <HorizontalStackLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="75"/>
+                                        <Setter Property="HeightRequest" Value="125"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+
+                                    </Style>
+                                </HorizontalStackLayout.Resources>
+                                <Border />
+                                <Border Background="{StaticResource AccentBrush}" />
+                                <Border />
+                                <Border />
+                                <Border Background="{StaticResource AccentBrush}" />
+                                <Border />
+
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Grid.Column="2" Spacing="32" Margin="0">
@@ -121,6 +570,26 @@
                                          ProgressColor="{StaticResource Primary}"/>
                             </VerticalStackLayout>
                         </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Shadow" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <Label Text="On a label"/>
+                            <Label Text="I Have A Shadow" 
+                                Shadow="{StaticResource BasicShadow}"/>
+
+                            <Label Text="Image"/>
+
+                            <Image Source="https://aka.ms/campus.jpg"
+                               Aspect="AspectFill"
+                               HeightRequest="120"
+                               WidthRequest="120" Margin="0,0,0,30"
+                               Shadow="{StaticResource BasicShadow}"/>
+
+                        </VerticalStackLayout>
+                    </Border>
+
                     <Border>
                         <VerticalStackLayout>
                             <Label Text="Slider" Style="{StaticResource Headline}"/>
@@ -139,31 +608,55 @@
                         </VerticalStackLayout>
                     </Border>
 
+
                     <Border>
                         <VerticalStackLayout>
-                            <Label Text="Stepper" Style="{StaticResource Headline}"/>
+                            <Label Text="Picker" Style="{StaticResource Headline}"/>
                             <BoxView HeightRequest="1"/>
+                            <Picker Title="Select a color">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Red</x:String>
+                                        <x:String>Green</x:String>
+                                        <x:String>Blue</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </VerticalStackLayout>
+                    </Border>
 
-                            <Label Text="Default" />
-                            <StackLayout Orientation="Horizontal">
-                                <Stepper/>
-                                <Stepper IsEnabled="False"/>
-                            </StackLayout>
-
-
-                            <Label Text="BackgroundColor" />
-                            <StackLayout Orientation="Horizontal">
-                                <Stepper BackgroundColor="{StaticResource Secondary}"/>
-                                <Stepper BackgroundColor="{StaticResource Secondary}" 
-                                         IsEnabled="False"/>
-                            </StackLayout>
-
-                            <Label Text="BackgroundColor" />
-                            <StackLayout Orientation="Horizontal">
-                                <Stepper Increment="2"/>
-                                <Stepper BackgroundColor="{StaticResource Secondary}" 
-                                         IsEnabled="False"/>
-                            </StackLayout>
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Cascade Layout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <cl:CascadeLayout Spacing="16">
+                                <cl:CascadeLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="75"/>
+                                        <Setter Property="HeightRequest" Value="75"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+                                    </Style>
+                                </cl:CascadeLayout.Resources>
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                            </cl:CascadeLayout>
                         </VerticalStackLayout>
                     </Border>
                 </VerticalStackLayout>
@@ -194,7 +687,7 @@
                             <Editor Placeholder="Placeholder" AutoSize="TextChanges"/>
 
                             <Label Text="Fixed Height" StyleClass="Subhead"/>
-                            <Editor Placeholder="Placeholder" HeightRequest="200"/>
+                            <Editor Placeholder="Placeholder" HeightRequest="100"/>
 
                         </VerticalStackLayout>
                     </Border>
@@ -204,7 +697,7 @@
                             <Label Text="Entry" Style="{StaticResource Headline}"/>
                             <BoxView HeightRequest="1"/>
                             <Label Text="Basic" />
-                            <HorizontalStackLayout Spacing="16">
+                            <HorizontalStackLayout Spacing="32">
                                 <Entry/>
                                 <Entry IsEnabled="False"/>
                             </HorizontalStackLayout>
@@ -237,6 +730,82 @@
                         </VerticalStackLayout>
                     </Border>
 
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Font Image" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <HorizontalStackLayout>
+                                <Label Text="{x:Static app:IconFont.ArrowAltCircleLeft}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.ArrowAltCircleDown}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.ArrowAltCircleRight}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.ArrowAltCircleUp}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.CheckCircle}" TextColor="Green"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.ExclamationCircle}" TextColor="{StaticResource Error}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.InfoCircle}" TextColor="{StaticResource Secondary}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                                <Label Text="{x:Static app:IconFont.AddressCard}"
+                                   FontSize="24"
+                                   FontFamily="FontAwesome"
+                                    HorizontalOptions="Start" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Horizontal Wrap Layout" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <cl:HorizontalWrapLayout Spacing="16">
+                                <cl:HorizontalWrapLayout.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="WidthRequest" Value="75"/>
+                                        <Setter Property="HeightRequest" Value="75"/>
+                                        <Setter Property="Background" Value="{StaticResource Gray950Brush}"/>
+                                        <Setter Property="Stroke" Value="{StaticResource Gray300Brush}"/>
+                                        <Setter Property="StrokeThickness" Value="1"/>
+                                        <Setter Property="StrokeShape" Value="{Rectangle}"/>
+                                    </Style>
+                                </cl:HorizontalWrapLayout.Resources>
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                                <Border />
+                            </cl:HorizontalWrapLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                    
 
                 </VerticalStackLayout>
             <VerticalStackLayout Margin="0" Spacing="32" Grid.Column="0">
@@ -311,7 +880,6 @@
                         <Label Text="Checkbox" Style="{StaticResource Headline}"/>
                         <BoxView HeightRequest="1"/>
 
-                        <Label Text="Default" Style="{StaticResource Headline}"/>
                         <HorizontalStackLayout>
                             <CheckBox/>
                             <Label Text="Unchecked" VerticalOptions="Center"/>
@@ -329,7 +897,6 @@
                             <Label Text="Disabled checked" VerticalOptions="Center"/>
                         </HorizontalStackLayout>
 
-                        <Label Text="Styling" Style="{StaticResource Headline}"/>
                         <HorizontalStackLayout>
                             <CheckBox Color="{StaticResource Accent}"/>
                             <Label Text="Accent" VerticalOptions="Center"/>
@@ -337,7 +904,54 @@
                     </VerticalStackLayout>
                 </Border>
 
-                
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Clipping" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <HorizontalStackLayout>
+                                <VerticalStackLayout Margin="0">
+                                    <Label Text="Clip with Shape" Style="{StaticResource Headline}"/>
+                                    <Image Source="insta_04.jpg" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"
+                                            HorizontalOptions="Start">
+                                            <Image.Clip>
+                                                <EllipseGeometry RadiusX="50" RadiusY="50" Center="25,25"/>
+                                            </Image.Clip>
+                                        </Image>    
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Margin="0">
+                                    <Label Text="Clip with Path" Style="{StaticResource Headline}"/>
+                                    <Image Source="insta_02.jpg" WidthRequest="100"
+                                        HorizontalOptions="Start">
+                                        <Image.Clip>
+                                            <PathGeometry Figures="M45.00003 0.0003755092 C48.6566 3.115492 53.39751 4.995667 58.57761 4.995667 C63.75768 4.995667 68.49864 3.115117 72.15516 0 L90 17.84482 C86.71619 22.5125 84.78809 28.20319 84.78809 34.34386 C84.78809 38.76054 85.78532 42.94414 87.56722 46.68191 C89.10684 49.91339 90 53.59571 90 57.41377 C90 71.12593 78.88458 82.24136 65.17242 82.24136 L61.27555 82.24136 C54.7048 82.24136 48.84069 85.26647 45.00003 90 C41.15929 85.26647 35.29517 82.24136 28.72452 82.24136 L24.82755 82.24136 C11.1155 82.24136 0 71.12593 0 57.41377 C0 53.59571 0.8931539 49.91339 2.432828 46.68191 C4.21465 42.94414 5.212069 38.76054 5.212069 34.34386 C5.212069 28.20319 3.283775 22.5125 8.583069E-05 17.84482 L17.84488 0 C21.50145 3.115117 26.24229 4.995667 31.42246 4.995667 C36.60254 4.995667 41.3435 3.115492 45.00003 0.0003755092 Z"
+                                      />
+                                        </Image.Clip>
+                                    </Image>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="Grid" Style="{StaticResource Headline}"/>
+                            <BoxView HeightRequest="1"/>
+                            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*" HeightRequest="300">
+                                <Rectangle Grid.Row="0" Grid.Column="0" Fill="{StaticResource Gray100Brush}"/>
+                                <Rectangle Grid.Row="1" Grid.Column="0" Fill="{StaticResource Gray200Brush}"/>
+                                <Rectangle Grid.Row="2" Grid.Column="0" Fill="{StaticResource Gray300Brush}"/>
+
+                                <Rectangle Grid.Row="0" Grid.Column="1" Fill="{StaticResource Gray500Brush}"/>
+                                <Rectangle Grid.Row="1" Grid.Column="1" Fill="{StaticResource Gray900Brush}"/>
+                                <Rectangle Grid.Row="2" Grid.Column="1" Fill="{StaticResource Gray950Brush}"/>
+
+                                <Rectangle Grid.Row="0" Grid.Column="2" Fill="{StaticResource Gray300Brush}"/>
+                                <Rectangle Grid.Row="1" Grid.Column="2" Fill="{StaticResource Gray200Brush}"/>
+                                <Rectangle Grid.Row="2" Grid.Column="2" Fill="{StaticResource Gray100Brush}"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </Border>
+
                 </VerticalStackLayout>
             </Grid>
         </ScrollView>
