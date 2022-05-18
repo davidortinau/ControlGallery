@@ -1,0 +1,9 @@
+﻿
+Border > VerticalStackLayout {
+    margin: 32;
+    -maui-spacing: 16;
+}
+
+Border > VerticalStackLayout > HorizontalStackLayout {
+    -maui-spacing: 16;
+}
