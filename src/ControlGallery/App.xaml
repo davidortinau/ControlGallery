@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Resources/Styles/Icons.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Text.xaml" />
                 <ResourceDictionary Source="Resources/Styles/DefaultStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

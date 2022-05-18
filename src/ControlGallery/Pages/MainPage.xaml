@@ -24,6 +24,7 @@
         <Style TargetType="VerticalStackLayout">
             <Setter Property="Margin" Value="32"/>
             <Setter Property="Spacing" Value="16"/>
+            <Setter Property="Padding" Value="1"/>
         </Style>
 
         <Style TargetType="HorizontalStackLayout">
@@ -213,7 +214,6 @@
                                 <Entry Placeholder="Placeholder"/>
                                 <Entry Placeholder="Placeholder color" 
                                     PlaceholderColor="{StaticResource Accent}"/>
-                                <Entry Placeholder="Placeholder" IsEnabled="False"/>
                             </HorizontalStackLayout>
             
                             <Label Text="Password" />
@@ -225,7 +225,6 @@
                             <Label Text="With Text" />
                             <HorizontalStackLayout>
                                 <Entry Text="Text"/>
-                                <Entry Text="Text Color" TextColor="{StaticResource Accent}"/>
                                 <Entry Text="Text" IsEnabled="False"/>
                             </HorizontalStackLayout>
 
@@ -251,7 +250,7 @@
                 </Border>
 
                 <Border>
-                    <VerticalStackLayout>
+                    <VerticalStackLayout Padding="1">
 
                         <Label Text="Button" Style="{StaticResource Headline}"/>
                         <BoxView HeightRequest="1"/>
