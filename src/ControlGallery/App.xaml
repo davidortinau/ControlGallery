@@ -39,10 +39,10 @@
                 </DataTemplate>
             </Shell.FlyoutHeaderTemplate>
 
-            <FlyoutItem Title="Main">
+            <!--<FlyoutItem Title="Main">
                 <ShellContent Route="main" 
                       ContentTemplate="{DataTemplate pages:MainPage}" />
-            </FlyoutItem>
+            </FlyoutItem>-->
 
             <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
                 <ShellContent Route="controls" 
