@@ -19,7 +19,7 @@
     </Application.Resources>
 
     <Application.MainPage>
-        <Shell FlyoutBehavior="{OnIdiom Desktop=Disabled, Default=Flyout}"
+        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
                x:Name="AppShell"
                
                >

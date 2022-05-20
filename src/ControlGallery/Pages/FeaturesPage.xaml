@@ -15,6 +15,9 @@
                             >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Animations"
+                                       Icon="animationsicon.png"
+                                   Destination="{x:Type p:AnimationsPage}"/>
                             <m:NavItem Title="AppThemeBinding"
                                    Destination="{x:Type p:AppThemePage}"/>
                             <m:NavItem Title="Clipping"

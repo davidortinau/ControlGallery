@@ -54,17 +54,6 @@
                            PlaceholderColor="{StaticResource TextOnSolid_Light}"
                            Background="{StaticResource TertiaryBrush}"/>
                 </HorizontalStackLayout>
-
-                <Label Text="Community Toolkit Helpers" Style="{StaticResource Headline}"/>
-                <Label Text="With error message" StyleClass="Subhead" />
-                <HorizontalStackLayout>
-                    <Entry Text="" />
-                </HorizontalStackLayout>
-
-                <Label Text="Input mask" StyleClass="Subhead" />
-                <HorizontalStackLayout>
-                    <Entry Text="" />
-                </HorizontalStackLayout>
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
