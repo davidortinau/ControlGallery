@@ -47,6 +47,7 @@
     <None Remove="Resources\Images\insta_02.jpg" />
     <None Remove="Resources\Images\insta_03.jpg" />
     <None Remove="Resources\Images\insta_04.jpg" />
+    <None Remove="Resources\Images\menu.png" />
   </ItemGroup>
 	
 	

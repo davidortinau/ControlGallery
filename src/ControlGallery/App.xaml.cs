@@ -145,6 +145,8 @@ public partial class App : Microsoft.Maui.Controls.Application
 
 public class AppShellViewModel
 {
+    public Command ToggleFlyoutCommand { get;set;}
+
     private string appearance = "System";
 
     public string Appearance
@@ -170,7 +172,10 @@ public class AppShellViewModel
     }
     public AppShellViewModel()
     {
-        
+        ToggleFlyoutCommand = new Command(() =>
+        {
+            Shell.Current.FlyoutWidth = (Shell.Current.FlyoutWidth == 50) ? 300 : 50;
+        });
     }
 
 }
