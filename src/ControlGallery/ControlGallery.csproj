@@ -38,6 +38,11 @@
 	
   <ItemGroup>
     <None Remove="Resources\Fonts\FabMDL2.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Display-Semibold.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Display.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Text-Semibold.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Text.ttf" />
+    <None Remove="Resources\Fonts\SegoeIcons.ttf" />
     <None Remove="Resources\Images\h01.png" />
     <None Remove="Resources\Images\h02.png" />
     <None Remove="Resources\Images\h03.png" />

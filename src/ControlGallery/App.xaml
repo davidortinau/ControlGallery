@@ -28,16 +28,18 @@
             </Shell.BindingContext>
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
-                    <Grid RowDefinitions="60" 
+                    <Grid RowDefinitions="48"
                           ColumnDefinitions="*">
-                        <ImageButton Source="menu.png"
+                        <ImageButton Source="{StaticResource MenuIcon}"
                                      Background="Transparent"
                                      Aspect="AspectFit"
-                                     Margin="10"
+                                     Margin="16,0"
+                                     Padding="4"
                                      HeightRequest="34"
                                      WidthRequest="34"
                                      Command="{Binding ToggleFlyoutCommand}"
                                      HorizontalOptions="Start"
+                                     VerticalOptions="Center"
                                      
                                      />
 
