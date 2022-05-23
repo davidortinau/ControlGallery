@@ -38,5 +38,35 @@
         Glyph="{x:Static app:IconFont.DotCircle}"
         Color="{StaticResource Neutral}"
         Size="16"/>
-    
+
+    <FontImageSource
+        x:Key="MenuIcon"
+        FontFamily="SegoeIcons"
+        Glyph="{x:Static app:SegoeFluentIcon.GlobalNavButton}"
+        Color="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Gray950}}"
+        Size="32"/>
+
+    <FontImageSource
+        x:Key="HomeIcon"
+        FontFamily="SegoeIcons"
+        Glyph="{x:Static app:SegoeFluentIcon.Home}"
+        Color="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Gray950}}"
+        Size="16"/>
+
+    <FontImageSource
+        x:Key="ListLayoutIcon"
+        FontFamily="SegoeIcons"
+        Glyph="{x:Static app:SegoeFluentIcon.AllApps}"
+        Color="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource White}}"
+        Size="16"/>
+
+    <FontImageSource
+        x:Key="GridLayoutIcon"
+        FontFamily="SegoeIcons"
+        Glyph="{x:Static app:SegoeFluentIcon.TiltDown}"
+        Color="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource White}}"
+        Size="16"/>
+
+
+
 </ResourceDictionary>

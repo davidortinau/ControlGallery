@@ -14,12 +14,15 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("fa_solid.ttf", "FontAwesome");
 				fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
+                fonts.AddFont("SegoeIcons.ttf", "SegoeIcons");
+                fonts.AddFont("Segoe-UI-Variable-Static-Display.ttf", "SegoeUI");
+                fonts.AddFont("Segoe-UI-Variable-Static-Display-Semibold.ttf", "SegoeUISemiBold");
             });
 
 #if WINDOWS

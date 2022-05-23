@@ -21,28 +21,41 @@
     <Application.MainPage>
         <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Default=Flyout}"
                x:Name="AppShell"
-               
+               FlyoutWidth="300"
                >
             <Shell.BindingContext>
                 <app:AppShellViewModel/>
             </Shell.BindingContext>
             <Shell.FlyoutHeaderTemplate>
                 <DataTemplate>
-                    <Grid RowDefinitions="120" 
+                    <Grid RowDefinitions="48"
                           ColumnDefinitions="*">
-                        <Image Source="dotnet_bot.png"
+                        <ImageButton Source="{StaticResource MenuIcon}"
+                                     Background="Transparent"
+                                     Aspect="AspectFit"
+                                     Margin="16,0"
+                                     Padding="4"
+                                     HeightRequest="34"
+                                     WidthRequest="34"
+                                     Command="{Binding ToggleFlyoutCommand}"
+                                     HorizontalOptions="Start"
+                                     VerticalOptions="Center"
+                                     
+                                     />
+
+                        <!--<Image Source="dotnet_bot.png"
                                HeightRequest="80"
                                WidthRequest="80"
                                HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center"/>-->
                     </Grid>
                 </DataTemplate>
             </Shell.FlyoutHeaderTemplate>
 
-            <!--<FlyoutItem Title="Main">
+            <FlyoutItem Title="Main" FlyoutIcon="{StaticResource HomeIcon}">
                 <ShellContent Route="main" 
                       ContentTemplate="{DataTemplate pages:MainPage}" />
-            </FlyoutItem>-->
+            </FlyoutItem>
 
             <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
                 <ShellContent Route="controls" 

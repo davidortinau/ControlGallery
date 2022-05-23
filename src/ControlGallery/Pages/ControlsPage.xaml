@@ -9,23 +9,33 @@
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static local:IconFont.Boxes}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked"/>
-        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static local:IconFont.List}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="{StaticResource GridLayoutIcon}" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="{StaticResource ListLayoutIcon}" Clicked="ToolbarItem_Clicked_1"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
         <DataTemplate x:Key="ListTemplate">
-            <Grid ColumnDefinitions="44,*" RowDefinitions="44,1">
+            <Grid ColumnDefinitions="60,*" RowDefinitions="60,1">
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                 </Grid.GestureRecognizers>
                 <Image Source="{Binding Icon}"
+                       HeightRequest="32" WidthRequest="32"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"/>
                 <Label Grid.Column="1"
                     VerticalOptions="Center" 
                     Text="{Binding Title}"
-                />
+                    Style="{StaticResource Headline}"
+                >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding Title}" Style="{StaticResource Headline}"/>
+                            <Span Text="{x:Static x:Environment.NewLine}"/>
+                            <Span Text="{Binding Description}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <BoxView Color="{StaticResource Gray200}" Grid.ColumnSpan="2" Grid.Row="1"/>
             </Grid>
         </DataTemplate>
@@ -33,7 +43,7 @@
         <DataTemplate x:Key="GridTemplate">
             <Border Stroke="{StaticResource Gray200Brush}" StrokeThickness="1"
                     StrokeShape="{RoundRectangle CornerRadius=8}">
-                <Grid ColumnDefinitions="*" RowDefinitions="2*,3*"
+                <Grid ColumnDefinitions="44,*" RowDefinitions="2*,3*"
                       MinimumHeightRequest="100"
                       >
                     <Grid.GestureRecognizers>
@@ -41,12 +51,19 @@
                     </Grid.GestureRecognizers>
                     <Image Source="{Binding Icon}"
                             Grid.Row="0"
+                           Grid.ColumnSpan="2"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
-                    <Label Grid.Row="1"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                        VerticalOptions="End"
                         Text="{Binding Title}"
+                           Style="{StaticResource Headline}"
+                    />
+                    <Label Grid.Row="1"
+                           Grid.Column="1"
+                        VerticalOptions="Start"
+                        Text="{Binding Description}"
                     />
                 </Grid>
             </Border>
@@ -65,15 +82,19 @@
             <x:Array Type="{x:Type m:NavItem}">
                 <m:NavItem Title="ActivityIndicator"
                             Icon="view_activityindicator.png"
+                           Description="Displays an animation to show that the application is engaged in a lengthy activity."
                             Destination="{x:Type p:ActivityIndicatorPage}"/>
                 <m:NavItem Title="Alerts"
                            Icon="view_boxview.png"
+                           Description="Displaying an alert, asking a user to make a choice, or displaying a prompt is a common UI task."
                             Destination="{x:Type p:AlertPage}"/>
                 <m:NavItem Title="Borders"
-                           Icon="view_boxview.png"
+                           Icon="BorderIcon.png"
+                           Description="A container control that draws a border, background, or both, around another control."
                             Destination="{x:Type p:BorderPage}"/>
                 <m:NavItem Title="Buttons"
                             Icon="view_button.png"
+                           Description="Displays text and responds to a tap or click that directs the app to carry out a task."
                             Destination="{x:Type p:ButtonPage}"/>
                 <m:NavItem Title="CheckBoxes"
                            Icon="view_boxview.png"

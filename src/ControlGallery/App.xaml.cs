@@ -1,4 +1,5 @@
-﻿using CollectionViewDemos.Views;
+﻿using Animations;
+using CollectionViewDemos.Views;
 using ControlGallery.Pages;
 using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
@@ -44,6 +45,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(TimePickerPage), typeof(TimePickerPage));
         Routing.RegisterRoute(nameof(PickerPage), typeof(PickerPage));
         Routing.RegisterRoute(nameof(SearchBarPage), typeof(SearchBarPage));
+        Routing.RegisterRoute(nameof(AnimationsPage), typeof(AnimationsPage));
 
         // Layouts
         Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));
@@ -133,12 +135,18 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(NativeViewsPage), typeof(NativeViewsPage));
         Routing.RegisterRoute(nameof(ClippingPage), typeof(ClippingPage));
 
-
+        Routing.RegisterRoute(nameof(FadePage), typeof(FadePage));
+        Routing.RegisterRoute(nameof(CustomAnimationPage), typeof(CustomAnimationPage));
+        Routing.RegisterRoute(nameof(RotatePage), typeof(RotatePage));
+        Routing.RegisterRoute(nameof(ScalePage), typeof(ScalePage));
+        Routing.RegisterRoute(nameof(TranslatePage), typeof(TranslatePage));
     }
 }
 
 public class AppShellViewModel
 {
+    public Command ToggleFlyoutCommand { get;set;}
+
     private string appearance = "System";
 
     public string Appearance
@@ -164,7 +172,10 @@ public class AppShellViewModel
     }
     public AppShellViewModel()
     {
-        
+        ToggleFlyoutCommand = new Command(() =>
+        {
+            Shell.Current.FlyoutWidth = (Shell.Current.FlyoutWidth == 50) ? 300 : 50;
+        });
     }
 
 }

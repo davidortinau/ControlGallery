@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 	<TargetFrameworks>net6.0-ios;net6.0-android;net6.0-maccatalyst</TargetFrameworks>
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net6.0-windows10.0.19041</TargetFrameworks>
@@ -31,12 +31,18 @@
     <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiImage Include="Resources\Images\*" />
-	<MauiImage Include="Resources\Images\toolbox\*" />
-    <MauiFont Include="Resources\Fonts\*.ttf" />
+	  <MauiImage Include="Resources\Images\toolbox\*" />
+	  <MauiImage Include="Resources\Images\ControlIcons\*" />
+	  <MauiFont Include="Resources\Fonts\*.ttf" />
   </ItemGroup>
 	
   <ItemGroup>
     <None Remove="Resources\Fonts\FabMDL2.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Display-Semibold.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Display.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Text-Semibold.ttf" />
+    <None Remove="Resources\Fonts\Segoe-UI-Variable-Static-Text.ttf" />
+    <None Remove="Resources\Fonts\SegoeIcons.ttf" />
     <None Remove="Resources\Images\h01.png" />
     <None Remove="Resources\Images\h02.png" />
     <None Remove="Resources\Images\h03.png" />
@@ -46,6 +52,7 @@
     <None Remove="Resources\Images\insta_02.jpg" />
     <None Remove="Resources\Images\insta_03.jpg" />
     <None Remove="Resources\Images\insta_04.jpg" />
+    <None Remove="Resources\Images\menu.png" />
   </ItemGroup>
 	
 	
@@ -54,80 +61,5 @@
   </ItemGroup>
 	
 	
-  <ItemGroup>
-    <Compile Update="Pages\Controls\WebViewPage.xaml.cs">
-      <DependentUpon>WebViewPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\TimePickerPage.xaml.cs">
-      <DependentUpon>TimePickerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\SearchBarPage.xaml.cs">
-      <DependentUpon>SearchBarPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\PickerPage.xaml.cs">
-      <DependentUpon>PickerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Layouts\Custom\CacadeLayoutPage.xaml.cs">
-      <DependentUpon>CacadeLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Layouts\Custom\ColumnLayoutPage.xaml.cs">
-      <DependentUpon>ColumnLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Layouts\Custom\HorizontalWrapLayoutPage.xaml.cs">
-      <DependentUpon>HorizontalWrapLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\TipsPage.xaml.cs">
-      <DependentUpon>TipsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Features\ClippingPage.xaml.cs">
-      <DependentUpon>ClippingPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-	
-	
-  <ItemGroup>
-    <MauiXaml Update="Common\CameraView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\WebViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\TimePickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\SearchBarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\PickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Layouts\Custom\CacadeLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Layouts\Custom\ColumnLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Layouts\Custom\HorizontalWrapLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\TipsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Features\ClippingPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Tips\CameraViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Text.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Sizes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-  </ItemGroup>
 
 </Project>

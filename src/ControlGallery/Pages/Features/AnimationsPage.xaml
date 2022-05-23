@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ControlGallery"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:anim="clr-namespace:Animations"
+             x:Class="ControlGallery.Pages.AnimationsPage"
+             Title="Animations">
+    <ScrollView>
+
+        <VerticalStackLayout Margin="15" Spacing="8">
+            <Label Text="UI Features" Style="{StaticResource Headline}"/>
+            <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
+                            >
+                <BindableLayout.ItemsSource>
+                    <x:Array Type="{x:Type m:NavItem}">
+                        <m:NavItem Title="Fade"
+                                       Icon="animationsicon.png"
+                                   Destination="{x:Type anim:FadePage}"/>
+                        <m:NavItem Title="Rotate"
+                                   Destination="{x:Type anim:RotatePage}"/>
+                        <m:NavItem Title="Scale"
+                                   Destination="{x:Type anim:ScalePage}"/>
+                        <m:NavItem Title="Translate"
+                                   Destination="{x:Type anim:TranslatePage}"/>
+                        <m:NavItem Title="Custom Animation"
+                                   Destination="{x:Type anim:CustomAnimationPage}"/>
+                        <m:NavItem Title="Custom Easings"
+                                   Destination="{x:Type anim:EasingsPage}"/>
+                        <m:NavItem Title="LayoutTo"
+                                   Destination="{x:Type anim:FadePage}"/>
+                    </x:Array>
+                </BindableLayout.ItemsSource>
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Button 
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </cl:HorizontalWrapLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
