@@ -3,6 +3,7 @@ using ControlGallery.Pages;
 using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
+using ControlGallery.Pages.Tips;
 
 namespace ControlGallery;
 
@@ -129,6 +130,19 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(NativeViewsPage), typeof(NativeViewsPage));
         Routing.RegisterRoute(nameof(ClippingPage), typeof(ClippingPage));
 
+        Routing.RegisterRoute(nameof(FadePage), typeof(FadePage));
+        Routing.RegisterRoute(nameof(CustomAnimationPage), typeof(CustomAnimationPage));
+        Routing.RegisterRoute(nameof(RotatePage), typeof(RotatePage));
+        Routing.RegisterRoute(nameof(ScalePage), typeof(ScalePage));
+        Routing.RegisterRoute(nameof(TranslatePage), typeof(TranslatePage));
 
+        Routing.RegisterRoute(nameof(CameraViewPage), typeof(CameraViewPage));
     }
+}
+
+public class AppShellViewModel
+{
+    public Command ToggleFlyoutCommand { get;set;}
+
+    private string appearance = "System";
 }

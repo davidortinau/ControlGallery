@@ -53,50 +53,53 @@
   </ItemGroup>
 	
 	
-  <ItemGroup>
-    <Compile Update="Pages\Controls\WebViewPage.xaml.cs">
-      <DependentUpon>WebViewPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\TimePickerPage.xaml.cs">
-      <DependentUpon>TimePickerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\SearchBarPage.xaml.cs">
-      <DependentUpon>SearchBarPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\PickerPage.xaml.cs">
-      <DependentUpon>PickerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Features\ClippingPage.xaml.cs">
-      <DependentUpon>ClippingPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-	
-	
-  <ItemGroup>
-    <MauiXaml Update="Pages\Controls\WebViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\TimePickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\SearchBarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\PickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Features\ClippingPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Text.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Sizes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-  </ItemGroup>
 
+	<ItemGroup>
+
+		<Compile Update="**\*.ios*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Update="**\*.maccatalyst*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Update="**\*.android*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Update="**\*.tizen*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Update="**\*.windows*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
+		</Compile>
+
+		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'ios' " Update="*\*.ios*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>False</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'maccatalyst' " Update="**\*.maccatalyst*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>False</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'android' " Update="**\*.android*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>False</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'windows' " Update="**\*.windows*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>False</ExcludeFromCurrentConfiguration>
+		</Compile>
+		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'tizen' " Update="**\*.tizen*$(DefaultLanguageSourceExtension)">
+			<ExcludeFromCurrentConfiguration>False</ExcludeFromCurrentConfiguration>
+		</Compile>
+
+	</ItemGroup>
+
+	<Target Name="_MauiRemovePlatformFileNamePatternCompileItems" BeforeTargets="_MauiRemovePlatformCompileItems">
+		<ItemGroup>
+			<Compile Condition=" '%(Compile.ExcludeFromCurrentConfiguration)' == 'true' " Remove="**\*.ios*$(DefaultLanguageSourceExtension)" />
+			<Compile Condition=" '%(Compile.ExcludeFromCurrentConfiguration)' == 'true' " Remove="**\*.maccatalyst*$(DefaultLanguageSourceExtension)" />
+			<Compile Condition=" '%(Compile.ExcludeFromCurrentConfiguration)' == 'true' " Remove="**\*.android*$(DefaultLanguageSourceExtension)" />
+			<Compile Condition=" '%(Compile.ExcludeFromCurrentConfiguration)' == 'true' " Remove="**\*.windows*$(DefaultLanguageSourceExtension)" />
+			<Compile Condition=" '%(Compile.ExcludeFromCurrentConfiguration)' == 'true' " Remove="**\*.tizen*$(DefaultLanguageSourceExtension)" />
+		</ItemGroup>
+	</Target>
+
+
+	
 </Project>
