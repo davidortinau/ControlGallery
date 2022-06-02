@@ -72,7 +72,7 @@
 			<ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
 		</Compile>
 
-		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'ios' " Update="*\*.ios*$(DefaultLanguageSourceExtension)">
+		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'ios' " Update="**\*.ios*$(DefaultLanguageSourceExtension)">
 			<ExcludeFromCurrentConfiguration>False</ExcludeFromCurrentConfiguration>
 		</Compile>
 		<Compile Condition=" '$(TargetPlatformIdentifier)' == 'maccatalyst' " Update="**\*.maccatalyst*$(DefaultLanguageSourceExtension)">

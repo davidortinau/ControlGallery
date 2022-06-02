@@ -1,8 +1,8 @@
 ﻿namespace ControlGallery.Pages;
 
-public partial class FeaturesPage : ContentPage
+public partial class TipsPage : ContentPage
 {
-    public FeaturesPage()
+    public TipsPage()
     {
         InitializeComponent();
     }

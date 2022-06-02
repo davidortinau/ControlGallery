@@ -1,15 +1,15 @@
 ﻿using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 using Microsoft.UI.Xaml.Controls;
-using Frame = Microsoft.UI.Xaml.Controls.Frame;
+using MyControl = Microsoft.UI.Xaml.Controls.Button;
 
 namespace ControlGallery.Handlers;
 
-public partial class CameraViewHandler : ViewHandler<ICameraView, Frame>
+public partial class CameraViewHandler : ViewHandler<ICameraView, MyControl>
 {
-    protected override Frame CreatePlatformView()
+    protected override MyControl CreatePlatformView()
     {
-        return new Frame();
+        return new MyControl();
     }
 
     public static void MapSpecialColor(ICameraViewHandler handler, ICameraView view)

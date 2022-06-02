@@ -4,7 +4,7 @@ using PlatformView = UIKit.UIView;
 #elif MONOANDROID
 using PlatformView = Google.Android.Material.Button.MaterialButton;
 #elif WINDOWS
-using PlatformView = Microsoft.UI.Xaml.Controls.Frame;
+using PlatformView = Microsoft.UI.Xaml.Controls.Button;
 #elif TIZEN
 using PlatformView = Tizen.UIExtensions.ElmSharp.Button;
 #elif (NETSTANDARD || !PLATFORM) || (NET6_0 && !IOS && !ANDROID && !TIZEN)
