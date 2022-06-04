@@ -4,6 +4,7 @@
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
              xmlns:cl="clr-namespace:CustomLayouts"
+             xmlns:controls="clr-namespace:ControlGallery.Controls"
              x:Class="ControlGallery.Pages.TipsPage"
              Title="Tips &amp; Tricks">
     <ContentPage.Content>
@@ -11,7 +12,10 @@
 
             <VerticalStackLayout Margin="15" Spacing="8">
                 <Label Text="UI Features" Style="{StaticResource Headline}"/>
-                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
+                <controls:CameraView Color="Red" WidthRequest="300" HeightRequest="60"/>
+
+
+                <!--<cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
                             >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
@@ -28,7 +32,7 @@
                                 />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </cl:HorizontalWrapLayout>
+                </cl:HorizontalWrapLayout>-->
 
             </VerticalStackLayout>
         </ScrollView>

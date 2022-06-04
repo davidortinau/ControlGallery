@@ -1,4 +1,6 @@
 #if WINDOWS
+using ControlGallery.Controls;
+using ControlGallery.Handlers;
 using Microsoft.Maui.LifecycleEvents;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
@@ -23,7 +25,11 @@ public static class MauiProgram
             });
 
 #if WINDOWS
-            builder.ConfigureLifecycleEvents(events =>
+        builder.ConfigureMauiHandlers(collection =>
+        {
+            collection.AddHandler(typeof(CameraView), typeof(CameraViewHandler));
+        });
+        builder.ConfigureLifecycleEvents(events =>
             {
                 events.AddWindows(wndLifeCycleBuilder =>
                 {

@@ -2,5 +2,5 @@
 
 public interface ICameraView : IView
 {
-    Color Color { get; }
+    public Color Color { get; }
 }

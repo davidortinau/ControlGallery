@@ -130,12 +130,6 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(NativeViewsPage), typeof(NativeViewsPage));
         Routing.RegisterRoute(nameof(ClippingPage), typeof(ClippingPage));
 
-        Routing.RegisterRoute(nameof(FadePage), typeof(FadePage));
-        Routing.RegisterRoute(nameof(CustomAnimationPage), typeof(CustomAnimationPage));
-        Routing.RegisterRoute(nameof(RotatePage), typeof(RotatePage));
-        Routing.RegisterRoute(nameof(ScalePage), typeof(ScalePage));
-        Routing.RegisterRoute(nameof(TranslatePage), typeof(TranslatePage));
-
         Routing.RegisterRoute(nameof(CameraViewPage), typeof(CameraViewPage));
     }
 }
