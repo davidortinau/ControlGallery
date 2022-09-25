@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ControlGallery"
@@ -10,7 +10,7 @@
             <Image Source="insta_04.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"
                    HorizontalOptions="Start">
                 <Image.Clip>
-                    <EllipseGeometry RadiusX="80" RadiusY="80" Center="40,40"/>
+                    <EllipseGeometry RadiusX="80" RadiusY="80" Center="80,80"/>
                 </Image.Clip>
             </Image>
 

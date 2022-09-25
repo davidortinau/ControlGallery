@@ -7,7 +7,9 @@
              Title="Colors &amp; Brushes">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
+            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}"
+                         Spacing="8"
+                         >
                 <Label Text="Colors" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
                 

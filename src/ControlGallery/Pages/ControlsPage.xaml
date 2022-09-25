@@ -23,7 +23,7 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center"/>
                 <Label Grid.Column="1"
-                    VerticalOptions="Center" 
+                    VerticalOptions="Center"
                     Text="{Binding Title}"
                 />
                 <BoxView Color="{StaticResource Gray200}" Grid.ColumnSpan="2" Grid.Row="1"/>
@@ -31,8 +31,10 @@
         </DataTemplate>
 
         <DataTemplate x:Key="GridTemplate">
-            <Border Stroke="{StaticResource Gray200Brush}" StrokeThickness="1"
-                    StrokeShape="{RoundRectangle CornerRadius=8}">
+            <Border Stroke="{StaticResource Gray200Brush}" StrokeThickness="1">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8"/>
+                </Border.StrokeShape>
                 <Grid ColumnDefinitions="*" RowDefinitions="2*,3*"
                       MinimumHeightRequest="100"
                       >

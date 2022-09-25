@@ -1,32 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<TargetFrameworks>net6.0-ios;net6.0-android;net6.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net6.0-windows10.0.19041</TargetFrameworks>
+	  <TargetFrameworks>net7.0-ios;net7.0-android;net7.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net7.0-windows10.0.19041</TargetFrameworks>
     <OutputType>Exe</OutputType>
+    <RootNamespace>ControlGallery</RootNamespace>
     <UseMaui>true</UseMaui>
-    <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
     <SingleProject>true</SingleProject>
     <ImplicitUsings>enable</ImplicitUsings>
 
 	  <ApplicationTitle>Control Gallery</ApplicationTitle>
-	  <ApplicationId>com.microsoft.MauiControlGallery</ApplicationId>
-	  <ApplicationVersion>1</ApplicationVersion>
+	  <ApplicationId>com.simplyprofound.MauiControlGallery</ApplicationId>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationIdGuid>7374c3c2-74a8-43f6-bc79-44814d1531a1</ApplicationIdGuid>
 	  
-	  <!-- (Optional) Pin to a specific version -->
-	  <!--<MauiVersion>6.0.101-preview.10.2068</MauiVersion>-->
-	  <!--<MauiVersion>6.0.101-preview.11.2349</MauiVersion>-->
-
-	  <!-- Required for C# Hot Reload -->
-	  <UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
-
-	  <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">14.2</SupportedOSPlatformVersion>
-	  <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">14.0</SupportedOSPlatformVersion>
-	  <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
-	  <SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</SupportedOSPlatformVersion>
-	  <TargetPlatformMinVersion Condition="$(TargetFramework.Contains('-windows'))">10.0.17763.0</TargetPlatformMinVersion>
-	  <ProjectGuid>{DA6AB9E8-93F9-4324-9C25-A4E70160B936}</ProjectGuid>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
 	
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodesignKey>Apple Development: Created via API (2NJFZDD9ZM)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+    <EnableCodeSigning>false</EnableCodeSigning>
+  </PropertyGroup>
   <ItemGroup>
     <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
@@ -36,98 +39,7 @@
   </ItemGroup>
 	
   <ItemGroup>
-    <None Remove="Resources\Fonts\FabMDL2.ttf" />
-    <None Remove="Resources\Images\h01.png" />
-    <None Remove="Resources\Images\h02.png" />
-    <None Remove="Resources\Images\h03.png" />
-    <None Remove="Resources\Images\h04.png" />
-    <None Remove="Resources\Images\h05.png" />
-    <None Remove="Resources\Images\insta_01.jpg" />
-    <None Remove="Resources\Images\insta_02.jpg" />
-    <None Remove="Resources\Images\insta_03.jpg" />
-    <None Remove="Resources\Images\insta_04.jpg" />
-  </ItemGroup>
-	
-	
-  <ItemGroup>
     <EmbeddedResource Include="Resources\food_01.png" />
-  </ItemGroup>
-	
-	
-  <ItemGroup>
-    <Compile Update="Pages\Controls\WebViewPage.xaml.cs">
-      <DependentUpon>WebViewPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\TimePickerPage.xaml.cs">
-      <DependentUpon>TimePickerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\SearchBarPage.xaml.cs">
-      <DependentUpon>SearchBarPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Controls\PickerPage.xaml.cs">
-      <DependentUpon>PickerPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Layouts\Custom\CacadeLayoutPage.xaml.cs">
-      <DependentUpon>CacadeLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Layouts\Custom\ColumnLayoutPage.xaml.cs">
-      <DependentUpon>ColumnLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Layouts\Custom\HorizontalWrapLayoutPage.xaml.cs">
-      <DependentUpon>HorizontalWrapLayoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\TipsPage.xaml.cs">
-      <DependentUpon>TipsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\Features\ClippingPage.xaml.cs">
-      <DependentUpon>ClippingPage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-	
-	
-  <ItemGroup>
-    <MauiXaml Update="Common\CameraView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\WebViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\TimePickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\SearchBarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\PickerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Layouts\Custom\CacadeLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Layouts\Custom\ColumnLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Layouts\Custom\HorizontalWrapLayoutPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\TipsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Features\ClippingPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Tips\CameraViewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Text.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
-    <MauiXaml Update="Resources\Styles\Sizes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </MauiXaml>
   </ItemGroup>
 
 </Project>

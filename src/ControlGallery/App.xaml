@@ -1,4 +1,4 @@
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
              xmlns:pages="clr-namespace:ControlGallery.Pages"
@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Resources/Styles/Icons.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Text.xaml" />
                 <ResourceDictionary Source="Resources/Styles/DefaultStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/AppStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
@@ -38,6 +39,21 @@
                 </DataTemplate>
             </Shell.FlyoutHeaderTemplate>
 
+            <Shell.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="15,0.2*,0.8*">
+                        <Image Source="{Binding FlyoutIcon}"
+                            Margin="5"
+                            HeightRequest="35"
+                            Grid.Column="1" />
+                        <Label Grid.Column="2"
+                            Text="{Binding Title}"
+                            FontAttributes="Italic"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                </DataTemplate>
+            </Shell.ItemTemplate>
+
 
 
             <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
@@ -62,18 +78,22 @@
 
             <Shell.FlyoutFooterTemplate>
                 <DataTemplate>
-                    <VerticalStackLayout Margin="30">
-                        <Label Text="Appearance"/>
-                        <Picker x:Name="AppearancePicker" SelectedItem="{Binding Appearance}">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>System</x:String>
-                                    <x:String>Dark</x:String>
-                                    <x:String>Light</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </VerticalStackLayout>
+                    <Grid>
+                        <VerticalStackLayout Margin="15" Spacing="8">
+                            <Label Text="Appearance"/>
+                            <Picker x:Name="AppearancePicker"
+                            BackgroundColor="Transparent"
+                            SelectedItem="{Binding Appearance}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>System</x:String>
+                                        <x:String>Dark</x:String>
+                                        <x:String>Light</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </VerticalStackLayout>
+                    </Grid>
                 </DataTemplate>
             </Shell.FlyoutFooterTemplate>
         </Shell>

@@ -22,7 +22,11 @@ namespace ControlGallery.Models
             NavigateTo = new Command(
                 async () =>
                 {
-                    await Shell.Current.GoToAsync(Destination.Name);
+                    try{
+                        await Shell.Current.GoToAsync(Destination.Name);
+                    }catch(Exception ex){
+                        Debug.WriteLine($"Crap: {ex.Message}");
+                    }
                 });
         }
     }

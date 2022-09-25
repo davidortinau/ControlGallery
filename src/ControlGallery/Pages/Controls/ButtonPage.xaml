@@ -6,7 +6,6 @@
              xmlns:droid="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
-             Shell.NavBarIsVisible="False"
              Shell.TitleColor="White"
              Shell.FlyoutWidth="100"
              x:Class="ControlGallery.Pages.ButtonPage"
@@ -20,11 +19,11 @@
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ScrollView Margin="0,60,0,0">
+        <ScrollView Margin="0,0,0,0">
             <VerticalStackLayout 
-               Padding="{OnPlatform iOS='30,60,30,30', Default='30,00'}">
+               Padding="{OnPlatform iOS='30,60,30,30', Default='15,15'}">
 
-                <Label Text="Primary filled"/>
+                <Label Text="Primary filled" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
                     <Button Text="Button"/>
                     <Button Text="Button" IsEnabled="False"/>
@@ -37,51 +36,78 @@
 
                 <HorizontalStackLayout>
                     <Button FontFamily="FontAwesome"
-                            Text="{x:Static app:IconFont.Archway}"/>
+                            Text="{x:Static app:IconFont.PaperPlane}"/>
                     <Button FontFamily="FontAwesome"
-                            Text="{x:Static app:IconFont.Archway}"
+                            Text="{x:Static app:IconFont.PaperPlane}"
                             IsEnabled="False"/>
                 </HorizontalStackLayout>
 
-                <Label Text="Primary outline"/>
+                <Label Text="Primary outline" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
                     <Button Text="Button" 
                             Style="{StaticResource PrimaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutline}"/>
                 </HorizontalStackLayout>
 
+                <Label Text="Default values" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
-                    <Button ImageSource="{StaticResource CircleIconAlt}" Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
-                    <Button ImageSource="{StaticResource CircleIconAlt}" Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+                    <Button
+                    ImageSource="{StaticResource CircleIconAlt}" Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+                    <Button
+                    ImageSource="{StaticResource CircleIconAlt}" Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout>
-                    <Button ImageSource="{StaticResource CircleIconAlt}" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
-                    <Button ImageSource="{StaticResource CircleIconAlt}" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
-                </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Button ImageSource="{StaticResource CircleIconAlt}"
+                        ContentLayout="Right"
+                        Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+                <Button ImageSource="{StaticResource CircleIconAlt}"
+                        ContentLayout="Right"
+                        Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+            </HorizontalStackLayout>
 
-                <Label Text="Secondary outline"/>
+            <HorizontalStackLayout>
+                <Button ImageSource="{StaticResource CircleIconAlt}"
+                        ContentLayout="Top"
+                        Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+                <Button ImageSource="{StaticResource CircleIconAlt}"
+                        ContentLayout="Top"
+                        Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Button ImageSource="{StaticResource CircleIconAlt}"
+                        ContentLayout="Bottom"
+                        Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+                <Button ImageSource="{StaticResource CircleIconAlt}"
+                        ContentLayout="Bottom"
+                        Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}"/>
+            </HorizontalStackLayout>
+
+            <BoxView Style="{StaticResource HRule}" Margin="0,15"/>
+
+                <Label Text="Secondary outline" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
                     <Button Text="Button" Style="{StaticResource SecondaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource SecondaryButtonOutline}"/>
                 </HorizontalStackLayout>
 
-                <Label Text="Teriary outline"/>
+                <Label Text="Teriary outline" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout>
                     <Button Text="Button" Style="{StaticResource TertiaryButtonOutline}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource TertiaryButtonOutline}"/>
                 </HorizontalStackLayout>
 
-                <Label Text="Borderless"/>
+                <Label Text="Borderless" Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout HorizontalOptions="Start">
                     <Button Text="Button" Style="{StaticResource BorderlessButton}"/>
                     <Button Text="Button" IsEnabled="False" Style="{StaticResource BorderlessButton}"/>
                 </HorizontalStackLayout>
 
-                <Label Text="Misc Test Cases"/>
+                <Label Text="Misc Test Cases" Style="{StaticResource Headline}"/>
                 <Button Text="uppercase" TextTransform="Uppercase"/>
 
-                <Button Text="Corner 20" CornerRadius="20" HeightRequest="40" Padding="0"/>
+                <Button Text="Corner 20" CornerRadius="20" HeightRequest="40" Padding="20,0"/>
 
                 <Button Text="Sm" HorizontalOptions="Start"/>
 
