@@ -42,4 +42,12 @@
     <EmbeddedResource Include="Resources\food_01.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="CommunityToolkit.Maui" />
+    <None Remove="CommunityToolkit.Mvvm" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+  </ItemGroup>
 </Project>

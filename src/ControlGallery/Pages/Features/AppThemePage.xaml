@@ -2,9 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
-             xmlns:am="clr-namespace:Microsoft.Maui.ApplicationModel;assembly=Microsoft.Maui.Essentials"
+             xmlns:am="clr-namespace:Microsoft.Maui.ApplicationModel;assembly=Microsoft.Maui.Essentials" xmlns:features="clr-namespace:ControlGallery.Pages.Features"
              x:Class="ControlGallery.Pages.AppThemePage"
-             Title="AppThemes">
+             Title="AppThemes"
+             x:DataType="features:AppThemeViewModel"
+             >
+    <ContentPage.BindingContext>
+        <features:AppThemeViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ControlTemplate x:Key="ThemeRadioTemplate">
             <Frame
@@ -94,16 +99,13 @@
                 <HorizontalStackLayout
                         Spacing="12"
                          RadioButtonGroup.GroupName="AppTheme"
-                         RadioButtonGroup.SelectedValue="{Binding SelectedTheme}">
+                         RadioButtonGroup.SelectedValue="{Binding CurrentTheme}">
                     <HorizontalStackLayout.Resources>
                         <Style TargetType="RadioButton">
                             <Setter Property="ControlTemplate" Value="{StaticResource ThemeRadioTemplate}"/>
                         </Style>
                     </HorizontalStackLayout.Resources>
-                    <RadioButton Value="{x:Static am:AppTheme.Unspecified}"
-                                     IsChecked="True"
-                                     CheckedChanged="RadioButton_CheckedChanged"
-                                     >
+                    <RadioButton Value="{x:Static am:AppTheme.Unspecified}">
                         <RadioButton.Content>
                             <Grid RowDefinitions="4*,1*">
                                 <Image
@@ -116,15 +118,14 @@
                                         Color={StaticResource Gray900},
                                         Size=42}"/>
                                 <Label
-                                        Text="Default"
+                                        Text="System"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
                                         Grid.Row="1"/>
                             </Grid>
                         </RadioButton.Content>
                     </RadioButton>
-                    <RadioButton Value="{x:Static am:AppTheme.Dark}"
-                                     CheckedChanged="RadioButton_CheckedChanged">
+                    <RadioButton Value="{x:Static am:AppTheme.Dark}">
                         <RadioButton.Content>
                             <Grid RowDefinitions="4*,1*">
                                 <Image
@@ -144,9 +145,7 @@
                             </Grid>
                         </RadioButton.Content>
                     </RadioButton>
-                    <RadioButton Value="{x:Static am:AppTheme.Light}"
-                                     CheckedChanged="RadioButton_CheckedChanged"
-                                     >
+                    <RadioButton Value="{x:Static am:AppTheme.Light}">
                         <RadioButton.Content>
                             <Grid RowDefinitions="4*,1*">
                                 <Image
@@ -168,7 +167,7 @@
                     </RadioButton>
                 </HorizontalStackLayout>
                 
-                <BoxView Style="{StaticResource HRule}"/>
+                
                 
             </StackLayout>
         </ScrollView>

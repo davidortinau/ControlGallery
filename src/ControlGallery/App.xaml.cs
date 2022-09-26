@@ -137,34 +137,44 @@ public partial class App : Microsoft.Maui.Controls.Application
     }
 }
 
-public class AppShellViewModel
+[INotifyPropertyChanged]
+public partial class AppShellViewModel
 {
-    private string appearance = "System";
+    private string appearance = App.Current.UserAppTheme.ToString();
 
     public string Appearance
     {
         get => appearance; 
         set
         {
+            if (appearance == value)
+                return;
+
             appearance = value;
 
             switch (appearance)
             {
-                case "System":
-                    App.Current.UserAppTheme = AppTheme.Unspecified;
+                case "Light":
+                    App.Current.UserAppTheme = AppTheme.Light;
                     break;
                 case "Dark":
                     App.Current.UserAppTheme = AppTheme.Dark;
                     break;
                 default:
-                    App.Current.UserAppTheme = AppTheme.Light;
+                    App.Current.UserAppTheme = AppTheme.Unspecified;
                     break;
             }
         }
     }
+
     public AppShellViewModel()
     {
-        
+        App.Current.RequestedThemeChanged += Current_RequestedThemeChanged;    
     }
 
+    private void Current_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+    {
+        appearance = App.Current.UserAppTheme.ToString();
+        OnPropertyChanged(nameof(Appearance));
+    }
 }

@@ -86,7 +86,7 @@
                             SelectedItem="{Binding Appearance}">
                                 <Picker.ItemsSource>
                                     <x:Array Type="{x:Type x:String}">
-                                        <x:String>System</x:String>
+                                        <x:String>Unspecified</x:String>
                                         <x:String>Dark</x:String>
                                         <x:String>Light</x:String>
                                     </x:Array>
