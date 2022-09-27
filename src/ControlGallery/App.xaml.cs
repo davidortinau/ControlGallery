@@ -33,7 +33,6 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(LabelPage), typeof(LabelPage));
         Routing.RegisterRoute(nameof(ProgressBarPage), typeof(ProgressBarPage));
         Routing.RegisterRoute(nameof(RadioButtonPage), typeof(RadioButtonPage));
-        Routing.RegisterRoute(nameof(ShadowPage), typeof(ShadowPage));
         Routing.RegisterRoute(nameof(ShapesPage), typeof(ShapesPage));
         Routing.RegisterRoute(nameof(SliderPage), typeof(SliderPage));
         Routing.RegisterRoute(nameof(StepperPage), typeof(StepperPage));
@@ -132,6 +131,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(TriggersPage), typeof(TriggersPage));
         Routing.RegisterRoute(nameof(NativeViewsPage), typeof(NativeViewsPage));
         Routing.RegisterRoute(nameof(ClippingPage), typeof(ClippingPage));
+        Routing.RegisterRoute(nameof(ShadowPage), typeof(ShadowPage));
 
 
     }

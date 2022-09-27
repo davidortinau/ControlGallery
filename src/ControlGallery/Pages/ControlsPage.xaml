@@ -110,8 +110,6 @@
                 <m:NavItem Title="SearchBar"
                             Icon="view_searchbar.png"
                             Destination="{x:Type p:SearchBarPage}"/>
-                <m:NavItem Title="Shadows"
-                        Destination="{x:Type p:ShadowPage}"/>
                 <m:NavItem Title="Shapes"
                             Destination="{x:Type p:ShapesPage}"/>
                 <m:NavItem Title="Sliders"

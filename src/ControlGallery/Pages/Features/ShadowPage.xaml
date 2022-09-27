@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:ControlGallery.Models"
+             xmlns:cl="clr-namespace:CustomLayouts"
              x:Class="ControlGallery.Pages.ShadowPage"
-             Title="Border"
-             >
+             Title="Shadow">
     <ContentPage.Resources>
         <Shadow x:Key="BasicShadow"
                             Brush="{StaticResource BlackBrush}"
@@ -13,7 +14,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView>
-            <VerticalStackLayout Margin="15" Spacing="8">
+            <VerticalStackLayout Margin="15" Spacing="24">
                 <Label Text="On a layout"
                        Style="{StaticResource Headline}" />
                 <BoxView Style="{StaticResource HRule}"/>
@@ -38,16 +39,17 @@
                        Style="{StaticResource Headline}" />
                 <BoxView Style="{StaticResource HRule}"/>
 
-                <Image Source="https://aka.ms/campus.jpg"
+                <Image Source="insta_04.jpg"
                        Aspect="AspectFill"
                        HeightRequest="120"
                        WidthRequest="120"
+                       HorizontalOptions="Start"
                        Shadow="{StaticResource BasicShadow}"
                        >
                     <Image.Clip>
-                        <EllipseGeometry RadiusX="120"
-                                         RadiusY="120"
-                                         Center="120,120"/>
+                        <EllipseGeometry RadiusX="60"
+                                         RadiusY="60"
+                                         Center="60,60"/>
                     </Image.Clip>
                 </Image>
 
@@ -67,6 +69,7 @@
 
                 <Grid 
                     HeightRequest="50" WidthRequest="50"
+                    HorizontalOptions="Start"
                     Shadow="{StaticResource BasicShadow}">
                     <Polygon Fill="#663300" 
                          Points="0 0 0 50 25 25"/>
@@ -85,10 +88,10 @@
                 <Path 
                     HeightRequest="100" WidthRequest="100" 
                     Fill="{StaticResource PrimaryBrush}"
+                    Shadow="{StaticResource BasicShadow}"
                     Data="M50,0 L50,50 L25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.3309524 10.9701429,0.224119049 24.5865793,0.00334928573 L25,0 L50,0 Z" />
 
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
-        
 </ContentPage>

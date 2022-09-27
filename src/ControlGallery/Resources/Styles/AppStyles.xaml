@@ -94,9 +94,12 @@
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Disabled">
+                    <VisualState x:Name="Disabled"><!-- these styles REPLACE the BasedOn styles and don't inherit them -->
                         <VisualState.Setters>
-                            <Setter Property="ImageSource" Value="{StaticResource CircleIconAltDisabled}" />
+                            <Setter Property="ImageSource" Value="{StaticResource AtomIcon}" /><!-- cannot do this -->
+                            <Setter Property="BorderColor" Value="{StaticResource Neutral}" />
+                            <Setter Property="TextColor" Value="{StaticResource Neutral}" />
+                            <Setter Property="Background" Value="Transparent"/>
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>

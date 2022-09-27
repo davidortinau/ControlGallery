@@ -27,6 +27,8 @@
                                    Destination="{x:Type p:MenuBarPage}"/>
                             <m:NavItem Title="Native Views"
                                    Destination="{x:Type p:NativeViewsPage}"/>
+                            <m:NavItem Title="Shadow"
+                                   Destination="{x:Type p:ShadowPage}"/>
                             <m:NavItem Title="Triggers"
                                    Destination="{x:Type p:TriggersPage}"/>
                         </x:Array>
