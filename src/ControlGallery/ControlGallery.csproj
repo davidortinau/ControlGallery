@@ -46,10 +46,22 @@
     <None Remove="CommunityToolkit.Maui" />
     <None Remove="CommunityToolkit.Mvvm" />
     <None Remove="Microsoft.Maui.Controls.Maps" />
+    <None Remove="Pages\Features\Gestures\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
     <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.0-rc.1.6687" />
+  </ItemGroup>
+  <ItemGroup>
+    <MauiXaml Update="Pages\Features\TooltipPage.xaml">
+      <SubType></SubType>
+    </MauiXaml>
+    <MauiXaml Update="Pages\Features\GesturesPage.xaml">
+      <SubType></SubType>
+    </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Features\Gestures\" />
   </ItemGroup>
 </Project>

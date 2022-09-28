@@ -25,6 +25,8 @@
                                    Destination="{x:Type p:ContextMenuPage}"/>
                             <m:NavItem Title="FontImageSource"
                                    Destination="{x:Type p:FontImagePage}"/>
+                            <m:NavItem Title="Gestures"
+                                   Destination="{x:Type p:GesturesPage}"/>
                             <m:NavItem Title="MenuBar"
                                    Destination="{x:Type p:MenuBarPage}"/>
                             <m:NavItem Title="Native Views"

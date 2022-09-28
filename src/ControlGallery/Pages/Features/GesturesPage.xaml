@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:p="clr-namespace:ControlGallery.Pages"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             x:Class="ControlGallery.Pages.GesturesPage"
+             Title="Gesture Recognizers">
+    <ScrollView>
+        <StackLayout Margin="15" Spacing="8">
+            <Label Text="Gesture Recognizers" Style="{StaticResource Headline}"/>
+            <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
+                            >
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Tap"
+                                   Destination="{x:Type p:TapGesturePage}"/>
+                            <m:NavItem Title="Pointer"
+                                   Destination="{x:Type p:PointerGesturePage}"/>
+                            <m:NavItem Title="Swipe"
+                                   Destination="{x:Type p:ColorsPage}"/>
+                            <m:NavItem Title="Drag and Drop"
+                                   Destination="{x:Type p:ContextMenuPage}"/>
+                            <m:NavItem Title="Pan"
+                                   Destination="{x:Type p:FontImagePage}"/>
+                            <m:NavItem Title="Pinch"
+                                   Destination="{x:Type p:MenuBarPage}"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </cl:HorizontalWrapLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
