@@ -134,7 +134,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(ClippingPage), typeof(ClippingPage));
         Routing.RegisterRoute(nameof(ShadowPage), typeof(ShadowPage));
         Routing.RegisterRoute(nameof(ContextMenuPage), typeof(ContextMenuPage));
-
+        Routing.RegisterRoute(nameof(TooltipPage), typeof(TooltipPage));
 
     }
 }
