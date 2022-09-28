@@ -21,6 +21,8 @@
                                    Destination="{x:Type p:ClippingPage}"/>
                             <m:NavItem Title="Colors"
                                    Destination="{x:Type p:ColorsPage}"/>
+                            <m:NavItem Title="ContextMenu"
+                                   Destination="{x:Type p:ContextMenuPage}"/>
                             <m:NavItem Title="FontImageSource"
                                    Destination="{x:Type p:FontImagePage}"/>
                             <m:NavItem Title="MenuBar"

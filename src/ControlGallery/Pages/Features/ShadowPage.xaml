@@ -44,8 +44,7 @@
                        HeightRequest="120"
                        WidthRequest="120"
                        HorizontalOptions="Start"
-                       Shadow="{StaticResource BasicShadow}"
-                       >
+                       Shadow="{StaticResource BasicShadow}">
                     <Image.Clip>
                         <EllipseGeometry RadiusX="60"
                                          RadiusY="60"
