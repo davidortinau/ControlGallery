@@ -97,6 +97,9 @@
                 <m:NavItem Title="Labels"
                             Icon="view_label.png"
                             Destination="{x:Type p:LabelPage}"/>
+                <m:NavItem Title="Map"
+                            Icon="view_map.png"
+                            Destination="{x:Type p:MapPage}"/>
                     <m:NavItem Title="Picker"
                             Icon="view_picker.png"
                             Destination="{x:Type p:PickerPage}"/>

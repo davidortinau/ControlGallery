@@ -31,6 +31,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(EntryPage), typeof(EntryPage));
         Routing.RegisterRoute(nameof(ImagePage), typeof(ImagePage));
         Routing.RegisterRoute(nameof(LabelPage), typeof(LabelPage));
+        Routing.RegisterRoute(nameof(MapPage), typeof(MapPage));
         Routing.RegisterRoute(nameof(ProgressBarPage), typeof(ProgressBarPage));
         Routing.RegisterRoute(nameof(RadioButtonPage), typeof(RadioButtonPage));
         Routing.RegisterRoute(nameof(ShapesPage), typeof(ShapesPage));

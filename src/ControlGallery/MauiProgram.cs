@@ -7,6 +7,7 @@ using Windows.Graphics;
 
 using Microsoft.Maui.Handlers;
 using static Microsoft.Maui.Controls.Button;
+using Microsoft.Maui.Controls.Maps;
 
 #if IOS || MACCATALYST
 using UIKit;
@@ -26,6 +27,7 @@ public static class MauiProgram
 		builder
 			.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
+            .UseMauiMaps()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("fa_solid.ttf", "FontAwesome");

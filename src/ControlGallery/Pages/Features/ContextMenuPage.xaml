@@ -5,7 +5,7 @@
              x:Class="ControlGallery.Pages.ContextMenuPage"
              Title="ContextMenu">
     <ScrollView>
-        <StackLayout Margin="15" Spacing="8">
+        <StackLayout Margin="15" Spacing="16">
             <Label Text="ContextMenu" Style="{StaticResource Headline}"/>
             <Label Text="Right-click the Button for additional actions"/>
             <Button
@@ -14,7 +14,7 @@
                 ToolTipProperties.Text="More than meets the eye"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center">
+                HorizontalOptions="Start">
                 <FlyoutBase.ContextFlyout>
                     <MenuFlyout>
                             <MenuFlyoutItem Text="Increment by 10" Clicked="OnIncrementMenuItemClicked" CommandParameter="10"></MenuFlyoutItem>
