@@ -5,14 +5,14 @@
              Title="ActivityIndicator">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <StackLayout Style="{StaticResource MainContainer}">
                 <Label Text="Default" Style="{StaticResource Headline}"/>
                 <Label Text="IsRunning" StyleClass="Subhead"/>
-                <ActivityIndicator IsRunning="True" />
+                <ActivityIndicator IsRunning="True" HorizontalOptions="Start"/>
 
-                <Label Text="Styled" Style="{StaticResource Headline}"/>
+                <Label Text="Styled" Style="{StaticResource Headline}"/>    
                 <Label Text="Color" StyleClass="Subhead"/>
-                <ActivityIndicator IsRunning="True" Color="{StaticResource Primary}" />
+                <ActivityIndicator IsRunning="True" Color="{StaticResource Primary}" HorizontalOptions="Start" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

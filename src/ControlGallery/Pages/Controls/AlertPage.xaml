@@ -1,14 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ControlGallery.Pages.AlertPage">
+             x:Class="ControlGallery.Pages.AlertPage"
+             Title="Alert"
+             >
+    <ScrollView>
+    <StackLayout Style="{StaticResource MainContainer}">
 
-    <StackLayout Margin="15,100">
-        <Button Text="Display Alert" Clicked="Button_Clicked"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    />
+        <Label Text="Simple Alert" Style="{StaticResource Headline}"/>
+        <BoxView Style="{StaticResource HRule}"/>
+        <Button Text="Display Alert"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+        />
+
+        <Label Text="Return Response" Style="{StaticResource Headline}"/>
+        <BoxView Style="{StaticResource HRule}"/>
+        <Button Text="Display Alert"
+                Clicked="YesNo_Clicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+        />
+        <Label x:Name="YesNoLbl" TextColor="{StaticResource Primary}"/>
+
+        <Label Text="Action Sheet" Style="{StaticResource Headline}"/>
+        <BoxView Style="{StaticResource HRule}"/>
+        <Button Text="Display Action Sheet"
+                Clicked="ActionSheet_Clicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+        />
+        <Label x:Name="ActionLbl" TextColor="{StaticResource Primary}"/>
+
+        <Label Text="Prompt" Style="{StaticResource Headline}"/>
+        <BoxView Style="{StaticResource HRule}"/>
+        <Button Text="Display Action Prompt"
+                Clicked="Prompt_Clicked"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+        />
+        <Label x:Name="PromptLbl" TextColor="{StaticResource Primary}"/>
 
         
     </StackLayout>
+    </ScrollView>
 </ContentPage>

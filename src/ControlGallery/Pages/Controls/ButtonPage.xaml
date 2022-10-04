@@ -10,14 +10,6 @@
              Shell.FlyoutWidth="100"
              x:Class="ControlGallery.Pages.ButtonPage"
              Title="Button">
-    <ContentPage.Resources>
-        <Style TargetType="HorizontalStackLayout">
-            <Setter Property="Spacing" Value="8"/>
-        </Style>
-        <Style TargetType="VerticalStackLayout">
-            <Setter Property="Spacing" Value="8"/>
-        </Style>
-    </ContentPage.Resources>
     <ContentPage.Content>
         <ScrollView Margin="0,0,0,0">
             <VerticalStackLayout 
