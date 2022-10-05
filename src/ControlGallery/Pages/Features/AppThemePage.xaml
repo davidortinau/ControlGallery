@@ -12,15 +12,18 @@
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ControlTemplate x:Key="ThemeRadioTemplate">
-            <Frame
-                          BorderColor="{StaticResource Gray100}"
+            <Border
+                          Stroke="{StaticResource Gray100}"
+                          StrokeThickness="1"
                           BackgroundColor="Transparent"
-                          HasShadow="False"
                           HeightRequest="120"
                           WidthRequest="100"
                           HorizontalOptions="Start"
                           VerticalOptions="Start"
                           Padding="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8"/>
+                </Border.StrokeShape>
 
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
@@ -31,7 +34,7 @@
                                             x:Name="Checked">
                                 <VisualState.Setters>
                                     <Setter
-                                                  Property="BorderColor"
+                                                  Property="Stroke"
                                                   Value="{StaticResource Primary}" />
                                     <Setter
                                                   TargetName="Check"
@@ -44,7 +47,7 @@
                                             x:Name="Unchecked">
                                 <VisualState.Setters>
                                     <Setter
-                                                    Property="BorderColor"
+                                                    Property="Stroke"
                                                     Value="{StaticResource Gray100}" />
                                     <Setter
                                                     TargetName="Check"
@@ -58,12 +61,12 @@
                 </VisualStateManager.VisualStateGroups>
 
                 <Grid
-                                Margin="8"
+                                Margin="8" Background="Red"
                                 WidthRequest="100">
                     <Grid
                                       WidthRequest="18"
                                       HeightRequest="18"
-                                      Margin="0,0,8,0"
+                                      Margin="0,0,8,0" Background="Green"
                                       HorizontalOptions="End"
                                       VerticalOptions="Start">
                         <Ellipse
@@ -85,7 +88,7 @@
                     </Grid>
                     <ContentPresenter></ContentPresenter>
                 </Grid>
-            </Frame>
+            </Border>
         </ControlTemplate>
 
 

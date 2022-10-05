@@ -26,12 +26,13 @@
     <EnableCodeSigning>false</EnableCodeSigning>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignProvision>Automatic</CodesignProvision>
+    <CreatePackage>false</CreatePackage>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
     <EnableCodeSigning>false</EnableCodeSigning>
   </PropertyGroup>
   <ItemGroup>
-    <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" />
+    <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiImage Include="Resources\Images\*" />
 	<MauiImage Include="Resources\Images\toolbox\*" />
@@ -59,6 +60,9 @@
     </MauiXaml>
     <MauiXaml Update="Pages\Features\GesturesPage.xaml">
       <SubType></SubType>
+    </MauiXaml>
+    <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Pages\Features\Gestures\HoverGesturePage.xaml">
+      <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
   <ItemGroup>

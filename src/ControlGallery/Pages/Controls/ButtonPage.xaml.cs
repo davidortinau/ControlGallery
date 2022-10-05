@@ -4,19 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Graphics;
+namespace ControlGallery.Pages;
 
-namespace ControlGallery.Pages
+public partial class ButtonPage : ContentPage
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ButtonPage : ContentPage
+    int counter;
+
+    public int Counter
     {
-        public ButtonPage()
+        get
         {
-            InitializeComponent();
+            return counter;
         }
+        set
+        {
+            counter = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public ButtonPage()
+    {
+        InitializeComponent();
+
+        BindingContext = this;
+    }
+
+    void Button_Clicked(System.Object sender, System.EventArgs e)
+    {
+        Counter++;
+        ShowCount();
+    }
+
+    async void ShowCount()
+    {
+        CounterLbl.CancelAnimations();
+        await CounterLbl.FadeTo(1, 200);
+        await CounterLbl.FadeTo(1, 600);// just to buffer before fade out
+        await CounterLbl.FadeTo(0, 200);
     }
 }
