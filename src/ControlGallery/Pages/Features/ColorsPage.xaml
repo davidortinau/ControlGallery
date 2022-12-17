@@ -40,12 +40,12 @@
                                 <Ellipse WidthRequest="100" HeightRequest="100"
                                          HorizontalOptions="Center"
                                          Fill="{Binding Brush}">
-                                    <Ellipse.Shadow>
+                                    <!--<Ellipse.Shadow>
                                         <Shadow Brush="{StaticResource Gray500Brush}"
                                                 Offset="20,20"
                                                 Radius="40"
                                                 Opacity="0.8" />
-                                    </Ellipse.Shadow>
+                                    </Ellipse.Shadow>-->
                                     </Ellipse>
                                 <Label Text="{Binding BrushName}"/>
                                 <Label Text="{Binding BrushValue}"/>

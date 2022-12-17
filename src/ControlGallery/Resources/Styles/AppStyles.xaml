@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
+<ResourceDictionary
+    xmlns:pages="clr-namespace:ControlGallery.Pages.Controls"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:ControlGallery.Common.Behaviors">
+
+    <pages:ControlPageTemplate x:Key="ControlPageTemplate"/>
 
     <Style TargetType="Label"
             x:Key="LargeTitle">
@@ -46,9 +50,17 @@
         <Setter Property="CornerRadius" Value="8"/>
         <Setter Property="Padding" Value="14,10"/>
         <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="behaviors:CursorBehavior.AttachBehavior" Value="True"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
+                     <VisualState x:Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter
+                                Property="BackgroundColor"
+                                Value="{StaticResource Accent}"/>
+                        </VisualState.Setters>
+                    </VisualState>
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />

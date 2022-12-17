@@ -1,36 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ControlGallery.Converters"
              x:Class="ControlGallery.Pages.Layouts.BasisExperimentPage"
              Title="Basis Experiment">
     
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
+    <Grid RowDefinitions="Auto, *">
         <!-- Control Panel -->
-        <Grid Grid.Row="0" Margin="15">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="15"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+              ColumnDefinitions="Auto, *, *">
             
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
             <Grid.Resources>
-                <local:BooleanInverseConverter x:Key="booleanInverse" />
-
                 <Style TargetType="Label">
                     <Setter Property="VerticalOptions" Value="Center" />
                 </Style>
@@ -141,9 +121,6 @@
                 </Style>
 
             </FlexLayout.Resources>
-
-            <Button Text="Click me"
-                    Clicked="Button_Clicked"/>
 
             <Label Text="Label 1"
                    TextColor="{StaticResource Text_Light}"

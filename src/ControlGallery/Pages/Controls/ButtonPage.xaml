@@ -3,14 +3,10 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
-             xmlns:droid="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
-             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             ios:Page.UseSafeArea="true"
-             Shell.TitleColor="White"
-             Shell.FlyoutWidth="100"
              x:Class="ControlGallery.Pages.ButtonPage"
              Title="Button">
     <ContentPage.Content>
+        
         <Grid Margin="30">
             <ScrollView Margin="0,0,0,0">
                 <VerticalStackLayout>

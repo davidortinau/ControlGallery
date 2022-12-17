@@ -6,6 +6,7 @@
              xmlns:p="clr-namespace:ControlGallery.Pages"
              xmlns:c="clr-namespace:CollectionViewDemos.Views"
              xmlns:cl="clr-namespace:CustomLayouts"
+             xmlns:behaviors="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
@@ -41,6 +42,9 @@
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                     </Grid.GestureRecognizers>
+                    <Grid.Behaviors>
+                        <behaviors:CursorBehavior />
+                    </Grid.Behaviors>
                     <Image Source="{Binding Icon}"
                             Grid.Row="0"
                         VerticalOptions="Center"

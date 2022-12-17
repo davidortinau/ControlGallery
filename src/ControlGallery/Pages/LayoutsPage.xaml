@@ -5,6 +5,7 @@
              xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
              xmlns:a="clr-namespace:ControlGallery.Pages.Layouts.AbsoluteLayouts"
              xmlns:cl="clr-namespace:CustomLayouts"
+             xmlns:Behaviors="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
     <ContentPage.Content>
@@ -38,7 +39,12 @@
                             <Button 
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
-                                />
+                                >
+                                <Button.Behaviors>
+                                    <Behaviors:CursorBehavior />
+                                </Button.Behaviors>
+
+                            </Button>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>

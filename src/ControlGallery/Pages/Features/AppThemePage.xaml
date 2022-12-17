@@ -10,12 +10,13 @@
     <ContentPage.BindingContext>
         <features:AppThemeViewModel/>
     </ContentPage.BindingContext>
+
     <ContentPage.Resources>
         <ControlTemplate x:Key="ThemeRadioTemplate">
             <Border
                           Stroke="{StaticResource Gray100}"
                           StrokeThickness="1"
-                          BackgroundColor="Transparent"
+                          Background="{StaticResource Gray100}"
                           HeightRequest="120"
                           WidthRequest="100"
                           HorizontalOptions="Start"
@@ -61,12 +62,12 @@
                 </VisualStateManager.VisualStateGroups>
 
                 <Grid
-                                Margin="8" Background="Red"
+                                Margin="8" 
                                 WidthRequest="100">
                     <Grid
                                       WidthRequest="18"
                                       HeightRequest="18"
-                                      Margin="0,0,8,0" Background="Green"
+                                      Margin="0,0,8,0" 
                                       HorizontalOptions="End"
                                       VerticalOptions="Start">
                         <Ellipse
@@ -96,7 +97,7 @@
 
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">
-            <StackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}">
+            <VerticalStackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}" Spacing="8">
                 <Label x:Name="CurrentThemeLabel"
                     Style="{StaticResource Headline}"/>
                 <HorizontalStackLayout
@@ -122,6 +123,7 @@
                                         Size=42}"/>
                                 <Label
                                         Text="System"
+                                        TextColor="{StaticResource Gray950}"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
                                         Grid.Row="1"/>
@@ -142,6 +144,7 @@
                                         Size=42}"/>
                                 <Label
                                         Text="Dark"
+                                        TextColor="{StaticResource Gray950}"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
                                         Grid.Row="1"/>
@@ -162,6 +165,7 @@
                                         Size=42}"/>
                                 <Label
                                         Text="Light"
+                                        TextColor="{StaticResource Gray950}"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
                                         Grid.Row="1"/>
@@ -172,7 +176,7 @@
                 
                 
                 
-            </StackLayout>
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
