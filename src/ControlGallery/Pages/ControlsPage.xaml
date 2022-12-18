@@ -6,7 +6,7 @@
              xmlns:p="clr-namespace:ControlGallery.Pages"
              xmlns:c="clr-namespace:CollectionViewDemos.Views"
              xmlns:cl="clr-namespace:CustomLayouts"
-             xmlns:behaviors="clr-namespace:ControlGallery.Common.Behaviors"
+             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
@@ -28,23 +28,24 @@
                     Text="{Binding Title}"
                 />
                 <BoxView Color="{StaticResource Gray200}" Grid.ColumnSpan="2" Grid.Row="1"/>
+                <Grid.Behaviors>
+                    <b:CursorBehavior/>
+                </Grid.Behaviors>
             </Grid>
         </DataTemplate>
 
         <DataTemplate x:Key="GridTemplate">
-            <Border Stroke="{StaticResource Gray200Brush}" StrokeThickness="1">
+            <Border Stroke="{StaticResource Gray200Brush}" StrokeThickness="1" b:CursorBehavior.AttachBehavior="True">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="8"/>
                 </Border.StrokeShape>
-                <Grid ColumnDefinitions="*" RowDefinitions="2*,3*"
+                <Grid ColumnDefinitions="*"
+                      RowDefinitions="13*,8*"
                       MinimumHeightRequest="100"
                       >
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                     </Grid.GestureRecognizers>
-                    <Grid.Behaviors>
-                        <behaviors:CursorBehavior />
-                    </Grid.Behaviors>
                     <Image Source="{Binding Icon}"
                             Grid.Row="0"
                         VerticalOptions="Center"
@@ -54,6 +55,9 @@
                         HorizontalOptions="Center"
                         Text="{Binding Title}"
                     />
+                    <Grid.Behaviors>
+                        <b:CursorBehavior/>
+                    </Grid.Behaviors>
                 </Grid>
             </Border>
         </DataTemplate>

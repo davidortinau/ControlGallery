@@ -4,6 +4,7 @@
              xmlns:pages="clr-namespace:ControlGallery.Pages"
              xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
              windows:Application.ImageDirectory="Assets"
+             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -51,6 +52,9 @@
                             Text="{Binding Title}"
                             FontAttributes="Italic"
                             VerticalTextAlignment="Center" />
+                        <Grid.Behaviors>
+                            <b:CursorBehavior/>
+                        </Grid.Behaviors>
                     </Grid>
                 </DataTemplate>
             </Shell.ItemTemplate>

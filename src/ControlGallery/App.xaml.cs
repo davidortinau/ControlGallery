@@ -126,6 +126,7 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         // Features pages
         Routing.RegisterRoute(nameof(AppThemePage), typeof(AppThemePage));
+        Routing.RegisterRoute(nameof(BehaviorsPage), typeof(BehaviorsPage));
         Routing.RegisterRoute(nameof(ColorsPage), typeof(ColorsPage));
         Routing.RegisterRoute(nameof(FontImagePage), typeof(FontImagePage));
         Routing.RegisterRoute(nameof(MenuBarPage), typeof(MenuBarPage));
