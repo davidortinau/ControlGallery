@@ -23,7 +23,7 @@
                 <Image Source="{Binding Icon}"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"/>
-                <Label Grid.Column="1"
+                <Label Grid.Column="1" 
                     VerticalOptions="Center"
                     Text="{Binding Title}"
                 />

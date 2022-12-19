@@ -44,6 +44,25 @@
                 Value="{AppThemeBinding Dark={StaticResource Text_Dark}, Light={StaticResource Text_Light}}"/>
     </Style>
 
+    <!-- hover bg style -->
+    <Style TargetType="Button"
+           Class="hoverable">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                     <VisualState x:Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource Error}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+
+    </Style>
+
     <Style TargetType="Button">
         <Setter Property="TextColor" Value="{StaticResource TextOnSolid_Light}"/>
         <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>

@@ -59,7 +59,10 @@
                 </DataTemplate>
             </Shell.ItemTemplate>
 
-
+            <FlyoutItem Title="Home">
+                <ShellContent Route="home" 
+                      ContentTemplate="{DataTemplate pages:HomePage}" />
+            </FlyoutItem>
 
             <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
                 <ShellContent Route="controls" 

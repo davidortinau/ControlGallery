@@ -1,64 +1,186 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
+             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:l="clr-namespace:CustomLayouts"
+             xmlns:p="clr-namespace:ControlGallery.Pages"
+             xmlns:feed="clr-namespace:CodeHollow.FeedReader;assembly=CodeHollow.FeedReader"
              x:Class="ControlGallery.Pages.HomePage"
-             Title="Gallery"
-             >
+             x:DataType="p:HomeViewModel"
+             Title="Gallery">
+
+    <ContentPage.BindingContext>
+        <p:HomeViewModel/>
+    </ContentPage.BindingContext>
+
     <ScrollView>
-        <FlexLayout Margin="15" Wrap="Wrap">
+        <Grid RowDefinitions="40,310, 40, 40, 40, *" RowSpacing="12" Margin="15">
+            <Label Text="Blogs" Style="{StaticResource Title1}"/>
+            <ScrollView Orientation="Horizontal" Grid.Row="1">
+                <HorizontalStackLayout
+                    BindableLayout.ItemsSource="{Binding Articles}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Border
+                                x:DataType="feed:FeedItem"
+                                Stroke="Transparent"
+                                StrokeThickness="1"
+                                StrokeShape="{RoundRectangle CornerRadius=12}"
+                                Background="{StaticResource Gray200Brush}"
+                                ToolTipProperties.Text="{Binding Link}"
+                                >
+                                <Grid RowDefinitions="5*,13*,Auto" HeightRequest="300" WidthRequest="300">
+                                    <BoxView Color="{StaticResource Primary}" VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                    <VerticalStackLayout
+                                        Grid.Row="1"
+                                           Padding="12,8"
+                                           VerticalOptions="Start">
+                                        <Label Text="{Binding Title}"
+                                               Style="{StaticResource Headline}"/>
+                                        <Label Text="{Binding Description}"
+                                               TextType="Html"/>                                        
+                                    </VerticalStackLayout>
+                                    <Label Style="{StaticResource Footnote}"
+                                            Padding="12,8"
+                                            VerticalOptions="End"
+                                            Grid.Row="2">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding Author}"/>
+                                                <Span Text=""/>
+                                                <Span Text="{Binding PublishingDate, StringFormat='{0:MMMM dd, yyyy}'}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </Grid>
+                                <Border.Behaviors>
+                                    <b:CursorBehavior/>
+                                </Border.Behaviors>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type p:HomeViewModel}}, Path=NavigateToCommand}"
+                                                          CommandParameter="{Binding Link}"/>
+                                </Border.GestureRecognizers>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </HorizontalStackLayout>
 
-            <Label Text="Views" Style="{StaticResource LargeTitle}" />
-            <Button Text="ActivityIndicator" Clicked="OnClicked" />
-            <Button Text="Button" Clicked="OnClicked" />
-            <Button Text="CarouselView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Checkbox" Clicked="OnClicked" />
-            <Button Text="CollectionView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="DatePicker" Clicked="OnClicked" />
-            <Button Text="Editor" Clicked="OnClicked" />
-            <Button Text="Entry" Clicked="OnClicked" />
-            <Button Text="IndicatorView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Image" Clicked="OnClicked" />
-            <Button Text="ImageButton" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Label" Clicked="OnClicked" />
-            <Button Text="Map" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Picker" Clicked="OnClicked" />
-            <Button Text="ProgressBar" Clicked="OnClicked" />
-            <Button Text="RadioButton" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="RefreshView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="SearchBar" Clicked="OnClicked" />
-            <Button Text="Shapes" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Slider" Clicked="OnClicked" />
-            <Button Text="Stepper" Clicked="OnClicked" />
-            <Button Text="SwipeView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Switch" Clicked="OnClicked" />
-            <Button Text="TimePicker" Clicked="OnClicked" />
-            <Button Text="WebView" Clicked="OnClicked" IsEnabled="False" />
+            </ScrollView>
 
-            <Label Text="Layouts" Style="{StaticResource LargeTitle}" />
-            <Button Text="AbsoluteLayout" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="ContentPresenter" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="ContentView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Grid" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="GridLayout (New)" Clicked="OnClicked" />
-            <Button Text="HorizontalStackLayout" Clicked="OnClicked" />
-            <Button Text="RelativeLayout" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="StackLayout" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="TemplatedView" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="VerticalStackLayout" Clicked="OnClicked" />
+            <Label Text="Quick Links" Style="{StaticResource Title1}" Grid.Row="2"/>
+            <ScrollView Orientation="Horizontal" Grid.Row="3">
+                <HorizontalStackLayout>
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:QuickLink}">
+                            <m:QuickLink Title="GitHub" Hyperlink="https://github.com/dotnet/maui"/>
+                            <m:QuickLink Title="Learn Docs" Hyperlink="https://learn.microsoft.com/dotnet/maui"/>
+                            <m:QuickLink Title="Samples" Hyperlink="https://github.com/dotnet/maui-samples"/>
+                            <m:QuickLink Title="Blog" Hyperlink="https://devblogs.microsoft.com/dotnet"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Border
+                                x:DataType="m:QuickLink"
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                StrokeShape="{RoundRectangle CornerRadius=12}"
+                                Background="{StaticResource SecondaryBrush}"
+                                ToolTipProperties.Text="{Binding Hyperlink}"
+                                >
+                                <Grid
+                                    Margin="12,0"
+                                    ColumnDefinitions="5*,13*" RowDefinitions="34" HeightRequest="34" MinimumWidthRequest="120">
+                                    <Label Text="{x:Static app:IconFont.ExternalLinkAlt}"
+                                           FontFamily="FontAwesome"
+                                           TextColor="White"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Title}"
+                                           Grid.Column="1"
+                                           TextColor="White"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Fill"/>
+                                </Grid>
+                                <Border.Behaviors>
+                                    <b:CursorBehavior/>
+                                </Border.Behaviors>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding NavigateTo}"/>
+                                </Border.GestureRecognizers>
+                            </Border>
 
-            <Label Text="Features" Style="{StaticResource LargeTitle}" />
-            <Button Text="Accessibility" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Animation" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Borders" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Brushes" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Corners" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Device" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="FlowDirection (RTL)" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Fonts" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Lifecycle Events" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Themes" Clicked="OnClicked" IsEnabled="False" />
-            <Button Text="Transforms" Clicked="OnClicked" IsEnabled="False" />
-        </FlexLayout>
+                        </DataTemplate>
+
+                    </BindableLayout.ItemTemplate>
+                    
+
+                    
+
+                </HorizontalStackLayout>
+
+            </ScrollView>
+
+            <Label
+                Grid.Row="4"
+                Text="What's New" Style="{StaticResource Title1}"/>
+
+            <l:HorizontalWrapLayout
+                Grid.Row="5"
+                Spacing="8">
+                <l:HorizontalWrapLayout.Resources>
+                    <Style TargetType="VerticalStackLayout">
+                        <Setter Property="WidthRequest" Value="300"/>
+                    </Style>
+                </l:HorizontalWrapLayout.Resources>
+                <VerticalStackLayout>
+                    <Label Text="Latest Release" Style="{StaticResource Headline}"/>
+                    <BoxView Style="{StaticResource HRule}"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Version: 7.0.52&#10;"/>
+                                <Span Text="Released: December 13, 2022&#10;"/>
+                                <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/>
+                                <Span Text=" Release Notes" TextDecorations="Underline"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Label Text="Updated Documentation" Style="{StaticResource Headline}"/>
+                    <BoxView Style="{StaticResource HRule}"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Version: 7.0.52&#10;"/>
+                                <Span Text="Released: December 13, 2022&#10;"/>
+                                <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/>
+                                <Span Text=" Release Notes" TextDecorations="Underline"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Label Text="Top Contributors" Style="{StaticResource Headline}"/>
+                    <BoxView Style="{StaticResource HRule}"/>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Version: 7.0.52&#10;"/>
+                                <Span Text="Released: December 13, 2022&#10;"/>
+                                <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/>
+                                <Span Text=" Release Notes" TextDecorations="Underline"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
+            </l:HorizontalWrapLayout>
+
+        </Grid>
     </ScrollView>
 </ContentPage>
