@@ -22,14 +22,17 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
 	
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-    <EnableCodeSigning>False</EnableCodeSigning>
+  <!-- <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <EnableCodeSigning>false</EnableCodeSigning>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignProvision>Automatic</CodesignProvision>
-    <CreatePackage>false</CreatePackage>
-  </PropertyGroup>
+    <CreatePackage>true</CreatePackage>
+  </PropertyGroup> -->
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
     <EnableCodeSigning>false</EnableCodeSigning>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+    <CreatePackage>false</CreatePackage>
   </PropertyGroup>
   <ItemGroup>
     <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
@@ -56,6 +59,7 @@
     <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.52" />
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
+    <PackageReference Include="AngleSharp" Version="0.17.1" />
   </ItemGroup>
   <ItemGroup>
     <MauiXaml Remove="Resources\Styles\Colors %28copy%29.xaml" />

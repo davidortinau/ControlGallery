@@ -2,6 +2,7 @@
 using CodeHollow.FeedReader;
 using AsyncAwaitBestPractices;
 using System.Diagnostics;
+using AngleSharp.Html.Parser;
 
 namespace ControlGallery.Pages;
 
@@ -33,14 +34,14 @@ public partial class HomeViewModel
     {
         var feed = await FeedReader.ReadAsync("https://devblogs.microsoft.com/dotnet/category/maui/feed/");
 
-        //Console.WriteLine("Feed Title: " + feed.Title);
-        //Console.WriteLine("Feed Description: " + feed.Description);
-        //Console.WriteLine("Feed Image: " + feed.ImageUrl);
-        //// ...
+        //var htmlParser = new HtmlParser();
         //foreach (var item in feed.Items)
         //{
-        //    Console.WriteLine(item.Title + " - " + item.Link);
+            
+        //    var document = htmlParser.ParseDocument(item.Description);
+        //    item.Description = document.QuerySelector("p").TextContent;
         //}
+
         try
         {
             Articles = new List<FeedItem>(feed.Items);
@@ -53,6 +54,3 @@ public partial class HomeViewModel
 
 
 }
-
-
-

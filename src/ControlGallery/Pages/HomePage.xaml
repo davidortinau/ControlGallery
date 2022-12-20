@@ -17,8 +17,8 @@
 
     <ScrollView>
         <Grid RowDefinitions="40,310, 40, 40, 40, *" RowSpacing="12" Margin="15">
-            <Label Text="Blogs" Style="{StaticResource Title1}"/>
-            <ScrollView Orientation="Horizontal" Grid.Row="1">
+            <Label Text="From the .NET Blog" Style="{StaticResource Title1}"/>
+            <ScrollView Orientation="Horizontal" Grid.Row="1" HorizontalScrollBarVisibility="Never">
                 <HorizontalStackLayout
                     BindableLayout.ItemsSource="{Binding Articles}">
                     <BindableLayout.ItemTemplate>
@@ -31,17 +31,22 @@
                                 Background="{StaticResource Gray200Brush}"
                                 ToolTipProperties.Text="{Binding Link}"
                                 >
-                                <Grid RowDefinitions="5*,13*,Auto" HeightRequest="300" WidthRequest="300">
-                                    <BoxView Color="{StaticResource Primary}" VerticalOptions="Fill" HorizontalOptions="Fill" />
-                                    <VerticalStackLayout
-                                        Grid.Row="1"
-                                           Padding="12,8"
-                                           VerticalOptions="Start">
-                                        <Label Text="{Binding Title}"
+                                <Grid RowDefinitions="8*,13*,Auto" HeightRequest="300" WidthRequest="300"
+                                      IsClippedToBounds="False"
+                                      Margin="0,-12,0,0"
+                                      >
+                                    <Label Text="{Binding Title}"
+                                               Background="{StaticResource Primary}"
+                                               Padding="12,8"
+                                               TextColor="White"
+                                               VerticalTextAlignment="End"
                                                Style="{StaticResource Headline}"/>
-                                        <Label Text="{Binding Description}"
-                                               TextType="Html"/>                                        
-                                    </VerticalStackLayout>
+                                    
+                                        
+                                    <Label Text="{Binding Description}"
+                                            Grid.Row="1"
+                                        Padding="12,8"
+                                            TextType="Html"/>                                        
                                     <Label Style="{StaticResource Footnote}"
                                             Padding="12,8"
                                             VerticalOptions="End"
@@ -82,11 +87,19 @@
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <Border
+                            <Button
+                                Style="{StaticResource PrimaryButtonOutlineIcon}"
+                                x:DataType="m:QuickLink"
+                                ImageSource="{FontImage Color={StaticResource Primary}, FontFamily=FontAwesome,
+                                    Glyph={x:Static app:IconFont.ExternalLinkAlt},Size=12}" 
+                                    Text="{Binding Title}"
+                                    Command="{Binding NavigateTo}"/>
+
+                            <!--<Border
                                 x:DataType="m:QuickLink"
                                 Stroke="Black"
                                 StrokeThickness="1"
-                                StrokeShape="{RoundRectangle CornerRadius=12}"
+                                StrokeShape="{RoundRectangle CornerRadius=0}"
                                 Background="{StaticResource SecondaryBrush}"
                                 ToolTipProperties.Text="{Binding Hyperlink}"
                                 >
@@ -110,7 +123,7 @@
                                 <Border.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                                 </Border.GestureRecognizers>
-                            </Border>
+                            </Border>-->
 
                         </DataTemplate>
 

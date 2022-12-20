@@ -125,6 +125,18 @@
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="PointerOver">
+                        <VisualState.Setters>
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource SecondaryBrush}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Background" Value="Transparent" />
+                        </VisualState.Setters>
+                    </VisualState>
                     <VisualState x:Name="Disabled"><!-- these styles REPLACE the BasedOn styles and don't inherit them -->
                         <VisualState.Setters>
                             <Setter Property="ImageSource" Value="{StaticResource AtomIcon}" /><!-- cannot do this -->
