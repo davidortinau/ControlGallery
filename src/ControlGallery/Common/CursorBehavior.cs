@@ -11,6 +11,8 @@ public partial class CursorBehavior : PlatformBehavior<View>
     public static bool GetAttachBehavior(BindableObject view)
     {
         return (bool)view.GetValue(AttachBehaviorProperty);
+
+        
     }
 
     public static void SetAttachBehavior(BindableObject view, bool value)

@@ -52,6 +52,7 @@
     <None Remove="Microsoft.Maui.Controls.Maps" />
     <None Remove="Pages\Features\Gestures\" />
     <None Remove="Services\" />
+    <None Remove="Common\Views\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
@@ -60,6 +61,9 @@
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
+    <PackageReference Include="CompiledBindings.MAUI" Version="1.0.14" />
+    <PackageReference Include="Markdown.ColorCode" Version="1.2.0-preview-2" />
+    <PackageReference Include="ColorCode.Core" Version="2.0.14" />
   </ItemGroup>
   <ItemGroup>
     <MauiXaml Remove="Resources\Styles\Colors %28copy%29.xaml" />
@@ -78,6 +82,7 @@
   <ItemGroup>
     <Folder Include="Pages\Features\Gestures\" />
     <Folder Include="Services\" />
+    <Folder Include="Common\Views\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Styles\Converters.xaml" Condition=" '$(EnableDefaultXamlItems)' == 'true' ">

@@ -3,13 +3,60 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
+             xmlns:views="clr-namespace:ControlGallery.Common.Views"
              x:Class="ControlGallery.Pages.ButtonPage"
              Title="Button">
     <ContentPage.Content>
         
-        <Grid Margin="30">
+        <Grid Margin="30" ColumnDefinitions="*,300" ColumnSpacing="30">
             <ScrollView Margin="0,0,0,0">
                 <VerticalStackLayout>
+
+                    <Label Text="Button" Style="{StaticResource LargeTitle}"/>
+                    <Label TextType="Html"
+                           Style="{StaticResource Footnote}">
+                        <Label.Text>
+                            <![CDATA[
+                            <b>Namespace:</b> Microsoft.Maui.Controls
+                            ]]>
+                        </Label.Text>
+                    </Label>
+                    <Label Text="The .NET MAUI Button displays text and responds to a tap or click that directs the app to carry out a task. A Button usually displays a short text string indicating a command, but it can also display a bitmap image, or a combination of text and an image. When the Button is pressed with a finger or clicked with a mouse it initiates that command."/>
+
+                    <views:ExampleView HeaderText="Basic Button">
+                        <views:ExampleView.Example>
+                            <HorizontalStackLayout>
+                                <Button Text="Button" Clicked="Button_Clicked"/>
+                                <Button Text="Button" IsEnabled="False" Clicked="Button_Clicked"/>
+                            </HorizontalStackLayout>
+                        </views:ExampleView.Example>
+                        <views:ExampleView.Xaml>
+                            <x:String>
+&lt;HorizontalStackLayout&gt;
+    &lt;Button Text=&quot;Button&quot; Clicked=&quot;Button_Clicked&quot;/&gt;
+    &lt;Button Text=&quot;Button&quot; IsEnabled=&quot;False&quot; Clicked=&quot;Button_Clicked&quot;/&gt;
+&lt;/HorizontalStackLayout&gt;
+                            </x:String>
+                        </views:ExampleView.Xaml>
+                        <views:ExampleView.CSharp>
+                            <x:String>
+var h = new HorizontalStackLayout
+{
+    Children =
+    {
+        new Button
+        {
+            Text = "Button"
+        },
+        new Button
+        {
+            Text = "Button",
+            IsEnabled = false
+        }
+};
+                            </x:String>
+                        </views:ExampleView.CSharp>
+                    </views:ExampleView>                 
 
                     <Label Text="Primary filled" Style="{StaticResource Headline}"/>
                     <HorizontalStackLayout>
@@ -113,6 +160,18 @@
                    FontSize="42"
                    Padding="{OnPlatform iOS='30,60,30,30', Default='15,15'}"
                    />
+
+            <VerticalStackLayout Grid.Column="1">
+                <Label Text="Documentation" Style="{StaticResource Headline}"/>
+                    <Label Text="API Doc - Microsoft.Maui.Controls.Button" />
+                    <Label Text="Learn Doc" />
+
+                    <Label Text="Related" Style="{StaticResource Headline}"/>
+                    <Label Text="ImageButton" />
+                    <Label Text="TapGesture" />
+                    <Label Text="VisualStateManager" />
+
+            </VerticalStackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

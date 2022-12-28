@@ -34,13 +34,13 @@ public partial class HomeViewModel
     {
         var feed = await FeedReader.ReadAsync("https://devblogs.microsoft.com/dotnet/category/maui/feed/");
 
-        //var htmlParser = new HtmlParser();
-        //foreach (var item in feed.Items)
-        //{
-            
-        //    var document = htmlParser.ParseDocument(item.Description);
-        //    item.Description = document.QuerySelector("p").TextContent;
-        //}
+        var htmlParser = new HtmlParser();
+        foreach (var item in feed.Items)
+        {
+
+            var document = htmlParser.ParseDocument(item.Description);
+            item.Description = document.QuerySelector("p").TextContent;
+        }
 
         try
         {
