@@ -47,7 +47,7 @@ public class ColorSyntaxConverter : IValueConverter
 
         var formatter = new FormattedStringFormatter();
         var fs = new FormattedString();
-        formatter.FormatString(codestring, Languages.CSharp, fs);
+        formatter.FormatString(codestring, language, fs);
         return fs;
 
     }

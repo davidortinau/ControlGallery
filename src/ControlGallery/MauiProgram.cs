@@ -15,6 +15,7 @@ using Microsoft.Maui.Controls.Platform;
 using static Microsoft.Maui.Controls.Platform.ButtonExtensions;
 using CoreGraphics;
 using Foundation;
+using CommunityToolkit.Maui.Markup;
 #endif
 
 namespace ControlGallery;
@@ -27,6 +28,7 @@ public static class MauiProgram
 		builder
 			.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkitMarkup()
             .UseMauiMaps()
 			.ConfigureFonts(fonts =>
 			{

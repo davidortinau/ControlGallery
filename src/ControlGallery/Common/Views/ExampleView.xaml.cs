@@ -1,4 +1,7 @@
-﻿namespace ControlGallery.Common.Views;
+﻿using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
+
+namespace ControlGallery.Common.Views;
 
 public partial class ExampleView : ContentView
 {
@@ -51,10 +54,24 @@ public partial class ExampleView : ContentView
         set { SetValue(CSharpSourceProperty, value); }
     }
 
+    public static readonly BindableProperty StylesProperty = BindableProperty.Create("Styles", typeof(string), typeof(ControlExample), null);
+    public string Styles
+    {
+        get { return (string)GetValue(StylesProperty); }
+        set { SetValue(StylesProperty, value); }
+    }
+
     public static readonly BindableProperty LanguageProperty = BindableProperty.Create("Language", typeof(string), typeof(ControlExample), null);
     public string Language
     {
         get { return (string)GetValue(CSharpSourceProperty); }
         set { SetValue(LanguageProperty, value); }
+    }
+
+    void Button_Clicked(System.Object sender, System.EventArgs e)
+    {
+        string code = (rCsharp.IsChecked) ? CSharp : Xaml;
+        Clipboard.SetTextAsync(code);
+        Toast.Make("Copied", ToastDuration.Short, 18).Show();
     }
 }
