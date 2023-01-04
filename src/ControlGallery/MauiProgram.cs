@@ -39,6 +39,10 @@ public static class MauiProgram
             });
 
         OverrideHandlers();
+
+        Microsoft.Maui.Controls.Internals.Profile.Enable();
+        Microsoft.Maui.Controls.Internals.Profile.Start();
+
         return builder.Build();
 	}
 

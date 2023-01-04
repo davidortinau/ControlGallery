@@ -545,6 +545,10 @@ Content = new HorizontalStackLayout
                     <Label Text="TapGesture" />
                     <Label Text="VisualStateManager" />
 
+                <Button Text="Profile"
+                        Clicked="Button_Clicked_1"
+                        />
+
             </VerticalStackLayout>
         </Grid>
     </ContentPage.Content>

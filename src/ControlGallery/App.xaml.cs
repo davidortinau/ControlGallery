@@ -21,6 +21,8 @@ public partial class App : Microsoft.Maui.Controls.Application
 
     private void RegisterRoutes()
     {
+        Routing.RegisterRoute(nameof(ProfileReportPage), typeof(ProfileReportPage));
+
         Routing.RegisterRoute(nameof(ActivityIndicatorPage), typeof(ActivityIndicatorPage));
         Routing.RegisterRoute(nameof(AlertPage), typeof(AlertPage));
         Routing.RegisterRoute(nameof(BorderPage), typeof(BorderPage));

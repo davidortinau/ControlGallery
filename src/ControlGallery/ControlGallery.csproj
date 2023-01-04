@@ -65,6 +65,7 @@
     <PackageReference Include="Markdown.ColorCode" Version="1.2.0-preview-2" />
     <PackageReference Include="ColorCode.Core" Version="2.0.14" />
     <PackageReference Include="CommunityToolkit.Maui.Markup" Version="2.1.0" />
+    <PackageReference Include="Portable.Xaml" Version="0.26.0" />
   </ItemGroup>
   <ItemGroup>
     <MauiXaml Remove="Resources\Styles\Colors %28copy%29.xaml" />

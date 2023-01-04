@@ -8,6 +8,7 @@ using ControlGallery.Common;
 using Markdig;
 using Markdown.ColorCode;
 using Microsoft.Maui.Controls;
+using Portable.Xaml;
 
 namespace ControlGallery.Converters;
 
@@ -43,13 +44,25 @@ public class ColorSyntaxConverter : IValueConverter
 
         //Debug.WriteLine(html + colorizedHtml + "</body></html>");
 
+
         //return html + colorizedHtml + "</body></html>";
+
+        Microsoft.Maui.Controls.Internals.Profile.FrameBegin();
+        Microsoft.Maui.Controls.Internals.Profile.FramePartition("Converter Start");
 
         var formatter = new FormattedStringFormatter();
         var fs = new FormattedString();
         formatter.FormatString(codestring, language, fs);
-        return fs;
 
+        Debug.WriteLine(XamlServices.Save(fs));
+
+        //foreach(var s in fs.Spans)
+        //{
+        //    Debug.WriteLine(s.ToString());
+        //}        
+
+        Microsoft.Maui.Controls.Internals.Profile.FrameEnd();
+        return fs;
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
