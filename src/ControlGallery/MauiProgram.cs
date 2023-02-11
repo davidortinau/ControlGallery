@@ -54,9 +54,9 @@ public static class MauiProgram
             UpdateContentLayout(handler.PlatformView, (Button)btn);
         });
 #endif
-
     }
 
+    
 #if IOS || MACCATALYST
 
     static CGRect GetTitleBoundingRect(this UIButton platformButton)
@@ -208,6 +208,7 @@ public static class MauiProgram
 #pragma warning restore CA1416
     }
 #endif
+
 }
 
 

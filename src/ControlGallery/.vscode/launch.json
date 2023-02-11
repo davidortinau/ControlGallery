@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug",
-            "type": "comet",
+            "name": ".NET Meteor Debugger",
+            "type": "dotnet-meteor.debugger",
             "request": "launch",
-            "preLaunchTask": "comet: Run"
+            "preLaunchTask": "dotnet-meteor: Build"
         }
     ]
 }

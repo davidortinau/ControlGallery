@@ -3,6 +3,8 @@ using CodeHollow.FeedReader;
 using AsyncAwaitBestPractices;
 using System.Diagnostics;
 using AngleSharp.Html.Parser;
+using System.Text.Json;
+using ControlGallery.Models;
 
 namespace ControlGallery.Pages;
 
@@ -11,6 +13,9 @@ public partial class HomeViewModel
 {
     [ObservableProperty]
     private List<FeedItem> articles;
+
+    [ObservableProperty]
+    private GithubRelease latestRelease;
 
     [RelayCommand]
     async Task NavigateTo(string link)
@@ -28,6 +33,7 @@ public partial class HomeViewModel
 	public HomeViewModel()
     {
 		LoadBlogs().SafeFireAndForget();
+        GetLatestRelease().SafeFireAndForget();
 	}
 
     async Task LoadBlogs()
@@ -51,6 +57,33 @@ public partial class HomeViewModel
         }
     }
 
+    HttpClient _client;
+    JsonSerializerOptions _serializerOptions;
 
+    async Task GetLatestRelease()
+    {
+        _client = new HttpClient();
+        _serializerOptions = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = true
+        };
 
+        Uri uri = new Uri("https://api.github.com/repos/dotnet/maui/releases/latest");
+        try
+        {
+            HttpResponseMessage response = await _client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                LatestRelease = JsonSerializer.Deserialize<GithubRelease>(content, _serializerOptions);
+                //Items = JsonSerializer.Deserialize<List<TodoItem>>(content, _serializerOptions);
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(@"\tERROR {0}", ex.Message);
+        }
+
+    }
 }

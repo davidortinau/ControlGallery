@@ -154,13 +154,18 @@
                     <Label>
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Version: 7.0.52&#10;"/>
-                                <Span Text="Released: December 13, 2022&#10;"/>
-                                <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/>
-                                <Span Text=" Release Notes" TextDecorations="Underline"/>
+                                <Span Text="{Binding LatestRelease.name, StringFormat='{0}'}"/>
+                                <Span Text="&#10;"/>
+                                <Span Text="{Binding LatestRelease.published_at, StringFormat='Released: {0:D}'}"/>
+                                
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+                    <Button Text="Release Notes" Style="{StaticResource BorderlessButton}"
+                    Padding="0" Margin="0"
+                    ImageSource="{FontImage Glyph={x:Static app:IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
+                    Command="{Binding NavigateToCommand}"
+                                            CommandParameter="{Binding LatestRelease.html_url}"/>
                 </VerticalStackLayout>
 
                 <VerticalStackLayout>

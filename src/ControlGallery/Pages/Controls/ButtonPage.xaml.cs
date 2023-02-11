@@ -34,7 +34,7 @@ public partial class ButtonPage : ContentPage
     void Button_Clicked(System.Object sender, System.EventArgs e)
     {
         Counter++;
-        ShowCount();
+        //ShowCount();
     }
 
     async void ShowCount()

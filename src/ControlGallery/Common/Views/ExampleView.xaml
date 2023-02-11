@@ -78,7 +78,7 @@
                 x:Name="ControlPresenter"
                 Padding="30"
                 Content="{Binding Example}"
-                Background="{StaticResource Gray100}"
+                Background="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
                 />
 
             <!--  Sample code display  -->

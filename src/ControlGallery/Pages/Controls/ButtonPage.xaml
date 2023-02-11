@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
              xmlns:views="clr-namespace:ControlGallery.Common.Views"
+             xmlns:behaviors="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.Pages.ButtonPage"
              Title="Button">
     <ContentPage.Content>
@@ -298,8 +299,7 @@ Content = new HorizontalStackLayout
                         </views:ExampleView.Styles>
                     </views:ExampleView>  
 
-
-                    <views:ExampleView HeaderText="Styled PrimaryButtonOutlineIcon">
+                    <!--<views:ExampleView HeaderText="Styled PrimaryButtonOutlineIcon">
                         <views:ExampleView.Example>
                             <VerticalStackLayout>
                                 <HorizontalStackLayout>
@@ -443,8 +443,7 @@ Content = new HorizontalStackLayout
 &lt;/Style&gt;
                             </x:String>
                         </views:ExampleView.Styles>
-                    </views:ExampleView>
-
+                    </views:ExampleView>-->
                     
                     <views:ExampleView HeaderText="Styled BorderlessButton">
                         <views:ExampleView.Example>
@@ -463,8 +462,21 @@ Content = new HorizontalStackLayout
                         </views:ExampleView.Xaml>
                         <views:ExampleView.CSharp>
                             <x:String>
-
-
+Content = new HorizontalStackLayout
+{
+	Children =
+	{
+		new Button()
+			.Text("Button")
+			.Style("BorderlessButton")
+			.ClickGesture(()=>Button_Clicked()),
+		new Button()
+			.Text("Button")
+            .Style("BorderlessButton")
+            .ClickGesture(()=>Button_Clicked())
+			.IsEnabled(false),
+	}
+};
                             </x:String>
                         </views:ExampleView.CSharp>
                         <views:ExampleView.Styles>
@@ -489,7 +501,7 @@ Content = new HorizontalStackLayout
                         </views:ExampleView.Styles>
                     </views:ExampleView>
 
-                    <views:ExampleView HeaderText="Miscellaneous">
+                    <!--<views:ExampleView HeaderText="Miscellaneous">
                         <views:ExampleView.Example>
                             <VerticalStackLayout>
                                 <Button Text="uppercase" TextTransform="Uppercase" Clicked="Button_Clicked"/>
@@ -520,34 +532,33 @@ Content = new HorizontalStackLayout
 
                             </x:String>
                         </views:ExampleView.CSharp>
-                    </views:ExampleView>
+                    </views:ExampleView>-->
 
-                    
                 </VerticalStackLayout>
             </ScrollView>
 
-            <Label x:Name="CounterLbl"
-                   Text="{Binding Counter}"
-                   HorizontalOptions="End"
-                   VerticalOptions="Start"
-                   Opacity="0"
-                   FontSize="42"
-                   Padding="{OnPlatform iOS='30,60,30,30', Default='15,15'}"
-                   />
+            
 
-            <VerticalStackLayout Grid.Column="1">
+            <VerticalStackLayout Grid.Column="1" Spacing="8">
                 <Label Text="Documentation" Style="{StaticResource Headline}"/>
-                    <Label Text="API Doc - Microsoft.Maui.Controls.Button" />
-                    <Label Text="Learn Doc" />
+                <Label Text="API Doc - Microsoft.Maui.Controls.Button"  Style="{StaticResource Hyperlink}"/>
+                <Label Text="Learn Doc" Style="{StaticResource Hyperlink}"/>
 
-                    <Label Text="Related" Style="{StaticResource Headline}"/>
-                    <Label Text="ImageButton" />
-                    <Label Text="TapGesture" />
-                    <Label Text="VisualStateManager" />
+                <Label Text="Related" Style="{StaticResource Headline}" Margin="0,16,0,0"/>
+                <Label Text="ImageButton" Style="{StaticResource Hyperlink}" />
+                <Label Text="TapGesture" Style="{StaticResource Hyperlink}" />
+                <Label Text="VisualStateManager" Style="{StaticResource Hyperlink}" />
 
                 <Button Text="Profile"
                         Clicked="Button_Clicked_1"
+                        IsVisible="False"
                         />
+
+                <Label Text="Button Counter" Style="{StaticResource Headline}" Margin="0,16,0,0"/>
+                <Label x:Name="CounterLbl"
+                   Text="{Binding Counter}"
+                   
+                   />
 
             </VerticalStackLayout>
         </Grid>
