@@ -6,6 +6,13 @@
              xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
              x:Class="ControlGallery.Pages.Layouts.KeypadPage"
              Title="Keypad">
+        <ContentPage.Resources>
+                <Style TargetType="Button">
+                        <Setter Property="HorizontalOptions"
+                                Value="Fill"/>
+                </Style>
+        </ContentPage.Resources>
+
     <Grid HorizontalOptions="Center"
           VerticalOptions="Center"
           RowSpacing="4"

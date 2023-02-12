@@ -67,7 +67,7 @@ namespace ControlGallery.Pages.Layouts
 
             DoubleToIntConverter doubleToInt = new DoubleToIntConverter();
 
-redSlider = new Slider();
+            redSlider = new Slider();
             redSlider.ValueChanged += OnSliderValueChanged;
             childGrid.Children.Add(redSlider);
 
@@ -103,7 +103,7 @@ redSlider = new Slider();
             childGrid.Children.Add(blueLabel);
 
             // Place the child Grid in the root Grid
-            rootGrid.Add(childGrid, 1, 0);
+            rootGrid.Add(childGrid, column: 0, row: 1);
 
 
 			this.Content = rootGrid;

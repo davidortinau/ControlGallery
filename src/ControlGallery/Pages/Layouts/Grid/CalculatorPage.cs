@@ -18,7 +18,8 @@ namespace ControlGallery.Pages.Layouts
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromArgb ("#eee") },
 					new Setter { Property = Button.TextColorProperty, Value = Colors.Black },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
-					new Setter { Property = Button.FontSizeProperty, Value = 40 }
+					new Setter { Property = Button.FontSizeProperty, Value = 40 },
+					new Setter { Property = Button.HorizontalOptionsProperty, Value = LayoutOptions.Fill }
 				}
 			};
 
@@ -29,7 +30,8 @@ namespace ControlGallery.Pages.Layouts
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromArgb ("#ddd") },
 					new Setter { Property = Button.TextColorProperty, Value = Colors.Black },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
-					new Setter { Property = Button.FontSizeProperty, Value = 40 }
+					new Setter { Property = Button.FontSizeProperty, Value = 40 },
+					new Setter { Property = Button.HorizontalOptionsProperty, Value = LayoutOptions.Fill }
 				}
 			};
 
@@ -40,7 +42,8 @@ namespace ControlGallery.Pages.Layouts
 					new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromArgb ("#E8AD00") },
 					new Setter { Property = Button.TextColorProperty, Value = Colors.White },
 					new Setter { Property = Button.CornerRadiusProperty, Value = 0 },
-					new Setter { Property = Button.FontSizeProperty, Value = 40 }
+					new Setter { Property = Button.FontSizeProperty, Value = 40 },
+					new Setter { Property = Button.HorizontalOptionsProperty, Value = LayoutOptions.Fill }
 				}
 			};
 
