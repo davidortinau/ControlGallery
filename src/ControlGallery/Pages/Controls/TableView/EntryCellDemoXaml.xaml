@@ -7,14 +7,14 @@ Title="EntryCell">
 		<TableView>
 			<TableRoot>
 				<TableSection Title="Keyboards">
-					<EntryCell Label="Deault" Placeholder="default" />
+					<EntryCell Label="Default" Placeholder="default" />
 					<EntryCell Label="Chat" Placeholder="omg brb ttyl gtg lol" Keyboard="Chat" />
 					<EntryCell Label="Email" Placeholder="sales@xamarin.com" Keyboard="Email" />
-					<EntryCell Label="Numberic" Placeholder="55" Keyboard="Numeric" />
+					<EntryCell Label="Numeric" Placeholder="55" Keyboard="Numeric" />
 					<EntryCell Label="Telephone" Placeholder="+1 012 345 6789" Keyboard="Telephone" />
 					<EntryCell Label="Text" Placeholder="text" Keyboard="Text" />
 					<EntryCell Label="Url" Placeholder="http://developer.xamarin.com" Keyboard="Url" />
-				</TableSection>.
+				</TableSection>
 				<TableSection Title="States &amp; Colors">
 					<EntryCell Label="Colorful" Placeholder="text" LabelColor="Red" />
 					<EntryCell Label="Disabled" Placeholder="text" IsEnabled="false" />

@@ -7,6 +7,7 @@
              xmlns:c="clr-namespace:CollectionViewDemos.Views"
              xmlns:cl="clr-namespace:CustomLayouts"
              xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
+             xmlns:car="clr-namespace:ControlGallery.Pages.Controls.CarouselView"
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
@@ -85,6 +86,9 @@
                             Destination="{x:Type p:ButtonPage}"/>
                 <m:NavItem Title="CheckBoxes"
                             Destination="{x:Type p:CheckboxPage}"/>
+                <m:NavItem Title="CarouselView"
+                            Icon="view_listview.png"
+                            Destination="{x:Type car:BasicCarouselPage}"/>
                 <m:NavItem Title="CollectionView"
                             Icon="view_listview.png"
                             Destination="{x:Type c:CollectionViewPage}"/>

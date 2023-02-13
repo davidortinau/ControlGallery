@@ -7,6 +7,10 @@
         <Style TargetType="HorizontalStackLayout">
             <Setter Property="Spacing" Value="8"/>
         </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="MinimumWidthRequest" Value="150"/>
+        </Style>
     </ContentPage.Resources>
 
     <ContentPage.Content>
@@ -14,7 +18,7 @@
             <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}" Spacing="8">
                 <Label Text="Basic" Style="{StaticResource Headline}" />
                 <Entry />
-                <HorizontalStackLayout Background="Red">
+                <HorizontalStackLayout>
                     <Entry />
                     <Entry IsEnabled="False"/>
                 </HorizontalStackLayout>

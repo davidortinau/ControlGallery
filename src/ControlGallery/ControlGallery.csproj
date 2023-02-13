@@ -66,6 +66,8 @@
     <PackageReference Include="ColorCode.Core" Version="2.0.14" />
     <PackageReference Include="CommunityToolkit.Maui.Markup" Version="2.1.0" />
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
+    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
+		<PackageReference Include="tbc.target" Version="0.0.20221117.2" />
   </ItemGroup>
   <ItemGroup>
     <MauiXaml Remove="Resources\Styles\Colors %28copy%29.xaml" />

@@ -14,14 +14,14 @@
         <ControlTemplate
         x:Key="ImageQualityRadioTemplate">
             <Frame
-          BorderColor="{StaticResource LightRadioButtonColor}"
-          BackgroundColor="{StaticResource LightRadioButtonColor}"
-          HasShadow="False"
-          HeightRequest="100"
-          WidthRequest="100"
-          HorizontalOptions="Start"
-          VerticalOptions="Start"
-          Padding="0">
+                BorderColor="{StaticResource LightRadioButtonColor}"
+                BackgroundColor="{StaticResource LightRadioButtonColor}"
+                HasShadow="False"
+                HeightRequest="100"
+                WidthRequest="100"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Padding="0">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
                         <VisualStateGroup
@@ -96,7 +96,9 @@
     
     <ContentPage.Content>
     <ScrollView>
-        <StackLayout Margin="{OnPlatform iOS='30,60,30,30', Default='30'}">
+        <VerticalStackLayout 
+            Padding="{OnPlatform iOS='30,60,30,30', Default='30'}" 
+            Spacing="8">
             <Label Text="On" Style="{StaticResource Headline}"/>
             <StackLayout Orientation="Horizontal">
                 <RadioButton Content="RadioButton" IsChecked="True" />
@@ -125,6 +127,7 @@
                 BindableLayout.ItemsSource="{Binding QualityOptions}"
                 RadioButtonGroup.GroupName="Quality"
                 RadioButtonGroup.SelectedValue="High"
+                Spacing="8"
                 >
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
@@ -140,15 +143,14 @@
                                         Scale="0.75" />
                                     <Label HorizontalOptions="Fill"
                                             HeightRequest="40"
-                                           Text="{Binding Description}"
-                                            TextColor="#323130" />
+                                           Text="{Binding Description}"/>
                                 </StackLayout>
                             </RadioButton.Content>
                         </RadioButton>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </StackLayout>
-        </StackLayout>
+        </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -147,7 +147,6 @@
                        Style="{StaticResource Headline}" />
                 <BoxView Style="{StaticResource HRule}"/>
                 <Label Text="Regular"/>
-                <Label Text="Secondary" Style="{StaticResource Secondary}"/>
                 <Label Text="Error" StyleClass="Error"/>
                 <Label Text="Warning" StyleClass="Warning"/>
                 <Label Text="Disabled" StyleClass="Disabled"/>

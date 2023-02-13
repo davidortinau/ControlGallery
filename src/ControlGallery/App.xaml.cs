@@ -1,5 +1,6 @@
 ﻿using CollectionViewDemos.Views;
 using ControlGallery.Pages;
+using ControlGallery.Pages.Controls.CarouselView;
 using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
@@ -141,6 +142,8 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(GesturesPage), typeof(GesturesPage));
         Routing.RegisterRoute(nameof(TapGesturePage), typeof(TapGesturePage));
         Routing.RegisterRoute(nameof(PointerGesturePage), typeof(PointerGesturePage));
+        
+        Routing.RegisterRoute(nameof(BasicCarouselPage), typeof(BasicCarouselPage));
 
     }
 }

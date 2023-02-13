@@ -1,0 +1,40 @@
+{
+    "ConsoleHost": {
+        "ExpectedClients": [{
+            "Address": "localhost",
+            "Port": 50129
+        }]
+    },
+    "FileWatcher": {
+        "RootPath": "../",
+        "Ignore": [
+            "/obj/",
+            "/bin/"
+        ]
+    },
+    "AssemblyCompiler": {
+        "Debug": true,
+        "PreprocessorSymbols": [
+            "DEBUG",
+            "__RELOAD__"
+        ],
+        "SourceGeneratorReferences": [{
+            "Kind": "NuGetPackageReference",
+            "Reference": "CommunityToolkit.Maui.Markup",
+            "Context": "2.1.0"
+        }],
+        "GlobalUsingsSources": [{
+            "Kind": "SearchPath",
+            "Reference": "./obj/Debug/net7.0-ios",
+            "Context": "LastModified"
+        },
+        {
+            "Kind": "SearchPath",
+            "Reference": "_usings.cs",
+            "Context": "LastModified"
+        }],        
+        "iOSDynamicRegistrationOptions": {
+            "Enabled": false
+        }
+    }
+}
