@@ -9,7 +9,7 @@
              Title="Button">
     <ContentPage.Content>
         
-        <Grid Margin="30" ColumnDefinitions="*,300" ColumnSpacing="30">
+        <Grid Margin="30" ColumnDefinitions="{OnIdiom Phone=*,0, Default=*,300}" ColumnSpacing="30">
             <ScrollView Margin="0,-30,0,-30">
                 <VerticalStackLayout Padding="0,30,0,30">
 

@@ -2,112 +2,56 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
+using CommunityToolkit.Maui.Markup;
 
 namespace ControlGallery.Pages.Layouts
 {	public class CombinedStackPage : ContentPage
 	{
 		public CombinedStackPage()
 		{
+            this.Title = "Combined Stacks";
+
             BackgroundColor = Colors.White;
 			this.Content = new StackLayout
             {
                 Margin = new Thickness(20),
+                Spacing = 8,
                 Children =
                 {
                     new Label { Text = "Primary colors" },
-                    new Frame
-                    {
-                        BorderColor = Colors.Black,
-                        Padding = new Thickness(5),
-                        Content = new StackLayout
-                        {
-                            Orientation = StackOrientation.Horizontal,
-                            Spacing = 15,
-                            Children =
-                            {
-                                new BoxView { Color = Colors.Red },
-                                new Label { Text = "Red", FontSize = 16, VerticalOptions = LayoutOptions.Center }
-                            }
-                        }
-                    },
-                    new Frame
-                    {
-                        BorderColor = Colors.Black,
-                        Padding = new Thickness(5),
-                        Content = new StackLayout
-                        {
-                            Orientation = StackOrientation.Horizontal,
-                            Spacing = 15,
-                            Children =
-                            {
-                                new BoxView { Color = Colors.Yellow },
-                                new Label { Text = "Yellow", FontSize = 16, VerticalOptions = LayoutOptions.Center }
-                            }
-                        }
-                    },
-                    new Frame
-                    {
-                        BorderColor = Colors.Black,
-                        Padding = new Thickness(5),
-                        Content = new StackLayout
-                        {
-                            Orientation = StackOrientation.Horizontal,
-                            Spacing = 15,
-                            Children =
-                            {
-                                new BoxView { Color = Colors.Blue },
-                                new Label { Text = "Blue", FontSize = 16, VerticalOptions = LayoutOptions.Center }
-                            }
-                        }
-                    },
+                    ColorView(Colors.Red),
+                    ColorView(Colors.Yellow),
+                    ColorView(Colors.Blue),
                     new Label { Text = "Secondary colors" },
-                    new Frame
-                    {
-                        BorderColor = Colors.Black,
-                        Padding = new Thickness(5),
-                        Content = new StackLayout
-                        {
-                            Orientation = StackOrientation.Horizontal,
-                            Spacing = 15,
-                            Children =
-                            {
-                                new BoxView { Color = Colors.Green },
-                                new Label { Text = "Green", FontSize = 16, VerticalOptions = LayoutOptions.Center }
-                            }
-                        }
-                    },
-                    new Frame
-                    {
-                        BorderColor = Colors.Black,
-                        Padding = new Thickness(5),
-                        Content = new StackLayout
-                        {
-                            Orientation = StackOrientation.Horizontal,
-                            Spacing = 15,
-                            Children =
-                            {
-                                new BoxView { Color = Colors.Orange },
-                                new Label { Text = "Orange", FontSize = 16, VerticalOptions = LayoutOptions.Center }
-                            }
-                        }
-                    },
-                    new Frame
-                    {
-                        BorderColor = Colors.Black,
-                        Padding = new Thickness(5),
-                        Content = new StackLayout
-                        {
-                            Orientation = StackOrientation.Horizontal,
-                            Spacing = 15,
-                            Children =
-                            {
-                                new BoxView { Color = Colors.Purple },
-                                new Label { Text = "Purple", FontSize = 16, VerticalOptions = LayoutOptions.Center }
-                            }
-                        }
-                    },
+                    ColorView(Colors.Green),
+                    ColorView(Colors.Orange),
+                    ColorView(Colors.Purple),
                 }
             };
 		}
+
+        Border ColorView(Color c)
+        {
+            return new Border
+                    {
+                        Stroke = Colors.Black,
+                        StrokeThickness = 1,
+                        Content = new StackLayout
+                        {
+                            Orientation = StackOrientation.Horizontal,
+                            Spacing = 15,
+                            Children =
+                            {
+                                new BoxView{ Color = c }
+                                    .Size(40)
+                                    .Center() ,
+                                new Label()
+                                    .Text(c.ToHex())
+                                    .FontSize(16)
+                                    .Center()
+                            }
+                        }
+                    }.Padding(5);
+        }
 	}
 }

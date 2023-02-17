@@ -3,39 +3,44 @@ using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
 
-namespace ControlGallery.Pages.Layouts
-{	public class HorizontalStackPage : ContentPage
-	{
-		public HorizontalStackPage()
-		{
-            Style boxStyle = new Style(typeof(BoxView))
-            {
-                Setters =
-                {
-                    new Setter { Property = BoxView.HeightRequestProperty, Value = 50 },
-                    new Setter { Property = BoxView.WidthRequestProperty, Value = 50 }
-                }
-            };
-            Resources.Add(boxStyle);
+namespace ControlGallery.Pages.Layouts;
+public class HorizontalStackPage : ContentPage
+{
+    public HorizontalStackPage()
+    {
+        this.Title = "Horizontal";
+        this.Padding = 0;
 
-            this.Content = new ScrollView()
+        this.Content = new ScrollView { 
+            Orientation = ScrollOrientation.Horizontal, 
+            Content = new StackLayout
             {
-                Orientation = ScrollOrientation.Horizontal,
-                Content = new StackLayout
+                Orientation = StackOrientation.Horizontal,
+                Spacing = 25,
+                Children =
                 {
-                    Margin = new Thickness(20),
-                    Orientation = StackOrientation.Horizontal,
-                    Children =
-                    {
-                        new BoxView { Color = Colors.Red },
-                        new BoxView { Color = Colors.Yellow },
-                        new BoxView { Color = Colors.Blue },
-                        new BoxView { Color = Colors.Green },
-                        new BoxView { Color = Colors.Orange },
-                        new BoxView { Color = Colors.Purple }
-                    }
+                    ColorView(Colors.Red),
+                    ColorView(Colors.Yellow),
+                    ColorView(Colors.Blue),
+                    ColorView(Colors.Green),
+                    ColorView(Colors.Orange),
+                    ColorView(Colors.Purple),
+                    ColorView(Colors.Black),
+                    ColorView(Colors.Red),
+                    ColorView(Colors.Yellow),
+                    ColorView(Colors.Blue),
+                    ColorView(Colors.Green),
+                    ColorView(Colors.Orange),
+                    ColorView(Colors.Purple),
+                    ColorView(Colors.Black),
                 }
-            };
-		}
-	}
+            }
+            .Top()
+        };
+    }
+
+    BoxView ColorView(Color c)
+    {
+        return new BoxView { Color = c }.Size(50);
+    }
 }

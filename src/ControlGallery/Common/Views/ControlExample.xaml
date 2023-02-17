@@ -100,7 +100,7 @@
                             x:Name="ControlPresenter"
                             Padding="12"
                             Background="{StaticResource Gray500Brush}"
-                            Content="{x:Bind Example}" />
+                            Content="{Binding Example}" />
                     </Border>
                     <!--  Output Display  -->
 

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net7.0-ios;net7.0-android;net7.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net7.0-windows10.0.19041</TargetFrameworks>
+	  <TargetFrameworks>net8.0-ios;net8.0-android;net8.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net8.0-windows10.0.19041</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <RootNamespace>ControlGallery</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -61,7 +61,6 @@
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
-    <PackageReference Include="CompiledBindings.MAUI" Version="1.0.14" />
     <PackageReference Include="Markdown.ColorCode" Version="1.2.0-preview-2" />
     <PackageReference Include="ColorCode.Core" Version="2.0.14" />
     <PackageReference Include="CommunityToolkit.Maui.Markup" Version="2.1.0" />
