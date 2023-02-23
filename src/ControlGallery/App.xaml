@@ -63,8 +63,7 @@
                         FlyoutIcon="{FontImage FontFamily=FontAwesome,
                                                 Glyph={x:Static app:IconFont.Home},
                                                 Size=16,
-                                                Color={StaticResource Gray500}}"
-                        >
+                                                Color={StaticResource Gray500}}">
                 <ShellContent Route="home" 
                       ContentTemplate="{DataTemplate pages:HomePage}" />
             </FlyoutItem>

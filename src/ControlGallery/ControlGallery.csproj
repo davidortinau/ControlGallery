@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net8.0-ios;net8.0-android;net8.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net8.0-windows10.0.19041</TargetFrameworks>
+	  <TargetFrameworks>net7.0-ios;net7.0-android;net7.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net7.0-windows10.0.19041</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <RootNamespace>ControlGallery</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -19,7 +19,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
   </PropertyGroup>
 	
   <!-- <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
@@ -30,6 +30,7 @@
   </PropertyGroup> -->
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
     <EnableCodeSigning>false</EnableCodeSigning>
+    <MtouchLink>Full</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
     <CreatePackage>false</CreatePackage>
@@ -40,6 +41,9 @@
     <MauiImage Include="Resources\Images\*" />
 	<MauiImage Include="Resources\Images\toolbox\*" />
     <MauiFont Include="Resources\Fonts\*.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Resources\Styles\DefaultStyles.cs" />
   </ItemGroup>
 	
   <ItemGroup>
@@ -69,6 +73,9 @@
 		<PackageReference Include="tbc.target" Version="0.0.20221117.2" />
   </ItemGroup>
   <ItemGroup>
+    <MauiXaml Remove="Pages\Controls\BorderPage.xaml" />
+    <MauiXaml Remove="Pages\Controls\BoxViewPage.xaml" />
+    <MauiXaml Remove="Pages\Controls\CheckboxPage.xaml" />
     <MauiXaml Remove="Resources\Styles\Colors %28copy%29.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -91,5 +98,8 @@
     <BundleResource Include="Resources\Styles\Converters.xaml" Condition=" '$(EnableDefaultXamlItems)' == 'true' ">
       <SubType>Designer</SubType>
     </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Styles\DefaultStyles.cs" />
   </ItemGroup>
 </Project>

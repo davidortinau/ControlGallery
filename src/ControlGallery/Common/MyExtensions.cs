@@ -27,5 +27,11 @@ public static class MyExtensions
         bindable.SetValue(VisualElement.StyleProperty, styleKey);
         return bindable;
     }
+
+    // public static TBindable IsRunning(this TBindable activityIndicator, bool isRunning) where TBindable : BindableObject, IActivityIndicator
+    // {
+    //     activityIndicator.IsRunning = isRunning;
+    //     return activityIndicator;
+    // }
 }
 

@@ -47,6 +47,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(TimePickerPage), typeof(TimePickerPage));
         Routing.RegisterRoute(nameof(PickerPage), typeof(PickerPage));
         Routing.RegisterRoute(nameof(SearchBarPage), typeof(SearchBarPage));
+        Routing.RegisterRoute(nameof(BoxViewPage), typeof(BoxViewPage));
 
         // Layouts
         Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));
