@@ -47,7 +47,9 @@ public static class MauiProgram
 				fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
-            });
+            })
+			
+			;
 
         // Microsoft.Maui.Controls.Internals.Profile.Enable();
         // Microsoft.Maui.Controls.Internals.Profile.Start();

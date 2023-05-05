@@ -1,7 +1,6 @@
 ﻿namespace ControlGallery.Pages.Features;
 
-[INotifyPropertyChanged]
-public partial class AppThemeViewModel
+public partial class AppThemeViewModel : ObservableObject
 {
 
 	public AppTheme CurrentTheme

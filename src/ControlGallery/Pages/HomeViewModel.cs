@@ -8,8 +8,7 @@ using ControlGallery.Models;
 
 namespace ControlGallery.Pages;
 
-[INotifyPropertyChanged]
-public partial class HomeViewModel
+public partial class HomeViewModel : ObservableObject
 {
     [ObservableProperty]
     private List<FeedItem> articles;

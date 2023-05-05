@@ -32,56 +32,56 @@ namespace ControlGallery.Pages.Layouts
             // Row 0
             grid.Children.Add(new BoxView
             {
-                Color = Colors.Green
+               Color = Colors.Green
             });
             grid.Children.Add(new Label
             {
-                Text = "Row 0, Column 0",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
+               Text = "Row 0, Column 0",
+               HorizontalOptions = LayoutOptions.Center,
+               VerticalOptions = LayoutOptions.Center
             });
             grid.Add(new BoxView
             {
-                Color = Colors.Blue
+               Color = Colors.Blue
             }, 1, 0);
             grid.Add(new Label
             {
-                Text = "Row 0, Column 1",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
+               Text = "Row 0, Column 1",
+               HorizontalOptions = LayoutOptions.Center,
+               VerticalOptions = LayoutOptions.Center
             }, 1, 0);
 
             // Row 1
             grid.Add(new BoxView
             {
-                Color = Colors.Teal
+               Color = Colors.Teal
             }, 0, 1, 1, 2);
             grid.Add(new Label
             {
-                Text = "Row 1, Column 0",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
+               Text = "Row 1, Column 0",
+               HorizontalOptions = LayoutOptions.Center,
+               VerticalOptions = LayoutOptions.Center
             }, 0, 1, 1, 2);
             grid.Add(new BoxView
             {
-                Color = Colors.Purple
+               Color = Colors.Purple
             }, 1, 2, 1, 2);
             grid.Add(new Label
             {
-                Text = "Row1, Column 1",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
+               Text = "Row1, Column 1",
+               HorizontalOptions = LayoutOptions.Center,
+               VerticalOptions = LayoutOptions.Center
             }, 1, 2, 1, 2);
 
-            // Row 2
+            //// Row 2
             BoxView boxView = new BoxView { Color = Colors.Red };
             Grid.SetRow(boxView, 2);
             Grid.SetColumnSpan(boxView, 2);
             Label label = new Label
             {
-                Text = "Row 2, Column 0 and 1",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
+               Text = "Row 2, Column 0 and 1",
+               HorizontalOptions = LayoutOptions.Center,
+               VerticalOptions = LayoutOptions.Center
             };
             Grid.SetRow(label, 2);
             Grid.SetColumnSpan(label, 2);

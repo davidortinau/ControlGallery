@@ -6,8 +6,6 @@ namespace ControlGallery.Pages;
 
 public class BorderPage : BaseContentPage
 {
-    Label YesNoLbl, ActionLbl, PromptLbl;
-
     protected override void Build()
     {
         this.Title = "Borders";

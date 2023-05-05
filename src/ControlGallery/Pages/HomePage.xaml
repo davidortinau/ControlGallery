@@ -168,35 +168,35 @@
                                             CommandParameter="{Binding LatestRelease.html_url}"/>
                 </VerticalStackLayout>
 
-                <VerticalStackLayout>
-                    <Label Text="Updated Documentation" Style="{StaticResource Headline}"/>
-                    <BoxView Style="{StaticResource HRule}"/>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Version: 7.0.52&#10;"/>
-                                <Span Text="Released: December 13, 2022&#10;"/>
-                                <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/>
-                                <Span Text=" Release Notes" TextDecorations="Underline"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout>
-                    <Label Text="Top Contributors" Style="{StaticResource Headline}"/>
-                    <BoxView Style="{StaticResource HRule}"/>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Version: 7.0.52&#10;"/>
-                                <Span Text="Released: December 13, 2022&#10;"/>
-                                <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/>
-                                <Span Text=" Release Notes" TextDecorations="Underline"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </VerticalStackLayout>
+                <!-- <VerticalStackLayout> -->
+                <!--     <Label Text="Updated Documentation" Style="{StaticResource Headline}"/> -->
+                <!--     <BoxView Style="{StaticResource HRule}"/> -->
+                <!--     <Label> -->
+                <!--         <Label.FormattedText> -->
+                <!--             <FormattedString> -->
+                <!--                 <Span Text="Version: 7.0.52&#10;"/> -->
+                <!--                 <Span Text="Released: December 13, 2022&#10;"/> -->
+                <!--                 <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/> -->
+                <!--                 <Span Text=" Release Notes" TextDecorations="Underline"/> -->
+                <!--             </FormattedString> -->
+                <!--         </Label.FormattedText> -->
+                <!--     </Label> -->
+                <!-- </VerticalStackLayout> -->
+                <!-- -->
+                <!-- <VerticalStackLayout> -->
+                <!--     <Label Text="Top Contributors" Style="{StaticResource Headline}"/> -->
+                <!--     <BoxView Style="{StaticResource HRule}"/> -->
+                <!--     <Label> -->
+                <!--         <Label.FormattedText> -->
+                <!--             <FormattedString> -->
+                <!--                 <Span Text="Version: 7.0.52&#10;"/> -->
+                <!--                 <Span Text="Released: December 13, 2022&#10;"/> -->
+                <!--                 <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/> -->
+                <!--                 <Span Text=" Release Notes" TextDecorations="Underline"/> -->
+                <!--             </FormattedString> -->
+                <!--         </Label.FormattedText> -->
+                <!--     </Label> -->
+                <!-- </VerticalStackLayout> -->
             </l:HorizontalWrapLayout>
 
         </Grid>
