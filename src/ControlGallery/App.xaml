@@ -2,6 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:app="clr-namespace:ControlGallery"
              xmlns:pages="clr-namespace:ControlGallery.Pages"
+             xmlns:xceed="clr-namespace:ControlGallery.Pages.Xceed"
+             xmlns:xctk="clr-namespace:Xceed.Maui.Toolkit;assembly=Xceed.Maui.Toolkit"
              xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
              windows:Application.ImageDirectory="Assets"
              xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
@@ -16,6 +18,7 @@
                 <ResourceDictionary Source="Resources/Styles/Converters.xaml" />
                 <ResourceDictionary Source="Resources/Styles/DefaultStyles.xaml" />
                 <ResourceDictionary Source="Resources/Styles/AppStyles.xaml" />
+                <xctk:FluentDesign AccentColor="Pink" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
@@ -86,6 +89,11 @@
             <FlyoutItem Title="Tips &amp; Tricks" FlyoutIcon="view_image.png">
                 <ShellContent Route="tips" 
                       ContentTemplate="{DataTemplate pages:TipsPage}" />
+            </FlyoutItem>
+
+            <FlyoutItem Title="Xceed" FlyoutIcon="view_image.png">
+                <ShellContent Route="xceed" 
+                      ContentTemplate="{DataTemplate xceed:XceedControlsPage}" />
             </FlyoutItem>
 
             <Shell.FlyoutFooterTemplate>

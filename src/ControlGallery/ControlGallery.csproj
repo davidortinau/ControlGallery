@@ -60,6 +60,7 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview2" />
+    <PackageReference Include="EJL.MauiHybridWebView" Version="1.0.0-preview3" />
     <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.52" />
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
@@ -70,6 +71,7 @@
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
 		<PackageReference Include="tbc.target" Version="0.0.20221117.2" />
+		<PackageReference Include="Xceed.Product.Maui.Toolkit.Full" Version="1.0.23268.1651" />
   </ItemGroup>
 
   <ItemGroup>
@@ -80,13 +82,13 @@
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
-  <PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">
+  <!--<PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">
     <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Debug.plist</CodesignEntitlements>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Release'">
     <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Release.plist</CodesignEntitlements>
     <UseHardenedRuntime>true</UseHardenedRuntime>
-  </PropertyGroup>
+  </PropertyGroup>-->
   
 </Project>

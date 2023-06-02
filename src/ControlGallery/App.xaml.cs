@@ -4,6 +4,7 @@ using ControlGallery.Pages.Controls.CarouselView;
 using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
+using ControlGallery.Pages.Xceed;
 
 namespace ControlGallery;
 
@@ -177,6 +178,9 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(PointerGesturePage), typeof(PointerGesturePage));
         
         Routing.RegisterRoute(nameof(BasicCarouselPage), typeof(BasicCarouselPage));
+
+        Routing.RegisterRoute(nameof(XceedControlsPage), typeof(XceedControlsPage));
+        Routing.RegisterRoute(nameof(HybridWebViewPage), typeof(HybridWebViewPage));
 
     }
 }

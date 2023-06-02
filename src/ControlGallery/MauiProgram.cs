@@ -18,6 +18,7 @@ using IContainer = DryIoc.IContainer;
 using DryIoc;
 using DryIoc.Microsoft.DependencyInjection;
 
+
 #if IOS || MACCATALYST
 using UIKit;
 using Microsoft.Maui.Controls.Platform;
@@ -26,6 +27,8 @@ using CoreGraphics;
 using Foundation;
 using CommunityToolkit.Maui.Markup;
 #endif
+
+using Xceed.Maui.Toolkit;
 
 namespace ControlGallery;
 
@@ -41,15 +44,16 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMarkup()
             .UseMauiMaps()
-			.ConfigureFonts(fonts =>
+            .UseXceedMauiToolkit(FluentDesignAccentColor.Orchid)
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("fa_solid.ttf", "FontAwesome");
 				fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
-            })
-			
-			;
+            });
+
+            builder.Services.AddHybridWebView();
 
         // Microsoft.Maui.Controls.Internals.Profile.Enable();
         // Microsoft.Maui.Controls.Internals.Profile.Start();
