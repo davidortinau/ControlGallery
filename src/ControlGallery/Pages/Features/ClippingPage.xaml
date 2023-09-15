@@ -27,7 +27,7 @@
             <Image Source="insta_04.jpg" WidthRequest="200" HeightRequest="200" Aspect="AspectFill"
                    HorizontalOptions="Start">
                 <Image.Clip>
-                    <RectangleGeometry Rect="50,50,100,100" />
+                    <RectangleGeometry Rect="0,0,200,200" />
                 </Image.Clip>
             </Image>
 

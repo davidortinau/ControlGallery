@@ -62,8 +62,8 @@
                        HeightRequest="100">
                     <Image.Clip>
                         <EllipseGeometry 
-                            Center="100,100"
-                            RadiusX="100" RadiusY="100" />
+                            Center="50,50"
+                            RadiusX="50" RadiusY="50" />
                     </Image.Clip>
                 </Image>
 

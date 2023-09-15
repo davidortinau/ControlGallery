@@ -53,6 +53,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(PickerPage), typeof(PickerPage));
         Routing.RegisterRoute(nameof(SearchBarPage), typeof(SearchBarPage));
         Routing.RegisterRoute(nameof(BoxViewPage), typeof(BoxViewPage));
+        Routing.RegisterRoute(nameof(VirtualListViewPage), typeof(VirtualListViewPage));
 
         // Layouts
         Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));

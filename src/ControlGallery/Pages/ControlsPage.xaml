@@ -147,6 +147,9 @@
                     <m:NavItem Title="WebView"
                             Icon="view_webview.png"
                             Destination="{x:Type p:WebViewPage}"/>
+                <m:NavItem Title="VirtualListView"
+                           Icon="view_listview.png"
+                           Destination="{x:Type p:VirtualListViewPage}"/>
                 </x:Array>
         </CollectionView.ItemsSource>
     </CollectionView>        

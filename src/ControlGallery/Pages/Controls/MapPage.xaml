@@ -5,7 +5,7 @@
              Title="Map">
     <ContentPage.Content>
         <Grid>
-            <Map x:Name="map"/>
+            <Map x:Name="map" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

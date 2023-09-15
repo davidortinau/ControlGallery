@@ -36,7 +36,7 @@
                         <Frame IsClippedToBounds="True"
                        BorderColor="Black"
                        BackgroundColor="Gray"
-                       CornerRadius="38"
+                       CornerRadius="30"
                        HeightRequest="60"
                        WidthRequest="60"
                        HorizontalOptions="Center"
