@@ -32,10 +32,10 @@
                                     <Setter
                                       Property="BorderColor"
                                       Value="#FF3300" />
-                                        <!--<Setter
+                                        <Setter
                                           TargetName="Check"
-                                          Property="Opacity"
-                                          Value="1" />-->              
+                                          Property="IsVisible"
+                                          Value="True" />              
                                     </VisualState.Setters>
                             </VisualState>
                             <VisualState
@@ -44,10 +44,10 @@
                                     <Setter
                       Property="BorderColor"
                       Value="#F3F2F1" />
-                                    <!--<Setter
+                                    <Setter
                       TargetName="Check"
-                      Property="Opacity"
-                      Value="0" />-->
+                      Property="IsVisible"
+                      Value="False" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>

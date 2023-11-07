@@ -4,7 +4,7 @@
              x:Class="CollectionViewDemos.Views.VerticalListMultipleSelectionPage"
              Title="Vertical list (multiple selection)">
     <Grid Margin="20" RowDefinitions="Auto,*">
-        <ScrollView HeightRequest="150">
+        <ScrollView HeightRequest="100">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -29,7 +29,7 @@
                         SelectionChanged="OnCollectionViewSelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
+                    <Grid Padding="10" ColumnSpacing="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />

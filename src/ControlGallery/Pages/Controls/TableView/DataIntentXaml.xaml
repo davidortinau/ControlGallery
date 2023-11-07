@@ -14,7 +14,7 @@
                 <SwitchCell Text="SwitchCell Text" />
                 <ImageCell Text="ImageCell Text" 
                            Detail="ImageCell Detail" 
-                           ImageSource="XamarinLogo.png" />
+                           ImageSource="dotnet_bot.png" />
             </TableSection>
             <TableSection Title="Second Section">
                 <TextCell Text="TextCell" 
@@ -24,7 +24,7 @@
                 <SwitchCell Text="SwitchCell Text" />
                 <ImageCell Text="ImageCell Text" 
                            Detail="ImageCell Detail" 
-                           ImageSource="XamarinLogo.png" />
+                           ImageSource="dotnet_bot.png" />
                 <ViewCell x:Name="_viewCell" 
                           Tapped="OnViewCellTapped">
                     <Grid Margin="15,0">

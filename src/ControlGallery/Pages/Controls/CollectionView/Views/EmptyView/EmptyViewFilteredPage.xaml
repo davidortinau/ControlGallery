@@ -12,7 +12,7 @@
                         EmptyView="No items match your filter.">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
+                    <Grid Padding="10" ColumnSpacing="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />

@@ -4,14 +4,15 @@
              xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
              x:Class="CollectionViewDemos.Views.VerticalListSpacingPage"
              Title="Vertical list (spacing)">
-    <StackLayout Margin="20">
+    <Grid Margin="20" RowDefinitions="Auto, *">
         <controls:SpacingModifier CV="{x:Reference collectionView}"
                                   SpacingText="0" />
         <CollectionView x:Name="collectionView"
-                        ItemsSource="{Binding Monkeys}">
+                        ItemsSource="{Binding Monkeys}"
+                        Grid.Row="1">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
+                    <Grid Padding="10" ColumnSpacing="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -37,5 +38,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </StackLayout>
+    </Grid>
 </ContentPage>

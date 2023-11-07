@@ -33,7 +33,7 @@ public class XceedControlsPage : BaseContentPage
                     new Button{
                         Content = new Label().Text("Button Label"),
                         CornerRadius = 20,
-                        HorizontalContentAlignment = LayoutOptions.Start,
+                        HorizontalContentOptions = LayoutOptions.Start,
                         Style = fbd as Style,
                     }
                     .Start()

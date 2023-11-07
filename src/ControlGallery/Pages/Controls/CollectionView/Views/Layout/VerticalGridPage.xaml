@@ -8,7 +8,7 @@
                         ItemsLayout="VerticalGrid, 2">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
+                    <Grid Padding="10" ColumnSpacing="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="35" />
                             <RowDefinition Height="35" />
