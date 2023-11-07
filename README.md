@@ -1,5 +1,5 @@
 # Control Gallery
 
-Porting pages from Xamarin.Forms to [.NET MAUI](https://github.com/dotnet/maui) using a mix of what is ported and what is available via compatibility shims.
+A gallery of [.NET MAUI](https://github.com/dotnet/maui) controls, layouts, and features. I've also included some community libraries.
 
-![Gallery](media/catalyst-01.png)
+![Gallery](media/control-gallery-net8.png)
