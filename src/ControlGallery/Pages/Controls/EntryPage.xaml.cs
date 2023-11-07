@@ -23,5 +23,10 @@ namespace ControlGallery.Pages
         {
             Debug.WriteLine($"text: {e.NewTextValue}");
         }
+
+        private async void Entry_Completed(object sender, EventArgs e)
+        {
+            await this.DisplayAlert("Completed","Captured completed event", "Okay");
+        }
     }
 }

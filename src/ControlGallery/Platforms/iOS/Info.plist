@@ -15,6 +15,7 @@
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
+		<string>arm64</string>
 		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
@@ -30,7 +31,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MinimumOSVersion</key>
-	<string>14.2</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.simplyprofound.MauiControlGallery</string>
+	<key></key>
+	<string></string>
 </dict>
 </plist>

@@ -4,6 +4,7 @@ using ControlGallery.Pages.Controls.CarouselView;
 using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
+using ControlGallery.Pages.Xceed;
 
 namespace ControlGallery;
 
@@ -18,6 +19,10 @@ public partial class App : Microsoft.Maui.Controls.Application
         AppShell.BindingContext = new AppShellViewModel();
 
         //App.Current.UserAppTheme = AppTheme.Light;
+
+        // var attr = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+        // var version = attr.InformationalVersion;
+        // Debug.WriteLine($"{version}");
     }
 
     private void RegisterRoutes()
@@ -47,6 +52,8 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(TimePickerPage), typeof(TimePickerPage));
         Routing.RegisterRoute(nameof(PickerPage), typeof(PickerPage));
         Routing.RegisterRoute(nameof(SearchBarPage), typeof(SearchBarPage));
+        Routing.RegisterRoute(nameof(BoxViewPage), typeof(BoxViewPage));
+        Routing.RegisterRoute(nameof(VirtualListViewPage), typeof(VirtualListViewPage));
 
         // Layouts
         Routing.RegisterRoute(nameof(BasisExperimentPage), typeof(BasisExperimentPage));
@@ -108,6 +115,21 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(VerticalListGroupingPage), typeof(VerticalListGroupingPage));
         Routing.RegisterRoute(nameof(VerticalListGroupingVariableSizeItemsPage), typeof(VerticalListGroupingVariableSizeItemsPage));
         Routing.RegisterRoute(nameof(VerticalListTextGroupingPage), typeof(VerticalListTextGroupingPage));
+        Routing.RegisterRoute(nameof(VerticalGridTextPage), typeof(VerticalGridTextPage));
+        Routing.RegisterRoute(nameof(VerticalListSpacingPage), typeof(VerticalListSpacingPage));
+        Routing.RegisterRoute(nameof(HorizontalGridSpacingPage), typeof(HorizontalGridSpacingPage));
+        Routing.RegisterRoute(nameof(HorizontalListSpacingPage), typeof(HorizontalListSpacingPage));
+        Routing.RegisterRoute(nameof(VerticalGridSpacingPage), typeof(VerticalGridSpacingPage));
+
+        Routing.RegisterRoute(nameof(VerticalListSwipeContextItemsPage), typeof(VerticalListSwipeContextItemsPage));
+        Routing.RegisterRoute(nameof(VerticalListSnapPointsPage), typeof(VerticalListSnapPointsPage));
+
+        Routing.RegisterRoute(nameof(VerticalListDynamicSizeItemsPage), typeof(VerticalListDynamicSizeItemsPage));
+        Routing.RegisterRoute(nameof(VerticalListVariableSizeItemsPage), typeof(VerticalListVariableSizeItemsPage));
+        
+        Routing.RegisterRoute(nameof(VerticalListSnapPointsPage), typeof(VerticalListSnapPointsPage));
+        Routing.RegisterRoute(nameof(VerticalListSnapPointsPage), typeof(VerticalListSnapPointsPage));
+        
 
         Routing.RegisterRoute(nameof(HorizontalGridHeaderFooterViewPage), typeof(HorizontalGridHeaderFooterViewPage));
         Routing.RegisterRoute(nameof(VerticalListHeaderFooterDataTemplatePage), typeof(VerticalListHeaderFooterDataTemplatePage));
@@ -127,6 +149,19 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(HorizontalGridPullToRefreshPage), typeof(HorizontalGridPullToRefreshPage));
         Routing.RegisterRoute(nameof(VerticalListPullToRefreshPage), typeof(VerticalListPullToRefreshPage));
 
+        Routing.RegisterRoute(nameof(VerticalListMultiplePreSelectionPage), typeof(VerticalListMultiplePreSelectionPage));
+        Routing.RegisterRoute(nameof(VerticalListMultipleSelectionPage), typeof(VerticalListMultipleSelectionPage));
+        Routing.RegisterRoute(nameof(VerticalListSelectionColorPage), typeof(VerticalListSelectionColorPage));
+        Routing.RegisterRoute(nameof(VerticalListSinglePreSelectionPage), typeof(VerticalListSinglePreSelectionPage));
+        Routing.RegisterRoute(nameof(VerticalListSingleSelectionPage), typeof(VerticalListSingleSelectionPage));
+
+        Routing.RegisterRoute(nameof(IncrementalLoadingPage), typeof(IncrementalLoadingPage));
+        Routing.RegisterRoute(nameof(ItemsUpdatingScrollModePage), typeof(ItemsUpdatingScrollModePage));
+        Routing.RegisterRoute(nameof(ScrollToByIndexPage), typeof(ScrollToByIndexPage));
+        Routing.RegisterRoute(nameof(ScrollToByIndexWithGroupingPage), typeof(ScrollToByIndexWithGroupingPage));
+        Routing.RegisterRoute(nameof(ScrollToByObjectPage), typeof(ScrollToByObjectPage));
+        Routing.RegisterRoute(nameof(ScrollToByObjectWithGroupingPage), typeof(ScrollToByObjectWithGroupingPage));
+
         // Features pages
         Routing.RegisterRoute(nameof(AppThemePage), typeof(AppThemePage));
         Routing.RegisterRoute(nameof(BehaviorsPage), typeof(BehaviorsPage));
@@ -145,11 +180,13 @@ public partial class App : Microsoft.Maui.Controls.Application
         
         Routing.RegisterRoute(nameof(BasicCarouselPage), typeof(BasicCarouselPage));
 
+        Routing.RegisterRoute(nameof(XceedControlsPage), typeof(XceedControlsPage));
+        Routing.RegisterRoute(nameof(HybridWebViewPage), typeof(HybridWebViewPage));
+
     }
 }
 
-[INotifyPropertyChanged]
-public partial class AppShellViewModel
+public partial class AppShellViewModel : ObservableObject
 {
     private string appearance = App.Current.UserAppTheme.ToString();
 

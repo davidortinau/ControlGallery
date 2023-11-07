@@ -11,25 +11,7 @@
 
             <VerticalStackLayout Margin="15" Spacing="8">
                 <Label Text="UI Features" Style="{StaticResource Headline}"/>
-                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
-                            >
-                    <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
-                            <m:NavItem Title="Camera View"
-                                   Destination="{x:Type p:AppThemePage}"/>
-                            
-                        </x:Array>
-                    </BindableLayout.ItemsSource>
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Button 
-                                Text="{Binding Title}"
-                                Command="{Binding NavigateTo}"
-                                />
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </cl:HorizontalWrapLayout>
-
+                
             </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -8,8 +8,7 @@ using ControlGallery.Models;
 
 namespace ControlGallery.Pages;
 
-[INotifyPropertyChanged]
-public partial class HomeViewModel
+public partial class HomeViewModel : ObservableObject
 {
     [ObservableProperty]
     private List<FeedItem> articles;
@@ -38,10 +37,18 @@ public partial class HomeViewModel
 
     async Task LoadBlogs()
     {
-        var feed = await FeedReader.ReadAsync("https://devblogs.microsoft.com/dotnet/category/maui/feed/");
+        Feed feed = null;
+        try
+        {
+            feed = await FeedReader.ReadAsync("https://devblogs.microsoft.com/dotnet/category/maui/feed/");
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"{ex.Message}");
+        }
 
         var htmlParser = new HtmlParser();
-        foreach (var item in feed.Items)
+        foreach (var item in feed?.Items)
         {
 
             var document = htmlParser.ParseDocument(item.Description);
@@ -50,7 +57,7 @@ public partial class HomeViewModel
 
         try
         {
-            Articles = new List<FeedItem>(feed.Items);
+            Articles = new List<FeedItem>(feed?.Items);
         }catch(Exception ex)
         {
             Console.WriteLine(ex.Message);

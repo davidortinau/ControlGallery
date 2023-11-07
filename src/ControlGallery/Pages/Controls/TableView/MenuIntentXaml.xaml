@@ -10,13 +10,13 @@ Title="Menu Intent">
 					<TextCell Text="TextCell" Detail="TextCell Detail" />
 					<EntryCell Label="Entry Label" Text="EntryCell Text" />
 					<SwitchCell Text="SwitchCell Text" />
-					<ImageCell Text="ImageCell Text" Detail="ImageCell Detail" ImageSource="XamarinLogo.png" />
+					<ImageCell Text="ImageCell Text" Detail="ImageCell Detail" ImageSource="dotnet_bot.png" />
 				</TableSection>
 				<TableSection Title="Second Section">
 					<TextCell Text="TextCell" Detail="TextCell Detail" />
 					<EntryCell Label="Entry Label" Text="EntryCell Text" />
 					<SwitchCell Text="SwitchCell Text" />
-					<ImageCell Text="ImageCell Text" Detail="ImageCell Detail" ImageSource="XamarinLogo.png" />
+					<ImageCell Text="ImageCell Text" Detail="ImageCell Detail" ImageSource="dotnet_bot.png" />
 				</TableSection>
 			</TableRoot>
 		</TableView>

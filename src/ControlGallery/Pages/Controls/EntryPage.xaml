@@ -17,7 +17,7 @@
         <ScrollView>
             <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}" Spacing="8">
                 <Label Text="Basic" Style="{StaticResource Headline}" />
-                <Entry />
+                <Entry Completed="Entry_Completed" />
                 <HorizontalStackLayout>
                     <Entry />
                     <Entry IsEnabled="False"/>

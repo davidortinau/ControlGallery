@@ -47,8 +47,8 @@ public class ColorSyntaxConverter : IValueConverter
 
         //return html + colorizedHtml + "</body></html>";
 
-        Microsoft.Maui.Controls.Internals.Profile.FrameBegin();
-        Microsoft.Maui.Controls.Internals.Profile.FramePartition("Converter Start");
+        // Microsoft.Maui.Controls.Internals.Profile.FrameBegin();
+        // Microsoft.Maui.Controls.Internals.Profile.FramePartition("Converter Start");
 
         var formatter = new FormattedStringFormatter();
         var fs = new FormattedString();
@@ -61,7 +61,7 @@ public class ColorSyntaxConverter : IValueConverter
         //    Debug.WriteLine(s.ToString());
         //}        
 
-        Microsoft.Maui.Controls.Internals.Profile.FrameEnd();
+        // Microsoft.Maui.Controls.Internals.Profile.FrameEnd();
         return fs;
     }
 

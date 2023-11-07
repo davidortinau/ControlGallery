@@ -81,6 +81,8 @@
                             Destination="{x:Type p:AlertPage}"/>
                 <m:NavItem Title="Borders"
                             Destination="{x:Type p:BorderPage}"/>
+                <m:NavItem Title="BoxView"
+                            Destination="{x:Type p:BoxViewPage}"/>
                 <m:NavItem Title="Buttons"
                             Icon="view_button.png"
                             Destination="{x:Type p:ButtonPage}"/>
@@ -145,6 +147,9 @@
                     <m:NavItem Title="WebView"
                             Icon="view_webview.png"
                             Destination="{x:Type p:WebViewPage}"/>
+                <m:NavItem Title="VirtualListView"
+                           Icon="view_listview.png"
+                           Destination="{x:Type p:VirtualListViewPage}"/>
                 </x:Array>
         </CollectionView.ItemsSource>
     </CollectionView>        

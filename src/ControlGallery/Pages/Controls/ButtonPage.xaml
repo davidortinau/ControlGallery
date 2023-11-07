@@ -9,7 +9,7 @@
              Title="Button">
     <ContentPage.Content>
         
-        <Grid Margin="30" ColumnDefinitions="{OnIdiom Phone=*,0, Default=*,300}" ColumnSpacing="30">
+        <Grid Margin="30" ColumnDefinitions="{OnIdiom Phone='*,0', Default='*,300'}" ColumnSpacing="30">
             <ScrollView Margin="0,-30,0,-30">
                 <VerticalStackLayout Padding="0,30,0,30">
 
@@ -299,6 +299,8 @@ Content = new HorizontalStackLayout
                         </views:ExampleView.Styles>
                     </views:ExampleView>  
 
+                    
+
                     <!--<views:ExampleView HeaderText="Styled PrimaryButtonOutlineIcon">
                         <views:ExampleView.Example>
                             <VerticalStackLayout>
@@ -533,6 +535,42 @@ Content = new HorizontalStackLayout
                             </x:String>
                         </views:ExampleView.CSharp>
                     </views:ExampleView>-->
+
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout>
+                            <Button
+                            ImageSource="{StaticResource CircleIconAlt}" Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                            <Button
+                            ImageSource="{StaticResource CircleIconAlt}" Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Button ImageSource="{StaticResource CircleIconAlt}"
+                                    ContentLayout="Right"
+                                    Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                            <Button ImageSource="{StaticResource CircleIconAlt}"
+                                    ContentLayout="Right"
+                                    Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Button ImageSource="{StaticResource CircleIconAlt}"
+                                    ContentLayout="Top"
+                                    Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                            <Button ImageSource="{StaticResource CircleIconAlt}"
+                                    ContentLayout="Top"
+                                    Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Button ImageSource="{StaticResource CircleIconAlt}"
+                                    ContentLayout="Bottom"
+                                    Text="Button" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                            <Button ImageSource="{StaticResource CircleIconAlt}"
+                                    ContentLayout="Bottom"
+                                    Text="Button" IsEnabled="False" Style="{StaticResource PrimaryButtonOutlineIcon}" Clicked="Button_Clicked"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
 
                 </VerticalStackLayout>
             </ScrollView>

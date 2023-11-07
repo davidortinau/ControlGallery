@@ -11,23 +11,20 @@
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <DataTemplate x:Key="ColorItemTemplate">
-            <Grid Margin="5"
-                  HeightRequest="120"
-                  WidthRequest="105">
-                <BoxView Color="{Binding Color}"
-                         HeightRequest="40"
-                         WidthRequest="40" />
+            
                 <Label Text="{Binding Name}"
+                       Padding="8,4"
+                       Margin="5"
+                       HeightRequest="120"
+                       WidthRequest="105"
+                       Background="{Binding Color}"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
-            </Grid>
+            
         </DataTemplate>
     </ContentPage.Resources>
-    <StackLayout Margin="10">
-        <Label Text="RefreshView"
-               FontSize="50"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+    <StackLayout Margin="15" Spacing="20">
+        
         <Label Text="Pull the items down to refresh the ScrollView." />
         <Label Text="{Binding Items.Count, StringFormat='Number of items: {0}'}" />
         <RefreshView IsRefreshing="{Binding IsRefreshing}"

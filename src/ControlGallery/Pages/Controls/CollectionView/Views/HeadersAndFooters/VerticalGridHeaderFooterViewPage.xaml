@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewDemos.Views.HorizontalGridHeaderFooterViewPage"
              Title="Grid header and footer (View)">
-    <StackLayout Margin="20">
+    <Grid Margin="20">
         <CollectionView ItemsSource="{Binding Monkeys}"
                         ItemsLayout="HorizontalGrid, 4">
             <CollectionView.Header>
@@ -24,7 +24,7 @@
             </CollectionView.Footer>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
+                    <Grid Padding="10" ColumnSpacing="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -50,5 +50,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </StackLayout>
+    </Grid>
 </ContentPage>

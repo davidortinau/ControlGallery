@@ -5,13 +5,15 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using CollectionViewDemos.Models;
+using Microsoft.Maui.Adapters;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 
 namespace CollectionViewDemos.ViewModels
 {
-    public class MonkeysViewModel : INotifyPropertyChanged
+    public partial class MonkeysViewModel : ObservableObject
     {
-        readonly IList<Monkey> source;
+        readonly List<Monkey> source;
         Monkey selectedMonkey;
         int selectionCount = 1;
 
@@ -55,6 +57,9 @@ namespace CollectionViewDemos.ViewModels
         public ICommand FavoriteCommand => new Command<Monkey>(FavoriteMonkey);
         public ICommand FilterCommand => new Command<string>(FilterItems);
         public ICommand MonkeySelectionChangedCommand => new Command(MonkeySelectionChanged);
+        
+        [ObservableProperty]
+        ObservableCollectionAdapter<Monkey> adapter;
 
         public MonkeysViewModel()
         {
@@ -68,8 +73,10 @@ namespace CollectionViewDemos.ViewModels
             {
                 Monkeys[1], Monkeys[3], Monkeys[4]
             };
+            
+            Adapter = new ObservableCollectionAdapter<Monkey>(new ObservableCollection<Monkey>(source));
         }
-
+        
         void CreateMonkeyCollection()
         {
             source.Add(new Monkey

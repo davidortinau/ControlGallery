@@ -17,18 +17,30 @@ public class BasicCarouselPage : ContentPage
     }
 
     private IndicatorView indicators;
-    enum Rows { Carousel, Indicators }
+    enum Rows { Carousel, Indicators, Filler }
 
     private void Build()
     {
         this.Content = new Grid()
         {
+            RowSpacing = 15,
             RowDefinitions = GridRowsColumns.Rows.Define(
-                (Rows.Carousel    , GridLength.Auto ),
-                (Rows.Indicators, 75  )
+                (Rows.Indicators, 75  ),
+                (Rows.Carousel    , 200 ),
+                
+                (Rows.Filler, GridLength.Star)
             ),
             Children =
             {
+                new IndicatorView
+                    {
+                        IndicatorColor = Colors.DarkGrey,
+                        SelectedIndicatorColor = Colors.Purple,
+                        IndicatorSize = 10
+                    }
+                    .Background(Colors.Blue)
+                    .Row(Rows.Indicators)
+                    .Assign(out indicators),
                 new Border
                     {
                         Stroke = Colors.Black,
@@ -53,19 +65,8 @@ public class BasicCarouselPage : ContentPage
                             
                         
                     }
-                    .Margin(15)
-                    .Row(Rows.Carousel),
-                new IndicatorView
-                    {
-                        IndicatorColor = Colors.DarkGrey,
-                        SelectedIndicatorColor = Colors.Purple
-                    }
-                    .Height(40)
-                    .Background(Colors.Blue)
-                    .Row(Rows.Indicators)
-                    .CenterHorizontal()
-                    .Bottom()
-                    .Assign(out indicators)
+                    .Row(Rows.Carousel)
+                
                     
             }
         };

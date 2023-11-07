@@ -39,6 +39,8 @@
                                    Destination="{x:Type p:TooltipPage}"/>
                             <m:NavItem Title="Triggers"
                                    Destination="{x:Type p:TriggersPage}"/>
+                            <m:NavItem Title="HybridWebView"
+                                   Destination="{x:Type p:HybridWebViewPage}"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net8.0-ios;net8.0-android;net8.0-maccatalyst</TargetFrameworks>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net8.0-windows10.0.19041</TargetFrameworks>
+	  <TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+    
     <OutputType>Exe</OutputType>
     <RootNamespace>ControlGallery</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -12,84 +12,114 @@
 	  <ApplicationId>com.simplyprofound.MauiControlGallery</ApplicationId>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationIdGuid>7374c3c2-74a8-43f6-bc79-44814d1531a1</ApplicationIdGuid>
 	  
-	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-  </PropertyGroup>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	
-  <!-- <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-    <EnableCodeSigning>false</EnableCodeSigning>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <CodesignProvision>Automatic</CodesignProvision>
+  </PropertyGroup>
+
+  <!--<PropertyGroup>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <CodesignRequireProvisioningProfile>true</CodesignRequireProvisioningProfile>
+    <DisableCodesignVerification>true</DisableCodesignVerification>
+</PropertyGroup>-->
+	
+  <!-- <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <CodesignKey>Created via API</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <CreatePackage>true</CreatePackage>
   </PropertyGroup> -->
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
-    <EnableCodeSigning>false</EnableCodeSigning>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	
+<!--  <PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">-->
+<!--    <ProvisioningType>manual</ProvisioningType>-->
+<!--    <CodesignProvision>VS: WildCard Development</CodesignProvision>-->
+<!--  </PropertyGroup>-->
+
+  <!-- <PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+  </PropertyGroup> -->
+  
+  <!-- <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CodesignKey>Apple Development: Created via API (Z6JDU47RND)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <PlatformTarget>iPhone</PlatformTarget>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup> -->
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
     <CreatePackage>false</CreatePackage>
+    <EnableCodeSigning>true</EnableCodeSigning>
+    <CodesignRequireProvisioningProfile>true</CodesignRequireProvisioningProfile>
+    <DisableCodesignVerification>true</DisableCodesignVerification>
   </PropertyGroup>
   <ItemGroup>
     <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiImage Include="Resources\Images\*" />
-	<MauiImage Include="Resources\Images\toolbox\*" />
+	  <MauiImage Include="Resources\Images\toolbox\*" />
     <MauiFont Include="Resources\Fonts\*.ttf" />
   </ItemGroup>
-	
+  
   <ItemGroup>
     <EmbeddedResource Include="Resources\food_01.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="CommunityToolkit.Maui" />
-    <None Remove="CommunityToolkit.Mvvm" />
-    <None Remove="Microsoft.Maui.Controls.Maps" />
-    <None Remove="Pages\Features\Gestures\" />
-    <None Remove="Services\" />
-    <None Remove="Common\Views\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Maui" Version="3.1.0" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0-preview2" />
-    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.52" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="EJL.MauiHybridWebView" Version="1.0.0-preview4" />
+    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.0-rc.2.9530" />
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
     <PackageReference Include="Markdown.ColorCode" Version="1.2.0-preview-2" />
     <PackageReference Include="ColorCode.Core" Version="2.0.14" />
-    <PackageReference Include="CommunityToolkit.Maui.Markup" Version="2.1.0" />
+    <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.3.0" />
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
-		<PackageReference Include="tbc.target" Version="0.0.20221117.2" />
+    <PackageReference Include="Redth.Maui.VirtualListView" Version="0.2.4" />
+    <PackageReference Include="Xceed.Product.Maui.Toolkit.Full" Version="1.5.23517.727" />
   </ItemGroup>
+
   <ItemGroup>
-    <MauiXaml Remove="Resources\Styles\Colors %28copy%29.xaml" />
-  </ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.1.23419.4" />
+	</ItemGroup>
+
   <ItemGroup>
-    <MauiXaml Update="Pages\Features\TooltipPage.xaml">
-      <SubType></SubType>
+    <MauiXaml Update="Pages\Controls\VirtualListViewPage.xaml">
+      <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Pages\Features\GesturesPage.xaml">
-      <SubType></SubType>
-    </MauiXaml>
-    <MauiXaml Condition=" '$(EnableDefaultXamlItems)' == 'true' " Update="Pages\Features\Gestures\HoverGesturePage.xaml">
+    <MauiXaml Update="Pages\Controls\MonkeyViewCell.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
+
   <ItemGroup>
-    <Folder Include="Pages\Features\Gestures\" />
-    <Folder Include="Services\" />
-    <Folder Include="Common\Views\" />
+    <Compile Update="Pages\Controls\VirtualListViewPage.xaml.cs">
+      <DependentUpon>VirtualListView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Controls\MonkeyViewCell.xaml.cs">
+      <DependentUpon>MonkeyViewCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Styles\Converters.xaml" Condition=" '$(EnableDefaultXamlItems)' == 'true' ">
-      <SubType>Designer</SubType>
-    </BundleResource>
-  </ItemGroup>
+
+	<!-- Build Properties must be defined within these property groups to ensure successful publishing
+       to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
+  <!--<PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">
+    <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Debug.plist</CodesignEntitlements>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Release'">
+    <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Release.plist</CodesignEntitlements>
+    <UseHardenedRuntime>true</UseHardenedRuntime>
+  </PropertyGroup>-->
+  
 </Project>
