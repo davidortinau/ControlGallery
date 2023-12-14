@@ -1,4 +1,6 @@
-﻿using CollectionViewDemos.Views;
+﻿using System.Diagnostics;
+using System.Reflection;
+using CollectionViewDemos.Views;
 using ControlGallery.Pages;
 using ControlGallery.Pages.Controls.CarouselView;
 using ControlGallery.Pages.Controls.TableView;
@@ -20,9 +22,9 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         //App.Current.UserAppTheme = AppTheme.Light;
 
-        // var attr = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
-        // var version = attr.InformationalVersion;
-        // Debug.WriteLine($"{version}");
+        var attr = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+        var version = attr.InformationalVersion;
+        Debug.WriteLine($"{version}");
     }
 
     private void RegisterRoutes()
@@ -223,6 +225,7 @@ public partial class AppShellViewModel : ObservableObject
     private void Current_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
     {
         appearance = App.Current.UserAppTheme.ToString();
+        Console.WriteLine($"{App.Current.PlatformAppTheme} | {App.Current.UserAppTheme}");
         OnPropertyChanged(nameof(Appearance));
     }
 }

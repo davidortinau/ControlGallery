@@ -14,6 +14,8 @@ public partial class AppThemeViewModel : ObservableObject
                 return;
 
             App.Current.UserAppTheme = value;
+            //App.Current.PlatformAppTheme = AppTheme.Unspecified;
+	        //App.Current.RequestedTheme
             OnPropertyChanged(nameof(CurrentTheme));
         }
 	}

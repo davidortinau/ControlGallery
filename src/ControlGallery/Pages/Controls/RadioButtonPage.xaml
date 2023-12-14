@@ -150,6 +150,23 @@
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </StackLayout>
+
+            <RadioButton
+                TextColor="Red"
+                FontSize="30"
+                TextTransform="Uppercase"
+                FontAttributes="Bold"
+                Content="Label for Content" />
+
+            <RadioButton>
+                <RadioButton.Content>
+                    <Label Text="Label for Content" TextColor="Red"
+                    FontSize="30"
+                    TextTransform="Uppercase"
+                    FontAttributes="Bold"
+                     />
+                </RadioButton.Content>
+            </RadioButton>
         </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -72,9 +72,14 @@
                 <Label Text="HTML"
                        Style="{StaticResource Headline}" />
                 <BoxView Style="{StaticResource HRule}"/>
-                <Label BackgroundColor="Yellow" 
-                       Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
-       TextType="Html"  />
+                <Label 
+                     BackgroundColor="Yellow" 
+                     Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
+                     TextType="Html"  />
+                     <Label 
+                     Text="Some text that is html. &lt;strong&gt;Bold&lt;/strong&gt; &lt;em&gt;Italics&lt;/em&gt; &lt;span style='color:red'&gt;Red Text&lt;/span&gt;"
+                     TextColor="Green"
+                     TextType="Html"  />
 
                 <Label Text="FormattedText &amp; Spans"
                        Style="{StaticResource Headline}" />

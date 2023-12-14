@@ -31,8 +31,8 @@ public partial class HomeViewModel : ObservableObject
 
 	public HomeViewModel()
     {
-		LoadBlogs().SafeFireAndForget();
-        GetLatestRelease().SafeFireAndForget();
+		// LoadBlogs().SafeFireAndForget();
+        // GetLatestRelease().SafeFireAndForget();
 	}
 
     async Task LoadBlogs()
