@@ -22,9 +22,7 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         //App.Current.UserAppTheme = AppTheme.Light;
 
-        var attr = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
-        var version = attr.InformationalVersion;
-        Debug.WriteLine($"{version}");
+        
     }
 
     private void RegisterRoutes()
@@ -217,9 +215,20 @@ public partial class AppShellViewModel : ObservableObject
         }
     }
 
+    [ObservableProperty]
+    private string _mauiVersion;
+
     public AppShellViewModel()
     {
-        App.Current.RequestedThemeChanged += Current_RequestedThemeChanged;    
+        App.Current.RequestedThemeChanged += Current_RequestedThemeChanged;   
+        MauiVersion = GetMauiVersion(); 
+    }
+
+    string GetMauiVersion()
+    {
+        var attr = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+        string version = attr.InformationalVersion;
+        return version;
     }
 
     private void Current_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)

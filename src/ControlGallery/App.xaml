@@ -100,6 +100,8 @@
                 <DataTemplate>
                     <Grid>
                         <VerticalStackLayout Margin="15" Spacing="8">
+                            <Label Text='{Binding MauiVersion, StringFormat="Built with .NET MAUI {0}"}'
+                            FontSize="8" TextColor="{StaticResource Gray300}" />
                             <Label Text="Appearance"/>
                             <Picker x:Name="AppearancePicker"
                             BackgroundColor="Transparent"

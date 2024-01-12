@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ControlGallery"
+             xmlns:a="clr-namespace:ControlGallery"
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
              xmlns:c="clr-namespace:CollectionViewDemos.Views"
@@ -11,8 +11,8 @@
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static local:IconFont.Boxes}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked"/>
-        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static local:IconFont.List}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static a:IconFont.Boxes}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static a:IconFont.List}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked_1"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>

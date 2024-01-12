@@ -2,7 +2,7 @@ using CommunityToolkit.Maui.Markup;
 
 namespace ControlGallery.Pages;
 
-public class CheckboxPage : BaseContentPage
+public class CheckboxPage : ContentPageBase
 {
     protected override void Build()
     {
@@ -69,7 +69,7 @@ public class CheckboxPage : BaseContentPage
                         }
                     },
                 }
-            }.DynamicResource(Label.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
     }
 }

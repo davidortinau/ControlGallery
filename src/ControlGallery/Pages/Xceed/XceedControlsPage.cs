@@ -5,7 +5,7 @@ using Border = Xceed.Maui.Toolkit.Border;
 
 namespace ControlGallery.Pages.Xceed;
 
-public class XceedControlsPage : BaseContentPage
+public class XceedControlsPage : ContentPageBase
 {
     
     protected override void Build()

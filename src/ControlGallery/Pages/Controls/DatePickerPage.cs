@@ -1,6 +1,6 @@
 namespace ControlGallery.Pages;
 
-public class DatePickerPage : BaseContentPage
+public class DatePickerPage : ContentPageBase
 {
     protected override void Build()
     {
@@ -15,7 +15,7 @@ public class DatePickerPage : BaseContentPage
                     new DatePicker(),
     
                 }
-            }.DynamicResource(Label.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
     }
 }

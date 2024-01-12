@@ -2,7 +2,7 @@ using CommunityToolkit.Maui.Markup;
 
 namespace ControlGallery.Pages;
 
-public class EditorPage : BaseContentPage
+public class EditorPage : ContentPageBase
 {
     protected override void Build()
     {
@@ -37,7 +37,7 @@ public class EditorPage : BaseContentPage
                     new Editor().Placeholder("This tall and nore more").Height(200)
 
                 }
-            }.DynamicResource(Label.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
     }
 }

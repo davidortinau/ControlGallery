@@ -166,6 +166,7 @@
                     ImageSource="{FontImage Glyph={x:Static app:IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
                     Command="{Binding NavigateToCommand}"
                                             CommandParameter="{Binding LatestRelease.html_url}"/>
+
                 </VerticalStackLayout>
 
                 <!-- <VerticalStackLayout> -->

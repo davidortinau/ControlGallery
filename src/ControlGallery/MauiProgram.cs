@@ -5,6 +5,7 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using DotNet.Meteor.HotReload.Plugin;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 
@@ -41,7 +42,11 @@ public static class MauiProgram
 				fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
-            });
+            })
+#if DEBUG
+			.EnableHotReload()
+#endif
+            ;
 
             builder.Services.AddHybridWebView();
 
@@ -59,6 +64,8 @@ public static class MauiProgram
                     handler.PlatformView?.UpdateCharacterSpacing(editor);
                 });
 
+
         return app;
 	}
+
 }

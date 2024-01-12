@@ -2,9 +2,9 @@ using ControlGallery.Services;
 
 namespace ControlGallery.Pages;
 
-public abstract class BaseContentPage : ContentPage
+public abstract class ContentPageBase : ContentPage
 {
-    public BaseContentPage()
+    public ContentPageBase()
     {
         Build();
     }
@@ -42,7 +42,7 @@ public abstract class BaseContentPage : ContentPage
     }
 }
 
-public abstract class BaseContentPage<T> : BaseContentPage where T : BaseViewModel
+public abstract class BaseContentPage<T> : ContentPageBase where T : BaseViewModel
 	{
 		protected BaseContentPage(in T viewModel)//, in IAnalyticsService analyticsService, in IMainThread mainThread, in bool shouldUseSafeArea = false
 			: base() //analyticsService, mainThread, shouldUseSafeArea

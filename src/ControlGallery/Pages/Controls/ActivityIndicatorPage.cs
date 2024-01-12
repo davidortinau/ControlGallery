@@ -1,6 +1,6 @@
 namespace ControlGallery.Pages;
 
-public class ActivityIndicatorPage : BaseContentPage
+public class ActivityIndicatorPage : ContentPageBase
 {
     protected override void Build()
     {
@@ -26,7 +26,7 @@ public class ActivityIndicatorPage : BaseContentPage
                     }
                         .Start(),         
                 }
-            }.DynamicResource(Label.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
     }
 }

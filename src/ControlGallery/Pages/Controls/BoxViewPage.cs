@@ -1,6 +1,6 @@
 namespace ControlGallery.Pages;
 
-public class BoxViewPage : BaseContentPage
+public class BoxViewPage : ContentPageBase
 {
     protected override void Build()
     {
@@ -14,7 +14,7 @@ public class BoxViewPage : BaseContentPage
                     new Separator(),
                     new BoxView{ Color = AppColors.Primary }.Size(100),       
                 }
-            }.DynamicResource(Label.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
     }
 }

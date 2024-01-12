@@ -3,7 +3,7 @@ using CommunityToolkit.Maui.Markup;
 
 namespace ControlGallery.Pages;
 
-public class AlertPage : BaseContentPage
+public class AlertPage : ContentPageBase
 {
     Label YesNoLbl, ActionLbl, PromptLbl;
     Button AlertBtn, AlertResponseBtn, AlertActionBtn, AlertPromptBtn;
@@ -49,7 +49,7 @@ public class AlertPage : BaseContentPage
                         .Assign(out PromptLbl)
                         .TextColor(AppColors.Primary),
                 }
-        }.DynamicResource(Label.StyleProperty, "MainContainer")
+        }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
 
         AlertBtn.Clicked += (s, e) => TapAlert();

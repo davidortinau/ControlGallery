@@ -4,7 +4,7 @@ using static CommunityToolkit.Maui.Markup.GridRowsColumns;
 
 namespace ControlGallery.Pages;
 
-public class BorderPage : BaseContentPage
+public class BorderPage : ContentPageBase
 {
     protected override void Build()
     {
@@ -88,7 +88,7 @@ public class BorderPage : BaseContentPage
                         }
                     },
                 }
-            }.DynamicResource(Label.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
     }
 }
