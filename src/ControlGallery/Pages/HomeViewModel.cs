@@ -5,6 +5,7 @@ using System.Diagnostics;
 using AngleSharp.Html.Parser;
 using System.Text.Json;
 using ControlGallery.Models;
+using System.Reflection;
 
 namespace ControlGallery.Pages;
 
@@ -15,6 +16,9 @@ public partial class HomeViewModel : ObservableObject
 
     [ObservableProperty]
     private GithubRelease latestRelease;
+
+    [ObservableProperty]
+    private string _mauiVersion;
 
     [RelayCommand]
     async Task NavigateTo(string link)
@@ -33,6 +37,8 @@ public partial class HomeViewModel : ObservableObject
     {
 		// LoadBlogs().SafeFireAndForget();
         // GetLatestRelease().SafeFireAndForget();
+        MauiVersion = GetMauiVersion(); 
+
 	}
 
     async Task LoadBlogs()
@@ -92,5 +98,12 @@ public partial class HomeViewModel : ObservableObject
             Debug.WriteLine(@"\tERROR {0}", ex.Message);
         }
 
+    }
+
+    string GetMauiVersion()
+    {
+        var attr = typeof(MauiApp).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>();
+        string version = attr.InformationalVersion;
+        return version;
     }
 }

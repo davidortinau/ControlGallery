@@ -8,6 +8,7 @@
              xmlns:cl="clr-namespace:CustomLayouts"
              xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
              xmlns:car="clr-namespace:ControlGallery.Pages.Controls.CarouselView"
+             xmlns:effects="clr-namespace:ControlGallery.Common.Effects"
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
@@ -70,8 +71,13 @@
     </ContentPage.Resources>
     
     <CollectionView Grid.Row="1" x:Name="ControlsList"
-                    Margin="15"
+                    effects:ContentInsetAdjustmentBehavior.ContentInset="{StaticResource PageInset}"
                     ItemTemplate="{StaticResource TemplateSelector}">
+        <CollectionView.Effects>
+            <effects:ContentInsetAdjustmentBehaviorRoutingEffect
+                
+                />
+        </CollectionView.Effects>
         <CollectionView.ItemsSource>
             <x:Array Type="{x:Type m:NavItem}">
                 <m:NavItem Title="ActivityIndicator"

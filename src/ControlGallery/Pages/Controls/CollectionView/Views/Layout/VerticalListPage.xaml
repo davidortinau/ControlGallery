@@ -3,12 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="CollectionViewDemos.Views.VerticalListPage"
              Title="Vertical list (DataTemplate)">
-    <Grid Margin="20">
+    <Grid Margin="0">
         <CollectionView ItemsSource="{Binding Monkeys}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border Margin="10,0,10,0">
-                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10" Margin="5">
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10" Margin="10">
                             <Image Source="{Binding ImageUrl}" 
                                 Aspect="AspectFill"
                                 HeightRequest="60" 

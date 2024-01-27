@@ -5,6 +5,7 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 #endif
 
+using ControlGallery.Common.Effects;
 using DotNet.Meteor.HotReload.Plugin;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
@@ -43,6 +44,12 @@ public static class MauiProgram
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
             })
+#if IOS || MACCATALYST
+			.ConfigureEffects(effects =>
+			{
+				effects.Add<ContentInsetAdjustmentBehaviorRoutingEffect, ContentInsetAdjustmentBehaviorPlatformEffect>();
+			})
+#endif
 #if DEBUG
 			.EnableHotReload()
 #endif
@@ -63,7 +70,8 @@ public static class MauiProgram
                     handler.PlatformView?.UpdatePlaceholder(editor);
                     handler.PlatformView?.UpdateCharacterSpacing(editor);
                 });
-
+        
+        
 
         return app;
 	}

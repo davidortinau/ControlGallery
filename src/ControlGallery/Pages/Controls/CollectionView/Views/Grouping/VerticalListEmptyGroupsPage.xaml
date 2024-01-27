@@ -8,15 +8,9 @@
                         IsGrouped="true">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" ColumnSpacing="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
+                    <Grid Padding="10" ColumnSpacing="10" 
+                        ColumnDefinitions="60,Auto"
+                        RowDefinitions="Auto,Auto">
                         <Image Grid.RowSpan="2" 
                                Source="{Binding ImageUrl}" 
                                Aspect="AspectFill"
@@ -24,27 +18,38 @@
                                WidthRequest="60" />
                         <Label Grid.Column="1" 
                                Text="{Binding Name}" 
+                               FontSize="Subtitle"
                                FontAttributes="Bold" />
                         <Label Grid.Row="1"
                                Grid.Column="1" 
                                Text="{Binding Location}"
-                               FontAttributes="Italic" 
-                               VerticalOptions="End" />
+                               FontSize="Caption"
+                               VerticalOptions="Start" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.GroupHeaderTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Name}"
-                           BackgroundColor="LightGray"
-                           FontSize="Large"
-                           FontAttributes="Bold" />
+                    <Grid RowDefinitions="Auto,1" RowSpacing="4">
+                        <Label Text="{Binding Name}"
+                            FontSize="Title"
+                            Padding="4" />
+                        <BoxView Color="{AppThemeBinding Light=Black, Dark=White}" Grid.Row="1"/>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.GroupHeaderTemplate>
             <CollectionView.GroupFooterTemplate>
                 <DataTemplate>
-                    <Label Text="{Binding Count, StringFormat='Total animals: {0:D}'}"
-                           Margin="0,0,0,10" />
+                    <Label 
+                        Margin="0,0,0,10"
+                        HorizontalTextAlignment="End">
+                        <Label.Text>
+                            <MultiBinding StringFormat="Total {0}: {1:D}">
+                                <Binding Path="Name" />
+                                <Binding Path="Count" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
                 </DataTemplate>
             </CollectionView.GroupFooterTemplate>
         </CollectionView>

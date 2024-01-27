@@ -9,6 +9,7 @@
              xmlns:feed="clr-namespace:CodeHollow.FeedReader;assembly=CodeHollow.FeedReader"
              x:Class="ControlGallery.Pages.HomePage"
              x:DataType="p:HomeViewModel"
+             
              Title="Gallery">
 
     <ContentPage.BindingContext>
@@ -87,7 +88,7 @@
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <Button
+                            <Button 
                                 Style="{StaticResource PrimaryButtonOutlineIcon}"
                                 x:DataType="m:QuickLink"
                                 ImageSource="{FontImage Color={StaticResource Primary}, FontFamily=FontAwesome,
@@ -138,17 +139,10 @@
 
             <Label
                 Grid.Row="4"
-                Text="What's New" Style="{StaticResource Title1}"/>
+                Text="About .NET MAUI" Style="{StaticResource Title1}"/>
 
-            <l:HorizontalWrapLayout
-                Grid.Row="5"
+                <VerticalStackLayout Grid.Row="5"
                 Spacing="8">
-                <l:HorizontalWrapLayout.Resources>
-                    <Style TargetType="VerticalStackLayout">
-                        <Setter Property="WidthRequest" Value="300"/>
-                    </Style>
-                </l:HorizontalWrapLayout.Resources>
-                <VerticalStackLayout>
                     <Label Text="Latest Release" Style="{StaticResource Headline}"/>
                     <BoxView Style="{StaticResource HRule}"/>
                     <Label>
@@ -166,6 +160,11 @@
                     ImageSource="{FontImage Glyph={x:Static app:IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
                     Command="{Binding NavigateToCommand}"
                                             CommandParameter="{Binding LatestRelease.html_url}"/>
+
+                    <Label Text="Build With .NET MAUI Version" Style="{StaticResource Headline}"/>
+                    <BoxView Style="{StaticResource HRule}"/>
+                    <Label Text='{Binding MauiVersion}'
+                            TextColor="{StaticResource Gray300}" />
 
                 </VerticalStackLayout>
 
@@ -198,7 +197,7 @@
                 <!--         </Label.FormattedText> -->
                 <!--     </Label> -->
                 <!-- </VerticalStackLayout> -->
-            </l:HorizontalWrapLayout>
+            
 
         </Grid>
     </ScrollView>

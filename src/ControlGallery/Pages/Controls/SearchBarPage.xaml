@@ -7,6 +7,15 @@
     <ScrollView>
         <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
             <SearchBar />
+            <SearchBar
+                Text="Start VerticalTextAlignment"
+                VerticalTextAlignment="Start" />
+            <SearchBar
+                Text="Center VerticalTextAlignment"
+                VerticalTextAlignment="Center" />
+            <SearchBar
+                Text="End VerticalTextAlignment"
+                VerticalTextAlignment="End" />
         </StackLayout>
     </ScrollView>
 
