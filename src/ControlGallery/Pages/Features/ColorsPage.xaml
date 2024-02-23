@@ -7,13 +7,13 @@
              Title="Colors &amp; Brushes">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}"
+            <VerticalStackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}"
                          Spacing="8"
                          >
                 <Label Text="Colors" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
                 
-                <cl:HorizontalWrapLayout 
+                <cl:HorizontalWrapLayout CompressedLayout.IsHeadless="True"
                             Margin="2,15">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type models:ColorBrush}">
@@ -36,7 +36,7 @@
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout WidthRequest="160" HeightRequest="160" Margin="8,0,8,8">
+                            <VerticalStackLayout WidthRequest="160" HeightRequest="160" Margin="8,0,8,8">
                                 <Ellipse WidthRequest="100" HeightRequest="100"
                                          HorizontalOptions="Center"
                                          Fill="{Binding Brush}">
@@ -49,14 +49,14 @@
                                     </Ellipse>
                                 <Label Text="{Binding BrushName}"/>
                                 <Label Text="{Binding BrushValue}"/>
-                            </StackLayout>
+                            </VerticalStackLayout>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
 
                 <Label Text="Linear Gradient Brush" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
-                <cl:HorizontalWrapLayout Spacing="15">
+                <cl:HorizontalWrapLayout Spacing="15" CompressedLayout.IsHeadless="True">
                     <Rectangle WidthRequest="200" HeightRequest="200">
                         <Rectangle.Background>
                             <LinearGradientBrush EndPoint="0,1">
@@ -102,7 +102,7 @@
 
                 <Label Text="Radial Gradient Brush" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
-                <cl:HorizontalWrapLayout Spacing="15">
+                <cl:HorizontalWrapLayout Spacing="15" CompressedLayout.IsHeadless="True">
                     <Rectangle WidthRequest="200" HeightRequest="200">
                         <Rectangle.Background>
                             <RadialGradientBrush>
@@ -147,7 +147,7 @@
                 </cl:HorizontalWrapLayout>
 
 
-            </StackLayout>
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

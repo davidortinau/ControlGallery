@@ -44,12 +44,14 @@ public static class MauiProgram
 				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
             })
-#if IOS || MACCATALYST
+
 			.ConfigureEffects(effects =>
 			{
+                #if IOS || MACCATALYST
 				effects.Add<ContentInsetAdjustmentBehaviorRoutingEffect, ContentInsetAdjustmentBehaviorPlatformEffect>();
+                #endif
 			})
-#endif
+
 #if DEBUG
 			.EnableHotReload()
 #endif

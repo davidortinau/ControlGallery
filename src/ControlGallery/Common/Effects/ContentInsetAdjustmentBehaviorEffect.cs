@@ -73,3 +73,34 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
     }
 }
 #endif
+// #if ANDROID
+// public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
+// {
+//     protected override void OnAttached()
+//     {
+//         // try
+//         // {
+//         //     var scroll = Control.Subviews[0] as UICollectionView;
+//         //     scroll.ContentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.Never;
+            
+//         //     var inset = (Thickness)Element.GetValue(ContentInsetAdjustmentBehavior.ContentInsetProperty);
+//         //     scroll.ContentInset = new UIEdgeInsets((nfloat)inset.Top, (nfloat)inset.Left, (nfloat)inset.Bottom, (nfloat)inset.Right);
+//         // }
+//         // catch (Exception ex)
+//         // {
+//         //     Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+//         // }
+//     }
+
+//     protected override void OnDetached()
+//     {
+//     }
+
+//     protected override void OnElementPropertyChanged(PropertyChangedEventArgs args)
+//     {
+//         base.OnElementPropertyChanged(args);
+
+        
+//     }
+// }
+// #endif

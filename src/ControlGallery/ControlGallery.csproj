@@ -7,7 +7,7 @@
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
     <ImplicitUsings>enable</ImplicitUsings>
-    <MauiVersion>8.0.6</MauiVersion>
+    <MauiVersion>8.0.7</MauiVersion>
     
 
 	  <ApplicationTitle>Control Gallery</ApplicationTitle>
@@ -75,7 +75,7 @@
     <PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="EJL.MauiHybridWebView" Version="1.0.0-preview4" />
-    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.0-rc.2.9530" />
+    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.7" />
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
@@ -85,9 +85,9 @@
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
     <PackageReference Include="Redth.Maui.VirtualListView" Version="0.2.4" />
-    <PackageReference Include="Xceed.Product.Maui.Toolkit.Full" Version="1.5.23517.727" />
+    <PackageReference Include="Xceed.Product.Maui.Toolkit.Full" Version="1.6.23567.1403" />
     <PackageReference Include="epj.RouteGenerator" Version="1.0.0-pre1" />
-    <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*"/>
+    <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" />
   </ItemGroup>
 
   <ItemGroup>
@@ -127,4 +127,10 @@
     <UseHardenedRuntime>true</UseHardenedRuntime>
   </PropertyGroup>-->
   
+  <ItemGroup>
+    <None Remove="Pages\Features\Animation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Features\Animation\" />
+  </ItemGroup>
 </Project>

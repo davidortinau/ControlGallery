@@ -16,8 +16,6 @@ namespace CollectionViewDemos.Views
                 async (Type pageType) =>
                 {
                     await Shell.Current.GoToAsync(pageType.Name);
-                    //Page page = (Page)Activator.CreateInstance(pageType);
-                    //await Navigation.PushAsync(page);
                 });
 
             BindingContext = this;

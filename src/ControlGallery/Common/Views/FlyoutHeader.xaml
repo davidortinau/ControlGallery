@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:views="clr-namespace:ControlGallery.Common.Views"
+             x:Class="ControlGallery.Common.Views.FlyoutHeader"
+             InputTransparent="True"
+             RowDefinitions="120">
+
+        <Image Source="dotnet_bot.png"
+                HeightRequest="80"
+                WidthRequest="80" InputTransparent="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+    
+    
+</Grid>

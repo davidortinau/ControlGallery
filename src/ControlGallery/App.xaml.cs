@@ -1,12 +1,16 @@
 ﻿using System.Diagnostics;
-
+using Animations;
 using CollectionViewDemos.Views;
+using CommunityToolkit.Mvvm.Messaging;
+using ControlGallery.Common.Messages;
 using ControlGallery.Pages;
 using ControlGallery.Pages.Controls.CarouselView;
 using ControlGallery.Pages.Controls.TableView;
+using ControlGallery.Pages.Features.Animation;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
 using ControlGallery.Pages.Xceed;
+using Flexibility.Shared;
 
 namespace ControlGallery;
 
@@ -18,7 +22,39 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         RegisterRoutes();
 
-        AppShell.BindingContext = new AppShellViewModel();        
+        AppShell.BindingContext = new AppShellViewModel();   
+
+        MainPage.SizeChanged += UpdateFlyoutBehaviorIfNeeded;     // this is an infinite loop swapping between sizes
+    }
+
+    // protected override Window CreateWindow(IActivationState activationState)
+    // {
+    //     Window window = base.CreateWindow(activationState);
+    //     window.SizeChanged += UpdateFlyoutBehaviorIfNeeded;
+    //     return window;
+    // }
+
+    private const double minPageWidth = 800;
+    private void UpdateFlyoutBehaviorIfNeeded(object sender, EventArgs e)
+    {
+        double currentWidth = ((VisualElement)sender).Width + Shell.Current.FlyoutWidth; // don't get this, insteaed get the window size
+        
+        Debug.WriteLine($"currentWidth: {currentWidth}, " +
+        $"PageWidth: {((VisualElement)sender).Width}, " +
+            $"Shell.Current.FlyoutWidth: {Shell.Current.FlyoutWidth}"   );
+
+        if (currentWidth < minPageWidth && Shell.Current.FlyoutWidth > 75)
+        {
+            // Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+            Shell.Current.FlyoutWidth = 75;
+            WeakReferenceMessenger.Default.Send(new ToggleFlyoutHeaderMsg(false));
+        }
+        else if (currentWidth > minPageWidth && Shell.Current.FlyoutWidth < 320)
+        {
+            // Shell.Current.FlyoutBehavior = FlyoutBehavior.Locked;
+            Shell.Current.FlyoutWidth = 320;
+            WeakReferenceMessenger.Default.Send(new ToggleFlyoutHeaderMsg(true));
+        }
     }
 
     private void RegisterRoutes()
@@ -178,6 +214,25 @@ public partial class App : Microsoft.Maui.Controls.Application
 
         Routing.RegisterRoute(nameof(XceedControlsPage), typeof(XceedControlsPage));
         Routing.RegisterRoute(nameof(HybridWebViewPage), typeof(HybridWebViewPage));
+
+        Routing.RegisterRoute(nameof(AchievementsPage), typeof(AchievementsPage));
+        Routing.RegisterRoute(nameof(AlignmentPage), typeof(AlignmentPage));
+        Routing.RegisterRoute(nameof(GridPage), typeof(GridPage));
+        Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+        Routing.RegisterRoute(nameof(PhotosPage), typeof(PhotosPage));
+        Routing.RegisterRoute(nameof(ReadingColumnsPage), typeof(ReadingColumnsPage));
+        Routing.RegisterRoute(nameof(ShowPage), typeof(ShowPage));
+
+        // Animations
+        Routing.RegisterRoute(nameof(AnimationsPage), typeof(AnimationsPage));
+        Routing.RegisterRoute(nameof(CustomAnimationPage), typeof(CustomAnimationPage));
+        Routing.RegisterRoute(nameof(EasingsPage), typeof(EasingsPage));
+        Routing.RegisterRoute(nameof(EasingEditorPage), typeof(EasingEditorPage));
+        Routing.RegisterRoute(nameof(FadePage), typeof(FadePage));
+        Routing.RegisterRoute(nameof(LayoutToPage), typeof(LayoutToPage));
+        Routing.RegisterRoute(nameof(RotatePage), typeof(RotatePage));
+        Routing.RegisterRoute(nameof(ScalePage), typeof(ScalePage));
+        Routing.RegisterRoute(nameof(TranslatePage), typeof(TranslatePage));
 
     }
 }

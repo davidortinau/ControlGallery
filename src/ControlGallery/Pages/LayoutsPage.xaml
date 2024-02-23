@@ -5,6 +5,7 @@
              xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
              xmlns:a="clr-namespace:ControlGallery.Pages.Layouts.AbsoluteLayouts"
              xmlns:cl="clr-namespace:CustomLayouts"
+             xmlns:f="clr-namespace:Flexibility.Shared"
              xmlns:Behaviors="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
@@ -49,10 +50,10 @@
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
 
-                <HorizontalStackLayout Spacing="8">
+                <!-- <HorizontalStackLayout Spacing="8">
                     <Image Source="layout_contentview.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
                     <Label Text="ContentView" Style="{StaticResource Headline}" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
+                </HorizontalStackLayout> -->
 
                 <HorizontalStackLayout Spacing="8">
                     <Image Source="layout_flexlayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
@@ -61,6 +62,20 @@
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Achievements Sample"
+                                   Destination="{x:Type f:AchievementsPage}"/>
+                            <m:NavItem Title="Alignment Sample"
+                                   Destination="{x:Type f:AlignmentPage}"/>
+                            <m:NavItem Title="Grid Sample"
+                                   Destination="{x:Type f:GridPage}"/>
+                            <m:NavItem Title="Login Sample"
+                                   Destination="{x:Type f:LoginPage}"/>
+                            <m:NavItem Title="Photos Sample"
+                                   Destination="{x:Type f:PhotosPage}"/>
+                            <m:NavItem Title="Reading Sample"
+                                   Destination="{x:Type f:ReadingColumnsPage}"/>
+                            <m:NavItem Title="Show Sample"
+                                   Destination="{x:Type f:ShowPage}"/>
                             <m:NavItem Title="Basis"
                                    Destination="{x:Type p:BasisExperimentPage}"/>
                             <m:NavItem Title="Catalog"
@@ -119,7 +134,7 @@
 
                 <HorizontalStackLayout Spacing="8">
                     <Image Source="layout_stacklayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
-                    <Label Text="StackLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                    <Label Text="StackLayout (HorizontalStackLayout, VerticalStackLayout)" Style="{StaticResource Headline}" VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
@@ -151,15 +166,15 @@
                     </BindableLayout.ItemTemplate>
                 </cl:HorizontalWrapLayout>
 
-                <HorizontalStackLayout Spacing="8">
+                <!-- <HorizontalStackLayout Spacing="8">
                     <Image Source="layout_relativelayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
                     <Label Text="RelativeLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
+                </HorizontalStackLayout> -->
 
-                <HorizontalStackLayout Spacing="8">
+                <!-- <HorizontalStackLayout Spacing="8">
                     <Image Source="layout_scrollview.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
                     <Label Text="ScrollView" Style="{StaticResource Headline}" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
+                </HorizontalStackLayout> -->
 
                 <Label Text="Custom Layouts" Style="{StaticResource Headline}" VerticalOptions="Center"/>
                 <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">

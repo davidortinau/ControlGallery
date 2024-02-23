@@ -31,7 +31,7 @@
                      RefreshColor="Teal"
                      Command="{Binding RefreshCommand}">
             <ScrollView>
-                <cl:HorizontalWrapLayout
+                <VerticalStackLayout Spacing="10"
                             BindableLayout.ItemsSource="{Binding Items}"
                             BindableLayout.ItemTemplate="{StaticResource ColorItemTemplate}" />
             </ScrollView>

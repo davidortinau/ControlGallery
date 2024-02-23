@@ -18,12 +18,8 @@
     <x:Double x:Key="TextSizeCaption">12</x:Double>
     <x:Double x:Key="TextSizeSmallCaption">11</x:Double>
 
-    <x:Double x:Key="PageInset">
-        <OnIdiom x:TypeArguments="Double">
-            <On Idiom="Default" Value="15"/>
-            <On Idiom="Desktop" Value="30"/>
-        </OnIdiom>
-    </x:Double>
+    <OnIdiom x:TypeArguments="Thickness" x:Key="PageInset"
+                Phone="15" Desktop="30"/>
 
 
 </ResourceDictionary>

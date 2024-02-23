@@ -74,9 +74,7 @@
                     effects:ContentInsetAdjustmentBehavior.ContentInset="{StaticResource PageInset}"
                     ItemTemplate="{StaticResource TemplateSelector}">
         <CollectionView.Effects>
-            <effects:ContentInsetAdjustmentBehaviorRoutingEffect
-                
-                />
+            <effects:ContentInsetAdjustmentBehaviorRoutingEffect/>
         </CollectionView.Effects>
         <CollectionView.ItemsSource>
             <x:Array Type="{x:Type m:NavItem}">

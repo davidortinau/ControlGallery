@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:anim="clr-namespace:Animations"
+             x:Class="ControlGallery.Pages.Features.Animation.AnimationsPage"
+
+             Title="Animations">
+    <ScrollView>
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Animations">
+                <TextCell Text="Custom"
+                          Detail="ColorTo" 
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type anim:CustomAnimationPage}" />
+                <TextCell Text="Easings"
+                          Detail="Rate of change over time" 
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type anim:EasingsPage}" />
+                <TextCell Text="Fade"
+                          Detail="FadeTo" 
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type anim:FadePage}" />
+                <TextCell Text="Rotate"
+                          Detail="RotateTo" 
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type anim:RotatePage}" />
+                <TextCell Text="Scale"
+                          Detail="ScaleTo" 
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type anim:ScalePage}" />
+                <TextCell Text="Translate"
+                          Detail="TranslateTo" 
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type anim:TranslatePage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+    </ScrollView>
+</ContentPage>

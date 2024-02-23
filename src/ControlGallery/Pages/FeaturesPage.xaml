@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:m="clr-namespace:ControlGallery.Models"
              xmlns:p="clr-namespace:ControlGallery.Pages"
+             xmlns:anim="clr-namespace:ControlGallery.Pages.Features.Animation"
              xmlns:cl="clr-namespace:CustomLayouts"
              x:Class="ControlGallery.Pages.FeaturesPage"
              Title="Features">
@@ -15,6 +16,8 @@
                             >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Animations"
+                                   Destination="{x:Type anim:AnimationsPage}"/>
                             <m:NavItem Title="AppThemeBinding"
                                    Destination="{x:Type p:AppThemePage}"/>
                             <m:NavItem Title="Behaviors"
@@ -41,6 +44,8 @@
                                    Destination="{x:Type p:TriggersPage}"/>
                             <m:NavItem Title="HybridWebView"
                                    Destination="{x:Type p:HybridWebViewPage}"/>
+
+                            
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>

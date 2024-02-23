@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ControlGallery"
+             xmlns:v="clr-namespace:ControlGallery.Pages;assembly=ControlGallery"
              x:Class="ControlGallery.Pages.FontImagePage"
              Title="FontImagePage">
     <ContentPage.Resources>
@@ -12,16 +13,76 @@
         Color="{StaticResource Primary}"
         Size="80"/>
     </ContentPage.Resources>
-    <StackLayout Margin="15" Spacing="8">
-        <Label Text="Label" Style="{StaticResource Headline}"/>
-        <Label Text="{x:Static local:IconFont.AirFreshener}"
-               FontSize="24"
-               FontFamily="FontAwesome"
-                HorizontalOptions="Start" />
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="{StaticResource PageInset}">
+            <Label Text="Label" Style="{StaticResource Headline}"/>
+            <Label Text="{x:Static local:IconFont.AirFreshener}"
+                FontSize="24"
+                FontFamily="FontAwesome"
+                    HorizontalOptions="Start" />
 
-        <Label Text="Image" Style="{StaticResource Headline}"/>
-        <Image HeightRequest="80" WidthRequest="80"
-               Source="{StaticResource CircleIconAlt}"
-               HorizontalOptions="Start"/>
-    </StackLayout>
+            <Label Text="Image" Style="{StaticResource Headline}"/>
+            <Image HeightRequest="80" WidthRequest="80"
+                Source="{StaticResource CircleIconAlt}"
+                HorizontalOptions="Start"/>
+
+            <Label Text="FontAwesome" Style="{StaticResource Headline}"/>
+            <FlexLayout
+                Wrap="Wrap"
+                JustifyContent="SpaceAround">
+
+                <v:IconBox Icon="{x:Static local:IconFont.Ad}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AddressBook}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AddressCard}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Adjust}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AirFreshener}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AlignCenter}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AlignJustify}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AlignLeft}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AlignRight}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Allergies}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Ambulance}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AmericanSignLanguageInterpreting}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Anchor}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleDoubleDown}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleDoubleLeft}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleDoubleRight}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleDoubleUp}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleDown}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleLeft}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleRight}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AngleUp}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Angry}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Ankh}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AppleAlt}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Archive}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Archway}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowAltCircleDown}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowAltCircleLeft}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowAltCircleRight}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowAltCircleUp}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowCircleDown}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowCircleLeft}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowCircleRight}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowCircleUp}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowDown}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowLeft}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowRight}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowUp}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowsAltH}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowsAltV}" />
+                <v:IconBox Icon="{x:Static local:IconFont.ArrowsAlt}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AssistiveListeningSystems}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Asterisk}" />
+                <v:IconBox Icon="{x:Static local:IconFont.At}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Atlas}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Atom}" />
+                <v:IconBox Icon="{x:Static local:IconFont.AudioDescription}" />
+                <v:IconBox Icon="{x:Static local:IconFont.Award}" />
+
+                
+            </FlexLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

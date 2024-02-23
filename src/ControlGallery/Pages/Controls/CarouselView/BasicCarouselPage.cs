@@ -26,8 +26,7 @@ public class BasicCarouselPage : ContentPage
             RowSpacing = 15,
             RowDefinitions = GridRowsColumns.Rows.Define(
                 (Rows.Indicators, 75  ),
-                (Rows.Carousel    , 200 ),
-                
+                (Rows.Carousel    , 200 ),                
                 (Rows.Filler, GridLength.Star)
             ),
             Children =

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Flexibility.Shared.AlignmentPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Pages/Layouts/Flex/AlignmentPage.css"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label StyleClass="header" Text="Align"/>
+             <FlexLayout Direction="Column">
+                <Label Text="FlexStart" FlexLayout.AlignSelf="Start"/>
+                <Label Text="FlexCenter" FlexLayout.AlignSelf="Center"/>
+                <Label Text="FlexEnd" FlexLayout.AlignSelf="End"/>
+            </FlexLayout>
+
+            <Label StyleClass="header" Text="Justify Content"/>
+            <FlexLayout Direction="Row"
+                        JustifyContent="SpaceAround">
+                <BoxView Color="Red" WidthRequest="40" HeightRequest="40" />
+                <BoxView Color="Blue" WidthRequest="40" HeightRequest="40"/>
+                <BoxView Color="Purple" WidthRequest="40" HeightRequest="40" />
+            </FlexLayout>           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
