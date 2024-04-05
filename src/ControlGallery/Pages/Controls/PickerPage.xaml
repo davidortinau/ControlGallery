@@ -6,7 +6,7 @@
 
     <ScrollView>
         <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
-            <Picker Title="Select a color" ItemsSource="{Binding ColorNames}" SelectedItem="{Binding SelectedColorName, Mode=TwoWay}" />
+            <Picker Title="{OnPlatform 'Select a color', MacCatalyst=''}" ItemsSource="{Binding ColorNames}" SelectedItem="{Binding SelectedColorName, Mode=TwoWay}" />
             <BoxView Color="{Binding SelectedColor}" HeightRequest="200" />
         </StackLayout>
     </ScrollView>

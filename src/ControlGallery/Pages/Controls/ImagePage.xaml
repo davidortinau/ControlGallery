@@ -12,18 +12,21 @@
     <ContentPage.Content>
         <ScrollView>
             <VerticalStackLayout 
-                Style="{StaticResource MainContainer}">
+                Style="{StaticResource MainContainer}"
+                Spacing="9">
                 <Label Text="Embedded Resource" Style="{StaticResource Headline}"/>
                 <Image x:Name="ImgTarget"
                        HeightRequest="100" 
                        WidthRequest="100"/>
                 
-                <Label Text="Image with 40x40 and #f1f1f1 bg"/>
+                <Label Text="Image with 40x40 and #f1f1f1 bg"
+                Style="{StaticResource Headline}"/>
                 <Image Source="dotnet_bot.png" 
                        BackgroundColor="#f1f1f1"
                        HeightRequest="40" WidthRequest="40"/>
 
-                <Label Text="Image with AspectFill 40x100"/>
+                <Label Text="Image with AspectFill 40x100"
+                Style="{StaticResource Headline}"/>
                 <Image Source="dotnet_bot.png" 
                        BackgroundColor="#f1f1f1"
                        HeightRequest="40" 
@@ -31,7 +34,8 @@
                        Aspect="AspectFill"
                        />
 
-                <Label Text="Image with AspectFit 40x100"/>
+                <Label Text="Image with AspectFit 40x100"
+                Style="{StaticResource Headline}"/>
                 <Image Source="dotnet_bot.png" 
                        HeightRequest="40" WidthRequest="100"
                        BackgroundColor="#f1f1f1"
@@ -44,18 +48,21 @@
                        Aspect="Center"
                        />-->
 
-                <Label Text="Image with Fill 40x100"/>
+                <Label Text="Image with Fill 40x100"
+                Style="{StaticResource Headline}"/>
                 <Image Source="dotnet_bot.png" 
                        HeightRequest="40" WidthRequest="100"
                        Aspect="Fill"
                        />
 
-                <Label Text="Online image"/>
+                <Label Text="Online image"
+                Style="{StaticResource Headline}"/>
                 <Image Source="https://aka.ms/campus.jpg" 
                        WidthRequest="200"
                        HeightRequest="200"/>
 
-                <Label Text="Online image clipped"/>
+                <Label Text="Online image clipped"
+                Style="{StaticResource Headline}"/>
                 <Image Source="https://aka.ms/campus.jpg" 
                        Aspect="AspectFill"
                        WidthRequest="100"
@@ -67,7 +74,14 @@
                     </Image.Clip>
                 </Image>
 
-                <Label Text="Image without sizing info"/>
+                <Label Text="Animated GIF"
+                Style="{StaticResource Headline}"/>
+                <Image Source="animated_heart.gif"
+                IsAnimationPlaying="True" 
+                HorizontalOptions="Start" />
+
+                <Label Text="Image without sizing info"
+                Style="{StaticResource Headline}"/>
                 <Image Source="dotnet_bot.png" HorizontalOptions="Start" />
             </VerticalStackLayout>
         </ScrollView>
