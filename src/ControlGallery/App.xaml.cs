@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Animations;
+using CarouselGallery.Views;
 using CollectionViewDemos.Views;
 using CommunityToolkit.Mvvm.Messaging;
 using ControlGallery.Common.Messages;
@@ -210,7 +211,9 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(TapGesturePage), typeof(TapGesturePage));
         Routing.RegisterRoute(nameof(PointerGesturePage), typeof(PointerGesturePage));
         
+        Routing.RegisterRoute(nameof(CarouselViewPage), typeof(CarouselViewPage));
         Routing.RegisterRoute(nameof(BasicCarouselPage), typeof(BasicCarouselPage));
+        Routing.RegisterRoute(nameof(InstagramPage), typeof(InstagramPage));
 
         Routing.RegisterRoute(nameof(XceedControlsPage), typeof(XceedControlsPage));
         Routing.RegisterRoute(nameof(HybridWebViewPage), typeof(HybridWebViewPage));
@@ -233,6 +236,7 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(RotatePage), typeof(RotatePage));
         Routing.RegisterRoute(nameof(ScalePage), typeof(ScalePage));
         Routing.RegisterRoute(nameof(TranslatePage), typeof(TranslatePage));
+
 
     }
 }

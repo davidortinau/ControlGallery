@@ -23,10 +23,10 @@ public class BasicCarouselPage : ContentPage
     {
         this.Content = new Grid()
         {
-            RowSpacing = 15,
+            RowSpacing = 16,
             RowDefinitions = GridRowsColumns.Rows.Define(
-                (Rows.Indicators, 75  ),
                 (Rows.Carousel    , 200 ),                
+                (Rows.Indicators, 75  ),
                 (Rows.Filler, GridLength.Star)
             ),
             Children =
@@ -37,14 +37,14 @@ public class BasicCarouselPage : ContentPage
                         SelectedIndicatorColor = Colors.Purple,
                         IndicatorSize = 10
                     }
-                    .Background(Colors.Blue)
                     .Row(Rows.Indicators)
                     .Assign(out indicators),
                 new Border
                     {
-                        Stroke = Colors.Black,
-                        StrokeThickness = 1.0,
-                        Padding = 15,
+                        Stroke = Colors.Transparent,
+                        StrokeThickness = 0,
+                        Padding = 16,
+                        Margin = 16,
                         Content = 
                             new Microsoft.Maui.Controls.CarouselView()
                                 {
@@ -59,7 +59,7 @@ public class BasicCarouselPage : ContentPage
                                     )
                                 )
                                 .Size(240)
-                                .Background(Colors.Green)
+                                .Background(Colors.Transparent)
                                 
                             
                         

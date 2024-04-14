@@ -7,7 +7,6 @@
              xmlns:c="clr-namespace:CollectionViewDemos.Views"
              xmlns:cl="clr-namespace:CustomLayouts"
              xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
-             xmlns:car="clr-namespace:ControlGallery.Pages.Controls.CarouselView"
              xmlns:effects="clr-namespace:ControlGallery.Common.Effects"
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
@@ -94,7 +93,7 @@
                             Destination="{x:Type p:CheckboxPage}"/>
                 <m:NavItem Title="CarouselView"
                             Icon="view_listview.png"
-                            Destination="{x:Type car:BasicCarouselPage}"/>
+                            Destination="{x:Type p:CarouselViewPage}"/>
                 <m:NavItem Title="CollectionView"
                             Icon="view_listview.png"
                             Destination="{x:Type c:CollectionViewPage}"/>

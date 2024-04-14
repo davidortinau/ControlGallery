@@ -1,7 +1,5 @@
-﻿using Microsoft.Maui;
-using Microsoft.Maui.Graphics;
-using Microsoft.Maui.Layouts;
-using System;
+﻿using Microsoft.Maui.Layouts;
+using System.Diagnostics;
 using StackLayoutManager = Microsoft.Maui.Layouts.StackLayoutManager;
 
 namespace CustomLayouts
@@ -14,6 +12,7 @@ namespace CustomLayouts
         {
             _layout = horizontalWrapLayout;
         }
+
        
         public override Size Measure(double widthConstraint, double heightConstraint)
         {
@@ -37,25 +36,43 @@ namespace CustomLayouts
 
                 var measure = child.Measure(double.PositiveInfinity, heightConstraint);
 
+                if(n == 0){ // first item, go ahead and set a row height to start
+                    currentRowHeight = Math.Max(currentRowHeight, measure.Height);
+                    totalHeight += currentRowHeight;
+                    Debug.WriteLine($"item{n} totalHeight: {totalHeight}");
+                    // totalHeight += _layout.Spacing;
+                }
+
                 // Will adding this IView put us past the edge?
                 if (currentRowWidth + measure.Width > widthConstraint)
                 {
+                    // new row
+                    currentRowHeight = Math.Max(currentRowHeight, measure.Height);
+                    
                     // Keep track of the width so far
                     totalWidth = Math.Max(totalWidth, currentRowWidth);
+                    
                     totalHeight += currentRowHeight;
-
-                    // Account for spacing
                     totalHeight += _layout.Spacing;
-
-                    // Start over at 0 
-                    currentRowWidth = 0;
-                    currentRowHeight = measure.Height;
+                    // Debug.WriteLine($"item{n} totalHeight: {totalHeight}");
+                    // if (n < _layout.Count - 1) 
+                    // {
+                    //     totalHeight += _layout.Spacing;
+                    //     // Debug.WriteLine($"item{n} totalHeight + spacing: {totalHeight}");
+                    // }
+                    
+                    currentRowWidth = measure.Width;
+                    if (n < _layout.Count - 1) 
+                    {
+                        currentRowWidth += _layout.Spacing;
+                    }
+                    // currentRowHeight = measure.Height;
                 }
                 else
                 {
-                    currentRowWidth += measure.Width;
-                    currentRowHeight = Math.Max(currentRowHeight, measure.Height);
-
+                    // add to row
+                    currentRowWidth += measure.Width;                    
+                    
                     if (n < _layout.Count - 1) 
                     {
                         currentRowWidth += _layout.Spacing;
@@ -64,8 +81,8 @@ namespace CustomLayouts
             }
 
             // Account for the last row
-            totalWidth = Math.Max(totalWidth, currentRowWidth);
-            totalHeight += currentRowHeight;
+            // totalWidth = Math.Max(totalWidth, currentRowWidth);
+            // totalHeight += currentRowHeight;
 
             // Account for padding
             totalWidth += padding.HorizontalThickness;

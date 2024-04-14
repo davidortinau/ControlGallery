@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:ControlGallery.Models"
+             xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
+             xmlns:a="clr-namespace:ControlGallery.Pages.Controls.CarouselView"
+             xmlns:cl="clr-namespace:CustomLayouts"
+             xmlns:f="clr-namespace:Flexibility.Shared"
+             xmlns:Behaviors="clr-namespace:ControlGallery.Common.Behaviors"
+             x:Class="ControlGallery.Pages.CarouselViewPage"
+             Title="Layouts">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <VerticalStackLayout Margin="15" Spacing="8">
+                <Label Text="Carousel Samples" Style="{StaticResource Headline}" VerticalOptions="Center"/>
+                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
+                    <BindableLayout.ItemsSource>
+                        <x:Array Type="{x:Type m:NavItem}">
+                            <m:NavItem Title="Basic Carousel"
+                                   Destination="{x:Type a:BasicCarouselPage}"/>
+                        <m:NavItem Title="Instagram"
+                                   Destination="{x:Type a:InstagramPage}"/>
+                        </x:Array>
+                    </BindableLayout.ItemsSource>
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Text="{Binding Title}"
+                                Command="{Binding NavigateTo}"
+                                >
+                                <Button.Behaviors>
+                                    <Behaviors:CursorBehavior />
+                                </Button.Behaviors>
+
+                            </Button>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </cl:HorizontalWrapLayout>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
