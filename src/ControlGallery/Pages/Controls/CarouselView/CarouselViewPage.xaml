@@ -18,9 +18,17 @@
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <m:NavItem Title="Basic Carousel"
-                                   Destination="{x:Type a:BasicCarouselPage}"/>
-                        <m:NavItem Title="Instagram"
-                                   Destination="{x:Type a:InstagramPage}"/>
+                                Destination="{x:Type a:BasicCarouselPage}"/>
+                            <m:NavItem Title="Instagram"
+                                Destination="{x:Type a:InstagramPage}"/>
+                            <m:NavItem Title="Lufthansa"
+                                Destination="{x:Type a:LufthansaPage}"/>
+                            <m:NavItem Title="Marriott Bonvoy"
+                                Destination="{x:Type a:MarriottPage}"/>
+                            <m:NavItem Title="Mint"
+                                Destination="{x:Type a:MintPage}"/>
+                            <m:NavItem Title="REI"
+                                Destination="{x:Type a:REIPage}"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>

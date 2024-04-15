@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Wheat"
+             Shell.BackgroundColor="Black"
+             Title="REI"
+             x:Class="ControlGallery.Pages.Controls.CarouselView.REIPage">
+    <ContentPage.Content>
+        <StackLayout Margin="15" Spacing="10">
+            <Frame BackgroundColor="White"
+                   Padding="10"
+                   BorderColor="Black"
+                   CornerRadius="0">
+                <CarouselView x:Name="reiCV"
+                              IndicatorView="indicatorView"
+                              HeightRequest="170">
+                    <CarouselView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>h01.png</x:String>
+                            <x:String>h02.png</x:String>
+                            <x:String>h03.png</x:String>
+                            <x:String>h04.png</x:String>
+                        </x:Array>
+                    </CarouselView.ItemsSource>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding .}"/>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+            </Frame>
+            <IndicatorView 
+                IndicatorColor="LightGray"
+                SelectedIndicatorColor="Black"
+                IndicatorSize="10"
+                HorizontalOptions="Center"
+                x:Name="indicatorView"/>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

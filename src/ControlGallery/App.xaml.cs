@@ -214,6 +214,10 @@ public partial class App : Microsoft.Maui.Controls.Application
         Routing.RegisterRoute(nameof(CarouselViewPage), typeof(CarouselViewPage));
         Routing.RegisterRoute(nameof(BasicCarouselPage), typeof(BasicCarouselPage));
         Routing.RegisterRoute(nameof(InstagramPage), typeof(InstagramPage));
+        Routing.RegisterRoute(nameof(LufthansaPage), typeof(LufthansaPage));
+        Routing.RegisterRoute(nameof(MarriottPage), typeof(MarriottPage));
+        Routing.RegisterRoute(nameof(MintPage), typeof(MintPage));
+        Routing.RegisterRoute(nameof(REIPage), typeof(REIPage));
 
         Routing.RegisterRoute(nameof(XceedControlsPage), typeof(XceedControlsPage));
         Routing.RegisterRoute(nameof(HybridWebViewPage), typeof(HybridWebViewPage));

@@ -4,11 +4,15 @@
              xmlns:local="clr-namespace:ControlGallery"
              x:Class="CarouselGallery.Views.Components.MintView01">
     <Grid Margin="0,15" RowDefinitions="350,*">
-        <Frame
-                                Visual="Default"
-                                HasShadow="True"
-                                CornerRadius="12"
-                                BackgroundColor="#66D0EB">
+        <Border
+            StrokeShape="RoundRectangle 12"
+            BackgroundColor="#66D0EB">
+            <Border.Shadow>
+                 <Shadow Brush="Black"
+                    Offset="20,20"
+                    Radius="40"
+                    Opacity="0.8" />
+            </Border.Shadow>
             <StackLayout Spacing="15">
                 <Image Source="{FontImage
                                     FontFamily=FontAwesome,
@@ -32,7 +36,7 @@
                        HorizontalTextAlignment="Center"/>
             </StackLayout>
 
-        </Frame>
+        </Border>
 
         <StackLayout Margin="0,30"
                                 Grid.Row="1"
