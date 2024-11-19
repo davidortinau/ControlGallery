@@ -22,8 +22,34 @@ public partial class AppShell : Shell
 
         RegisterRoutes();
 
-        BindingContext = new AppShellViewModel();   
+        BindingContext = new AppShellViewModel();  
+
+         this.SizeChanged += UpdateFlyoutBehaviorIfNeeded;
     }
+
+    private const double minPageWidth = 800;
+    private void UpdateFlyoutBehaviorIfNeeded(object sender, EventArgs e)
+    {
+        var window = (VisualElement)sender;
+        double currentWidth = window.Width + Shell.Current.FlyoutWidth; // don't get this, insteaed get the window size
+        
+        Debug.WriteLine($"currentWidth: {currentWidth}, " +
+        $"PageWidth: {window.Width}, " +
+            $"Shell.Current.FlyoutWidth: {Shell.Current.FlyoutWidth}"   );
+
+        if (currentWidth < minPageWidth && Shell.Current.FlyoutWidth > 75)
+        {
+            // Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
+            Shell.Current.FlyoutWidth = 75;
+            WeakReferenceMessenger.Default.Send(new ToggleFlyoutHeaderMsg(false));
+        }
+        else if (currentWidth > minPageWidth && Shell.Current.FlyoutWidth < 320)
+        {
+            // Shell.Current.FlyoutBehavior = FlyoutBehavior.Locked;
+            Shell.Current.FlyoutWidth = 320;
+            WeakReferenceMessenger.Default.Send(new ToggleFlyoutHeaderMsg(true));
+        }
+    }   
 
     private void RegisterRoutes()
     {
@@ -250,10 +276,14 @@ public partial class AppShellViewModel : ObservableObject
 
     
 
+    
+
     private void Current_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
     {
         appearance = App.Current.UserAppTheme.ToString();
         Console.WriteLine($"{App.Current.PlatformAppTheme} | {App.Current.UserAppTheme}");
         OnPropertyChanged(nameof(Appearance));
     }
+
+    
 }
