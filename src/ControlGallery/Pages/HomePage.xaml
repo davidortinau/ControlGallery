@@ -9,7 +9,6 @@
              xmlns:feed="clr-namespace:CodeHollow.FeedReader;assembly=CodeHollow.FeedReader"
              x:Class="ControlGallery.Pages.HomePage"
              x:DataType="p:HomeViewModel"
-             
              Title="Gallery">
 
     <ContentPage.BindingContext>
@@ -29,7 +28,7 @@
                                 Stroke="Transparent"
                                 StrokeThickness="1"
                                 StrokeShape="{RoundRectangle CornerRadius=12}"
-                                Background="{StaticResource Gray200Brush}"
+                                Background="{StaticResource Gray200}"
                                 ToolTipProperties.Text="{Binding Link}"
                                 >
                                 <Grid RowDefinitions="8*,13*,Auto" HeightRequest="300" WidthRequest="300"

@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+	  <TargetFrameworks>net9.0-android;net9.0-ios;net9.0-maccatalyst</TargetFrameworks>
     
     <OutputType>Exe</OutputType>
     <RootNamespace>ControlGallery</RootNamespace>
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
     <ImplicitUsings>enable</ImplicitUsings>
-    <MauiVersion>8.0.20</MauiVersion>
+    <MauiVersion>9.0.10</MauiVersion>
     
 
 	  <ApplicationTitle>Control Gallery</ApplicationTitle>
@@ -15,8 +15,8 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
 	  
-	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
@@ -24,35 +24,7 @@
 	
   </PropertyGroup>
 
-  <!--<PropertyGroup>
-    <EnableCodeSigning>true</EnableCodeSigning>
-    <CodesignRequireProvisioningProfile>true</CodesignRequireProvisioningProfile>
-    <DisableCodesignVerification>true</DisableCodesignVerification>
-</PropertyGroup>-->
-	
-  <!-- <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
-    <EnableCodeSigning>true</EnableCodeSigning>
-    <CodesignKey>Created via API</CodesignKey>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
-    <CreatePackage>true</CreatePackage>
-  </PropertyGroup> -->
-	
-<!--  <PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">-->
-<!--    <ProvisioningType>manual</ProvisioningType>-->
-<!--    <CodesignProvision>VS: WildCard Development</CodesignProvision>-->
-<!--  </PropertyGroup>-->
-
-  <!-- <PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
-    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-  </PropertyGroup> -->
-  
-  <!-- <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <CodesignKey>Apple Development: Created via API (Z6JDU47RND)</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
-    <PlatformTarget>iPhone</PlatformTarget>
-    <DeviceSpecificBuild>false</DeviceSpecificBuild>
-  </PropertyGroup> -->
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net9.0-ios|AnyCPU'">
     <CreatePackage>false</CreatePackage>
     <EnableCodeSigning>true</EnableCodeSigning>
     <CodesignRequireProvisioningProfile>true</CodesignRequireProvisioningProfile>
@@ -72,28 +44,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="EJL.MauiHybridWebView" Version="1.0.0-preview4" />
-    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.7" />
-    <PackageReference Include="CodeHollow.FeedReader" Version="1.2.4" />
-    <PackageReference Include="AsyncAwaitBestPractices" Version="6.0.6" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.10" />
+    <PackageReference Include="CodeHollow.FeedReader" Version="1.2.6" />
+    <PackageReference Include="AsyncAwaitBestPractices" Version="9.0.0" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
     <PackageReference Include="Markdown.ColorCode" Version="1.2.0-preview-2" />
     <PackageReference Include="ColorCode.Core" Version="2.0.14" />
-    <PackageReference Include="CommunityToolkit.Maui.Markup" Version="3.3.0" />
+    <PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.2.0" />
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
     <PackageReference Include="Redth.Maui.VirtualListView" Version="0.2.4" />
-    <PackageReference Include="Xceed.Product.Maui.Toolkit.Full" Version="1.6.23567.1403" />
     <PackageReference Include="epj.RouteGenerator" Version="1.0.0-pre1" />
-    <PackageReference Include="DotNetMeteor.HotReload.Plugin" Version="3.*" />
   </ItemGroup>
 
   <ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.1.23419.4" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
   <ItemGroup>

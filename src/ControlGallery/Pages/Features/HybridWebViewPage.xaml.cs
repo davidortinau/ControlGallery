@@ -13,7 +13,7 @@ public partial class HybridWebViewPage : ContentPage
         _todoDataStore = new TodoDataStore();
         _todoDataStore.TaskDataChanged += OnTodoDataChanged;
 
-        myHybridWebView.JSInvokeTarget = new TodoJSInvokeTarget(this, _todoDataStore);
+        myHybridWebView.SetInvokeJavaScriptTarget(new TodoJSInvokeTarget(this, _todoDataStore));
 
         BindingContext = this;
     }
@@ -27,8 +27,8 @@ public partial class HybridWebViewPage : ContentPage
 
     private async void SendUpdatedTasksToJS(IList<TodoTask> tasks)
     {
-        _ = await MainThread.InvokeOnMainThreadAsync(async () =>
-            await myHybridWebView.InvokeJsMethodAsync("globalSetData", tasks));
+        // _ = await MainThread.InvokeOnMainThreadAsync(async () =>
+        //     await myHybridWebView.InvokeJavaScriptAsync("globalSetData", tasks));
     }
 
     private sealed class TodoJSInvokeTarget

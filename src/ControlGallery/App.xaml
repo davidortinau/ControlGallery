@@ -1,13 +1,5 @@
 ﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:app="clr-namespace:ControlGallery"
-             xmlns:views="clr-namespace:ControlGallery.Common.Views"
-             xmlns:pages="clr-namespace:ControlGallery.Pages"
-             xmlns:xceed="clr-namespace:ControlGallery.Pages.Xceed"
-             xmlns:xctk="clr-namespace:Xceed.Maui.Toolkit;assembly=Xceed.Maui.Toolkit"
-             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
-             windows:Application.ImageDirectory="Assets"
-             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
              x:Class="ControlGallery.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -19,78 +11,7 @@
                 <ResourceDictionary Source="Resources/Styles/Converters.xaml" />
                 <ResourceDictionary Source="Resources/Styles/DefaultStyles.xaml" />
                 <ResourceDictionary Source="Resources/Styles/AppStyles.xaml" />
-                <xctk:FluentDesign AccentColor="Pink" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-
-    <Application.MainPage>
-        <Shell FlyoutBehavior="{OnIdiom Desktop=Locked, Tablet=Locked, Default=Flyout}" 
-            FlyoutHeaderBehavior="Scroll"
-            FlyoutHeaderTemplate="{DataTemplate views:FlyoutHeader}"
-            ItemTemplate="{DataTemplate views:FlyoutItem}"
-               x:Name="AppShell">
-
-            <Shell.BindingContext>
-                <app:AppShellViewModel/>
-            </Shell.BindingContext>
-
-
-            <FlyoutItem Title="Home"
-                        FlyoutIcon="{FontImage FontFamily=FontAwesome,
-                                                Glyph={x:Static app:IconFont.Home},
-                                                Size=16,
-                                                Color={StaticResource Gray500}}">
-                <ShellContent Route="home" 
-                      ContentTemplate="{DataTemplate pages:HomePage}" />
-            </FlyoutItem>
-
-            <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
-                <ShellContent Route="controls" 
-                      ContentTemplate="{DataTemplate pages:ControlsPage}" />
-            </FlyoutItem>
-
-            <FlyoutItem Title="Layouts" FlyoutIcon="layout_grid.png">
-                <ShellContent Route="alert" 
-                      ContentTemplate="{DataTemplate pages:LayoutsPage}" />
-            </FlyoutItem>
-
-            <FlyoutItem Title="Features" FlyoutIcon="view_slider.png">
-                <ShellContent Route="features" 
-                      ContentTemplate="{DataTemplate pages:FeaturesPage}" />
-            </FlyoutItem>
-
-            <FlyoutItem Title="Tips &amp; Tricks" FlyoutIcon="view_image.png">
-                <ShellContent Route="tips" 
-                      ContentTemplate="{DataTemplate pages:TipsPage}" />
-            </FlyoutItem>
-
-            <FlyoutItem Title="Xceed" FlyoutIcon="view_image.png">
-                <ShellContent Route="xceed" 
-                      ContentTemplate="{DataTemplate xceed:XceedControlsPage}" />
-            </FlyoutItem>
-
-            <Shell.FlyoutFooterTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <VerticalStackLayout Margin="15" Spacing="8">
-                            
-                            <Label Text="Appearance"/>
-                            <Picker x:Name="AppearancePicker"
-                            BackgroundColor="Transparent"
-                            SelectedItem="{Binding Appearance}">
-                                <Picker.ItemsSource>
-                                    <x:Array Type="{x:Type x:String}">
-                                        <x:String>Unspecified</x:String>
-                                        <x:String>Dark</x:String>
-                                        <x:String>Light</x:String>
-                                    </x:Array>
-                                </Picker.ItemsSource>
-                            </Picker>
-                        </VerticalStackLayout>
-                    </Grid>
-                </DataTemplate>
-            </Shell.FlyoutFooterTemplate>
-        </Shell>
-    </Application.MainPage>
 </Application>

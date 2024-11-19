@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:hwv="clr-namespace:HybridWebView;assembly=HybridWebView"
              x:Class="ControlGallery.Pages.HybridWebViewPage"
-             Title="HybridWebView"
-             >    
+             Title="HybridWebView">    
 
     <Grid ColumnDefinitions="*" RowDefinitions="Auto,*">
         <Label
@@ -12,12 +10,12 @@
                 FontSize="32"
                 HorizontalOptions="Center" />
 
-        <hwv:HybridWebView Grid.Row="1" 
+        <HybridWebView Grid.Row="1" 
             MinimumHeightRequest="400"
             MinimumWidthRequest="600"
             x:Name="myHybridWebView" 
-            HybridAssetRoot="ReactTodoApp" 
-            MainFile="index.html"
+            HybridRoot="ReactTodoApp" 
+            DefaultFile="index.html"
              />
     </Grid>
 

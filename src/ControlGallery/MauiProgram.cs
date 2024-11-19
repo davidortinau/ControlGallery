@@ -6,10 +6,8 @@ using Windows.Graphics;
 #endif
 
 using ControlGallery.Common.Effects;
-using DotNet.Meteor.HotReload.Plugin;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
-
 
 #if IOS || MACCATALYST
 using UIKit;
@@ -19,8 +17,6 @@ using CoreGraphics;
 using Foundation;
 using CommunityToolkit.Maui.Markup;
 #endif
-
-using Xceed.Maui.Toolkit;
 
 namespace ControlGallery;
 
@@ -35,7 +31,6 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMarkup()
             .UseMauiMaps()
-            .UseXceedMauiToolkit(FluentDesignAccentColor.Orchid)
             .UseVirtualListView()
             .ConfigureFonts(fonts =>
 			{
@@ -53,11 +48,11 @@ public static class MauiProgram
 			})
 
 #if DEBUG
-			.EnableHotReload()
+			// .EnableHotReload()
 #endif
             ;
 
-            builder.Services.AddHybridWebView();
+            
 
         // Microsoft.Maui.Controls.Internals.Profile.Enable();
         // Microsoft.Maui.Controls.Internals.Profile.Start();
