@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
+             x:Class="ControlGallery.AppWindow">
+    <Window.TitleBar>
+        <TitleBar Title="Control Gallery"
+                  BackgroundColor="#512BD4"
+                  ForegroundColor="White"                  
+                  HeightRequest="50">
+            <TitleBar.Content>
+                <SearchBar Placeholder="Search"
+                           PlaceholderColor="White"
+                           Background="#512BD4"
+                           MaximumWidthRequest="300"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Center" />
+            </TitleBar.Content>            
+            <TitleBar.TrailingContent>
+                <HorizontalStackLayout Spacing="8" Margin="4">
+                    <toolkit:AvatarView Text="DO" 
+                        FontSize="12"
+                        TextColor="White"
+                        BackgroundColor="#999999" 
+                        HeightRequest="36" 
+                        WidthRequest="36"/>
+
+                    <Button Text="Hello"/>
+
+                    <sf:SfSegmentedControl x:Name="ThemeSegmentedControl" 
+                        SelectionChanged="SfSegmentedControl_SelectionChanged"
+                        SegmentWidth="36" SegmentHeight="36">
+                        <sf:SfSegmentedControl.ItemsSource>
+                            <x:Array Type="{x:Type sf:SfSegmentItem}">
+                                <sf:SfSegmentItem ImageSource="{StaticResource IconLight}"/>
+                                <sf:SfSegmentItem ImageSource="{StaticResource IconDark}"/>
+                            </x:Array>
+                        </sf:SfSegmentedControl.ItemsSource>
+                    </sf:SfSegmentedControl>
+                </HorizontalStackLayout>
+            </TitleBar.TrailingContent>
+        </TitleBar>
+    </Window.TitleBar>
+</Window>

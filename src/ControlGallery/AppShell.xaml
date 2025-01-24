@@ -15,11 +15,12 @@
     </Shell.BindingContext>
 
     <FlyoutItem Title="Home"
-                FlyoutIcon="{FontImage FontFamily=FontAwesome,
+                >
+        <ShellContent Route="home" 
+            FlyoutIcon="{FontImage FontFamily=FontAwesome,
                                         Glyph={x:Static app:IconFont.Home},
                                         Size=16,
-                                        Color={StaticResource Gray500}}">
-        <ShellContent Route="home" 
+                                        Color={StaticResource Gray500}}"
                 ContentTemplate="{DataTemplate pages:HomePage}" />
     </FlyoutItem>
 
