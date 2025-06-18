@@ -67,6 +67,14 @@ public static class MauiProgram
 #endif
             ;
 
+#if IOS || MACCATALYST
+        builder.ConfigureMauiHandlers(handlers =>
+        {
+            handlers.AddHandler<Microsoft.Maui.Controls.CollectionView, Microsoft.Maui.Controls.Handlers.Items2.CollectionViewHandler2>();
+            handlers.AddHandler<Microsoft.Maui.Controls.CarouselView, Microsoft.Maui.Controls.Handlers.Items2.CarouselViewHandler2>();
+        });
+#endif
+
             
 
         // Microsoft.Maui.Controls.Internals.Profile.Enable();

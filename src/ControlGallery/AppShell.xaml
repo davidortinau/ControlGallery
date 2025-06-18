@@ -1,47 +1,41 @@
-﻿<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-        xmlns:app="clr-namespace:ControlGallery"
-        xmlns:views="clr-namespace:ControlGallery.Common.Views"
-        xmlns:pages="clr-namespace:ControlGallery.Pages"
-        xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
-        x:Class="ControlGallery.AppShell"
+﻿<Shell x:Class="ControlGallery.AppShell"
         FlyoutBehavior="{OnIdiom Desktop=Locked, Tablet=Locked, Default=Flyout}" 
     FlyoutHeaderBehavior="Scroll"
-    FlyoutHeaderTemplate="{DataTemplate views:FlyoutHeader}"
-    ItemTemplate="{DataTemplate views:FlyoutItem}">
+    FlyoutHeaderTemplate="{DataTemplate FlyoutHeader}"
+    ItemTemplate="{DataTemplate CustomFlyoutItem}">
     
     <Shell.BindingContext>
-        <app:AppShellViewModel/>
+        <AppShellViewModel/>
     </Shell.BindingContext>
 
     <FlyoutItem Title="Home"
                 >
         <ShellContent Route="home" 
-            FlyoutIcon="{FontImage FontFamily=FontAwesome,
-                                        Glyph={x:Static app:IconFont.Home},
+            FlyoutIcon="{FontImageSource FontFamily=FontAwesome,
+                                        Glyph={x:Static IconFont.Home},
                                         Size=16,
                                         Color={StaticResource Gray500}}"
-                ContentTemplate="{DataTemplate pages:HomePage}" />
+                ContentTemplate="{DataTemplate HomePage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Controls" FlyoutIcon="view_entry.png">
         <ShellContent Route="controls" 
-                ContentTemplate="{DataTemplate pages:ControlsPage}" />
+                ContentTemplate="{DataTemplate ControlsPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Layouts" FlyoutIcon="layout_grid.png">
         <ShellContent Route="alert" 
-                ContentTemplate="{DataTemplate pages:LayoutsPage}" />
+                ContentTemplate="{DataTemplate LayoutsPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Features" FlyoutIcon="view_slider.png">
         <ShellContent Route="features" 
-                ContentTemplate="{DataTemplate pages:FeaturesPage}" />
+                ContentTemplate="{DataTemplate FeaturesPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Tips &amp; Tricks" FlyoutIcon="view_image.png">
         <ShellContent Route="tips" 
-                ContentTemplate="{DataTemplate pages:TipsPage}" />
+                ContentTemplate="{DataTemplate TipsPage}" />
     </FlyoutItem>
 
     <Shell.FlyoutFooterTemplate>

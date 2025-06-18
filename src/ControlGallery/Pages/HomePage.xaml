@@ -7,6 +7,8 @@
              xmlns:l="clr-namespace:CustomLayouts"
              xmlns:p="clr-namespace:ControlGallery.Pages"
              xmlns:feed="clr-namespace:CodeHollow.FeedReader;assembly=CodeHollow.FeedReader"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="ControlGallery.Pages.HomePage"
              x:DataType="p:HomeViewModel"
              Title="Gallery">
@@ -74,6 +76,7 @@
 
             </ScrollView>
 
+
             <Label Text="Quick Links" Style="{StaticResource Title1}" Grid.Row="2"/>
             <ScrollView Orientation="Horizontal" Grid.Row="3">
                 <HorizontalStackLayout>
@@ -90,7 +93,7 @@
                             <Button 
                                 Style="{StaticResource PrimaryButtonOutlineIcon}"
                                 x:DataType="m:QuickLink"
-                                ImageSource="{FontImage Color={StaticResource Primary}, FontFamily=FontAwesome,
+                                ImageSource="{FontImageSource Color={StaticResource Primary}, FontFamily=FontAwesome,
                                     Glyph={x:Static app:IconFont.ExternalLinkAlt},Size=12}" 
                                     Text="{Binding Title}"
                                     Command="{Binding NavigateTo}"/>
@@ -156,7 +159,7 @@
                     </Label>
                     <Button Text="Release Notes" Style="{StaticResource BorderlessButton}"
                     Padding="0" Margin="0"
-                    ImageSource="{FontImage Glyph={x:Static app:IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
+                    ImageSource="{FontImageSource Glyph={x:Static app:IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
                     Command="{Binding NavigateToCommand}"
                                             CommandParameter="{Binding LatestRelease.html_url}"/>
 

@@ -3,12 +3,12 @@ using ControlGallery.Common.Messages;
 
 namespace ControlGallery.Common.Views;
 
-public partial class FlyoutItem : Grid
+public partial class CustomFlyoutItem : Grid
 {
     private bool isLabelVisible = true;
     public bool IsLabelVisible { get => isLabelVisible; set { isLabelVisible = value; OnPropertyChanged(); } }
 
-    public FlyoutItem()
+    public CustomFlyoutItem()
     {
         InitializeComponent();
 
