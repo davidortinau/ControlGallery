@@ -110,7 +110,7 @@
                                      />
                     
                     </HorizontalStackLayout>
-                    <Button ImageSource="{FontImage FontFamily=FontAwesome, Glyph={x:Static common:IconFont.Copy}, Color={StaticResource Gray500},Size=18}"
+                    <Button ImageSource="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static common:IconFont.Copy}, Color={StaticResource Gray500},Size=18}"
                                 HorizontalOptions="End"
                                 Style="{StaticResource BorderlessButton}"
                                 Margin="0"

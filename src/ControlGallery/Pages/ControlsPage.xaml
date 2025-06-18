@@ -11,8 +11,8 @@
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static a:IconFont.Boxes}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked"/>
-        <ToolbarItem IconImageSource="{FontImage Glyph={x:Static a:IconFont.List}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static a:IconFont.Boxes}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static a:IconFont.List}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked_1"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>

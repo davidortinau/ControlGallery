@@ -20,7 +20,8 @@ public partial class App : Microsoft.Maui.Controls.Application
 
     protected override Window CreateWindow(IActivationState activationState)
     {
-        Window window = new Window(new AppShell());
+        AppWindow window = new AppWindow();
+        window.Page = new AppShell();
         return window;
     }
 
