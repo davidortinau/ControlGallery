@@ -137,7 +137,7 @@
                                   HorizontalOptions="Center"
                                   VerticalOptions="Center">
                                     <Image
-                                        Source="{FontImage FontFamily=FontAwesome, 
+                                        Source="{FontImageSource FontFamily=FontAwesome, 
                                             Glyph={x:Static app:IconFont.Image}, 
                                             Color=#323130}"
                                         Scale="0.75" />
