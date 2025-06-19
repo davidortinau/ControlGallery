@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"xmlns:v="clr-namespace:ControlGallery.Pages;assembly=ControlGallery"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ControlGallery.Pages.FontImagePage"
              Title="FontImagePage">
     <ContentPage.Resources>
@@ -79,7 +79,6 @@
                 <v:IconBox Icon="{x:Static local:IconFont.AudioDescription}" />
                 <v:IconBox Icon="{x:Static local:IconFont.Award}" />
 
-                
             </FlexLayout>
         </VerticalStackLayout>
     </ScrollView>

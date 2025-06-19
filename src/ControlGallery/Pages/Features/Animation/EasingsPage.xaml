@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Animations.Controls"xmlns:anim="clr-namespace:Animations"
+             
              Title="Easings"
              x:Class="Animations.EasingsPage">
 
@@ -183,9 +183,7 @@
                     />
                 </EasingCard>
 
-
                 <Label Text="Custom Easings" FlexLayout.Basis="100%" Margin="0,30,0,15" />
-
 
                 <EasingCard CardTitle="BounceInOut"
                                      EasingStyle="{x:Static CustomEasing.BounceInOut}">

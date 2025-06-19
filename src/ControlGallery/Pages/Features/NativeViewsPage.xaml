@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"xmlns:ios="clr-namespace:UIKit;assembly=Microsoft.iOS;targetPlatform=iOS"x:Class="ControlGallery.Pages.NativeViewsPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:UIKit;assembly=Microsoft.iOS;targetPlatform=iOS"
+             x:Class="ControlGallery.Pages.NativeViewsPage"
              Title="Native Views">
     <ContentPage.Content>
         <ScrollView>
