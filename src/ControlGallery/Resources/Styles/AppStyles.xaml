@@ -2,12 +2,11 @@
 <!-- <?xaml-comp compile="true" ?> -->
 <ResourceDictionary
     xmlns:pages="clr-namespace:ControlGallery.Pages.Controls"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns="http://schemas.microsoft.com/dotnet/maui/global"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:f="clr-namespace:Fonts"
-    xmlns:behaviors="clr-namespace:ControlGallery.Common.Behaviors">
+             xmlns:f="clr-namespace:Fonts">
 
-    <pages:ControlPageTemplate x:Key="ControlPageTemplate"/>
+    <ControlPageTemplate x:Key="ControlPageTemplate"/>
 
     <x:Double x:Key="sizeNone">0</x:Double>
     <x:Double x:Key="size20">2</x:Double>
@@ -33,13 +32,13 @@
     <Color x:Key="DarkOnLightBackground">#0D0D0D</Color>
 
     <FontImageSource x:Key="IconLight"
-            Glyph="{x:Static f:FluentUI.weather_sunny_28_regular}"
-            FontFamily="{x:Static f:FluentUI.FontFamily}"
+            Glyph="{x:Static FluentUI.weather_sunny_28_regular}"
+            FontFamily="{x:Static FluentUI.FontFamily}"
             Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
             Size="{StaticResource size240}" />
     <FontImageSource x:Key="IconDark"
-            Glyph="{x:Static f:FluentUI.weather_moon_28_regular}"
-            FontFamily="{x:Static f:FluentUI.FontFamily}"
+            Glyph="{x:Static FluentUI.weather_moon_28_regular}"
+            FontFamily="{x:Static FluentUI.FontFamily}"
             Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
             Size="{StaticResource size240}" />
 
@@ -99,7 +98,7 @@
     </Style>
 
     <Style TargetType="RadioButton">
-        <Setter Property="behaviors:CursorBehavior.AttachBehavior" Value="True"/>
+        <Setter Property="CursorBehavior.AttachBehavior" Value="True"/>
 
     </Style>
 
@@ -109,7 +108,7 @@
     <Setter Property="CornerRadius" Value="8"/>
     <Setter Property="Padding" Value="14,10"/>
     <Setter Property="HorizontalOptions" Value="Start"/>
-    <Setter Property="behaviors:CursorBehavior.AttachBehavior" Value="True"/>
+    <Setter Property="CursorBehavior.AttachBehavior" Value="True"/>
     <Setter Property="VisualStateManager.VisualStateGroups">
         <VisualStateGroupList>
             <VisualStateGroup x:Name="CommonStates">
@@ -231,7 +230,7 @@
     </Style>
 
     <Style x:Key="Hyperlink" TargetType="Label">
-        <Setter Property="behaviors:CursorBehavior.AttachBehavior" Value="True"/>
+        <Setter Property="CursorBehavior.AttachBehavior" Value="True"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">

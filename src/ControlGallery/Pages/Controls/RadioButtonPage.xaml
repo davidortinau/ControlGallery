@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ControlGallery.Pages.RadioButtonPage"
-             xmlns:app="clr-namespace:ControlGallery"
-             Title="RadioButton">
+             x:Class="ControlGallery.Pages.RadioButtonPage"Title="RadioButton">
     <ContentPage.Resources>
         <ResourceDictionary>
         <Color
@@ -138,7 +136,7 @@
                                   VerticalOptions="Center">
                                     <Image
                                         Source="{FontImageSource FontFamily=FontAwesome, 
-                                            Glyph={x:Static app:IconFont.Image}, 
+                                            Glyph={x:Static IconFont.Image}, 
                                             Color=#323130}"
                                         Scale="0.75" />
                                     <Label HorizontalOptions="Fill"

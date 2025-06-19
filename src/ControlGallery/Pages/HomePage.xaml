@@ -1,20 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:app="clr-namespace:ControlGallery"
-             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
-             xmlns:m="clr-namespace:ControlGallery.Models"
-             xmlns:l="clr-namespace:CustomLayouts"
-             xmlns:p="clr-namespace:ControlGallery.Pages"
-             xmlns:feed="clr-namespace:CodeHollow.FeedReader;assembly=CodeHollow.FeedReader"
-             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="ControlGallery.Pages.HomePage"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"x:Class="ControlGallery.Pages.HomePage"
              x:DataType="p:HomeViewModel"
              Title="Gallery">
 
     <ContentPage.BindingContext>
-        <p:HomeViewModel/>
+        <HomeViewModel/>
     </ContentPage.BindingContext>
 
     <ScrollView>
@@ -63,7 +54,7 @@
                                     </Label>
                                 </Grid>
                                 <Border.Behaviors>
-                                    <b:CursorBehavior/>
+                                    <CursorBehavior/>
                                 </Border.Behaviors>
                                 <Border.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type p:HomeViewModel}}, Path=NavigateToCommand}"
@@ -82,10 +73,10 @@
                 <HorizontalStackLayout>
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:QuickLink}">
-                            <m:QuickLink Title="GitHub" Hyperlink="https://github.com/dotnet/maui"/>
-                            <m:QuickLink Title="Learn Docs" Hyperlink="https://learn.microsoft.com/dotnet/maui"/>
-                            <m:QuickLink Title="Samples" Hyperlink="https://github.com/dotnet/maui-samples"/>
-                            <m:QuickLink Title="Blog" Hyperlink="https://devblogs.microsoft.com/dotnet"/>
+                            <QuickLink Title="GitHub" Hyperlink="https://github.com/dotnet/maui"/>
+                            <QuickLink Title="Learn Docs" Hyperlink="https://learn.microsoft.com/dotnet/maui"/>
+                            <QuickLink Title="Samples" Hyperlink="https://github.com/dotnet/maui-samples"/>
+                            <QuickLink Title="Blog" Hyperlink="https://devblogs.microsoft.com/dotnet"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
@@ -94,7 +85,7 @@
                                 Style="{StaticResource PrimaryButtonOutlineIcon}"
                                 x:DataType="m:QuickLink"
                                 ImageSource="{FontImageSource Color={StaticResource Primary}, FontFamily=FontAwesome,
-                                    Glyph={x:Static app:IconFont.ExternalLinkAlt},Size=12}" 
+                                    Glyph={x:Static IconFont.ExternalLinkAlt},Size=12}" 
                                     Text="{Binding Title}"
                                     Command="{Binding NavigateTo}"/>
 
@@ -109,7 +100,7 @@
                                 <Grid
                                     Margin="12,0"
                                     ColumnDefinitions="5*,13*" RowDefinitions="34" HeightRequest="34" MinimumWidthRequest="120">
-                                    <Label Text="{x:Static app:IconFont.ExternalLinkAlt}"
+                                    <Label Text="{x:Static IconFont.ExternalLinkAlt}"
                                            FontFamily="FontAwesome"
                                            TextColor="White"
                                            VerticalOptions="Center"
@@ -121,7 +112,7 @@
                                            HorizontalOptions="Fill"/>
                                 </Grid>
                                 <Border.Behaviors>
-                                    <b:CursorBehavior/>
+                                    <CursorBehavior/>
                                 </Border.Behaviors>
                                 <Border.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding NavigateTo}"/>
@@ -159,7 +150,7 @@
                     </Label>
                     <Button Text="Release Notes" Style="{StaticResource BorderlessButton}"
                     Padding="0" Margin="0"
-                    ImageSource="{FontImageSource Glyph={x:Static app:IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
+                    ImageSource="{FontImageSource Glyph={x:Static IconFont.ExternalLinkAlt}, FontFamily=FontAwesome, Size=12, Color={StaticResource Primary}}"
                     Command="{Binding NavigateToCommand}"
                                             CommandParameter="{Binding LatestRelease.html_url}"/>
 
@@ -178,7 +169,7 @@
                 <!--             <FormattedString> -->
                 <!--                 <Span Text="Version: 7.0.52&#10;"/> -->
                 <!--                 <Span Text="Released: December 13, 2022&#10;"/> -->
-                <!--                 <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/> -->
+                <!--                 <Span Text="{x:Static IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/> -->
                 <!--                 <Span Text=" Release Notes" TextDecorations="Underline"/> -->
                 <!--             </FormattedString> -->
                 <!--         </Label.FormattedText> -->
@@ -193,7 +184,7 @@
                 <!--             <FormattedString> -->
                 <!--                 <Span Text="Version: 7.0.52&#10;"/> -->
                 <!--                 <Span Text="Released: December 13, 2022&#10;"/> -->
-                <!--                 <Span Text="{x:Static app:IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/> -->
+                <!--                 <Span Text="{x:Static IconFont.ExternalLinkAlt}" FontFamily="FontAwesome"/> -->
                 <!--                 <Span Text=" Release Notes" TextDecorations="Underline"/> -->
                 <!--             </FormattedString> -->
                 <!--         </Label.FormattedText> -->

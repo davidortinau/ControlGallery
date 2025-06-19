@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- <?xaml-comp compile="true" ?> -->
-<ResourceDictionary
-    xmlns:converters="clr-namespace:ControlGallery.Converters"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ResourceDictionaryxmlns="http://schemas.microsoft.com/dotnet/maui/global"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <converters:BooleanInverseConverter x:Key="booleanInverse" />
+    <BooleanInverseConverter x:Key="booleanInverse" />
 
 </ResourceDictionary>

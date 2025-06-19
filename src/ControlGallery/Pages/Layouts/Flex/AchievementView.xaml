@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-      WidthRequest="90" HeightRequest="110" Padding="0" RowSpacing="4"
+<Grid xmlns="http://schemas.microsoft.com/dotnet/maui/global"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             WidthRequest="90" HeightRequest="110" Padding="0" RowSpacing="4"
             x:Class="Flexibility.Shared.AchievementView" >
     <Grid.Resources>
         <Style x:Key="FAFontStyle" TargetType="Label">  

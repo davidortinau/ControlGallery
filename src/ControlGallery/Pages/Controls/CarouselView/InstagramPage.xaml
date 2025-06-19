@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:CarouselGallery.Models"
-             xmlns:local="clr-namespace:ControlGallery"
-             Title="Instagram" 
+             xmlns:model="clr-namespace:CarouselGallery.Models"Title="Instagram" 
              x:Class="ControlGallery.Pages.Controls.CarouselView.InstagramPage">
     <Grid RowDefinitions="420,30,*">
         

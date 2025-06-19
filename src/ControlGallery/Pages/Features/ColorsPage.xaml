@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:ControlGallery.Models"
-             xmlns:cl="clr-namespace:CustomLayouts"
-             x:Class="ControlGallery.Pages.ColorsPage"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"x:Class="ControlGallery.Pages.ColorsPage"
              Title="Colors &amp; Brushes">
     <ContentPage.Content>
         <ScrollView>
@@ -13,25 +10,25 @@
                 <Label Text="Colors" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
                 
-                <cl:HorizontalWrapLayout CompressedLayout.IsHeadless="True"
+                <HorizontalWrapLayout CompressedLayout.IsHeadless="True"
                             Margin="2,15">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type models:ColorBrush}">
-                            <models:ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
-                            <models:ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
-                            <models:ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>
-                            <models:ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>
-                            <models:ColorBrush Brush="{StaticResource NeutralLighterBrush}" BrushName="NeutralLighter"/>
-                            <models:ColorBrush Brush="{StaticResource NeutralDarkerBrush}" BrushName="NeutralDarker"/>
-                            <models:ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
-                            <models:ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
-                            <models:ColorBrush Brush="{StaticResource Gray100Brush}" BrushName="Gray100"/>
-                            <models:ColorBrush Brush="{StaticResource Gray200Brush}" BrushName="Gray200"/>
-                            <models:ColorBrush Brush="{StaticResource Gray300Brush}" BrushName="Gray300"/>
-                            <models:ColorBrush Brush="{StaticResource Gray500Brush}" BrushName="Gray500"/>
-                            <models:ColorBrush Brush="{StaticResource Gray900Brush}" BrushName="Gray900"/>
-                            <models:ColorBrush Brush="{StaticResource Gray950Brush}" BrushName="Gray950"/>
-                            <models:ColorBrush Brush="{StaticResource AccentBrush}" BrushName="Accent"/>
+                            <ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
+                            <ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
+                            <ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>
+                            <ColorBrush Brush="{StaticResource NeutralBrush}" BrushName="Neutral"/>
+                            <ColorBrush Brush="{StaticResource NeutralLighterBrush}" BrushName="NeutralLighter"/>
+                            <ColorBrush Brush="{StaticResource NeutralDarkerBrush}" BrushName="NeutralDarker"/>
+                            <ColorBrush Brush="{StaticResource BlackBrush}" BrushName="Black"/>
+                            <ColorBrush Brush="{StaticResource WhiteBrush}" BrushName="White"/>
+                            <ColorBrush Brush="{StaticResource Gray100Brush}" BrushName="Gray100"/>
+                            <ColorBrush Brush="{StaticResource Gray200Brush}" BrushName="Gray200"/>
+                            <ColorBrush Brush="{StaticResource Gray300Brush}" BrushName="Gray300"/>
+                            <ColorBrush Brush="{StaticResource Gray500Brush}" BrushName="Gray500"/>
+                            <ColorBrush Brush="{StaticResource Gray900Brush}" BrushName="Gray900"/>
+                            <ColorBrush Brush="{StaticResource Gray950Brush}" BrushName="Gray950"/>
+                            <ColorBrush Brush="{StaticResource AccentBrush}" BrushName="Accent"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
@@ -52,11 +49,11 @@
                             </VerticalStackLayout>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </cl:HorizontalWrapLayout>
+                </HorizontalWrapLayout>
 
                 <Label Text="Linear Gradient Brush" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
-                <cl:HorizontalWrapLayout Spacing="15" CompressedLayout.IsHeadless="True">
+                <HorizontalWrapLayout Spacing="15" CompressedLayout.IsHeadless="True">
                     <Rectangle WidthRequest="200" HeightRequest="200">
                         <Rectangle.Background>
                             <LinearGradientBrush EndPoint="0,1">
@@ -98,11 +95,11 @@
                             </LinearGradientBrush>
                         </Rectangle.Background>
                     </Rectangle>
-                </cl:HorizontalWrapLayout>
+                </HorizontalWrapLayout>
 
                 <Label Text="Radial Gradient Brush" Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
-                <cl:HorizontalWrapLayout Spacing="15" CompressedLayout.IsHeadless="True">
+                <HorizontalWrapLayout Spacing="15" CompressedLayout.IsHeadless="True">
                     <Rectangle WidthRequest="200" HeightRequest="200">
                         <Rectangle.Background>
                             <RadialGradientBrush>
@@ -144,7 +141,7 @@
                             </RadialGradientBrush>
                         </Rectangle.Background>
                     </Rectangle>
-                </cl:HorizontalWrapLayout>
+                </HorizontalWrapLayout>
 
 
             </VerticalStackLayout>

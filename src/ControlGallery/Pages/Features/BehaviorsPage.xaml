@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:app="clr-namespace:ControlGallery"
-             xmlns:am="clr-namespace:Microsoft.Maui.ApplicationModel;assembly=Microsoft.Maui.Essentials"
-             xmlns:features="clr-namespace:ControlGallery.Pages.Features"
-             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
-             x:Class="ControlGallery.Pages.BehaviorsPage"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"x:Class="ControlGallery.Pages.BehaviorsPage"
              Title="Behaviors"
              x:DataType="features:AppThemeViewModel">
 
@@ -29,7 +24,7 @@
                                VerticalOptions="Center"/>
                     </Grid>
                     <Border.Behaviors>
-                        <b:CursorBehavior/>
+                        <CursorBehavior/>
 
                     </Border.Behaviors>
                 </Border>

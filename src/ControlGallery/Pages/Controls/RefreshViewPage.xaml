@@ -1,13 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ControlGallery.Pages.RefreshViewPage"
-             xmlns:app="clr-namespace:ControlGallery"
-             xmlns:p="clr-namespace:ControlGallery.Pages"
-             xmlns:cl="clr-namespace:CustomLayouts"
-             Title="RefreshView">
+             x:Class="ControlGallery.Pages.RefreshViewPage"Title="RefreshView">
     <ContentPage.BindingContext>
-        <p:RefreshViewDemoPageViewModel />
+        <RefreshViewDemoPageViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <DataTemplate x:Key="ColorItemTemplate">

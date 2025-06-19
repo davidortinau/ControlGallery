@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<vlv:VirtualViewCell
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:vlv="clr-namespace:Microsoft.Maui.Controls;assembly=VirtualListView"
-    xmlns:local="clr-namespace:CollectionViewDemos.Models"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="ControlGallery.Pages.MonkeyViewCell"
+<VirtualViewCell
+    xmlns="http://schemas.microsoft.com/dotnet/maui/global"xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Pages.MonkeyViewCell"
     x:DataType="local:Monkey"
     x:Name="self">
     <Border Margin="10,0,10,10">
@@ -26,4 +23,4 @@
                             
         </Grid>
     </Border>
-</vlv:VirtualViewCell>
+</VirtualViewCell>
