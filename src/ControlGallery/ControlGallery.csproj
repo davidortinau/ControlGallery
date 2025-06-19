@@ -8,7 +8,7 @@
     <SingleProject>true</SingleProject>
     <ImplicitUsings>enable</ImplicitUsings>
 
-    <NoWarn>XC0022</NoWarn>
+    <NoWarn>XC0022;CS8632;CS0108;CS0618;CS8785</NoWarn>
 
     <MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
     

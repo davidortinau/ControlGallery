@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Window xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.SegmentedControl;assembly=Syncfusion.Maui.Toolkit"
-             x:Class="ControlGallery.AppWindow">
+<Window x:Class="ControlGallery.AppWindow">
     <Window.TitleBar>
         <TitleBar Title="Control Gallery"
                   BackgroundColor="#512BD4"
@@ -25,7 +21,7 @@
             </TitleBar.Content>            
             <TitleBar.TrailingContent>
                 <HorizontalStackLayout Spacing="8" VerticalOptions="Fill">
-                    <toolkit:AvatarView Text="DO" 
+                    <AvatarView Text="DO" 
                         FontSize="12"
                         TextColor="White"
                         ImageSource="https://github.com/davidortinau/davidortinau/blob/d864304357ba632de0e309ca8147c76e80cbd546/davidortinau_2019.png?raw=true"
@@ -34,17 +30,17 @@
                         WidthRequest="36"
                         VerticalOptions="Center"/>
 
-                    <sf:SfSegmentedControl 
+                    <SfSegmentedControl 
                         x:Name="ThemeSegmentedControl"
                         SelectionChanged="SfSegmentedControl_SelectionChanged" 
                         SegmentWidth="36" SegmentHeight="36">
-                        <sf:SfSegmentedControl.ItemsSource>
-                            <x:Array Type="{x:Type sf:SfSegmentItem}">
-                                <sf:SfSegmentItem ImageSource="{StaticResource IconLight}"/>
-                                <sf:SfSegmentItem ImageSource="{StaticResource IconDark}"/>
+                        <SfSegmentedControl.ItemsSource>
+                            <x:Array Type="{x:Type SfSegmentItem}">
+                                <SfSegmentItem ImageSource="{StaticResource IconLight}"/>
+                                <SfSegmentItem ImageSource="{StaticResource IconDark}"/>
                             </x:Array>
-                        </sf:SfSegmentedControl.ItemsSource>
-                    </sf:SfSegmentedControl>
+                        </SfSegmentedControl.ItemsSource>
+                    </SfSegmentedControl>
                 </HorizontalStackLayout>
             </TitleBar.TrailingContent>
         </TitleBar>

@@ -1,159 +1,155 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:a="clr-namespace:ControlGallery"
-             xmlns:m="clr-namespace:ControlGallery.Models"
-             xmlns:p="clr-namespace:ControlGallery.Pages"
-             xmlns:c="clr-namespace:CollectionViewDemos.Views"
-             xmlns:cl="clr-namespace:CustomLayouts"
-             xmlns:b="clr-namespace:ControlGallery.Common.Behaviors"
-             xmlns:effects="clr-namespace:ControlGallery.Common.Effects"
-             x:Class="ControlGallery.Pages.ControlsPage" 
+<ContentPage x:Class="ControlGallery.Pages.ControlsPage"
              Title="Controls">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static a:IconFont.Boxes}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked"/>
-        <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static a:IconFont.List}, FontFamily=FontAwesome}" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static IconFont.Boxes}, FontFamily=FontAwesome}"
+                Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static IconFont.List}, FontFamily=FontAwesome}"
+                Clicked="ToolbarItem_Clicked_1"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
         <DataTemplate x:Key="ListTemplate">
-            <Grid ColumnDefinitions="44,*" RowDefinitions="44,1">
+            <Grid ColumnDefinitions="44,*"
+                    RowDefinitions="44,1">
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                 </Grid.GestureRecognizers>
                 <Image Source="{Binding Icon}"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"/>
-                <Label Grid.Column="1" 
-                    VerticalOptions="Center"
-                    Text="{Binding Title}"
-                />
-                <BoxView Color="{StaticResource Gray200}" Grid.ColumnSpan="2" Grid.Row="1"/>
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                <Label Grid.Column="1"
+                       VerticalOptions="Center"
+                       Text="{Binding Title}"/>
+                <BoxView Color="{StaticResource Gray200}"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="1"/>
                 <Grid.Behaviors>
-                    <b:CursorBehavior/>
+                    <CursorBehavior/>
                 </Grid.Behaviors>
             </Grid>
         </DataTemplate>
 
         <DataTemplate x:Key="GridTemplate">
-            <Border Stroke="{StaticResource Gray200Brush}" StrokeThickness="1" b:CursorBehavior.AttachBehavior="True">
+            <Border Stroke="{StaticResource Gray200Brush}"
+                    StrokeThickness="1"
+                    CursorBehavior.AttachBehavior="True">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="8"/>
                 </Border.StrokeShape>
                 <Grid ColumnDefinitions="*"
                       RowDefinitions="13*,8*"
-                      MinimumHeightRequest="100"
-                      >
+                      MinimumHeightRequest="100">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                     </Grid.GestureRecognizers>
                     <Image Source="{Binding Icon}"
-                            Grid.Row="0"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"/>
+                           Grid.Row="0"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
                     <Label Grid.Row="1"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        Text="{Binding Title}"
-                    />
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Text="{Binding Title}"/>
                     <Grid.Behaviors>
-                        <b:CursorBehavior/>
+                        <CursorBehavior/>
                     </Grid.Behaviors>
                 </Grid>
             </Border>
         </DataTemplate>
 
-        <p:DisplayTemplateSelector x:Key="TemplateSelector"
-                                   GridTemplate="{StaticResource GridTemplate}"
-                                   ListTemplate="{StaticResource ListTemplate}"/>
+        <DisplayTemplateSelector x:Key="TemplateSelector"
+                                 GridTemplate="{StaticResource GridTemplate}"
+                                 ListTemplate="{StaticResource ListTemplate}"/>
 
     </ContentPage.Resources>
-    
-    <CollectionView Grid.Row="1" x:Name="ControlsList"
-                    effects:ContentInsetAdjustmentBehavior.ContentInset="{StaticResource PageInset}"
+
+    <CollectionView Grid.Row="1"
+            x:Name="ControlsList"
+                    ContentInsetAdjustmentBehavior.ContentInset="{StaticResource PageInset}"
                     ItemTemplate="{StaticResource TemplateSelector}">
         <CollectionView.Effects>
-            <effects:ContentInsetAdjustmentBehaviorRoutingEffect/>
+            <ContentInsetAdjustmentBehaviorRoutingEffect/>
         </CollectionView.Effects>
         <CollectionView.ItemsSource>
-            <x:Array Type="{x:Type m:NavItem}">
-                <m:NavItem Title="ActivityIndicator"
-                            Icon="view_activityindicator.png"
-                            Destination="{x:Type p:ActivityIndicatorPage}"/>
-                <m:NavItem Title="Alerts"
-                            Destination="{x:Type p:AlertPage}"/>
-                <m:NavItem Title="Borders"
-                            Destination="{x:Type p:BorderPage}"/>
-                <m:NavItem Title="BoxView"
-                            Destination="{x:Type p:BoxViewPage}"/>
-                <m:NavItem Title="Buttons"
-                            Icon="view_button.png"
-                            Destination="{x:Type p:ButtonPage}"/>
-                <m:NavItem Title="CheckBoxes"
-                            Destination="{x:Type p:CheckboxPage}"/>
-                <m:NavItem Title="CarouselView"
-                            Icon="view_listview.png"
-                            Destination="{x:Type p:CarouselViewPage}"/>
-                <m:NavItem Title="CollectionView"
-                            Icon="view_listview.png"
-                            Destination="{x:Type c:CollectionViewPage}"/>
-                <m:NavItem Title="Date Picker"
-                            Icon="view_datepicker.png"
-                            Destination="{x:Type p:DatePickerPage}"/>
-                <m:NavItem Title="Editors"
-                            Icon="view_editor.png"
-                            Destination="{x:Type p:EditorPage}"/>
-                <m:NavItem Title="Entry"
-                            Icon="view_entry.png"
-                            Destination="{x:Type p:EntryPage}"/>
-                <m:NavItem Title="Frame"
-                            Destination="{x:Type p:FramePage}"/>
-                <m:NavItem Title="Images"
-                            Icon="view_image.png"
-                            Destination="{x:Type p:ImagePage}"/>
-                <m:NavItem Title="Labels"
-                            Icon="view_label.png"
-                            Destination="{x:Type p:LabelPage}"/>
-                <m:NavItem Title="Map"
-                            Icon="view_map.png"
-                            Destination="{x:Type p:MapPage}"/>
-                    <m:NavItem Title="Picker"
-                            Icon="view_picker.png"
-                            Destination="{x:Type p:PickerPage}"/>
-                    <m:NavItem Title="Progress Bars"
-                            Icon="view_progressbar.png"
-                            Destination="{x:Type p:ProgressBarPage}"/>
-                <m:NavItem Title="Radio Buttons"
-                            Destination="{x:Type p:RadioButtonPage}"/>
-                <m:NavItem Title="RefreshView"
-                            Destination="{x:Type p:RefreshViewPage}"/>
-                <m:NavItem Title="SearchBar"
-                            Icon="view_searchbar.png"
-                            Destination="{x:Type p:SearchBarPage}"/>
-                <m:NavItem Title="Shapes"
-                            Destination="{x:Type p:ShapesPage}"/>
-                <m:NavItem Title="Sliders"
-                            Icon="view_slider.png"
-                            Destination="{x:Type p:SliderPage}"/>
-                <m:NavItem Title="Steppers"
-                            Icon="view_stepper.png"
-                            Destination="{x:Type p:StepperPage}"/>
-                <m:NavItem Title="Switches"
-                            Icon="view_switch.png"
-                            Destination="{x:Type p:SwitchPage}"/>
-                <m:NavItem Title="TableView"
-                            Icon="view_tableview.png"
-                            Destination="{x:Type p:TableViewPage}"/>
-                    <m:NavItem Title="TimePicker"
-                            Icon="view_timepicker.png"
-                            Destination="{x:Type p:TimePickerPage}"/>
-                    <m:NavItem Title="WebView"
-                            Icon="view_webview.png"
-                            Destination="{x:Type p:WebViewPage}"/>
-                <m:NavItem Title="VirtualListView"
-                           Icon="view_listview.png"
-                           Destination="{x:Type p:VirtualListViewPage}"/>
-                </x:Array>
+            <x:Array Type="{x:Type NavItem}">
+                <NavItem Title="ActivityIndicator"
+                         Icon="view_activityindicator.png"
+                         Destination="{x:Type ActivityIndicatorPage}"/>
+                <NavItem Title="Alerts"
+                         Destination="{x:Type AlertPage}"/>
+                <NavItem Title="Borders"
+                         Destination="{x:Type BorderPage}"/>
+                <NavItem Title="BoxView"
+                         Destination="{x:Type BoxViewPage}"/>
+                <NavItem Title="Buttons"
+                         Icon="view_button.png"
+                         Destination="{x:Type ButtonPage}"/>
+                <NavItem Title="CheckBoxes"
+                         Destination="{x:Type CheckboxPage}"/>
+                <NavItem Title="CarouselView"
+                         Icon="view_listview.png"
+                         Destination="{x:Type CarouselViewPage}"/>
+                <NavItem Title="CollectionView"
+                         Icon="view_listview.png"
+                         Destination="{x:Type CollectionViewPage}"/>
+                <NavItem Title="Date Picker"
+                         Icon="view_datepicker.png"
+                         Destination="{x:Type DatePickerPage}"/>
+                <NavItem Title="Editors"
+                         Icon="view_editor.png"
+                         Destination="{x:Type EditorPage}"/>
+                <NavItem Title="Entry"
+                         Icon="view_entry.png"
+                         Destination="{x:Type EntryPage}"/>
+                <NavItem Title="Frame"
+                         Destination="{x:Type FramePage}"/>
+                <NavItem Title="Images"
+                         Icon="view_image.png"
+                         Destination="{x:Type ImagePage}"/>
+                <NavItem Title="Labels"
+                         Icon="view_label.png"
+                         Destination="{x:Type LabelPage}"/>
+                <NavItem Title="Map"
+                         Icon="view_map.png"
+                         Destination="{x:Type MapPage}"/>
+                <NavItem Title="Picker"
+                         Icon="view_picker.png"
+                         Destination="{x:Type PickerPage}"/>
+                <NavItem Title="Progress Bars"
+                         Icon="view_progressbar.png"
+                         Destination="{x:Type ProgressBarPage}"/>
+                <NavItem Title="Radio Buttons"
+                         Destination="{x:Type RadioButtonPage}"/>
+                <NavItem Title="RefreshView"
+                         Destination="{x:Type RefreshViewPage}"/>
+                <NavItem Title="SearchBar"
+                         Icon="view_searchbar.png"
+                         Destination="{x:Type SearchBarPage}"/>
+                <NavItem Title="Shapes"
+                         Destination="{x:Type ShapesPage}"/>
+                <NavItem Title="Sliders"
+                         Icon="view_slider.png"
+                         Destination="{x:Type SliderPage}"/>
+                <NavItem Title="Steppers"
+                         Icon="view_stepper.png"
+                         Destination="{x:Type StepperPage}"/>
+                <NavItem Title="Switches"
+                         Icon="view_switch.png"
+                         Destination="{x:Type SwitchPage}"/>
+                <NavItem Title="TableView"
+                         Icon="view_tableview.png"
+                         Destination="{x:Type TableViewPage}"/>
+                <NavItem Title="TimePicker"
+                         Icon="view_timepicker.png"
+                         Destination="{x:Type TimePickerPage}"/>
+                <NavItem Title="WebView"
+                         Icon="view_webview.png"
+                         Destination="{x:Type WebViewPage}"/>
+                <NavItem Title="VirtualListView"
+                         Icon="view_listview.png"
+                         Destination="{x:Type VirtualListViewPage}"/>
+            </x:Array>
         </CollectionView.ItemsSource>
-    </CollectionView>        
+    </CollectionView>
 </ContentPage>

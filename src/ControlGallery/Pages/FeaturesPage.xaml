@@ -1,64 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:m="clr-namespace:ControlGallery.Models"
-             xmlns:p="clr-namespace:ControlGallery.Pages"
-             xmlns:anim="clr-namespace:ControlGallery.Pages.Features.Animation"
-             xmlns:cl="clr-namespace:CustomLayouts"
-             x:Class="ControlGallery.Pages.FeaturesPage"
+<ContentPage x:Class="ControlGallery.Pages.FeaturesPage"
              Title="Features">
-    <ContentPage.Content>
-        <ScrollView>
+       <ContentPage.Content>
+              <ScrollView>
 
-            <VerticalStackLayout Margin="15" Spacing="8">
-                <Label Text="UI Features" Style="{StaticResource Headline}"/>
-                <cl:HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
-                            >
-                    <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
-                            <m:NavItem Title="Animations"
-                                   Destination="{x:Type anim:AnimationsPage}"/>
-                            <m:NavItem Title="AppThemeBinding"
-                                   Destination="{x:Type p:AppThemePage}"/>
-                            <m:NavItem Title="Behaviors"
-                                   Destination="{x:Type p:BehaviorsPage}"/>
-                            <m:NavItem Title="Clipping"
-                                   Destination="{x:Type p:ClippingPage}"/>
-                            <m:NavItem Title="Colors"
-                                   Destination="{x:Type p:ColorsPage}"/>
-                            <m:NavItem Title="ContextMenu"
-                                   Destination="{x:Type p:ContextMenuPage}"/>
-                            <m:NavItem Title="FontImageSource"
-                                   Destination="{x:Type p:FontImagePage}"/>
-                            <m:NavItem Title="Gestures"
-                                   Destination="{x:Type p:GesturesPage}"/>
-                            <m:NavItem Title="MenuBar"
-                                   Destination="{x:Type p:MenuBarPage}"/>
-                            <m:NavItem Title="Native Views"
-                                   Destination="{x:Type p:NativeViewsPage}"/>
-                            <m:NavItem Title="Shadow"
-                                   Destination="{x:Type p:ShadowPage}"/>
-                            <m:NavItem Title="Tooltips"
-                                   Destination="{x:Type p:TooltipPage}"/>
-                            <m:NavItem Title="Triggers"
-                                   Destination="{x:Type p:TriggersPage}"/>
-                            <m:NavItem Title="HybridWebView"
-                                   Destination="{x:Type p:HybridWebViewPage}"/>
+                     <VerticalStackLayout Margin="15"
+                                   Spacing="8">
+                            <Label Text="UI Features"
+                                          Style="{StaticResource Headline}"/>
+                            <HorizontalWrapLayout Margin="0,0,0,60"
+                                          Spacing="12">
+                                   <BindableLayout.ItemsSource>
+                                          <x:Array Type="{x:Type NavItem}">
+                                                 <NavItem Title="Animations"
+                                                          Destination="{x:Type AnimationsPage}"/>
+                                                 <NavItem Title="AppThemeBinding"
+                                                          Destination="{x:Type AppThemePage}"/>
+                                                 <NavItem Title="Behaviors"
+                                                          Destination="{x:Type BehaviorsPage}"/>
+                                                 <NavItem Title="Clipping"
+                                                          Destination="{x:Type ClippingPage}"/>
+                                                 <NavItem Title="Colors"
+                                                          Destination="{x:Type ColorsPage}"/>
+                                                 <NavItem Title="ContextMenu"
+                                                          Destination="{x:Type ContextMenuPage}"/>
+                                                 <NavItem Title="FontImageSource"
+                                                          Destination="{x:Type FontImagePage}"/>
+                                                 <NavItem Title="Gestures"
+                                                          Destination="{x:Type GesturesPage}"/>
+                                                 <NavItem Title="MenuBar"
+                                                          Destination="{x:Type MenuBarPage}"/>
+                                                 <NavItem Title="Native Views"
+                                                          Destination="{x:Type NativeViewsPage}"/>
+                                                 <NavItem Title="Shadow"
+                                                          Destination="{x:Type ShadowPage}"/>
+                                                 <NavItem Title="Tooltips"
+                                                          Destination="{x:Type TooltipPage}"/>
+                                                 <NavItem Title="Triggers"
+                                                          Destination="{x:Type TriggersPage}"/>
+                                                 <NavItem Title="HybridWebView"
+                                                          Destination="{x:Type HybridWebViewPage}"/>
 
-                            
-                        </x:Array>
-                    </BindableLayout.ItemsSource>
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Button 
-                                Text="{Binding Title}"
-                                Command="{Binding NavigateTo}"
-                                />
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </cl:HorizontalWrapLayout>
 
-            </VerticalStackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+                                          </x:Array>
+                                   </BindableLayout.ItemsSource>
+                                   <BindableLayout.ItemTemplate>
+                                          <DataTemplate>
+                                                 <Button
+                                                        Text="{Binding Title}"
+                                                        Command="{Binding NavigateTo}"/>
+                                          </DataTemplate>
+                                   </BindableLayout.ItemTemplate>
+                            </HorizontalWrapLayout>
+
+                     </VerticalStackLayout>
+              </ScrollView>
+       </ContentPage.Content>
 </ContentPage>
