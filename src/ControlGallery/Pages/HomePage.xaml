@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.HomePage"
              x:DataType="p:HomeViewModel"
              Title="Gallery">
@@ -24,11 +23,11 @@
                                 StrokeShape="{RoundRectangle CornerRadius=12}"
                                 Background="{StaticResource Gray200}"
                                 ToolTipProperties.Text="{Binding Link}"
-                                >
+                               >
                                 <Grid RowDefinitions="8*,13*,Auto" HeightRequest="300" WidthRequest="300"
                                       IsClippedToBounds="False"
                                       Margin="0,-12,0,0"
-                                      >
+                                     >
                                     <Label Text="{Binding Title}"
                                                Background="{StaticResource Primary}"
                                                Padding="12,8"
@@ -97,7 +96,7 @@
                                 StrokeShape="{RoundRectangle CornerRadius=0}"
                                 Background="{StaticResource SecondaryBrush}"
                                 ToolTipProperties.Text="{Binding Hyperlink}"
-                                >
+                               >
                                 <Grid
                                     Margin="12,0"
                                     ColumnDefinitions="5*,13*" RowDefinitions="34" HeightRequest="34" MinimumWidthRequest="120">

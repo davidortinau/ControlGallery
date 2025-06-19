@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.ControlsPage" 
              Title="Controls">
     <ContentPage.ToolbarItems>
@@ -36,7 +35,7 @@
                 <Grid ColumnDefinitions="*"
                       RowDefinitions="13*,8*"
                       MinimumHeightRequest="100"
-                      >
+                     >
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                     </Grid.GestureRecognizers>

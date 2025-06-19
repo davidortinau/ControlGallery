@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Grid xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<Grid
              x:Class="ControlGallery.Common.Views.FlyoutHeader"
              InputTransparent="True"
              RowDefinitions="120">

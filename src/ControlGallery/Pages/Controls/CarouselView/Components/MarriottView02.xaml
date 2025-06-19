@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentView
              x:Class="CarouselGallery.Views.Components.MarriottView02">
     <Grid ColumnDefinitions="2*,3*"
           RowDefinitions="5*,150,1*">

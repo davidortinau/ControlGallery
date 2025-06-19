@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
     <ContentPage.Content>
@@ -12,7 +11,7 @@
                     <Label Text="AbsoluteLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
                 </HorizontalStackLayout>
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
-                            >
+                           >
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type m:NavItem}">
                             <NavItem Title="Bouncing Text"
@@ -34,7 +33,7 @@
                             <Button 
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
-                                >
+                               >
                                 <Button.Behaviors>
                                     <CursorBehavior />
                                 </Button.Behaviors>
@@ -197,7 +196,7 @@
                     HorizontalOptions="Start"
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
-                >
+               >
                     <Button.BindingContext>
                         <NavItem Title="Margin + Padding"
                             Destination="{x:Type p:MarginPaddingPage}"/>

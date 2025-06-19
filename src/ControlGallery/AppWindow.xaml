@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Window xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<Window
              x:Class="ControlGallery.AppWindow">
     <Window.TitleBar>
         <TitleBar Title="Control Gallery"

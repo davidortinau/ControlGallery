@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.Controls.TableView.DataIntentXaml" 
              Title="Data Intent">
     <TableView Intent="Data" 
-               HasUnevenRows="true" >
+               HasUnevenRows="true">
         <TableRoot>
             <TableSection Title="First Section">
                 <TextCell Text="TextCell" 

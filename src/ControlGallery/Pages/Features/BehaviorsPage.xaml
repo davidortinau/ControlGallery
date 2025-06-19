@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.BehaviorsPage"
              Title="Behaviors"
              x:DataType="features:AppThemeViewModel">
@@ -16,7 +15,7 @@
                     MinimumHeightRequest="300"
                     MinimumWidthRequest="240"
                     Background="{StaticResource Gray200Brush}"
-                    >
+                   >
                     <Grid RowDefinitions="13*,8*" HeightRequest="300">
                         <Image Source="insta_01.jpg" Aspect="AspectFill"/>
                         <Label Text="Instagram Photo"

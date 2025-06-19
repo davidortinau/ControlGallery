@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.Layouts.KeypadPage"
              Title="Keypad">
         <ContentPage.Resources>
@@ -16,7 +15,7 @@
           ColumnSpacing="4"
           RowDefinitions="Auto,Auto,Auto,Auto,Auto"
           ColumnDefinitions="80,80,80"
-          >
+         >
         <Grid.BindingContext>
             <KeypadViewModel />
         </Grid.BindingContext>
@@ -26,7 +25,7 @@
                    Stroke="{StaticResource Gray200Brush}"
                     StrokeThickness="1"
                     StrokeShape="{Rectangle}"
-                    >
+                   >
             <Label Text="{Binding DisplayText}" />
         </Border>
 

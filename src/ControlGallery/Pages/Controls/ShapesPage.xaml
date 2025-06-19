@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.ShapesPage"
              Title="Shapes">
              <ContentPage.Resources>
@@ -8,7 +7,7 @@
                     <![CDATA[
                     
                     
-                    FlexLayout > Polygon {
+                    FlexLayout> Polygon {
                         -xf-horizontal-options: Center;
                         -xf-vertical-options: Center;
                         width: 50;

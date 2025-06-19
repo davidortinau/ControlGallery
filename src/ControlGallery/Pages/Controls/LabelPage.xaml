@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              x:Class="ControlGallery.Pages.LabelPage"
              Title="Label">
 
@@ -23,7 +22,7 @@
                             <Span Text="36 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="36"/>
                             <Span Text="48 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="48"/>
                             <Span Text="60 The quick brown fox jumps over the lazy dog. 1234567890 &#10;" FontSize="60"/>
-                            <Span Text="72 The quick brown fox jumps over the lazy dog. 1234567890 " FontSize="72" >
+                            <Span Text="72 The quick brown fox jumps over the lazy dog. 1234567890 " FontSize="72">
                                 <Span.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="https://google.com" />
                                 </Span.GestureRecognizers>
