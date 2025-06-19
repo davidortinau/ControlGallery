@@ -13,19 +13,19 @@
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
                            >
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
+                        <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="Bouncing Text"
-                                   Destination="{x:Type a:BouncingTextDemoPage}"/>
+                                   Destination="{x:Type BouncingTextDemoPage}"/>
                         <NavItem Title="Chessboard"
-                                   Destination="{x:Type a:ChessboardDemoPage}"/>
+                                   Destination="{x:Type ChessboardDemoPage}"/>
                         <NavItem Title="Proportional Coordinate Calc"
-                                   Destination="{x:Type a:ProportionalCoordinateCalcDemoPage}"/>
+                                   Destination="{x:Type ProportionalCoordinateCalcDemoPage}"/>
                         <NavItem Title="Proportional"
-                                   Destination="{x:Type a:ProportionalDemoPage}"/>
+                                   Destination="{x:Type ProportionalDemoPage}"/>
                         <NavItem Title="Simple Overlay"
-                                   Destination="{x:Type a:SimpleOverlayDemoPage}"/>
+                                   Destination="{x:Type SimpleOverlayDemoPage}"/>
                         <NavItem Title="Stylish Header"
-                                   Destination="{x:Type a:StylishHeaderDemoPage}"/>
+                                   Destination="{x:Type StylishHeaderDemoPage}"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
@@ -54,33 +54,33 @@
                 </HorizontalStackLayout>
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
+                        <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="Achievements Sample"
-                                   Destination="{x:Type f:AchievementsPage}"/>
+                                   Destination="{x:Type AchievementsPage}"/>
                             <NavItem Title="Alignment Sample"
-                                   Destination="{x:Type f:AlignmentPage}"/>
+                                   Destination="{x:Type AlignmentPage}"/>
                             <NavItem Title="Grid Sample"
-                                   Destination="{x:Type f:GridPage}"/>
+                                   Destination="{x:Type GridPage}"/>
                             <NavItem Title="Login Sample"
-                                   Destination="{x:Type f:LoginPage}"/>
+                                   Destination="{x:Type LoginPage}"/>
                             <NavItem Title="Photos Sample"
-                                   Destination="{x:Type f:PhotosPage}"/>
+                                   Destination="{x:Type PhotosPage}"/>
                             <NavItem Title="Reading Sample"
-                                   Destination="{x:Type f:ReadingColumnsPage}"/>
+                                   Destination="{x:Type ReadingColumnsPage}"/>
                             <NavItem Title="Show Sample"
-                                   Destination="{x:Type f:ShowPage}"/>
+                                   Destination="{x:Type ShowPage}"/>
                             <NavItem Title="Basis"
-                                   Destination="{x:Type p:BasisExperimentPage}"/>
+                                   Destination="{x:Type BasisExperimentPage}"/>
                             <NavItem Title="Catalog"
-                                   Destination="{x:Type p:CatalogItemsPage}"/>
+                                   Destination="{x:Type CatalogItemsPage}"/>
                             <NavItem Title="Grow"
-                                   Destination="{x:Type p:GrowExperimentPage}"/>
+                                   Destination="{x:Type GrowExperimentPage}"/>
                             <NavItem Title="Shrink"
-                                   Destination="{x:Type p:ShrinkExperimentPage}"/>
+                                   Destination="{x:Type ShrinkExperimentPage}"/>
                             <NavItem Title="Simple"
-                                   Destination="{x:Type p:SimpleStackPage}"/>
+                                   Destination="{x:Type SimpleStackPage}"/>
                             <NavItem Title="Wrapping"
-                                   Destination="{x:Type p:PhotoWrappingPage}"/>
+                                   Destination="{x:Type PhotoWrappingPage}"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
@@ -99,19 +99,19 @@
                 </HorizontalStackLayout>
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
+                        <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="Alignment"
-                                   Destination="{x:Type p:AlignmentGridPage}"/>
+                                   Destination="{x:Type AlignmentGridPage}"/>
                             <NavItem Title="Basic"
-                                   Destination="{x:Type p:BasicGridPage}"/>
+                                   Destination="{x:Type BasicGridPage}"/>
                             <NavItem Title="Calculator"
-                                   Destination="{x:Type p:CalculatorPage}"/>
+                                   Destination="{x:Type CalculatorPage}"/>
                             <NavItem Title="Keypad"
-                                   Destination="{x:Type p:KeypadPage}"/>
+                                   Destination="{x:Type KeypadPage}"/>
                             <NavItem Title="Slider"
-                                   Destination="{x:Type p:SliderGridPage}"/>
+                                   Destination="{x:Type SliderGridPage}"/>
                             <NavItem Title="Spacing"
-                                   Destination="{x:Type p:SpacingGridPage}"/>
+                                   Destination="{x:Type SpacingGridPage}"/>
                             
                         </x:Array>
                     </BindableLayout.ItemsSource>
@@ -131,21 +131,21 @@
                 </HorizontalStackLayout>
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
+                        <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="Alignment"
-                                   Destination="{x:Type p:AlignmentStackPage}"/>
+                                   Destination="{x:Type AlignmentStackPage}"/>
                             <NavItem Title="AndExpand"
-                                   Destination="{x:Type p:AndExpandPage}"/>
+                                   Destination="{x:Type AndExpandPage}"/>
                             <NavItem Title="Combined"
-                                   Destination="{x:Type p:CombinedStackPage}"/>
+                                   Destination="{x:Type CombinedStackPage}"/>
                             <NavItem Title="Expansion"
-                                   Destination="{x:Type p:ExpansionStackPage}"/>
+                                   Destination="{x:Type ExpansionStackPage}"/>
                             <NavItem Title="Horizontal"
-                                   Destination="{x:Type p:HorizontalStackPage}"/>
+                                   Destination="{x:Type HorizontalStackPage}"/>
                             <NavItem Title="Spacing"
-                                   Destination="{x:Type p:SpacingStackPage}"/>
+                                   Destination="{x:Type SpacingStackPage}"/>
                             <NavItem Title="Vertical"
-                                   Destination="{x:Type p:VerticalStackPage}"/>
+                                   Destination="{x:Type VerticalStackPage}"/>
                             
                         </x:Array>
                     </BindableLayout.ItemsSource>
@@ -172,13 +172,13 @@
                 <Label Text="Custom Layouts" Style="{StaticResource Headline}" VerticalOptions="Center"/>
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
+                        <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="HorizontalWrapLayout"
-                                   Destination="{x:Type p:HorizontalWrapLayoutPage}"/>
+                                   Destination="{x:Type HorizontalWrapLayoutPage}"/>
                             <NavItem Title="CascadeLayout"
-                                   Destination="{x:Type p:CascadeLayoutPage}"/>
+                                   Destination="{x:Type CascadeLayoutPage}"/>
                             <NavItem Title="ColumnLayout"
-                                   Destination="{x:Type p:ColumnLayoutPage}"/>
+                                   Destination="{x:Type ColumnLayoutPage}"/>
                         </x:Array>
                     </BindableLayout.ItemsSource>
                     <BindableLayout.ItemTemplate>
@@ -199,7 +199,7 @@
                >
                     <Button.BindingContext>
                         <NavItem Title="Margin + Padding"
-                            Destination="{x:Type p:MarginPaddingPage}"/>
+                            Destination="{x:Type MarginPaddingPage}"/>
                     </Button.BindingContext>
                 </Button>
 

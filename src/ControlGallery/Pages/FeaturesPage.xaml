@@ -10,35 +10,35 @@
                 <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
                            >
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:NavItem}">
+                        <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="Animations"
-                                   Destination="{x:Type anim:AnimationsPage}"/>
+                                   Destination="{x:Type AnimationsPage}"/>
                             <NavItem Title="AppThemeBinding"
-                                   Destination="{x:Type p:AppThemePage}"/>
+                                   Destination="{x:Type AppThemePage}"/>
                             <NavItem Title="Behaviors"
-                                   Destination="{x:Type p:BehaviorsPage}"/>
+                                   Destination="{x:Type BehaviorsPage}"/>
                             <NavItem Title="Clipping"
-                                   Destination="{x:Type p:ClippingPage}"/>
+                                   Destination="{x:Type ClippingPage}"/>
                             <NavItem Title="Colors"
-                                   Destination="{x:Type p:ColorsPage}"/>
+                                   Destination="{x:Type ColorsPage}"/>
                             <NavItem Title="ContextMenu"
-                                   Destination="{x:Type p:ContextMenuPage}"/>
+                                   Destination="{x:Type ContextMenuPage}"/>
                             <NavItem Title="FontImageSource"
-                                   Destination="{x:Type p:FontImagePage}"/>
+                                   Destination="{x:Type FontImagePage}"/>
                             <NavItem Title="Gestures"
-                                   Destination="{x:Type p:GesturesPage}"/>
+                                   Destination="{x:Type GesturesPage}"/>
                             <NavItem Title="MenuBar"
-                                   Destination="{x:Type p:MenuBarPage}"/>
+                                   Destination="{x:Type MenuBarPage}"/>
                             <NavItem Title="Native Views"
-                                   Destination="{x:Type p:NativeViewsPage}"/>
+                                   Destination="{x:Type NativeViewsPage}"/>
                             <NavItem Title="Shadow"
-                                   Destination="{x:Type p:ShadowPage}"/>
+                                   Destination="{x:Type ShadowPage}"/>
                             <NavItem Title="Tooltips"
-                                   Destination="{x:Type p:TooltipPage}"/>
+                                   Destination="{x:Type TooltipPage}"/>
                             <NavItem Title="Triggers"
-                                   Destination="{x:Type p:TriggersPage}"/>
+                                   Destination="{x:Type TriggersPage}"/>
                             <NavItem Title="HybridWebView"
-                                   Destination="{x:Type p:HybridWebViewPage}"/>
+                                   Destination="{x:Type HybridWebViewPage}"/>
 
                             
                         </x:Array>

@@ -36,7 +36,7 @@
                         SelectionChanged="SfSegmentedControl_SelectionChanged" 
                         SegmentWidth="36" SegmentHeight="36">
                         <SfSegmentedControl.ItemsSource>
-                            <x:Array Type="{x:Type sf:SfSegmentItem}">
+                            <x:Array Type="{x:Type SfSegmentItem}">
                                 <SfSegmentItem ImageSource="{StaticResource IconLight}"/>
                                 <SfSegmentItem ImageSource="{StaticResource IconDark}"/>
                             </x:Array>

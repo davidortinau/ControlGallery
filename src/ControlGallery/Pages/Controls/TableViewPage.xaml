@@ -6,19 +6,19 @@
         <ScrollView>
             <VerticalStackLayout Spacing="8" Margin="15">
                 <BindableLayout.ItemsSource>
-                    <x:Array Type="{x:Type m:NavItem}">
+                    <x:Array Type="{x:Type NavItem}">
                         <NavItem Title="Data Intent"
-                                   Destination="{x:Type p:DataIntentXaml}"/>
+                                   Destination="{x:Type DataIntentXaml}"/>
                         <NavItem Title="Entry Cell"
-                                   Destination="{x:Type p:EntryCellDemoXaml}"/>
+                                   Destination="{x:Type EntryCellDemoXaml}"/>
                         <NavItem Title="Form Intent"
-                                   Destination="{x:Type p:FormIntentXaml}"/>
+                                   Destination="{x:Type FormIntentXaml}"/>
                         <NavItem Title="Menu Intent"
-                                   Destination="{x:Type p:MenuIntentXaml}"/>
+                                   Destination="{x:Type MenuIntentXaml}"/>
                         <NavItem Title="Settings Intent"
-                                   Destination="{x:Type p:SettingsIntentXaml}"/>
+                                   Destination="{x:Type SettingsIntentXaml}"/>
                         <NavItem Title="Switch Cell"
-                                   Destination="{x:Type p:SwitchCellDemoXaml}"/>
+                                   Destination="{x:Type SwitchCellDemoXaml}"/>
                         
                     </x:Array>
                 </BindableLayout.ItemsSource>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
              x:Class="ControlGallery.Pages.HomePage"
-             x:DataType="p:HomeViewModel"
+             x:DataType="HomeViewModel"
              Title="Gallery">
 
     <ContentPage.BindingContext>
@@ -17,7 +17,7 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Border
-                                x:DataType="feed:FeedItem"
+                                x:DataType="FeedItem"
                                 Stroke="Transparent"
                                 StrokeThickness="1"
                                 StrokeShape="{RoundRectangle CornerRadius=12}"
@@ -57,7 +57,7 @@
                                     <CursorBehavior/>
                                 </Border.Behaviors>
                                 <Border.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type p:HomeViewModel}}, Path=NavigateToCommand}"
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type HomeViewModel}}, Path=NavigateToCommand}"
                                                           CommandParameter="{Binding Link}"/>
                                 </Border.GestureRecognizers>
                             </Border>
@@ -72,7 +72,7 @@
             <ScrollView Orientation="Horizontal" Grid.Row="3">
                 <HorizontalStackLayout>
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type m:QuickLink}">
+                        <x:Array Type="{x:Type QuickLink}">
                             <QuickLink Title="GitHub" Hyperlink="https://github.com/dotnet/maui"/>
                             <QuickLink Title="Learn Docs" Hyperlink="https://learn.microsoft.com/dotnet/maui"/>
                             <QuickLink Title="Samples" Hyperlink="https://github.com/dotnet/maui-samples"/>
@@ -83,14 +83,14 @@
                         <DataTemplate>
                             <Button 
                                 Style="{StaticResource PrimaryButtonOutlineIcon}"
-                                x:DataType="m:QuickLink"
+                                x:DataType="QuickLink"
                                 ImageSource="{FontImageSource Color={StaticResource Primary}, FontFamily=FontAwesome,
                                     Glyph={x:Static IconFont.ExternalLinkAlt},Size=12}" 
                                     Text="{Binding Title}"
                                     Command="{Binding NavigateTo}"/>
 
                             <!--<Border
-                                x:DataType="m:QuickLink"
+                                x:DataType="QuickLink"
                                 Stroke="Black"
                                 StrokeThickness="1"
                                 StrokeShape="{RoundRectangle CornerRadius=0}"

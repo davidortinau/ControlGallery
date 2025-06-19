@@ -34,7 +34,6 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMarkup()
             .UseMauiMaps()
-            .UseVirtualListView()
             .ConfigureSyncfusionToolkit()
             .ConfigureFonts(fonts =>
 			{

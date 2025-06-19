@@ -1,39 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-             
-             x:Class="ControlGallery.Pages.Features.Animation.AnimationsPage"
-
-             Title="Animations">
+    x:Class="ControlGallery.Pages.Features.Animation.AnimationsPage"
+    Title="Animations">
     <ScrollView>
-    <TableView Intent="Menu">
-        <TableRoot>
-            <TableSection Title="Animations">
-                <TextCell Text="Custom"
-                          Detail="ColorTo" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type anim:CustomAnimationPage}" />
-                <TextCell Text="Easings"
-                          Detail="Rate of change over time" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type anim:EasingsPage}" />
-                <TextCell Text="Fade"
-                          Detail="FadeTo" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type anim:FadePage}" />
-                <TextCell Text="Rotate"
-                          Detail="RotateTo" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type anim:RotatePage}" />
-                <TextCell Text="Scale"
-                          Detail="ScaleTo" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type anim:ScalePage}" />
-                <TextCell Text="Translate"
-                          Detail="TranslateTo" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type anim:TranslatePage}" />
-            </TableSection>
-        </TableRoot>
-    </TableView>
+        <TableView Intent="Menu">
+            <TableRoot>
+                <TableSection Title="Animations">
+                    <TextCell Text="Custom"
+                              Detail="ColorTo"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type CustomAnimationPage}"/>
+                    <TextCell Text="Easings"
+                              Detail="Rate of change over time"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type EasingsPage}"/>
+                    <TextCell Text="Fade"
+                              Detail="FadeTo"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type FadePage}"/>
+                    <TextCell Text="Rotate"
+                              Detail="RotateTo"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type RotatePage}"/>
+                    <TextCell Text="Scale"
+                              Detail="ScaleTo"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type ScalePage}"/>
+                    <TextCell Text="Translate"
+                              Detail="TranslateTo"
+                              Command="{Binding NavigateCommand}"
+                              CommandParameter="{x:Type TranslatePage}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ScrollView>
 </ContentPage>

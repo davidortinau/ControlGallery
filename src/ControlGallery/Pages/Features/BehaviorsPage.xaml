@@ -2,7 +2,7 @@
 <ContentPage
              x:Class="ControlGallery.Pages.BehaviorsPage"
              Title="Behaviors"
-             x:DataType="features:AppThemeViewModel">
+             x:DataType="AppThemeViewModel">
 
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">

@@ -14,7 +14,7 @@
             <StackLayout Spacing="15">
                 <Image Source="{FontImage
                                     FontFamily=FontAwesome,
-                    Glyph={x:Static local:IconFont.CalendarWeek},
+                    Glyph={x:Static IconFont.CalendarWeek},
                     Size=64,Color='#4E9DB5'}"
                        HorizontalOptions="Center"/>
                 <Label Text="BILLS"
@@ -47,7 +47,7 @@
             <Image
                                     Source="{FontImage
                                     FontFamily=FontAwesome,
-                                    Glyph={x:Static local:IconFont.MoneyBillWave},
+                                    Glyph={x:Static IconFont.MoneyBillWave},
                                     Color='#73BFC0',
                                     Size=80}"/>
 

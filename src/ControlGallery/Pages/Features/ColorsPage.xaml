@@ -13,7 +13,7 @@
                 <HorizontalWrapLayout CompressedLayout.IsHeadless="True"
                             Margin="2,15">
                     <BindableLayout.ItemsSource>
-                        <x:Array Type="{x:Type models:ColorBrush}">
+                        <x:Array Type="{x:Type ColorBrush}">
                             <ColorBrush Brush="{StaticResource PrimaryBrush}" BrushName="Primary"/>
                             <ColorBrush Brush="{StaticResource SecondaryBrush}" BrushName="Secondary"/>
                             <ColorBrush Brush="{StaticResource TertiaryBrush}" BrushName="Tertiary"/>

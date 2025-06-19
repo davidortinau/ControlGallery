@@ -11,16 +11,16 @@
                       CurrentItemChanged="cv_CurrentItemChanged"
                      >
             <CarouselView.ItemsSource>
-                <x:Array Type="{x:Type model:InstaPic}">
-                    <model:InstaPic ImageSource="insta_00.jpg"
+                <x:Array Type="{x:Type InstaPic}">
+                    <InstaPic ImageSource="insta_00.jpg"
                                     Description="Glenn takes Dan and Dave for a ride!"/>
-                    <model:InstaPic ImageSource="insta_01.jpg"
+                    <InstaPic ImageSource="insta_01.jpg"
                                     Description="Arrived at the Antwerpen-Berchem station."/>
-                    <model:InstaPic ImageSource="insta_02.jpg"
+                    <InstaPic ImageSource="insta_02.jpg"
                                     Description="Streets of Antwerp."/>
-                    <model:InstaPic ImageSource="insta_03.jpg"
+                    <InstaPic ImageSource="insta_03.jpg"
                                     Description="The canals of Utrecht were amazing."/>
-                    <model:InstaPic ImageSource="insta_04.jpg"
+                    <InstaPic ImageSource="insta_04.jpg"
                                     Description="Chowing down on Bitterballen with Brandon and Alex in Utrecht."/>
                 </x:Array>
             </CarouselView.ItemsSource>
@@ -48,21 +48,21 @@
             <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
                 <ImageButton Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.Heart},
+                                        Glyph={x:Static IconFont.Heart},
                                         Color=Black,
                                         Size=22
                                         }"
                              BackgroundColor="Transparent"/>
                 <ImageButton Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.CommentAlt},
+                                        Glyph={x:Static IconFont.CommentAlt},
                                         Color=Black,
                                         Size=22
                                         }"
                              BackgroundColor="Transparent"/>
                 <ImageButton Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.PaperPlane},
+                                        Glyph={x:Static IconFont.PaperPlane},
                                         Color=Black,
                                         Size=22
                                         }"
@@ -82,7 +82,7 @@
                          VerticalOptions="Center"
                          Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.Bookmark},
+                                        Glyph={x:Static IconFont.Bookmark},
                                         Color=Black,
                                         Size=22
                                         }"

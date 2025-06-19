@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPageTitle="Lufthansa"
+<ContentPage Title="Lufthansa"
              Shell.ForegroundColor="White"
              Shell.BackgroundColor="Black"
              x:Class="ControlGallery.Pages.Controls.CarouselView.LufthansaPage">

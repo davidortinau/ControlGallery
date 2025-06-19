@@ -14,7 +14,7 @@
             <StackLayout Spacing="15">
                 <Image Source="{FontImage
                                     FontFamily=FontAwesome,
-                    Glyph={x:Static local:IconFont.DollarSign},
+                    Glyph={x:Static IconFont.DollarSign},
                     Size=64,Color=DarkGreen}"
                        HorizontalOptions="Center"/>
                 <Label Text="CASH FLOW"

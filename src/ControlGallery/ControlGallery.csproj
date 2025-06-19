@@ -64,7 +64,6 @@
     <PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.2.0" />
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
-    <PackageReference Include="Redth.Maui.VirtualListView" Version="0.2.4" />
     <PackageReference Include="epj.RouteGenerator" Version="1.0.0-pre1" />
     <PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.5" />
   </ItemGroup>
@@ -74,26 +73,6 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
-
-  <ItemGroup>
-    <MauiXaml Update="Pages\Controls\VirtualListViewPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\MonkeyViewCell.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Pages\Controls\VirtualListViewPage.xaml.cs">
-      <DependentUpon>VirtualListView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\Controls\MonkeyViewCell.xaml.cs">
-      <DependentUpon>MonkeyViewCell.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
@@ -106,10 +85,4 @@
     <UseHardenedRuntime>true</UseHardenedRuntime>
   </PropertyGroup>-->
   
-  <ItemGroup>
-    <None Remove="Pages\Features\Animation\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Features\Animation\" />
-  </ItemGroup>
 </Project>

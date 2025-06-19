@@ -3,6 +3,9 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
 
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
+    "Microsoft.Maui.ApplicationModel", AssemblyName = "Microsoft.Maui.Essentials")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
     "ControlGallery")]
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
@@ -102,15 +105,7 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
     "ColorCode", AssemblyName = "ColorCode.Core")]
-[assembly: XmlnsDefinition(
-    "http://schemas.microsoft.com/dotnet/maui/global",
-    "Microsoft.Maui.ApplicationModel", AssemblyName = "Microsoft.Maui.Essentials")]
-[assembly: XmlnsDefinition(
-    "http://schemas.microsoft.com/dotnet/maui/global",
-    "Microsoft.Maui.Controls", AssemblyName = "VirtualListView")]
-[assembly: XmlnsDefinition(
-    "http://schemas.microsoft.com/dotnet/maui/global",
-    "Microsoft.Maui.Controls.Compatibility", AssemblyName = "Microsoft.Maui.Controls")]
+
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
     "Syncfusion.Maui.Toolkit.SegmentedControl", AssemblyName = "Syncfusion.Maui.Toolkit")]

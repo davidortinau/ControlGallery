@@ -10,12 +10,12 @@
                       PeekAreaInsets="60">
             <CarouselView.ItemsSource>
                 <x:Array Type="{x:Type ContentView}">
-                    <c:MintView01/>
-                    <c:MintView02/>
-                    <c:MintView01/>
-                    <c:MintView02/>
-                    <c:MintView01/>
-                    <c:MintView02/>
+                    <MintView01/>
+                    <MintView02/>
+                    <MintView01/>
+                    <MintView02/>
+                    <MintView01/>
+                    <MintView02/>
                 </x:Array>
             </CarouselView.ItemsSource>
             <CarouselView.ItemTemplate>

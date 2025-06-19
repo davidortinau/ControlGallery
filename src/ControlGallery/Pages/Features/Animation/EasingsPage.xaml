@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-             
              Title="Easings"
              x:Class="Animations.EasingsPage">
 
@@ -83,7 +82,7 @@
             </Border>
         </ControlTemplate>
 
-        <Style TargetType="controls:EasingCard">
+        <Style TargetType="EasingCard">
             <Setter Property="ControlTemplate" Value="{StaticResource EasingBox}"/>
             <Setter Property="FlexLayout.Grow" Value="1"/>
         </Style>
