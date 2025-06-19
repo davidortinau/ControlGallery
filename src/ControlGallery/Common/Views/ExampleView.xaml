@@ -1,18 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/maui/global"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:cc="clr-namespace:ColorCode;assembly=ColorCode.Core"
-             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:common="clr-namespace:ControlGallery"
-             xmlns:conv="clr-namespace:ControlGallery.Converters"
-             xmlns:behaviors="clr-namespace:ControlGallery.Common.Behaviors"
-             xmlns:v="clr-namespace:ControlGallery.Common.Views"
-             x:DataType="v:ExampleView"
+             x:DataType="ExampleView"
              x:Class="ControlGallery.Common.Views.ExampleView">
     <ContentView.Resources>
-        <mct:IntToBoolConverter x:Key="IntToBoolConverter"/>
-        <mct:IsStringNotNullOrEmptyConverter x:Key="IsNotNullConverter"/>
-        <conv:ColorSyntaxConverter x:Key="ColorSyntaxConverter"/>
+        <IntToBoolConverter x:Key="IntToBoolConverter"/>
+        <IsStringNotNullOrEmptyConverter x:Key="IsNotNullConverter"/>
+        <ColorSyntaxConverter x:Key="ColorSyntaxConverter"/>
 
         <ControlTemplate x:Key="TabTemplate">
             <Grid RowDefinitions="40,4" WidthRequest="100">
@@ -99,18 +93,18 @@
                                            Grid.ColumnSpan="2"
                                            VerticalOptions="End">
                         <RadioButton Content="C#" Value="1" x:Name="rCsharp" IsChecked="True"
-                                     behaviors:CursorBehavior.AttachBehavior="True"
+                                     CursorBehavior.AttachBehavior="True"
                                      IsVisible="{Binding CSharp, Converter={StaticResource IsNotNullConverter}}"/>
                         <RadioButton Content="XAML" Value="0" x:Name="rXaml"
-                                     behaviors:CursorBehavior.AttachBehavior="True"
+                                     CursorBehavior.AttachBehavior="True"
                                      IsVisible="{Binding Xaml, Converter={StaticResource IsNotNullConverter}}"/>
                         <RadioButton Content="Style" Value="2" x:Name="rStyle"
-                                     behaviors:CursorBehavior.AttachBehavior="True"
+                                     CursorBehavior.AttachBehavior="True"
                                      IsVisible="{Binding Styles, Converter={StaticResource IsNotNullConverter}}"
                                      />
                     
                     </HorizontalStackLayout>
-                    <Button ImageSource="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static common:IconFont.Copy}, Color={StaticResource Gray500},Size=18}"
+                    <Button ImageSource="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static IconFont.Copy}, Color={StaticResource Gray500},Size=18}"
                                 HorizontalOptions="End"
                                 Style="{StaticResource BorderlessButton}"
                                 Margin="0"
@@ -131,21 +125,21 @@
 
                     <Label Grid.Row="1"
                            Grid.Column="1"
-                           FormattedText="{Binding Xaml, Converter={StaticResource ColorSyntaxConverter}, ConverterParameter={x:Static cc:Languages.Xml}}"
+                           FormattedText="{Binding Xaml, Converter={StaticResource ColorSyntaxConverter}, ConverterParameter={x:Static Languages.Xml}}"
                             IsVisible="{Binding IsChecked, Source={x:Reference rXaml}}"
                             FontSize="16"
                             Margin="15"
                             />
                     <Label  Grid.Row="1"
                             Grid.Column="1"
-                            FormattedText="{Binding CSharp, Converter={StaticResource ColorSyntaxConverter}, ConverterParameter={x:Static cc:Languages.CSharp}}"
+                            FormattedText="{Binding CSharp, Converter={StaticResource ColorSyntaxConverter}, ConverterParameter={x:Static Languages.CSharp}}"
                             IsVisible="{Binding IsChecked, Source={x:Reference rCsharp}}"
                             FontSize="16"
                             Margin="15"
                             />
                     <Label  Grid.Row="1"
                             Grid.Column="1"
-                            FormattedText="{Binding Styles, Converter={StaticResource ColorSyntaxConverter}, ConverterParameter={x:Static cc:Languages.Xml}}"
+                            FormattedText="{Binding Styles, Converter={StaticResource ColorSyntaxConverter}, ConverterParameter={x:Static Languages.Xml}}"
                             IsVisible="{Binding IsChecked, Source={x:Reference rStyle}}"
                             FontSize="16"
                             Margin="15"

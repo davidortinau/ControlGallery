@@ -1,3 +1,4 @@
+using System.Reflection;
 using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
 
 [assembly: XmlnsDefinition(
@@ -11,6 +12,103 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
     "ControlGallery.Pages")]
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
-    "ControlGallery.Common.Behaviors")]    
+    "ControlGallery.Common.Behaviors")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "http://schemas.microsoft.com/dotnet/2022/maui/toolkit")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "http://schemas.syncfusion.com/maui/toolkit")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Models")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CustomLayouts")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CodeHollow.FeedReader", AssemblyName = "CodeHollow.FeedReader")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Common.Effects")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Layouts")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Layouts.AbsoluteLayouts")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CollectionViewDemos.Views")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Features.Animation")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Flexibility.Shared")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Converters")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CollectionViewDemos.Controls")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CollectionViewDemos.ViewModels")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Controls.CarouselView")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CarouselGallery.Views.Components")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CarouselGallery.Models")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Animations")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Animations.Controls")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Features")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Controls.TableView")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ControlGallery.Pages.Controls")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "CollectionViewDemos.Models")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "FlexLayoutDemos")]
 
-[assembly: XmlnsPrefix("ControlGallery.Common.Views","views")]
+// External assemblies that need assembly specification
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "ColorCode", AssemblyName = "ColorCode.Core")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Microsoft.Maui.ApplicationModel", AssemblyName = "Microsoft.Maui.Essentials")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Microsoft.Maui.Controls", AssemblyName = "VirtualListView")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Microsoft.Maui.Controls.Compatibility", AssemblyName = "Microsoft.Maui.Controls")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Syncfusion.Maui.Toolkit.SegmentedControl", AssemblyName = "Syncfusion.Maui.Toolkit")]
+
+// Maps namespace from the URI
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "http://schemas.microsoft.com/dotnet/2021/maui/maps")]
+
+[assembly: XmlnsPrefix("ControlGallery.Common.Views", "views")]
+[assembly: XmlnsPrefix("http://schemas.microsoft.com/dotnet/2022/maui/toolkit", "toolkit")]
+
+//  xmlns:feed="clr-namespace:CodeHollow.FeedReader;assembly=CodeHollow.FeedReader"

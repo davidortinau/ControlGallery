@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/maui/global"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:views="clr-namespace:ControlGallery.Common.Views"
              x:Class="ControlGallery.Common.Views.ControlExample">
 
     <ContentView.Resources>
         <x:Double x:Key="ExampleMaxWidth">1000</x:Double>
 
         <ResourceDictionary>
-            <mct:IsNotNullConverter x:Key="IsNotNullConverter" />
+            <IsNotNullConverter x:Key="IsNotNullConverter" />
         </ResourceDictionary>
 
         <!--<Storyboard x:Name="PopOutStoryboard">
@@ -143,30 +141,30 @@
             </Border>
 
             <!--  Sample code display  -->
-            <!--<mct:Expander Grid.Row="1" Background="{StaticResource Gray500Brush}">
+            <!--<Expander Grid.Row="1" Background="{StaticResource Gray500Brush}">
 
-                <mct:Expander.Header>
+                <Expander.Header>
                     <Label Text="Source code"/>
-                </mct:Expander.Header>
+                </Expander.Header>
 
-                <mct:Expander.Content>
+                <Expander.Content>
                     <VerticalStackLayout>
-                        <views:SampleCodePresenter
+                        <SampleCodePresenter
                             x:Name="XamlPresenter"
                             Code="{x:Bind Xaml}"
                             CodeSourceFile="{x:Bind XamlSource}"
                             Substitutions="{x:Bind Substitutions}"/>
                         <Border x:Name="SampleCodeSeparator" IsVisible="false" Margin="0,20"
                             StrokeThickness="1" Stroke="{StaticResource Gray300Brush}"/>
-                        <views:SampleCodePresenter
+                        <SampleCodePresenter
                             x:Name="CSharpPresenter"
                             Code="{x:Bind CSharp}"
                             CodeSourceFile="{x:Bind CSharpSource}"
                             Substitutions="{x:Bind Substitutions}"
                             IsCSharpSample="true"/>
                     </VerticalStackLayout>
-                </mct:Expander.Content>
-            </mct:Expander>
+                </Expander.Content>
+            </Expander>
 
             <HorizontalStackLayout x:Name="ScreenshotControls" Grid.Row="2"
                                    Spacing="6" Margin="0,6,0,0" IsVisible="false">
