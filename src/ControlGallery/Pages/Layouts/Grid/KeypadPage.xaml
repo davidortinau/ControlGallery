@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             xmlns:p="clr-namespace:ControlGallery.Pages.Layouts"
              x:Class="ControlGallery.Pages.Layouts.KeypadPage"
              Title="Keypad">
         <ContentPage.Resources>

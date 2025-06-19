@@ -85,6 +85,9 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
     "FlexLayoutDemos")]
+[assembly: XmlnsDefinition(
+    "http://schemas.microsoft.com/dotnet/maui/global",
+    "Fonts")]
 
 // External assemblies that need assembly specification
 [assembly: XmlnsDefinition(

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"x:Class="CollectionViewDemos.Views.ScrollToByIndexPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewDemos.Views.ScrollToByIndexPage"
              Title="Scroll to index">
     <Grid Margin="20" RowDefinitions="Auto,Auto,Auto,*">
         <StackLayout Orientation="Horizontal"

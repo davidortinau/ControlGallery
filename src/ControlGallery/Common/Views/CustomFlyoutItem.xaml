@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Grid xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"x:Class="ControlGallery.Common.Views.CustomFlyoutItem"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlGallery.Common.Views.CustomFlyoutItem"
              ColumnDefinitions="15,50,*">
         <Grid.Behaviors>
                 <CursorBehavior/>

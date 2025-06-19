@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"x:Class="CollectionViewDemos.Views.VerticalListSpacingPage"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewDemos.Views.VerticalListSpacingPage"
              Title="Vertical list (spacing)">
     <Grid Margin="20" RowDefinitions="Auto, *">
         <SpacingModifier CV="{x:Reference collectionView}"

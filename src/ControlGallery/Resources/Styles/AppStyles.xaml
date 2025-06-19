@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- <?xaml-comp compile="true" ?> -->
 <ResourceDictionary
-    xmlns:pages="clr-namespace:ControlGallery.Pages.Controls"
     xmlns="http://schemas.microsoft.com/dotnet/maui/global"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:f="clr-namespace:Fonts">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <ControlPageTemplate x:Key="ControlPageTemplate"/>
 
