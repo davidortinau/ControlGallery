@@ -15,7 +15,7 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
     private bool _isPlaying = false;
     private uint _duration = 3000;
     private bool _isLooping;
-    
+
     public EasingCard Card { get; set; }
 
     public Matrix PathMatrix
@@ -39,19 +39,19 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
     public uint Duration
     {
         get => _duration;
-        set { _duration = value; NotifyPropertyChanged();}
+        set { _duration = value; NotifyPropertyChanged(); }
     }
 
     public uint Rate
     {
         get => _rate;
-        set { _rate = value; NotifyPropertyChanged();}
+        set { _rate = value; NotifyPropertyChanged(); }
     }
 
     public bool IsLooping
     {
         get => _isLooping;
-        set { _isLooping = value; NotifyPropertyChanged();}
+        set { _isLooping = value; NotifyPropertyChanged(); }
     }
 
     public EasingEditorPage()
@@ -60,16 +60,16 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
         InitializeComponent();
     }
 
-    
+
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
 
-        EasingPath.Data = ((Path) Card.Content).Data;
-        EasingPath.Stroke = ((Path) Card.Content).Stroke;
+        EasingPath.Data = ((Path)Card.Content).Data;
+        EasingPath.Stroke = ((Path)Card.Content).Stroke;
         CalculateScale();
-        
+
     }
 
     void CalculateScale()
@@ -77,24 +77,24 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
         double padding = 15.0 * 2;
         var pathRatio = EasingPath.Width / EasingPath.Height;
         var gridRatio = PathContainer.Width / PathContainer.Height;
-        
+
         Debug.WriteLine($"PathRatio: {pathRatio}, GridRatio: {gridRatio}");
 
         var size = (gridRatio > pathRatio)
-            ? new Size(EasingPath.Width * ((PathContainer.Height-padding) / EasingPath.Height), PathContainer.Height-padding)
-            : new Size(PathContainer.Width - padding, EasingPath.Height * ((PathContainer.Width-padding) / EasingPath.Width));
+            ? new Size(EasingPath.Width * ((PathContainer.Height - padding) / EasingPath.Height), PathContainer.Height - padding)
+            : new Size(PathContainer.Width - padding, EasingPath.Height * ((PathContainer.Width - padding) / EasingPath.Width));
 
         ScaleFactor = (gridRatio > pathRatio)
             ? (PathContainer.Height / EasingPath.Height) * 0.7
             : (PathContainer.Width / EasingPath.Width) * 0.7;
-        
+
         NotifyPropertyChanged(nameof(ScaleFactor));
 
         // PathTransform.ScaleX = PathTransform.ScaleY = ScaleFactor;
-        
+
         Debug.WriteLine($"ScaleFactor: {ScaleFactor}");
     }
-    
+
     public new event PropertyChangedEventHandler PropertyChanged;
     private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
     {
@@ -116,22 +116,22 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
             IsPlaying = true;
             Animate();
         }
-        
+
     }
-    
+
     private void Animate()
     {
         // Box.TranslationX = 0;
         var timeline = new Animation();
-        var pacerAnim = new Animation(v=>Pacer.WidthRequest = v,0, AnimationTrack.Width, Easing.Linear);
-        var boxAnim = new Animation (v => Box.TranslationX = v, 0, (AnimationTrack.Width - Box.Width - AnimationTrack.Padding.Left - AnimationTrack.Padding.Right), Card.EasingStyle);
-        timeline.Add(0,1,pacerAnim);
-        timeline.Add(0,1,boxAnim);
+        var pacerAnim = new Animation(v => Pacer.WidthRequest = v, 0, AnimationTrack.Width, Easing.Linear);
+        var boxAnim = new Animation(v => Box.TranslationX = v, 0, (AnimationTrack.Width - Box.Width - AnimationTrack.Padding.Left - AnimationTrack.Padding.Right), Card.EasingStyle);
+        timeline.Add(0, 1, pacerAnim);
+        timeline.Add(0, 1, boxAnim);
         timeline.Commit(this, "Tween", _rate, _duration, null, (v, c) =>
         {
-            if(!_isLooping)
+            if (!_isLooping)
                 IsPlaying = false;
-        }, ()=>IsLooping);
+        }, () => IsLooping);
     }
 
     private void ResetBtn_OnClicked(object sender, EventArgs e)
@@ -145,7 +145,7 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
         Pacer.WidthRequest = 0;
         Box.TranslationX = 0;
     }
-    
+
     public List<string> Easings = new List<string>()
     {
         Easing.Linear.ToString(),

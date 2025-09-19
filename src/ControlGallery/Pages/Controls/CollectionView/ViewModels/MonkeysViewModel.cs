@@ -53,7 +53,7 @@ namespace CollectionViewDemos.ViewModels
         public ICommand FavoriteCommand => new Command<Monkey>(FavoriteMonkey);
         public ICommand FilterCommand => new Command<string>(FilterItems);
         public ICommand MonkeySelectionChangedCommand => new Command(MonkeySelectionChanged);
-        
+
         public MonkeysViewModel()
         {
             source = new List<Monkey>();
@@ -67,7 +67,7 @@ namespace CollectionViewDemos.ViewModels
                 Monkeys[1], Monkeys[3], Monkeys[4]
             };
         }
-        
+
         void CreateMonkeyCollection()
         {
             source.Add(new Monkey

@@ -9,7 +9,7 @@ namespace CustomLayouts
         IGridLayout? _gridLayout;
         GridLayoutManager? _manager;
 
-        public ColumnLayoutManager(ColumnLayout layout) 
+        public ColumnLayoutManager(ColumnLayout layout)
         {
             _columnLayout = layout;
         }

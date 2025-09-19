@@ -7,10 +7,10 @@ namespace ControlGallery.Common.Views;
 
 public partial class SampleCodePresenter : ContentView
 {
-	public SampleCodePresenter()
-	{
-		InitializeComponent();
-	}
+    public SampleCodePresenter()
+    {
+        InitializeComponent();
+    }
 
     public static readonly BindableProperty CodeProperty = BindableProperty.Create("Code", typeof(string), typeof(SampleCodePresenter), default(string), propertyChanged: OnBindablePropertyChanged);
     public string Code
