@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
+<ContentPage
              x:Class="CollectionViewDemos.Views.VerticalListSpacingPage"
              Title="Vertical list (spacing)">
     <Grid Margin="20" RowDefinitions="Auto, *">
-        <controls:SpacingModifier CV="{x:Reference collectionView}"
+        <SpacingModifier CV="{x:Reference collectionView}"
                                   SpacingText="0" />
         <CollectionView x:Name="collectionView"
                         ItemsSource="{Binding Monkeys}"

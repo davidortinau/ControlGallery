@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
-    
+    <TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
+
     <OutputType>Exe</OutputType>
     <RootNamespace>ControlGallery</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -11,26 +11,36 @@
     <NoWarn>XC0022;CS8632;CS0108;CS0618;CS8785</NoWarn>
 
     <MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
-    
-    <!-- <MauiVersion>9.0.60</MauiVersion> -->
-    
-	  <ApplicationTitle>Control Gallery</ApplicationTitle>
-	  <ApplicationId>com.simplyprofound.MauiControlGallery</ApplicationId>
+
+    <!-- <MauiVersion>10.0.0-ci.net10.25321.5</MauiVersion> -->
+
+    <ApplicationTitle>Control Gallery</ApplicationTitle>
+    <ApplicationId>com.simplyprofound.MauiControlGallery</ApplicationId>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
-	  
-	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-	  <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-	
+
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+    <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+
   </PropertyGroup>
 
   <PropertyGroup>
-      <DefineConstants>$(DefineConstants);MauiAllowImplicitXmlnsDeclaration</DefineConstants>
-      <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <DefineConstants>$(DefineConstants);MauiAllowImplicitXmlnsDeclaration</DefineConstants>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+  </PropertyGroup>
+
+  <!-- <PropertyGroup>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <MauiXamlInflator>SourceGen</MauiXamlInflator>
+  </PropertyGroup> -->
+
+  <!-- CoreCLR Android -->
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <UseMonoRuntime>false</UseMonoRuntime>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net10.0-ios|AnyCPU'">
@@ -39,15 +49,15 @@
     <CodesignRequireProvisioningProfile>true</CodesignRequireProvisioningProfile>
     <DisableCodesignVerification>true</DisableCodesignVerification>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
     <MauiImage Include="Resources\Images\*" />
-	  <MauiImage Include="Resources\Images\toolbox\*" />
+    <MauiImage Include="Resources\Images\toolbox\*" />
     <MauiFont Include="Resources\Fonts\*.ttf" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <EmbeddedResource Include="Resources\food_01.png" />
   </ItemGroup>
@@ -55,7 +65,6 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Maui" Version="12.0.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="9.0.80" />
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.6" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="9.0.0" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
@@ -64,38 +73,16 @@
     <PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.2.0" />
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
-    <PackageReference Include="Redth.Maui.VirtualListView" Version="0.2.4" />
-    <PackageReference Include="epj.RouteGenerator" Version="1.0.0-pre1" />
-    <PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.5" />
+    <PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
-	</ItemGroup>
-
-  <ItemGroup>
-    <MauiXaml Update="Pages\Controls\VirtualListViewPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Pages\Controls\MonkeyViewCell.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Pages\Controls\VirtualListViewPage.xaml.cs">
-      <DependentUpon>VirtualListView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\Controls\MonkeyViewCell.xaml.cs">
-      <DependentUpon>MonkeyViewCell.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-
-	<!-- Build Properties must be defined within these property groups to ensure successful publishing
+  <!-- Build Properties must be defined within these property groups to ensure successful publishing
        to the Mac App Store. See: https://aka.ms/maui-publish-app-store#define-build-properties-in-your-project-file -->
   <!--<PropertyGroup Condition="$(TargetFramework.Contains('-maccatalyst')) and '$(Configuration)' == 'Debug'">
     <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Debug.plist</CodesignEntitlements>
@@ -105,11 +92,5 @@
     <CodesignEntitlements>Platforms/MacCatalyst/Entitlements.Release.plist</CodesignEntitlements>
     <UseHardenedRuntime>true</UseHardenedRuntime>
   </PropertyGroup>-->
-  
-  <ItemGroup>
-    <None Remove="Pages\Features\Animation\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Features\Animation\" />
-  </ItemGroup>
+
 </Project>

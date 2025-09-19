@@ -7,19 +7,19 @@ namespace ControlGallery.Common.Views;
 
 public partial class SampleCodePresenter : ContentView
 {
-	public SampleCodePresenter()
-	{
-		InitializeComponent();
-	}
+    public SampleCodePresenter()
+    {
+        InitializeComponent();
+    }
 
-    public static readonly BindableProperty CodeProperty = BindableProperty.Create("Code", typeof(string), typeof(SampleCodePresenter), OnBindablePropertyChanged);
+    public static readonly BindableProperty CodeProperty = BindableProperty.Create("Code", typeof(string), typeof(SampleCodePresenter), default(string), propertyChanged: OnBindablePropertyChanged);
     public string Code
     {
         get { return (string)GetValue(CodeProperty); }
         set { SetValue(CodeProperty, value); }
     }
 
-    public static readonly BindableProperty CodeSourceFileProperty = BindableProperty.Create("CodeSourceFile", typeof(object), typeof(SampleCodePresenter), OnBindablePropertyChanged);
+    public static readonly BindableProperty CodeSourceFileProperty = BindableProperty.Create("CodeSourceFile", typeof(object), typeof(SampleCodePresenter), propertyChanged: OnBindablePropertyChanged);
     public Uri CodeSourceFile
     {
         get { return (Uri)GetValue(CodeSourceFileProperty); }
@@ -42,12 +42,11 @@ public partial class SampleCodePresenter : ContentView
 
     public bool IsEmpty => Code.Length == 0 && CodeSourceFile == null;
 
-    private string actualCode = "";
-    private static Regex SubstitutionPattern = new Regex(@"\$\(([^\)]+)\)");
+    private static Regex SubstitutionPattern = new Regex(@"\$\(([^)]+)\)");
 
-    private static void OnBindablePropertyChanged(BindableObject target, EventArgs args)
+    private static void OnBindablePropertyChanged(BindableObject bindable, object oldValue, object newValue)
     {
-        if (target is SampleCodePresenter presenter)
+        if (bindable is SampleCodePresenter presenter)
         {
             presenter.ReevaluateVisibility();
         }
@@ -116,106 +115,6 @@ public partial class SampleCodePresenter : ContentView
         //    FormatAndRenderSampleFromFile(CodeSourceFile, CodePresenter, IsCSharpSample ? Languages.CSharp : Languages.Xml);
         //}
     }
-
-    //private async void FormatAndRenderSampleFromFile(Uri source, ContentPresenter presenter, ILanguage highlightLanguage)
-    //{
-    //    if (source != null && source.AbsolutePath.EndsWith("txt"))
-    //    {
-    //        Uri derivedSource = GetDerivedSource(source);
-    //        var file = await StorageFile.GetFileFromApplicationUriAsync(derivedSource);
-    //        string sampleString = await FileIO.ReadTextAsync(file);
-
-    //        FormatAndRenderSampleFromString(sampleString, presenter, highlightLanguage);
-    //    }
-    //    else
-    //    {
-    //        presenter.Visibility = Visibility.Collapsed;
-    //    }
-    //}
-
-    //private void FormatAndRenderSampleFromString(string sampleString, ContentPresenter presenter, ILanguage highlightLanguage)
-    //{
-    //    // Trim out stray blank lines at start and end.
-    //    sampleString = sampleString.TrimStart('\n').TrimEnd();
-
-    //    // Also trim out spaces at the end of each line
-    //    sampleString = string.Join('\n', sampleString.Split('\n').Select(s => s.TrimEnd()));
-
-    //    // Perform any applicable substitutions.
-    //    sampleString = SubstitutionPattern.Replace(sampleString, match =>
-    //    {
-    //        foreach (var substitution in Substitutions)
-    //        {
-    //            if (substitution.Key == match.Groups[1].Value)
-    //            {
-    //                return substitution.ValueAsString();
-    //            }
-    //        }
-    //        throw new KeyNotFoundException(match.Groups[1].Value);
-    //    });
-
-    //    actualCode = sampleString;
-
-    //    var sampleCodeRTB = new RichTextBlock { FontFamily = new FontFamily("Consolas") };
-
-    //    var formatter = GenerateRichTextFormatter();
-    //    formatter.FormatRichTextBlock(sampleString, highlightLanguage, sampleCodeRTB);
-    //    presenter.Content = sampleCodeRTB;
-    //}
-
-    //private RichTextBlockFormatter GenerateRichTextFormatter()
-    //{
-    //    var formatter = new RichTextBlockFormatter(ThemeHelper.ActualTheme);
-
-    //    if (ThemeHelper.ActualTheme == ElementTheme.Dark)
-    //    {
-    //        UpdateFormatterDarkThemeColors(formatter);
-    //    }
-
-    //    return formatter;
-    //}
-
-    //private void UpdateFormatterDarkThemeColors(RichTextBlockFormatter formatter)
-    //{
-    //    // Replace the default dark theme resources with ones that more closely align to VS Code dark theme.
-    //    formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttribute]);
-    //    formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttributeQuotes]);
-    //    formatter.Styles.Remove(formatter.Styles[ScopeName.XmlAttributeValue]);
-    //    formatter.Styles.Remove(formatter.Styles[ScopeName.HtmlComment]);
-    //    formatter.Styles.Remove(formatter.Styles[ScopeName.XmlDelimiter]);
-    //    formatter.Styles.Remove(formatter.Styles[ScopeName.XmlName]);
-
-    //    formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.XmlAttribute)
-    //    {
-    //        Foreground = "#FF87CEFA",
-    //        ReferenceName = "xmlAttribute"
-    //    });
-    //    formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.XmlAttributeQuotes)
-    //    {
-    //        Foreground = "#FFFFA07A",
-    //        ReferenceName = "xmlAttributeQuotes"
-    //    });
-    //    formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.XmlAttributeValue)
-    //    {
-    //        Foreground = "#FFFFA07A",
-    //        ReferenceName = "xmlAttributeValue"
-    //    });
-    //    formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.HtmlComment)
-    //    {
-    //        Foreground = "#FF6B8E23",
-    //        ReferenceName = "htmlComment"
-    //    });
-    //    formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.XmlDelimiter)
-    //    {
-    //        Foreground = "#FF808080",
-    //        ReferenceName = "xmlDelimiter"
-    //    });
-    //    formatter.Styles.Add(new ColorCode.Styling.Style(ScopeName.XmlName)
-    //    {
-    //        Foreground = "#FF5F82E8",
-    //        ReferenceName = "xmlName"
-    //    });
-    //}
 
     private void CopyCodeButton_Click(object sender, EventArgs e)
     {

@@ -14,11 +14,11 @@ public class MarkupView : ContentView
 				new Button()
 					.Text("Button")
 					.Style("PrimaryButtonOutline")
-					.ClickGesture(()=>Button_Clicked()),
+					.TapGesture(()=>Button_Clicked()),
 				new Button()
 					.Text("Button")
-                    .Style("PrimaryButtonOutline")
-                    .ClickGesture(()=>Button_Clicked())
+					.Style("PrimaryButtonOutline")
+					.TapGesture(()=>Button_Clicked())
 					.IsEnabled(false),
 			}
 		};

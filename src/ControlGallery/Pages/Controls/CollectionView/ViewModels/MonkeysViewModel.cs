@@ -1,12 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using CollectionViewDemos.Models;
-using Microsoft.Maui.Adapters;
-using CommunityToolkit.Mvvm.ComponentModel;
 
 
 namespace CollectionViewDemos.ViewModels
@@ -57,9 +53,6 @@ namespace CollectionViewDemos.ViewModels
         public ICommand FavoriteCommand => new Command<Monkey>(FavoriteMonkey);
         public ICommand FilterCommand => new Command<string>(FilterItems);
         public ICommand MonkeySelectionChangedCommand => new Command(MonkeySelectionChanged);
-        
-        [ObservableProperty]
-        ObservableCollectionAdapter<Monkey> adapter;
 
         public MonkeysViewModel()
         {
@@ -73,10 +66,8 @@ namespace CollectionViewDemos.ViewModels
             {
                 Monkeys[1], Monkeys[3], Monkeys[4]
             };
-            
-            Adapter = new ObservableCollectionAdapter<Monkey>(new ObservableCollection<Monkey>(source));
         }
-        
+
         void CreateMonkeyCollection()
         {
             source.Add(new Monkey
@@ -258,9 +249,9 @@ namespace CollectionViewDemos.ViewModels
         }
 
         #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
+        public new event PropertyChangedEventHandler PropertyChanged;
 
-        void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        new void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

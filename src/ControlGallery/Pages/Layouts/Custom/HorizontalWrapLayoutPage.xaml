@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:cl="clr-namespace:CustomLayouts"
              x:Class="ControlGallery.Pages.Layouts.HorizontalWrapLayoutPage"
              Title="Horizontal Wrap Layout">
     <ContentPage.Resources>
@@ -16,7 +14,7 @@
         </Style>
     </ContentPage.Resources>
     <ScrollView>
-        <cl:HorizontalWrapLayout Spacing="5" Margin="15">
+        <HorizontalWrapLayout Spacing="5" Margin="15">
             <Border />
             <Border />
             <Border />
@@ -34,6 +32,6 @@
             <Border />
             <Border />
             <Border />
-        </cl:HorizontalWrapLayout>
+        </HorizontalWrapLayout>
     </ScrollView>
 </ContentPage>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:controls="clr-namespace:Animations.Controls"
+<ContentPage
              Title="{Binding Card.CardTitle}"
              x:Class="Animations.EasingEditorPage">
     <ContentPage.Resources>
-        <toolkit:BoolToObjectConverter
+        <BoolToObjectConverter
             x:Key="BoolToPlayPause"
             x:TypeArguments="FontImageSource"
                                           TrueObject="{StaticResource PauseIcon}"
@@ -40,9 +37,7 @@
                          VerticalOptions="Center"
                          CornerRadius="8"/>
             </Grid>
-                
-                
-            
+
                 <ScrollView Grid.Row="2">
                 <StackLayout Spacing="0">
                     <FlexLayout HorizontalOptions="Center" AlignItems="Center"
@@ -58,8 +53,7 @@
                                         Converter={StaticResource BoolToPlayPause}}" 
                                      Margin="8,0" 
                                      Clicked="PlayBtn_OnClicked"/>
-                            
-                        
+
                         <BoxView FlexLayout.Grow="1" />
                     </FlexLayout>
                     <TableView HasUnevenRows="True">
@@ -79,8 +73,7 @@
                                             Value="{Binding Duration, Mode=TwoWay, FallbackValue=250}"
                                             Maximum="3000" />
                                 </Grid>
-                                    
-                                    
+
                             </ViewCell>
                             <EntryCell Label="Rate" Text="{Binding Rate, Mode=TwoWay}" Keyboard="Numeric" />
                                 <SwitchCell On="{Binding IsLooping, Mode=TwoWay}" 

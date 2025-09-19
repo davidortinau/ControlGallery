@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:app="clr-namespace:ControlGallery"
+<ContentPage
              x:Class="ControlGallery.Pages.MainPage"
              Title="Main Pages"
-             >
+            >
 <ContentPage.Resources>
     <Color x:Key="Primary">#512BD4</Color>
         <Color x:Key="Secondary">#DFD8F7</Color>
@@ -94,27 +92,27 @@
     <FontImageSource
         x:Key="CircleIcon"
         FontFamily="FontAwesome"
-        Glyph="{x:Static app:IconFont.DotCircle}"
+        Glyph="{x:Static IconFont.DotCircle}"
         Color="{StaticResource TextOnSolid_Light}"
         Size="16"/>
 
     <FontImageSource
         x:Key="CircleIconDisabled"
         FontFamily="FontAwesome"
-        Glyph="{x:Static app:IconFont.DotCircle}"
+        Glyph="{x:Static IconFont.DotCircle}"
         Color="{StaticResource TextOnSolid_Light}"
         Size="16"/>
 
     <FontImageSource
         x:Key="CircleIconAlt"
         FontFamily="FontAwesome"
-        Glyph="{x:Static app:IconFont.DotCircle}"
+        Glyph="{x:Static IconFont.DotCircle}"
         Color="{StaticResource Primary}"
         Size="16"/>
     <FontImageSource
         x:Key="CircleIconAltDisabled"
         FontFamily="FontAwesome"
-        Glyph="{x:Static app:IconFont.DotCircle}"
+        Glyph="{x:Static IconFont.DotCircle}"
         Color="{StaticResource Neutral}"
         Size="16"/>
 

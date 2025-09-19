@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:ControlGallery.Models"
-             xmlns:cl="clr-namespace:CustomLayouts"
+<ContentPage
              x:Class="ControlGallery.Pages.ShadowPage"
              Title="Shadow">
     <ContentPage.Resources>
@@ -57,7 +54,7 @@
                 <BoxView Style="{StaticResource HRule}"/>
 
                 
-                <Polygon Fill="{StaticResource PrimaryBrush}"
+                <Microsoft.Maui.Controls.Shapes.Polygon Fill="{StaticResource PrimaryBrush}"
                          Shadow="{StaticResource BasicShadow}"
                          HeightRequest="50"
                          Points="0 36 0 13.5 13.5 0 36 0 50 13.5 50 36 36 50 13.5 50"/>
@@ -70,13 +67,13 @@
                     HeightRequest="50" WidthRequest="50"
                     HorizontalOptions="Start"
                     Shadow="{StaticResource BasicShadow}">
-                    <Polygon Fill="#663300" 
+                    <Microsoft.Maui.Controls.Shapes.Polygon Fill="#663300" 
                          Points="0 0 0 50 25 25"/>
-                    <Polygon Fill="#FF6600" 
+                    <Microsoft.Maui.Controls.Shapes.Polygon Fill="#FF6600" 
                          Points="0 0 50 0 25 25"/>
-                    <Polygon Fill="#FF9900" 
+                    <Microsoft.Maui.Controls.Shapes.Polygon Fill="#FF9900" 
                          Points="50 0 50 50 25 25"/>
-                    <Polygon Fill="#8C5D00" 
+                    <Microsoft.Maui.Controls.Shapes.Polygon Fill="#8C5D00" 
                          Points="0 50 25 25 50 50"/>
                 </Grid>
 

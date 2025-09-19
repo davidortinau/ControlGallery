@@ -2,7 +2,7 @@
 
 public partial class LayoutToPage : ContentPage
 {
-	private Point _initialPosition;
+    private Point _initialPosition;
     private Point _initalTranslate;
     private Size _imageSize;
     private Point _movedPosition;
@@ -36,7 +36,7 @@ public partial class LayoutToPage : ContentPage
             //this.Image.ScaleTo(1.5);
             //this.Image.FadeTo(0.2);
             //this.Image.RotateTo(180);
-            await this.Image.LayoutTo(rect);
+            await this.Image.TranslateToAsync(rect.X, rect.Y);
             ////await this.Image.TranslateTo(_movedPosition.X, _movedPosition.Y);
             //this.Image.ScaleTo(1);
             //this.Image.FadeTo(1);
@@ -51,7 +51,7 @@ public partial class LayoutToPage : ContentPage
             //this.Image.ScaleTo(0.5);
             //this.Image.FadeTo(0.5);
             //this.Image.RotateTo(90);
-            await this.Image.LayoutTo(rect);
+            await this.Image.TranslateToAsync(rect.X, rect.Y);
             //await this.Image.TranslateTo(_initalTranslate.X, _initalTranslate.Y);
             //this.Image.ScaleTo(1.0);
             //this.Image.FadeTo(1);

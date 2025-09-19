@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
+<ContentPage
              x:Class="CollectionViewDemos.Views.VerticalListSnapPointsPage"
              Title="Vertical list (snap points)">
     <Grid Margin="20" RowDefinitions="Auto,Auto,*">
@@ -9,7 +7,7 @@
                      HorizontalOptions="Center">
             <Label Text="SnapPointsType: "
                    VerticalTextAlignment="Center" />
-            <controls:EnumPicker x:Name="snapPointsTypeEnumPicker"
+            <EnumPicker x:Name="snapPointsTypeEnumPicker"
                               EnumType="{x:Type SnapPointsType}"
                               SelectedIndex="0"
                               SelectedIndexChanged="OnSnapPointsTypeSelectedIndexChanged" />
@@ -20,7 +18,7 @@
             <Label Grid.Row="1" 
                    Text="SnapPointsAlignment: "
                    VerticalTextAlignment="Center" />
-            <controls:EnumPicker x:Name="snapPointsAlignmentEnumPicker"
+            <EnumPicker x:Name="snapPointsAlignmentEnumPicker"
                              EnumType="{x:Type SnapPointsAlignment}"
                              SelectedIndex="0"
                              SelectedIndexChanged="OnSnapPointsAlignmentSelectedIndexChanged" />

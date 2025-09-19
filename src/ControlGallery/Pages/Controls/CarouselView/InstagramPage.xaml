@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:model="clr-namespace:CarouselGallery.Models"
-             xmlns:local="clr-namespace:ControlGallery"
+<ContentPage
              Title="Instagram" 
              x:Class="ControlGallery.Pages.Controls.CarouselView.InstagramPage">
     <Grid RowDefinitions="420,30,*">
@@ -12,18 +9,18 @@
                       HorizontalScrollBarVisibility="Never"
                       IndicatorView="indicatorView"
                       CurrentItemChanged="cv_CurrentItemChanged"
-                      >
+                     >
             <CarouselView.ItemsSource>
-                <x:Array Type="{x:Type model:InstaPic}">
-                    <model:InstaPic ImageSource="insta_00.jpg"
+                <x:Array Type="{x:Type InstaPic}">
+                    <InstaPic ImageSource="insta_00.jpg"
                                     Description="Glenn takes Dan and Dave for a ride!"/>
-                    <model:InstaPic ImageSource="insta_01.jpg"
+                    <InstaPic ImageSource="insta_01.jpg"
                                     Description="Arrived at the Antwerpen-Berchem station."/>
-                    <model:InstaPic ImageSource="insta_02.jpg"
+                    <InstaPic ImageSource="insta_02.jpg"
                                     Description="Streets of Antwerp."/>
-                    <model:InstaPic ImageSource="insta_03.jpg"
+                    <InstaPic ImageSource="insta_03.jpg"
                                     Description="The canals of Utrecht were amazing."/>
-                    <model:InstaPic ImageSource="insta_04.jpg"
+                    <InstaPic ImageSource="insta_04.jpg"
                                     Description="Chowing down on Bitterballen with Brandon and Alex in Utrecht."/>
                 </x:Array>
             </CarouselView.ItemsSource>
@@ -51,21 +48,21 @@
             <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="Center">
                 <ImageButton Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.Heart},
+                                        Glyph={x:Static IconFont.Heart},
                                         Color=Black,
                                         Size=22
                                         }"
                              BackgroundColor="Transparent"/>
                 <ImageButton Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.CommentAlt},
+                                        Glyph={x:Static IconFont.CommentAlt},
                                         Color=Black,
                                         Size=22
                                         }"
                              BackgroundColor="Transparent"/>
                 <ImageButton Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.PaperPlane},
+                                        Glyph={x:Static IconFont.PaperPlane},
                                         Color=Black,
                                         Size=22
                                         }"
@@ -85,14 +82,13 @@
                          VerticalOptions="Center"
                          Source="{FontImage
                                         FontFamily=FontAwesome,
-                                        Glyph={x:Static local:IconFont.Bookmark},
+                                        Glyph={x:Static IconFont.Bookmark},
                                         Color=Black,
                                         Size=22
                                         }"
                              BackgroundColor="Transparent"/>
 
         </Grid>
-        
 
         <Label x:Name="Description"
                Margin="15,0"

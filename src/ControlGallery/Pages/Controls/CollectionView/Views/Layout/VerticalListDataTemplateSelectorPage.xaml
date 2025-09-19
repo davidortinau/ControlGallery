@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:CollectionViewDemos.Controls"
+<ContentPage
              x:Class="CollectionViewDemos.Views.VerticalListDataTemplateSelectorPage"
              Title="Vertical list (DataTemplateSelector)">
     <ContentPage.Resources>
@@ -62,7 +60,7 @@
             </Grid>
         </DataTemplate>
         
-        <controls:MonkeyDataTemplateSelector x:Key="MonkeySelector"
+        <MonkeyDataTemplateSelector x:Key="MonkeySelector"
                                              AmericanMonkey="{StaticResource AmericanMonkeyTemplate}"
                                              OtherMonkey="{StaticResource OtherMonkeyTemplate}" />
     </ContentPage.Resources>

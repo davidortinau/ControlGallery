@@ -9,12 +9,12 @@ public partial class RotatePage : ContentPage
 
 	private async void OnClickedAsync(object sender, EventArgs e)
 	{
-		await Task.WhenAny<bool>(
-            BotImg.RotateTo(360, 500, Easing.CubicInOut),
-			BotImg.TranslateTo(0,-50, 250, Easing.CubicInOut)
-        );
-        await BotImg.TranslateTo(0, 0, 250, Easing.CubicInOut);
-        BotImg.Rotation = 0;
+		await Task.WhenAny(
+			BotImg.RotateToAsync(360, 500, Easing.CubicInOut),
+			BotImg.TranslateToAsync(0, -50, 250, Easing.CubicInOut)
+		);
+		await BotImg.TranslateToAsync(0, 0, 250, Easing.CubicInOut);
+		BotImg.Rotation = 0;
 	}
 }
 

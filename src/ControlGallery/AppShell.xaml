@@ -9,7 +9,7 @@
     </Shell.BindingContext>
 
     <FlyoutItem Title="Home"
-                >
+               >
         <ShellContent Route="home" 
             FlyoutIcon="{FontImageSource FontFamily=FontAwesome,
                                         Glyph={x:Static IconFont.Home},

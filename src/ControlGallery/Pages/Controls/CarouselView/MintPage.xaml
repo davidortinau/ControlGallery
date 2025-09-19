@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
              Title="Mint"
-             xmlns:local="clr-namespace:ControlGallery"
-             xmlns:c="clr-namespace:CarouselGallery.Views.Components"
              x:Class="ControlGallery.Pages.Controls.CarouselView.MintPage">
 
     <Grid RowDefinitions="*,90">
@@ -13,12 +10,12 @@
                       PeekAreaInsets="60">
             <CarouselView.ItemsSource>
                 <x:Array Type="{x:Type ContentView}">
-                    <c:MintView01/>
-                    <c:MintView02/>
-                    <c:MintView01/>
-                    <c:MintView02/>
-                    <c:MintView01/>
-                    <c:MintView02/>
+                    <MintView01/>
+                    <MintView02/>
+                    <MintView01/>
+                    <MintView02/>
+                    <MintView01/>
+                    <MintView02/>
                 </x:Array>
             </CarouselView.ItemsSource>
             <CarouselView.ItemTemplate>

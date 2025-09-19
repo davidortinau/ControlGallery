@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="ControlGallery.Pages.ControlsPage"
-             Title="Controls">
+<ContentPage
+    x:Class="ControlGallery.Pages.ControlsPage"
+    Title="Controls">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static IconFont.Boxes}, FontFamily=FontAwesome}"
-                Clicked="ToolbarItem_Clicked"/>
+                     Clicked="ToolbarItem_Clicked"/>
         <ToolbarItem IconImageSource="{FontImageSource Glyph={x:Static IconFont.List}, FontFamily=FontAwesome}"
-                Clicked="ToolbarItem_Clicked_1"/>
+                     Clicked="ToolbarItem_Clicked_1"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Resources>
         <DataTemplate x:Key="ListTemplate">
             <Grid ColumnDefinitions="44,*"
-                    RowDefinitions="44,1">
+                  RowDefinitions="44,1">
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding NavigateTo}"/>
                 </Grid.GestureRecognizers>
@@ -22,8 +23,8 @@
                        VerticalOptions="Center"
                        Text="{Binding Title}"/>
                 <BoxView Color="{StaticResource Gray200}"
-                        Grid.ColumnSpan="2"
-                        Grid.Row="1"/>
+                         Grid.ColumnSpan="2"
+                         Grid.Row="1"/>
                 <Grid.Behaviors>
                     <CursorBehavior/>
                 </Grid.Behaviors>
@@ -65,7 +66,7 @@
     </ContentPage.Resources>
 
     <CollectionView Grid.Row="1"
-            x:Name="ControlsList"
+                    x:Name="ControlsList"
                     ContentInsetAdjustmentBehavior.ContentInset="{StaticResource PageInset}"
                     ItemTemplate="{StaticResource TemplateSelector}">
         <CollectionView.Effects>
@@ -102,8 +103,6 @@
                 <NavItem Title="Entry"
                          Icon="view_entry.png"
                          Destination="{x:Type EntryPage}"/>
-                <NavItem Title="Frame"
-                         Destination="{x:Type FramePage}"/>
                 <NavItem Title="Images"
                          Icon="view_image.png"
                          Destination="{x:Type ImagePage}"/>
@@ -137,18 +136,12 @@
                 <NavItem Title="Switches"
                          Icon="view_switch.png"
                          Destination="{x:Type SwitchPage}"/>
-                <NavItem Title="TableView"
-                         Icon="view_tableview.png"
-                         Destination="{x:Type TableViewPage}"/>
                 <NavItem Title="TimePicker"
                          Icon="view_timepicker.png"
                          Destination="{x:Type TimePickerPage}"/>
                 <NavItem Title="WebView"
                          Icon="view_webview.png"
                          Destination="{x:Type WebViewPage}"/>
-                <NavItem Title="VirtualListView"
-                         Icon="view_listview.png"
-                         Destination="{x:Type VirtualListViewPage}"/>
             </x:Array>
         </CollectionView.ItemsSource>
     </CollectionView>

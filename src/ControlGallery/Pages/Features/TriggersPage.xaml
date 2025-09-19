@@ -1,85 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:ControlGallery.Models"
-             xmlns:local="clr-namespace:ControlGallery.Pages"
-             xmlns:cl="clr-namespace:CustomLayouts"
-             x:Class="ControlGallery.Pages.TriggersPage"
-             Title="Triggers">
+<ContentPage
+    x:Class="ControlGallery.Pages.TriggersPage"
+    Title="Triggers">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="{OnPlatform iOS='30,60,30,30', Android='15', Default='30'}">
-                <Label Text="Property Triggers" Style="{StaticResource Headline}"/>
+                <Label Text="Property Triggers"
+                        Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
                 <Label Text="Change the background color when the Entry is focused."/>
-                <Entry Placeholder="Enter name" HorizontalOptions="Start">
+                <Entry Placeholder="Enter name"
+                        HorizontalOptions="Start">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry"
-                         Property="IsFocused"
-                         Value="True">  
+                                 Property="IsFocused"
+                                 Value="True">
                             <Setter Property="Background"
-                    Value="Green" />
+                                    Value="Green"/>
                             <!-- Multiple Setter elements are allowed -->
                         </Trigger>
                         <Trigger TargetType="Entry"
-                 Property="IsFocused"
-                 Value="False">
+                                 Property="IsFocused"
+                                 Value="False">
                             <Setter Property="BackgroundColor"
-                    Value="Transparent" />
+                                    Value="Transparent"/>
                             <!-- Multiple Setter elements are allowed -->
                         </Trigger>
                     </Entry.Triggers>
                 </Entry>
 
-                <Label Text="Data Triggers" Style="{StaticResource Headline}"/>
+                <Label Text="Data Triggers"
+                        Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
                 <Label Text="Change button background when entry is longer than 0 characters."/>
                 <Entry x:Name="entry"
-                   Text=""
-                   Placeholder="Enter text" />      
+                       Text=""
+                       Placeholder="Enter text"/>
                 <Button Text="Save">
                     <Button.Triggers>
                         <DataTrigger TargetType="Button"
-                            Binding="{Binding Source={x:Reference entry},
+                                     Binding="{Binding Source={x:Reference entry},
                                        Path=Text.Length}"
-                             Value="0">
+                                     Value="0">
                             <Setter Property="BackgroundColor"
-                                Value="{StaticResource Neutral}" />
+                                    Value="{StaticResource Neutral}"/>
                             <!-- Multiple Setter elements are allowed -->
                         </DataTrigger>
                     </Button.Triggers>
                 </Button>
 
-                <Label Text="Event Triggers" Style="{StaticResource Headline}"/>
+                <Label Text="Event Triggers"
+                        Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
-                <Label Text="Change the color of text for string vs number."/>    
+                <Label Text="Change the color of text for string vs number."/>
                 <Entry>
                     <Entry.Triggers>
                         <EventTrigger Event="TextChanged">
-                            <local:NumericValidationTriggerAction />
+                            <NumericValidationTriggerAction/>
                         </EventTrigger>
                     </Entry.Triggers>
                 </Entry>
 
-                <Label Text="Multi-triggers" Style="{StaticResource Headline}"/>
+                <Label Text="Multi-triggers"
+                        Style="{StaticResource Headline}"/>
                 <BoxView Style="{StaticResource HRule}"/>
-                <Label Text="Change button background color when email and phone have more than 0 characters."/>    
-                <Entry x:Name="email" Placeholder="Email"
-       Text="" />
-                <Entry x:Name="phone" Placeholder="Phone"
-       Text="" />
+                <Label Text="Change button background color when email and phone have more than 0 characters."/>
+                <Entry x:Name="email"
+                        Placeholder="Email"
+                       Text=""/>
+                <Entry x:Name="phone"
+                        Placeholder="Phone"
+                       Text=""/>
                 <Button Text="Save">
                     <Button.Triggers>
                         <MultiTrigger TargetType="Button">
                             <MultiTrigger.Conditions>
                                 <BindingCondition Binding="{Binding Source={x:Reference email},
                                             Path=Text.Length}"
-                                  Value="0" />
+                                                  Value="0"/>
                                 <BindingCondition Binding="{Binding Source={x:Reference phone},
                                             Path=Text.Length}"
-                                  Value="0" />
+                                                  Value="0"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="BackgroundColor" Value="{StaticResource Neutral}" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{StaticResource Neutral}"/>
                             <!-- multiple Setter elements are allowed -->
                         </MultiTrigger>
                     </Button.Triggers>

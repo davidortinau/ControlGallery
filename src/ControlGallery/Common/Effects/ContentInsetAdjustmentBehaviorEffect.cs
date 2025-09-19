@@ -16,7 +16,7 @@ public static class ContentInsetAdjustmentBehavior
         return (Thickness)view.GetValue(ContentInsetProperty);
     }
 
-    public static void SetContentInset (BindableObject view, bool value)
+    public static void SetContentInset(BindableObject view, bool value)
     {
         view.SetValue(ContentInsetProperty, value);
     }
@@ -38,13 +38,13 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
         {
             var scroll = Control.Subviews[0] as UICollectionView;
             scroll.ContentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.Never;
-            
+
             var inset = (Thickness)Element.GetValue(ContentInsetAdjustmentBehavior.ContentInsetProperty);
             scroll.ContentInset = new UIEdgeInsets((nfloat)inset.Top, (nfloat)inset.Left, (nfloat)inset.Bottom, (nfloat)inset.Right);
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+            Console.WriteLine($"Cannot set property on attached control. Error: {ex.Message}");
         }
     }
 
@@ -68,7 +68,7 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
         }
         catch (Exception ex)
         {
-
+            Console.WriteLine($"Error updating ContentInset on attached control: {ex.Message}");
         }
     }
 }
@@ -82,7 +82,7 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
 //         // {
 //         //     var scroll = Control.Subviews[0] as UICollectionView;
 //         //     scroll.ContentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.Never;
-            
+
 //         //     var inset = (Thickness)Element.GetValue(ContentInsetAdjustmentBehavior.ContentInsetProperty);
 //         //     scroll.ContentInset = new UIEdgeInsets((nfloat)inset.Top, (nfloat)inset.Left, (nfloat)inset.Bottom, (nfloat)inset.Right);
 //         // }
@@ -100,7 +100,7 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
 //     {
 //         base.OnElementPropertyChanged(args);
 
-        
+
 //     }
 // }
 // #endif

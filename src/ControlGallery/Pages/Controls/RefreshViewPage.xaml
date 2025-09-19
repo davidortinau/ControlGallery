@@ -1,39 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ControlGallery.Pages.RefreshViewPage"
-             xmlns:app="clr-namespace:ControlGallery"
-             xmlns:p="clr-namespace:ControlGallery.Pages"
-             xmlns:cl="clr-namespace:CustomLayouts"
-             Title="RefreshView">
+<ContentPage
+    x:Class="ControlGallery.Pages.RefreshViewPage"
+    Title="RefreshView">
     <ContentPage.BindingContext>
-        <p:RefreshViewDemoPageViewModel />
+        <RefreshViewDemoPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <DataTemplate x:Key="ColorItemTemplate">
-            
-                <Label Text="{Binding Name}"
-                       Padding="8,4"
-                       Margin="5"
-                       HeightRequest="120"
-                       WidthRequest="105"
-                       Background="{Binding Color}"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center" />
-            
+
+            <Label Text="{Binding Name}"
+                   Padding="8,4"
+                   Margin="5"
+                   HeightRequest="120"
+                   WidthRequest="105"
+                   Background="{Binding Color}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
         </DataTemplate>
     </ContentPage.Resources>
-    <StackLayout Margin="15" Spacing="20">
-        
-        <Label Text="Pull the items down to refresh the ScrollView." />
-        <Label Text="{Binding Items.Count, StringFormat='Number of items: {0}'}" />
+    <StackLayout Margin="15"
+            Spacing="20">
+
+        <Label Text="Pull the items down to refresh the ScrollView."/>
+        <Label Text="{Binding Items.Count, StringFormat='Number of items: {0}'}"/>
         <RefreshView IsRefreshing="{Binding IsRefreshing}"
                      RefreshColor="Teal"
                      Command="{Binding RefreshCommand}">
             <ScrollView>
                 <VerticalStackLayout Spacing="10"
-                            BindableLayout.ItemsSource="{Binding Items}"
-                            BindableLayout.ItemTemplate="{StaticResource ColorItemTemplate}" />
+                                     BindableLayout.ItemsSource="{Binding Items}"
+                                     BindableLayout.ItemTemplate="{StaticResource ColorItemTemplate}"/>
             </ScrollView>
         </RefreshView>
     </StackLayout>

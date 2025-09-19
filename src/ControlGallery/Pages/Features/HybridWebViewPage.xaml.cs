@@ -25,7 +25,7 @@ public partial class HybridWebViewPage : ContentPage
         OnPropertyChanged(nameof(TodoAppTitle));
     }
 
-    private async void SendUpdatedTasksToJS(IList<TodoTask> tasks)
+    private void SendUpdatedTasksToJS(IList<TodoTask> tasks)
     {
         // _ = await MainThread.InvokeOnMainThreadAsync(async () =>
         //     await myHybridWebView.InvokeJavaScriptAsync("globalSetData", tasks));

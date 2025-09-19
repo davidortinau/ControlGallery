@@ -193,7 +193,7 @@
                     HorizontalOptions="Start"
                                 Text="{Binding Title}"
                                 Command="{Binding NavigateTo}"
-                >
+               >
                     <Button.BindingContext>
                         <NavItem Title="Margin + Padding"
                             Destination="{x:Type MarginPaddingPage}"/>
