@@ -9,9 +9,9 @@ public partial class ScalePage : ContentPage
 
 	private async void OnClickedAsync(object sender, EventArgs e)
 	{
-		await BotImg.ScaleTo(0, easing:Easing.SpringIn);
-        await Task.Delay(1000);
-        await BotImg.ScaleTo(1, easing: Easing.SpringOut);
+		await BotImg.ScaleToAsync(0, easing: Easing.SpringIn);
+		await Task.Delay(1000);
+		await BotImg.ScaleToAsync(1, easing: Easing.SpringOut);
 	}
 }
 

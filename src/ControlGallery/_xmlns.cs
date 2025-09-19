@@ -78,9 +78,6 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
     "ControlGallery.Pages.Features")]
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
-    "ControlGallery.Pages.Controls.TableView")]
-[assembly: XmlnsDefinition(
-    "http://schemas.microsoft.com/dotnet/maui/global",
     "ControlGallery.Pages.Controls")]
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",

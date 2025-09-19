@@ -4,12 +4,12 @@ using Microsoft.Maui.Layouts;
 
 namespace ControlGallery.Pages.Layouts
 {
-	public partial class BasisExperimentPage : ContentPage
-	{
-		public BasisExperimentPage ()
-		{
-			InitializeComponent ();
-		}
+    public partial class BasisExperimentPage : ContentPage
+    {
+        public BasisExperimentPage()
+        {
+            InitializeComponent();
+        }
 
         // Label 2 event handlers
         void OnLabel2AutoSwitchToggled(object sender, ToggledEventArgs args)
@@ -87,9 +87,9 @@ namespace ControlGallery.Pages.Layouts
             FlexLayout.SetBasis(label4, new FlexBasis((float)args.NewValue, relativeSwitch4.IsToggled));
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Clicked", "Nice shot man", "Okay");
+            await DisplayAlertAsync("Clicked", "Nice shot man", "Okay");
         }
     }
 }

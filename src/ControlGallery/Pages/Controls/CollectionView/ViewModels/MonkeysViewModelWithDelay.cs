@@ -10,7 +10,7 @@ namespace CollectionViewDemos.ViewModels
 
         public MonkeysViewModelWithDelay()
         {
-            CreateMonkeyCollection();
+            _ = CreateMonkeyCollection();
         }
 
         async Task CreateMonkeyCollection()

@@ -6,7 +6,6 @@ using CommunityToolkit.Mvvm.Messaging;
 using ControlGallery.Common.Messages;
 using ControlGallery.Pages;
 using ControlGallery.Pages.Controls.CarouselView;
-using ControlGallery.Pages.Controls.TableView;
 using ControlGallery.Pages.Features.Animation;
 using ControlGallery.Pages.Layouts;
 using ControlGallery.Pages.Layouts.AbsoluteLayouts;
@@ -22,9 +21,9 @@ public partial class AppShell : Shell
 
         RegisterRoutes();
 
-        BindingContext = new AppShellViewModel();  
+        BindingContext = new AppShellViewModel();
 
-         this.SizeChanged += UpdateFlyoutBehaviorIfNeeded;
+        this.SizeChanged += UpdateFlyoutBehaviorIfNeeded;
     }
 
     private const double minPageWidth = 800;
@@ -32,10 +31,10 @@ public partial class AppShell : Shell
     {
         var window = (VisualElement)sender;
         double currentWidth = window.Width + Shell.Current.FlyoutWidth; // don't get this, insteaed get the window size
-        
+
         Debug.WriteLine($"currentWidth: {currentWidth}, " +
         $"PageWidth: {window.Width}, " +
-            $"Shell.Current.FlyoutWidth: {Shell.Current.FlyoutWidth}"   );
+            $"Shell.Current.FlyoutWidth: {Shell.Current.FlyoutWidth}");
 
         if (currentWidth < minPageWidth && Shell.Current.FlyoutWidth > 75)
         {
@@ -49,7 +48,7 @@ public partial class AppShell : Shell
             Shell.Current.FlyoutWidth = 320;
             WeakReferenceMessenger.Default.Send(new ToggleFlyoutHeaderMsg(true));
         }
-    }   
+    }
 
     private void RegisterRoutes()
     {
@@ -72,7 +71,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(SliderPage), typeof(SliderPage));
         Routing.RegisterRoute(nameof(StepperPage), typeof(StepperPage));
         Routing.RegisterRoute(nameof(SwitchPage), typeof(SwitchPage));
-        Routing.RegisterRoute(nameof(FramePage), typeof(FramePage));
         Routing.RegisterRoute(nameof(RefreshViewPage), typeof(RefreshViewPage));
         Routing.RegisterRoute(nameof(WebViewPage), typeof(WebViewPage));
         Routing.RegisterRoute(nameof(TimePickerPage), typeof(TimePickerPage));
@@ -103,7 +101,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(SpacingStackPage), typeof(SpacingStackPage));
         Routing.RegisterRoute(nameof(VerticalStackPage), typeof(VerticalStackPage));
         Routing.RegisterRoute(nameof(AndExpandPage), typeof(AndExpandPage));
-        
+
         Routing.RegisterRoute(nameof(HorizontalWrapLayoutPage), typeof(HorizontalWrapLayoutPage));
         Routing.RegisterRoute(nameof(CascadeLayoutPage), typeof(CascadeLayoutPage));
         Routing.RegisterRoute(nameof(ColumnLayoutPage), typeof(ColumnLayoutPage));
@@ -111,14 +109,7 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(MarginPaddingPage), typeof(MarginPaddingPage));
 
-        Routing.RegisterRoute(nameof(TableViewPage), typeof(TableViewPage));
 
-        Routing.RegisterRoute(nameof(DataIntentXaml), typeof(DataIntentXaml));
-        Routing.RegisterRoute(nameof(EntryCellDemoXaml), typeof(EntryCellDemoXaml));
-        Routing.RegisterRoute(nameof(FormIntentXaml), typeof(FormIntentXaml));
-        Routing.RegisterRoute(nameof(MenuIntentXaml), typeof(MenuIntentXaml));
-        Routing.RegisterRoute(nameof(SettingsIntentXaml), typeof(SettingsIntentXaml));
-        Routing.RegisterRoute(nameof(SwitchCellDemoXaml), typeof(SwitchCellDemoXaml));
 
         Routing.RegisterRoute(nameof(BouncingTextDemoPage), typeof(BouncingTextDemoPage));
         Routing.RegisterRoute(nameof(ChessboardDemoPage), typeof(ChessboardDemoPage));
@@ -151,10 +142,10 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(VerticalListDynamicSizeItemsPage), typeof(VerticalListDynamicSizeItemsPage));
         Routing.RegisterRoute(nameof(VerticalListVariableSizeItemsPage), typeof(VerticalListVariableSizeItemsPage));
-        
+
         Routing.RegisterRoute(nameof(VerticalListSnapPointsPage), typeof(VerticalListSnapPointsPage));
         Routing.RegisterRoute(nameof(VerticalListSnapPointsPage), typeof(VerticalListSnapPointsPage));
-        
+
 
         Routing.RegisterRoute(nameof(HorizontalGridHeaderFooterViewPage), typeof(HorizontalGridHeaderFooterViewPage));
         Routing.RegisterRoute(nameof(VerticalListHeaderFooterDataTemplatePage), typeof(VerticalListHeaderFooterDataTemplatePage));
@@ -202,7 +193,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(GesturesPage), typeof(GesturesPage));
         Routing.RegisterRoute(nameof(TapGesturePage), typeof(TapGesturePage));
         Routing.RegisterRoute(nameof(PointerGesturePage), typeof(PointerGesturePage));
-        
+
         Routing.RegisterRoute(nameof(CarouselViewPage), typeof(CarouselViewPage));
         Routing.RegisterRoute(nameof(BasicCarouselPage), typeof(BasicCarouselPage));
         Routing.RegisterRoute(nameof(InstagramPage), typeof(InstagramPage));
@@ -242,7 +233,7 @@ public partial class AppShellViewModel : ObservableObject
 
     public string Appearance
     {
-        get => appearance; 
+        get => appearance;
         set
         {
             if (appearance == value)
@@ -265,17 +256,17 @@ public partial class AppShellViewModel : ObservableObject
         }
     }
 
-    
+
 
     public AppShellViewModel()
     {
-        App.Current.RequestedThemeChanged += Current_RequestedThemeChanged;   
-        
+        App.Current.RequestedThemeChanged += Current_RequestedThemeChanged;
+
     }
 
-    
 
-    
+
+
 
     private void Current_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
     {
@@ -284,5 +275,5 @@ public partial class AppShellViewModel : ObservableObject
         OnPropertyChanged(nameof(Appearance));
     }
 
-    
+
 }

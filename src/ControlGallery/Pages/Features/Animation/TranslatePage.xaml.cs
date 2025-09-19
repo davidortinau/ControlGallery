@@ -10,23 +10,23 @@ public partial class TranslatePage : ContentPage
 	private async void OnClickedAsync(object sender, EventArgs e)
 	{
 		// distance to right edge
-		var rightDist = (DeviceDisplay.MainDisplayInfo.Width - BotImg.X)/DeviceDisplay.MainDisplayInfo.Density;
-		
+		var rightDist = (DeviceDisplay.MainDisplayInfo.Width - BotImg.X) / DeviceDisplay.MainDisplayInfo.Density;
+
 		await Task.WhenAll(
-            BotImg.TranslateTo(rightDist,0, 1000, easing: Easing.CubicInOut),
-			BotImg.ScaleTo(0.4, 1000, easing: Easing.CubicInOut)
-        );
+			BotImg.TranslateToAsync(rightDist, 0, 1000, easing: Easing.CubicInOut),
+			BotImg.ScaleToAsync(0.4, 1000, easing: Easing.CubicInOut)
+		);
 
-        BotImg.TranslationX = rightDist*-1;
+		BotImg.TranslationX = rightDist * -1;
 
-        await Task.WhenAll(
-            BotImg.TranslateTo(0, 0, 1000, easing: Easing.CubicInOut),
-            BotImg.ScaleTo(1, 1000, easing: Easing.CubicInOut)
-        );
+		await Task.WhenAll(
+			BotImg.TranslateToAsync(0, 0, 1000, easing: Easing.CubicInOut),
+			BotImg.ScaleToAsync(1, 1000, easing: Easing.CubicInOut)
+		);
 
-        BotImg.TranslationX = 0;
+		BotImg.TranslationX = 0;
 		BotImg.Scale = 1;
-        
+
 	}
 }
 

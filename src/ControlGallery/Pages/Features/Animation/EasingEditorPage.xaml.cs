@@ -95,7 +95,7 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
         Debug.WriteLine($"ScaleFactor: {ScaleFactor}");
     }
     
-    public event PropertyChangedEventHandler PropertyChanged;
+    public new event PropertyChangedEventHandler PropertyChanged;
     private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
     {
         if (PropertyChanged != null)
@@ -104,7 +104,7 @@ public partial class EasingEditorPage : ContentPage, INotifyPropertyChanged
         }
     }
 
-    private async void PlayBtn_OnClicked(object sender, EventArgs e)
+    private void PlayBtn_OnClicked(object sender, EventArgs e)
     {
         if (_isPlaying)
         {

@@ -11,10 +11,9 @@
 
             <ControlTemplate
                 x:Key="ImageQualityRadioTemplate">
-                <Frame
-                    BorderColor="{StaticResource LightRadioButtonColor}"
+                <Border
+                    Stroke="{StaticResource LightRadioButtonColor}"
                     BackgroundColor="{StaticResource LightRadioButtonColor}"
-                    HasShadow="False"
                     HeightRequest="100"
                     WidthRequest="100"
                     HorizontalOptions="Start"
@@ -28,7 +27,7 @@
                                     x:Name="Checked">
                                     <VisualState.Setters>
                                         <Setter
-                                            Property="BorderColor"
+                                            Property="Stroke"
                                             Value="#FF3300"/>
                                         <Setter
                                             TargetName="Check"
@@ -40,7 +39,7 @@
                                     x:Name="Unchecked">
                                     <VisualState.Setters>
                                         <Setter
-                                            Property="BorderColor"
+                                            Property="Stroke"
                                             Value="#F3F2F1"/>
                                         <Setter
                                             TargetName="Check"
@@ -77,7 +76,7 @@
                         </Grid>
                         <ContentPresenter/>
                     </Grid>
-                </Frame>
+                </Border>
             </ControlTemplate>
 
             <Style
@@ -98,38 +97,38 @@
                 Padding="{OnPlatform iOS='30,60,30,30', Default='30'}"
                 Spacing="8">
                 <Label Text="On"
-                        Style="{StaticResource Headline}"/>
+                       Style="{StaticResource Headline}"/>
                 <StackLayout Orientation="Horizontal">
                     <RadioButton Content="RadioButton"
-                            IsChecked="True"/>
+                                 IsChecked="True"/>
                     <RadioButton Content="RadioButton (Disabled)"
-                            IsChecked="True"
-                            IsEnabled="False"/>
+                                 IsChecked="True"
+                                 IsEnabled="False"/>
                 </StackLayout>
 
                 <Label Text="Off"
-                        Style="{StaticResource Headline}"/>
+                       Style="{StaticResource Headline}"/>
                 <StackLayout Orientation="Horizontal">
                     <RadioButton Content="RadioButton"
-                            IsChecked="False"/>
+                                 IsChecked="False"/>
                     <RadioButton Content="RadioButton (Disabled)"
-                            IsChecked="False"
-                            IsEnabled="False"/>
+                                 IsChecked="False"
+                                 IsEnabled="False"/>
                 </StackLayout>
 
 
                 <Label Text="RadioButtonGroup"
-                        Style="{StaticResource Headline}"/>
+                       Style="{StaticResource Headline}"/>
                 <StackLayout Orientation="Horizontal"
-                        RadioButtonGroup.GroupName="Colors">
+                             RadioButtonGroup.GroupName="Colors">
                     <RadioButton Content="Red"
-                            IsChecked="True"/>
+                                 IsChecked="True"/>
                     <RadioButton Content="Green"/>
                     <RadioButton Content="Blue"/>
                 </StackLayout>
 
                 <Label Text="RadioButton ContentTemplate"
-                        Style="{StaticResource Headline}"/>
+                       Style="{StaticResource Headline}"/>
                 <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="FillAndExpand"
@@ -170,7 +169,7 @@
                 <RadioButton>
                     <RadioButton.Content>
                         <Label Text="Label for Content"
-                                TextColor="Red"
+                               TextColor="Red"
                                FontSize="30"
                                TextTransform="Uppercase"
                                FontAttributes="Bold"/>

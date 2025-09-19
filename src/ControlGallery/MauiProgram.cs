@@ -25,21 +25,21 @@ namespace ControlGallery;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-        
-		builder
-			.UseMauiApp<App>()
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+
+        builder
+            .UseMauiApp<App>()
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitMarkup()
             .UseMauiMaps()
             .ConfigureSyncfusionToolkit()
             .ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("fa_solid.ttf", "FontAwesome");
-				fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
-				fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
+            {
+                fonts.AddFont("fa_solid.ttf", "FontAwesome");
+                fonts.AddFont("opensans_regular.ttf", "OpenSansRegular");
+                fonts.AddFont("opensans_semibold.ttf", "OpenSansSemiBold");
                 fonts.AddFont("fabmdl2.ttf", "FabMDL2");
                 fonts.AddFont("FluentSystemIcons-Regular.ttf", FluentUI.FontFamily);
             })
@@ -54,15 +54,15 @@ public static class MauiProgram
             //     resources.AddResource("AppStyles.xaml");
             // })
 
-			.ConfigureEffects(effects =>
-			{
-                #if IOS || MACCATALYST
+            .ConfigureEffects(effects =>
+            {
+#if IOS || MACCATALYST
 				effects.Add<ContentInsetAdjustmentBehaviorRoutingEffect, ContentInsetAdjustmentBehaviorPlatformEffect>();
-                #endif
-			})
+#endif
+            })
 
 #if DEBUG
-			// .EnableHotReload()
+            // .EnableHotReload()
 #endif
             ;
 
@@ -74,7 +74,7 @@ public static class MauiProgram
         });
 #endif
 
-            
+
 
         // Microsoft.Maui.Controls.Internals.Profile.Enable();
         // Microsoft.Maui.Controls.Internals.Profile.Start();
@@ -89,11 +89,11 @@ public static class MauiProgram
                     handler.PlatformView?.UpdatePlaceholder(editor);
                     handler.PlatformView?.UpdateCharacterSpacing(editor);
                 });
-        
-        
+
+
 
         return app;
-	}
+    }
 
 }
 
@@ -105,23 +105,23 @@ public static class AppBuilderExtensions
     {
         var config = new ResourcesConfiguration();
         configureDelegate(config);
-        
+
         builder.ConfigureMauiHandlers(async handlers =>
         {
             // Register resources when the app starts
             Application.Current.Resources.MergedDictionaries.Clear();
-            
-            foreach(var resource in config.Resources)
+
+            foreach (var resource in config.Resources)
             {
                 await using Stream stream = await FileSystem.OpenAppPackageFileAsync(resource);
-                
+
                 using (var reader = new StreamReader(stream))
                 {
                     var xamlContent = reader.ReadToEnd();
                     var resourceDictionary = new ResourceDictionary().LoadFromXaml(xamlContent);
                     Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
                 }
-                
+
             }
         });
 

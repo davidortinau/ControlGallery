@@ -44,7 +44,7 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
+            Console.WriteLine($"Cannot set property on attached control. Error: {ex.Message}");
         }
     }
 
@@ -68,7 +68,7 @@ public class ContentInsetAdjustmentBehaviorPlatformEffect : PlatformEffect
         }
         catch (Exception ex)
         {
-
+            Console.WriteLine($"Error updating ContentInset on attached control: {ex.Message}");
         }
     }
 }

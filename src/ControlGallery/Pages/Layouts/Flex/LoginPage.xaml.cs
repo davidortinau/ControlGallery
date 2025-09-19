@@ -44,7 +44,7 @@ namespace Flexibility.Shared
 			};
 		}
 
-		void Handle_Clicked(object sender, System.EventArgs e)
+		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
 			var isValid = true;
 
@@ -61,7 +61,7 @@ namespace Flexibility.Shared
 			}
 
 			if (isValid)
-				DisplayAlert("Welcome to Visual State Manager", "", "Thanks!");
+				await DisplayAlertAsync("Welcome to Visual State Manager", "", "Thanks!");
 		}
 
 		void Handle_TextChanged(object sender, TextChangedEventArgs e)
@@ -86,7 +86,7 @@ namespace Flexibility.Shared
 
 	public enum PasswordScore
 	{
-        Blank = 0,
+		Blank = 0,
 		VeryWeak = 1,
 		Weak = 2,
 		Medium = 3,
@@ -110,7 +110,7 @@ namespace Flexibility.Shared
 			if (Regex.Match(password, @"^(?=.*\d).+$", RegexOptions.ECMAScript).Success)
 				score++;
 			if (Regex.Match(password, @"^(?=.*[a-z]).+$", RegexOptions.ECMAScript).Success &&
-								Regex.Match(password, @"^(?=.*[A-Z]).+$", RegexOptions.ECMAScript).Success)
+						Regex.Match(password, @"^(?=.*[A-Z]).+$", RegexOptions.ECMAScript).Success)
 				score++;
 			if (Regex.Match(password, @"^(?=.*[!,@,#,$,%,^,&,*,?,_,~,-,£,(,)]).+$", RegexOptions.ECMAScript).Success)
 				score++;

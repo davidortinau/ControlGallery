@@ -1,15 +1,15 @@
 ﻿namespace CarouselGallery.Views.Components
 {
-    public partial class MintView01 
+    public partial class MintView01
     {
         public MintView01()
         {
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.CurrentPage.DisplayAlert("You Did It!",
+            await Shell.Current.CurrentPage.DisplayAlertAsync("You Did It!",
                 "Thanks for tapping. There is no activity to see at this time. Have a nice day!",
                 "Bye!");
         }

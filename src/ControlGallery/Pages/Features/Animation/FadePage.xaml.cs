@@ -9,9 +9,9 @@ public partial class FadePage : ContentPage
 
 	private async void OnClickedAsync(object sender, EventArgs e)
 	{
-		await BotImg.FadeTo(0);
-        await Task.Delay(1000);
-        await BotImg.FadeTo(1);
+		await BotImg.FadeToAsync(0);
+		await Task.Delay(1000);
+		await BotImg.FadeToAsync(1);
 	}
 }
 

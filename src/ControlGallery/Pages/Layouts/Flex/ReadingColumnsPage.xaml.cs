@@ -1,5 +1,4 @@
-﻿
-namespace Flexibility.Shared
+﻿namespace ControlGallery.Pages.Layouts
 {
     public partial class ReadingColumnsPage : ContentPage
     {

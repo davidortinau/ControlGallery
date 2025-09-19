@@ -26,7 +26,7 @@ namespace ControlGallery.Pages
 
         private async void Entry_Completed(object sender, EventArgs e)
         {
-            await this.DisplayAlert("Completed","Captured completed event", "Okay");
+            await this.DisplayAlertAsync("Completed", "Captured completed event", "Okay");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Layouts;
+﻿#nullable enable
+using Microsoft.Maui.Layouts;
 
 namespace CustomLayouts
 {
@@ -59,7 +60,7 @@ namespace CustomLayouts
         {
             protected override void OnChildAdded(Element child)
             {
-                // We don't want to actually re-parent the stuff we add to this			
+                // We don't want to actually re-parent the stuff we add to this		
             }
 
             protected override void OnChildRemoved(Element child, int oldLogicalIndex)

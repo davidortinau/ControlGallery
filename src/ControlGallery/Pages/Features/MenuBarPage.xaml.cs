@@ -4,7 +4,7 @@ public partial class MenuBarPage : ContentPage
 {
     public MenuBarPage()
     {
-        InitializeComponent();        
+        InitializeComponent();
     }
 
     protected override void OnAppearing()
@@ -24,7 +24,7 @@ public partial class MenuBarPage : ContentPage
                 Application.Current.Quit();
             })
         };
-        MenuItem.SetAccelerator(exitItem, Accelerator.FromString("cmd+q"));
+        exitItem.KeyboardAccelerators.Add(new KeyboardAccelerator { Modifiers = KeyboardAcceleratorModifiers.Cmd, Key = "Q" });
         fileMenu.Add(exitItem);
 
         var locationMenu = new MenuBarItem { Text = "Location" };
@@ -42,7 +42,7 @@ public partial class MenuBarPage : ContentPage
         {
             Text = "Refresh"
         };
-        MenuItem.SetAccelerator(refreshItem, Accelerator.FromString("cmd+r"));
+        refreshItem.KeyboardAccelerators.Add(new KeyboardAccelerator { Modifiers = KeyboardAcceleratorModifiers.Cmd, Key = "R" });
         locationMenu.Add(refreshItem);
 
         this.MenuBarItems.Add(fileMenu);

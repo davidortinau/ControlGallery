@@ -12,10 +12,11 @@ public class AlertPage : ContentPageBase
     {
         this.Title = "Alerts";
 
-        this.Content = new ScrollView{
-        Content = new VerticalStackLayout
+        this.Content = new ScrollView
         {
-            Children = {
+            Content = new VerticalStackLayout
+            {
+                Children = {
                     new H1("Simple Alert"),
                     new Separator(),
                     new Button()
@@ -26,7 +27,7 @@ public class AlertPage : ContentPageBase
                     new Button()
                         .Text("Display Alert")
                         .Assign(out AlertResponseBtn),
-                    
+
                     new Label()
                         .Assign(out YesNoLbl)
                         .TextColor(AppColors.Primary),
@@ -49,7 +50,7 @@ public class AlertPage : ContentPageBase
                         .Assign(out PromptLbl)
                         .TextColor(AppColors.Primary),
                 }
-        }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
+            }.DynamicResource(VisualElement.StyleProperty, "MainContainer")
         };
 
         AlertBtn.Clicked += (s, e) => TapAlert();
@@ -59,34 +60,34 @@ public class AlertPage : ContentPageBase
     }
 
     private async void TapAlert()
-        {
-            await this.DisplayAlert("Welcome", ".NET MAUI supports simple platform alerts.", "Okay");
-        }
+    {
+        await this.DisplayAlertAsync("Welcome", ".NET MAUI supports simple platform alerts.", "Okay");
+    }
 
-        private async void TapAlertResponse()
+    private async void TapAlertResponse()
+    {
+        bool answer = await DisplayAlertAsync("Question?", "Would you like to play a game", "Yes", "No");
+        this.Dispatcher.Dispatch(() =>
         {
-            bool answer = await DisplayAlert("Question?", "Would you like to play a game", "Yes", "No");
-                        this.Dispatcher.Dispatch(() =>
-                        {
-                            YesNoLbl.Text = "Answer: " + answer;
-                        });
-        }
+            YesNoLbl.Text = "Answer: " + answer;
+        });
+    }
 
-        private async void TapAlertAction()
+    private async void TapAlertAction()
+    {
+        string action = await DisplayActionSheetAsync("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
+        this.Dispatcher.Dispatch(() =>
         {
-            string action = await DisplayActionSheet("ActionSheet: Send to?", "Cancel", null, "Email", "Twitter", "Facebook");
-                        this.Dispatcher.Dispatch(() =>
-                        {
-                            ActionLbl.Text = "Action: " + action;
-                        });
-        }
+            ActionLbl.Text = "Action: " + action;
+        });
+    }
 
-        private async void TapAlertPrompt()
+    private async void TapAlertPrompt()
+    {
+        string result = await DisplayPromptAsync("Question?", "What's your name?", "Ok", "Cancel", "Name", -1, Keyboard.Default, "Jon Doe");
+        this.Dispatcher.Dispatch(() =>
         {
-            string result = await DisplayPromptAsync("Question?", "What's your name?", "Ok", "Cancel", "Name", -1, Keyboard.Default, "Jon Doe");
-                        this.Dispatcher.Dispatch(() =>
-                        {
-                            PromptLbl.Text = "Result: " + result;
-                        });
-        }
+            PromptLbl.Text = "Result: " + result;
+        });
+    }
 }

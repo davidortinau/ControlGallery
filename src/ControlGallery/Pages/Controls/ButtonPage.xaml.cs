@@ -40,9 +40,9 @@ public partial class ButtonPage : ContentPage
     async void ShowCount()
     {
         CounterLbl.CancelAnimations();
-        await CounterLbl.FadeTo(1, 200);
-        await CounterLbl.FadeTo(1, 600);// just to buffer before fade out
-        await CounterLbl.FadeTo(0, 200);
+        await CounterLbl.FadeToAsync(1, 200);
+        await CounterLbl.FadeToAsync(1, 600);// just to buffer before fade out
+        await CounterLbl.FadeToAsync(0, 200);
     }
 
     async void Button_Clicked_1(System.Object sender, System.EventArgs e)
