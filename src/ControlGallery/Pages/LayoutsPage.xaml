@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-             x:Class="ControlGallery.Pages.LayoutsPage"
+<ContentPage x:Class="ControlGallery.Pages.LayoutsPage"
              Title="Layouts">
     <ContentPage.Content>
         <ScrollView>
@@ -10,8 +9,7 @@
                     <Image Source="layout_absolutelayout.png" HorizontalOptions="Start" HeightRequest="22" VerticalOptions="Center"/>
                     <Label Text="AbsoluteLayout" Style="{StaticResource Headline}" VerticalOptions="Center"/>
                 </HorizontalStackLayout>
-                <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12"
-                           >
+                <HorizontalWrapLayout Margin="0,0,0,60" Spacing="12">
                     <BindableLayout.ItemsSource>
                         <x:Array Type="{x:Type NavItem}">
                             <NavItem Title="Bouncing Text"
@@ -32,8 +30,7 @@
                         <DataTemplate>
                             <Button 
                                 Text="{Binding Title}"
-                                Command="{Binding NavigateTo}"
-                               >
+                                Command="{Binding NavigateTo}">
                                 <Button.Behaviors>
                                     <CursorBehavior />
                                 </Button.Behaviors>

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-             x:Class="ControlGallery.Pages.TipsPage"
+<ContentPage x:Class="ControlGallery.Pages.TipsPage"
              Title="Tips &amp; Tricks">
     <ContentPage.Content>
         <ScrollView>
