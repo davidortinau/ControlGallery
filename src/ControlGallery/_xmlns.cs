@@ -15,7 +15,7 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
     "ControlGallery.Pages")]
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
-    "ControlGallery.Common.Behaviors")]    
+    "ControlGallery.Common.Behaviors")]
 [assembly: XmlnsDefinition(
     "http://schemas.microsoft.com/dotnet/maui/global",
     "http://schemas.microsoft.com/dotnet/2022/maui/toolkit")]
@@ -115,3 +115,6 @@ using XmlnsPrefixAttribute = Microsoft.Maui.Controls.XmlnsPrefixAttribute;
 
 [assembly: XmlnsPrefix("ControlGallery.Common.Views", "views")]
 [assembly: XmlnsPrefix("http://schemas.microsoft.com/dotnet/2022/maui/toolkit", "toolkit")]
+[assembly: XmlnsPrefix("Fonts", "fonts")]
+[assembly: XmlnsPrefix("ControlGallery.Pages.Controls", "controls")]
+[assembly: XmlnsPrefix("ControlGallery.Common.Behaviors", "behaviors")]
