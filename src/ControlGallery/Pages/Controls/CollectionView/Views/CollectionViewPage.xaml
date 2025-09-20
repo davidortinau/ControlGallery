@@ -1,215 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
-             x:Class="CollectionViewDemos.Views.CollectionViewPage"
-             Title="CollectionView Demos">
-    <ScrollView>
-    <TableView Intent="Menu">
-        <TableRoot>
-            <TableSection Title="Layout">
-                <TextCell Text="Vertical list"
-                          Detail="Text" 
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListTextPage}" />
-                <TextCell Text="Horizontal list"
-                          Detail="Text"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalListTextPage}" />
-                <TextCell Text="Vertical grid"
-                          Detail="Text"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalGridTextPage}" />
-                <TextCell Text="Horizontal grid"
-                          Detail="Text"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalGridTextPage}" />
-                <TextCell Text="Vertical list"
-                          Detail="DataTemplate"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListPage}" />
-                <TextCell Text="Horizontal list"
-                          Detail="DataTemplate"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalListPage}" />
-                <TextCell Text="Vertical grid"
-                          Detail="DataTemplate"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalGridPage}" />
-                <TextCell Text="Horizontal grid"
-                          Detail="DataTemplate"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalGridPage}" />
-                <TextCell Text="Vertical list"
-                          Detail="Data template selector"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListDataTemplateSelectorPage}" />
-                <TextCell Text="Vertical list"
-                          Detail="RTL FlowDirection"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListRTLPage}" />
-            </TableSection>
-            <TableSection Title="Spacing">
-                <TextCell Text="Vertical list"
-                          Detail="ItemSpacing"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListSpacingPage}" />
-                <TextCell Text="Horizontal list"
-                          Detail="ItemSpacing"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalListSpacingPage}" />
-                <TextCell Text="Vertical grid"
-                          Detail="HorizontalItemSpacing and VerticalItemSpacing"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalGridSpacingPage}" />
-                <TextCell Text="Horizontal grid"
-                          Detail="HorizontalItemSpacing and VerticalItemSpacing"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalGridSpacingPage}" />
-            </TableSection>
-            <TableSection Title="Sizing">
-                <TextCell Text="Variable size items"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListVariableSizeItemsPage}" />
-                <TextCell Text="Dynamic item sizing"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListDynamicSizeItemsPage}" />
-            </TableSection>
-            <TableSection Title="Selection">
-                <TextCell Text="Single"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListSingleSelectionPage}" />
-                <TextCell Text="Multiple"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListMultipleSelectionPage}" />
-                <TextCell Text="Single pre-selection"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListSinglePreSelectionPage}" />
-                <TextCell Text="Multiple pre-selection"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListMultiplePreSelectionPage}" />
-                <TextCell Text="Selection color"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListSelectionColorPage}" />
-            </TableSection>
-            <TableSection Title="EmptyView">
-                <TextCell Text="EmptyView string"
-                          Detail="ItemsSource Null"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewNullPage}" />
-                <TextCell Text="EmptyView string"
-                          Detail="Load simulation"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewLoadSimulationPage}" />
-                <TextCell Text="EmptyView string"
-                          Detail="Filtering"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewFilteredPage}" />
-                <TextCell Text="EmptyView with multiple views"
-                          Detail="Filtering"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewWithViewsFilteredPage}" />
-                <TextCell Text="EmptyView with EmptyViewTemplate"
-                          Detail="Filtering"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewTemplatePage}" />
-                <TextCell Text="EmptyView with EmptyViewTemplate"
-                          Detail="Data template selector"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewDataTemplateSelectorPage}" />
-                <TextCell Text="EmptyView swap"
-                          Detail="Filtering"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type EmptyViewSwapPage}" />
-            </TableSection>
-            <TableSection Title="Grouping">
-                <TextCell Text="Grouping"
-                          Detail="Vertical list with DataTemplates"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListGroupingPage}" />
-                <TextCell Text="Grouping"
-                          Detail="Vertical list without DataTemplates"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListTextGroupingPage}" />
-                <TextCell Text="Grouping including empty groups"
-                          Detail="Vertical list with DataTemplates"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListEmptyGroupsPage}" />
-                <TextCell Text="Grouping with variable sized items"
-                          Detail="Vertical list with DataTemplates"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListGroupingVariableSizeItemsPage}" />
-            </TableSection>
-            <TableSection Title="Pull to Refresh">
-                <TextCell Text="Pull to refresh using RefreshView"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListPullToRefreshPage}" />
-                <TextCell Text="Pull to refresh using RefreshView"
-                          Detail="Horizontal grid"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalGridPullToRefreshPage}" />
-            </TableSection>
-            <TableSection Title="Headers and Footers">
-                <TextCell Text="String header and footer"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListHeaderFooterStringPage}" />
-                <TextCell Text="DataTemplate header and footer"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListHeaderFooterDataTemplatePage}" />
-                <TextCell Text="View header and footer"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListHeaderFooterViewPage}" />
-                <TextCell Text="View header and footer"
-                          Detail="Horizontal grid"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type HorizontalGridHeaderFooterViewPage}" />
-            </TableSection>
-            <TableSection Title="Scrolling">
-                <TextCell Text="Scroll by index"
-                          Detail="ScrollTo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type ScrollToByIndexPage}" />
-                <TextCell Text="Scroll by object"
-                          Detail="ScrollTo"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type ScrollToByObjectPage}" />
-                <TextCell Text="Scroll by index"
-                          Detail="Grouped data"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type ScrollToByIndexWithGroupingPage}" />
-                <TextCell Text="Scroll by object"
-                          Detail="Grouped data"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type ScrollToByObjectWithGroupingPage}" />
-                <TextCell Text="Snap points"
-                          Detail="Type and alignment"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListSnapPointsPage}" />
-                <TextCell Text="Scroll mode when adding items"
-                          Detail="ItemsUpdatingScrollMode"
-                          Command="{Binding  NavigateCommand}"
-                          CommandParameter="{x:Type ItemsUpdatingScrollModePage}" />
-                <TextCell Text="Incremental loading on scroll"
-                          Detail="RemainingItemsThreshold"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type IncrementalLoadingPage}" />
-            </TableSection>
-            <TableSection Title="Swipe">
-                <TextCell Text="Context menu items"
-                          Detail="Vertical list"
-                          Command="{Binding NavigateCommand}"
-                          CommandParameter="{x:Type VerticalListSwipeContextItemsPage}" />
-            </TableSection>
-        </TableRoot>
-    </TableView>
-    </ScrollView>
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CollectionViewDemos.Views.CollectionViewPage"
+    x:Name="PageRoot"
+    Title="CollectionView Demos">
+
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Groups}"
+                IsGrouped="True"
+                SelectionMode="None">
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Grid Padding="8"
+                            BackgroundColor="Transparent">
+                        <Label Text="{Binding Title}"
+                                FontAttributes="Bold"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="12"
+                            ColumnDefinitions="Auto,*,Auto">
+                        <!-- Icon column -->
+                        <Label Text="{Binding Icon}"
+                                FontFamily="FontAwesome"
+                                VerticalOptions="Center"
+                                Margin="0,0,8,0"/>
+
+                        <!-- Content column -->
+                        <StackLayout Spacing="2"
+                                Grid.Column="1">
+                            <Label Text="{Binding Title}"
+                                    FontSize="16"/>
+                            <Label Text="{Binding Description}"
+                                    FontSize="13"
+                                    TextColor="Gray"/>
+                        </StackLayout>
+
+                        <!-- Chevron / accessory -->
+                        <Label Text="›"
+                                Grid.Column="2"
+                                VerticalOptions="Center"
+                                TextColor="Gray"
+                                FontSize="20"/>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={x:Reference PageRoot}, Path=BindingContext.NavigateCommand}"
+                                CommandParameter="{Binding .}"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
 </ContentPage>

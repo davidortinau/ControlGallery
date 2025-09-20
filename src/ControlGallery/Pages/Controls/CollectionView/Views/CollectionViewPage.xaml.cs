@@ -1,24 +1,19 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
+using ControlGallery.Models;
+using CollectionViewDemos.ViewModels;
 
 
 namespace CollectionViewDemos.Views
 {
     public partial class CollectionViewPage : ContentPage
     {
-        public ICommand NavigateCommand { get; private set; }
-
         public CollectionViewPage()
         {
             InitializeComponent();
 
-            NavigateCommand = new Command<Type>(
-                async (Type pageType) =>
-                {
-                    await Shell.Current.GoToAsync(pageType.Name);
-                });
-
-            BindingContext = this;
+            BindingContext = new CollectionViewPageViewModel();
         }
     }
 }
