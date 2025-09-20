@@ -81,6 +81,22 @@
                      FontFamily="{x:Static FluentUI.FontFamily}"
                      Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
                      Size="{StaticResource size240}"/>
+    <FontImageSource x:Key="IconPlay"
+                     Glyph="{x:Static FluentUI.play_24_regular}"
+                     FontFamily="{x:Static FluentUI.FontFamily}"
+                     Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
+                     Size="{StaticResource size240}"/>
+    <FontImageSource x:Key="IconPause"
+                     Glyph="{x:Static FluentUI.pause_24_regular}"
+                     FontFamily="{x:Static FluentUI.FontFamily}"
+                     Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
+                     Size="{StaticResource size240}"/>
+    <FontImageSource x:Key="IconReset"
+                     Glyph="{x:Static FluentUI.arrow_reset_24_regular}"
+                     FontFamily="{x:Static FluentUI.FontFamily}"
+                     Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
+                     Size="{StaticResource size240}"/>
+
 
     <Style TargetType="Label"
            x:Key="LargeTitle">

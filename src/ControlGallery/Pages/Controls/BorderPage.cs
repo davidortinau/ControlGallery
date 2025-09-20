@@ -10,8 +10,10 @@ public class BorderPage : ContentPageBase
     {
         this.Title = "Borders";
 
-        this.Content = new ScrollView{
-            Content = new VerticalStackLayout{
+        this.Content = new ScrollView
+        {
+            Content = new VerticalStackLayout
+            {
                 Children = {
                     new H1("Rectangle"),
                     new Separator(),
@@ -84,7 +86,7 @@ public class BorderPage : ContentPageBase
                             .Background(Colors.Azure)
                             .Center()
                             .Size(72)
-                            
+
                         }
                     },
                 }

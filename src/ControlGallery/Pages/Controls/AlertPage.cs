@@ -1,6 +1,3 @@
-using CommunityToolkit.Maui.Core.Views;
-using CommunityToolkit.Maui.Markup;
-
 namespace ControlGallery.Pages;
 
 public class AlertPage : ContentPageBase

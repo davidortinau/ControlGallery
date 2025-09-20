@@ -17,7 +17,6 @@ using Microsoft.Maui.Controls.Platform;
 using static Microsoft.Maui.Controls.Platform.ButtonExtensions;
 using CoreGraphics;
 using Foundation;
-using CommunityToolkit.Maui.Markup;
 using System.Reflection;
 #endif
 
@@ -57,7 +56,7 @@ public static class MauiProgram
             .ConfigureEffects(effects =>
             {
 #if IOS || MACCATALYST
-				effects.Add<ContentInsetAdjustmentBehaviorRoutingEffect, ContentInsetAdjustmentBehaviorPlatformEffect>();
+                effects.Add<ContentInsetAdjustmentBehaviorRoutingEffect, ContentInsetAdjustmentBehaviorPlatformEffect>();
 #endif
             })
 

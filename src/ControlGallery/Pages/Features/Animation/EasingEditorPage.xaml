@@ -7,8 +7,10 @@
         <BoolToObjectConverter
             x:Key="BoolToPlayPause"
             x:TypeArguments="FontImageSource"
-            TrueObject="{StaticResource PauseIcon}"
-            FalseObject="{StaticResource PlayIcon}"/>
+            TrueObject="{StaticResource IconPause}"
+            FalseObject="{StaticResource IconPlay}"/>
+        <InvertedBoolConverter x:Key="InvertedBoolConverter"/>
+
     </ContentPage.Resources>
 
     <ContentPage.Content>
@@ -23,7 +25,6 @@
                       ScaleX="{Binding ScaleFactor}"
                       ScaleY="{Binding ScaleFactor}"
                       Stroke="{StaticResource InGradient}">
-
                 </Path>
 
             </Grid>
@@ -48,26 +49,34 @@
 
             <ScrollView Grid.Row="2">
                 <VerticalStackLayout Spacing="0">
-                    <HorizontalStackLayout>
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center">
                         <ImageButton x:Name="ResetBtn"
-                                     Source="{StaticResource ResetIcon}"
+                                     Source="{StaticResource IconReset}"
                                      Background="Transparent"
                                      Margin="8,0"
                                      Clicked="ResetBtn_OnClicked"/>
-                        <Button x:Name="PlayBtn"
-                                Background="Red"
-                                Text="Play"
-                                HeightRequest="60"
-                                Margin="8,0"
-                                Clicked="PlayBtn_OnClicked"/>
+                        <ImageButton x:Name="PlayBtn"
+                                     Source="{StaticResource IconPlay}"
+                                     Background="Transparent"
+                                     Margin="8,0"
+                                     IsVisible="{Binding IsPlaying, Converter={StaticResource InvertedBoolConverter}}"
+                                     Clicked="PlayBtn_OnClicked"/>
+                        <ImageButton x:Name="PauseButton"
+                                     Source="{StaticResource IconPause}"
+                                     Background="Transparent"
+                                     Margin="8,0"
+                                     IsVisible="{Binding IsPlaying}"
+                                     Clicked="PlayBtn_OnClicked"/>
                     </HorizontalStackLayout>
                     <!-- Options form (replaces TableView) -->
                     <VerticalStackLayout Padding="0,8,0,8"
                                          Spacing="12">
                         <Grid ColumnDefinitions="2*,4*"
-                              RowDefinitions="Auto"
+                              RowDefinitions="60"
                               Padding="15,0">
                             <Label Text="Duration"
+                                   ToolTipProperties.Text="(milliseconds) How long from beginning to end of the animation"
                                    VerticalOptions="Center"/>
                             <Label Text="{Binding Duration}"
                                    InputTransparent="True"
@@ -83,6 +92,7 @@
                         <Grid ColumnDefinitions="1*,3*"
                               Padding="15,0">
                             <Label Text="Rate"
+                                   ToolTipProperties.Text="(milliseconds) How long between animation frame updates"
                                    VerticalOptions="Center"/>
                             <Entry Text="{Binding Rate, Mode=TwoWay}"
                                    Keyboard="Numeric"
@@ -93,6 +103,7 @@
                         <Grid ColumnDefinitions="1*,3*"
                               Padding="15,0">
                             <Label Text="Loop"
+                                   ToolTipProperties.Text="(bool) Should the animation repeat"
                                    VerticalOptions="Center"/>
                             <Switch IsToggled="{Binding IsLooping, Mode=TwoWay}"
                                     Grid.Column="1"

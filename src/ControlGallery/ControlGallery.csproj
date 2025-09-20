@@ -63,14 +63,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Maui" Version="12.0.0" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="12.2.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="CodeHollow.FeedReader" Version="1.2.6" />
     <PackageReference Include="AsyncAwaitBestPractices" Version="9.0.0" />
     <PackageReference Include="AngleSharp" Version="0.17.1" />
     <PackageReference Include="Markdown.ColorCode" Version="1.2.0-preview-2" />
     <PackageReference Include="ColorCode.Core" Version="2.0.14" />
-    <PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.2.0" />
+    <PackageReference Include="CommunityToolkit.Maui.Markup" Version="6.0.1" />
     <PackageReference Include="Portable.Xaml" Version="0.26.0" />
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.1.0" />
     <PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.7" />
